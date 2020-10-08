@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+        <script src="../Content/js/amcharts.js"></script>
+        <script src="../Content/js/pie.js"></script>
+        <script src="../Content/js/serial.js"></script>
+
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <div class="block-overlay un-blocked"></div>
+
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item " data-nodeid="5" data-parent="0" >
+                            <a href="../MedicalModule/Reception-Index.html" class="fa fa-home">R-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Clinics-Transactions-Dashboard.html" class="fa fa-home">D-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../SystemSettings/Admin-Index.html" class="fa fa-home">A-Home</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="1" data-parent="0">
+                            <a class="fa fa-gear">Settings</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="2" data-parent="1" >
+                            <div class="sub-list-header ">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>System Settings</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">Main Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-globe leaf-node" href="../SystemSettings/MainSettings-Countries-Index.html">Countries & Cities</a>
+                                        </li>
+                                        <li class="sub-list-item " data-parent="1">
+                                            <a class="fa fa-building leaf-node" href="../SystemSettings/MainSettings-Companies-Index.html">Companies</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-sitemap leaf-node" href="../SystemSettings/MainSettings-Branches-Index.html">Branches</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-cogs leaf-node" href="../SystemSettings/MainSettings-GeneralSettings.html">General Settings</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-tags leaf-node" href="../SystemSettings/MainSettings-GeneralFeatures.html">General Features</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-hashtag leaf-node" href="../SystemSettings/MainSettings-SystemCodes.html">System Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-user-secret node">User Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-lock leaf-node" href="../SystemSettings/UsersSettings-Roles.html">Roles</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../SystemSettings/UsersSettings-Users.html">Users</a>
+                                        </li>
+                                        <!-- <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-unlock-alt leaf-node">Forget Password</a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-heartbeat">Medical</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>Medical System</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">General Settings</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../MedicalModule/GeneralSettings-PatientsSettings.html" >Patient Settings</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/GeneralSettings-Clinics.html">Clinics</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/GeneralSettings-Services-Index.html">Services</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-bed leaf-node" href="../MedicalModule/GeneralSettings-Rooms.html">Rooms</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/GeneralSettings-Vacations.html">Vacations</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/GeneralSettings-Shifts-Index.html">Shifts</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-ticket leaf-node" href="../MedicalModule/GeneralSettings-ReservationNumbers.html">Reservations Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-address-book-o node">Reception</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-users leaf-node" href="../MedicalModule/Reception-MainSettings-Patients-Index.html">Patients</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-secret leaf-node" href="../MedicalModule/Reception-MainSettings-Cashiers.html">Cashiers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square node"> Clincs</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-ClinicSection-Doctors.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-ClinicSection-PendingInvoices.html">Pendding Invoices</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-ClinicSection-Prices.html">Services price</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-book-o leaf-node" href="../MedicalModule/Reception-ClinicSection-Reservations.html">Reservations</a>
+                                                </li>
+                                                <!-- <li data-parent="2">
+                                                    <a class="fa fa-history leaf-node">Periodic CheckUps</a>
+                                                </li> -->
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Receipts-Index.html">Cash Receipts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Payments-Index.html">Cash Payments</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-line-chart node">Reports & Analytics</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Revenues</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics.html">Clinics Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics-TrendAnalysis.html">Clinics Revenue Trend Analysis</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Doctors.html">Doctors Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services.html">Services Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services-TrendAnalysis.html">Services Revenue Trend Analysis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o node">Shifts Reports</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-DailyTransactions.html">Daily Transactions</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-ShiftTransactions.html">Shifts Transactions</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-calculator node">Accounting</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-MainSettings-InvoicesSettings.html">Invoices Settings</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTresuries.html">Sub Treasuries</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTreasuriesSerials.html">Treasuries Serialization</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-percent leaf-node" href="../MedicalModule/Accounting-MainSettings-DeductionsAndAdditions-index.html">Additions And Deductions </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Pricing</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-021-hospital leaf-node" href="../MedicalModule/Accounting-Transactions-Pricing-ClinicPricing.html">Clincs</a>
+                                                        </li>
+                                                        <!-- <li data-parent="3">
+                                                            <a class="gicon gicon-015-microscope leaf-node">Test labs</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-hospital-x-ray leaf-node">Rays</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-ambulance-facing-right leaf-node">Emergency</a>
+                                                        </li>  -->
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-tags leaf-node" href="../MedicalModule/Accounting-Transactions-Offers-Index.html">Offers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-Transactions-Invoices-Index.html">Invoices</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-h-square node">Clinics</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-gear node">Clinic Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Clinics-DoctorSettings-Doctors-Index.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorsShifts-Index.html">Doctor Shifts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorSchedule.html">Doctors Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Clinics-ClinicSettings-TransactionSerialization.html">Transactions Serialization</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-thermometer-full leaf-node" href="../MedicalModule/Clinics-Transactions-SickLeave-Index.html">Sick Leave</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node"  href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Referral Form</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-card-o leaf-node" href="../MedicalModule/Clinics-Transactions-PatientReview-Index.html">Patient Review</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-id-card leaf-node" href="../MedicalModule/Clinics-Transactions-InitialMedicalData-Index.html">Initial Medical Data</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>
+
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <img src="../Content/Images/logo-02.png" onclick="widgetHint2.showHint();"> 
+                                <!-- <h3>G7 Medical Pro</h3> -->
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Hot Tools">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="Add Patient">
+                                                    <span class="fa fa-user-plus"></span>
+                                                    <p>Add Patient</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="Search Patients">
+                                                    <span class="fa fa-search"></span>
+                                                    <p>Search Patients</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="End Shift">
+                                                    <span class="fa fa-stop"></span>
+                                                    <p>End Shift</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="Reservations">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <p>Reservations</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="Change Language" onclick="widgetHint.showHint();" ></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Notifications</h6>
+                                        <a class="dropdown-item warning">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                    <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                    <span>6 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item danger">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                    <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                    <span>30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item success">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                    <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                    <span>10 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item default">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                    <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                    <span>30 seconds ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                               <!--  <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li> -->
+                                <li class="form-div-container-container icon-link normal-link  icon-sqr row col-xl-4 col" id="WidgetItem">
+                                    <div class="form-div row">
+                                        <span class="fa fa-building col-2 fa-size"></span>
+                                        <select class="form-control col-10" id="CompaniesSearch">
+                                            <option>All Companies</option>
+                                            <option>Company 1</option>
+                                            <option>Company 2</option>
+                                            <option>Company 3</option>
+                                            <option>Company 4</option>
+                                            <option>Company 5</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="form-div-container-container icon-link normal-link  icon-sqr row col-xl-4 col" id="WidgetItem2">
+                                    <div class="form-div row">
+                                        <span class="fa fa-sitemap col-2 fa-size"></span>
+                                        <select class="form-control col-10" id="branchsSearch">
+                                            <option>All Branches</option>
+                                            <option>branch 1</option>
+                                            <option>branch 2</option>
+                                            <option>branch 3</option>
+                                            <option>branch 4</option>
+                                            <option>branch 5</option>
+                                        </select>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Profile</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Settings</p>
+                                                        <span class="badge badge-pill">New</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Help</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Log Out</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!-- Page Container -->
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <!--------------- Data Section : Begin ---------------->
+                <div class="data-section d-inline-flex col position-retaive col-12 ">
+                    <div class="no-gutters data-container col-12 position-relative index-data-section">
+                        <div class="row col-lg-10 col-12 no-gutters ml-auto mr-auto">
+                            <!-- <div class="widget-container col-lg-4 col-md-6 col-12">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content system-info">
+                                            <div class="date">
+                                                <span class="month">May</span>
+                                                <span class="day">27</span>
+                                                <span class="year">2018</span>
+                                            </div>
+                                            <div class="data col">
+                                                <div class="time">
+                                                    <h3> 10:51 <span>AM</span></h3>
+                                                </div>
+                                                <div class="user-data col-12 row no-gutters">
+                                                    <h3 class="fa fa-sitemap "> Cairo Branch </h3>
+                                                    <h3 class="fa fa-money "> Sub Treasury </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="widget-container d-xl-block d-lg-none">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content counter-data">
+                                            <span class="gicon gicon-021-hospital icon"></span> 
+                                            <div class="data col row no-gutters">
+                                                <h3>Clinics</h3>
+                                                <p><span>120</span>Patients</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="widget-container col-xl-3 col-md-6 col-12">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content counter-data-lg">
+                                            <div class="data col row no-gutters">
+                                                <p>Total Revenues</p>
+                                                <h3>500,000 $</h3>
+                                            </div>
+                                            <span class="fa fa-money icon"></span>
+                                        </div>
+                                        <div class="chart-container" id="counter-lg-chart4" style="width: 100%; height: 160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-container col-xl-3 col-md-6 col-12">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content counter-data-lg">
+                                            <div class="data col row no-gutters">
+                                                <p>Number of Patients</p>
+                                                <h3>250,200</h3>
+                                            </div>
+                                            <span class="fa fa-users icon"></span>
+                                        </div>
+                                        <div class="chart-container" id="counter-lg-chart1" style="width: 100%; height: 160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-container col-xl-3 col-md-6 col-12">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content counter-data-lg">
+                                            <div class="data col row no-gutters">
+                                                <p>Number Of Employees</p>
+                                                <h3>480,500</h3>
+                                            </div>
+                                            <span class="fa fa-user-secret icon"></span>
+                                        </div>
+                                        <div class="chart-container" id="counter-lg-chart2" style="width: 100%; height: 160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget-container col-xl-3 col-md-6 col-12">
+                                <div class="widget">
+                                    <div class="widget-container-body">
+                                        <div class="widget-content counter-data-lg">
+                                            <div class="data col row no-gutters">
+                                                <p>Number of Doctors</p>
+                                                <h3>50</h3>
+                                            </div>
+                                            <span class="fa fa-user-md icon"></span>
+                                        </div>
+                                        <div class="chart-container" id="counter-lg-chart3" style="width: 100%; height: 160px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-12 row no-gutters ml-auto mr-auto">
+                            <!-- <div class="widget-container col-12">
+                                <div class="widget">
+                                    <div class="widget-container-header has-footer">
+                                       <div class="widget-nav">
+                                            <a id="explorer-back-btn" class="fa fa-chevron-left back-btn chev-left"></a>
+                                           <div class="widget-nav-container"  id="widget-nav">
+                                                <a class="header-nav" href="#" data-nodeid="0">Medical Settings</a>
+                                            </div>
+                                        </div>
+                                        <div class="header-tools">
+                                            <a class="fa fa-exchange rt-90 toggle-widget"></a>
+                                            <a class="fa fa-refresh refresh-widget"></a>
+                                            <a class="fa fa-times remove-widget"></a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-container-body collapse show">
+                                        <div class="widget-content">
+                                            <ul class="icon-list explorer-container" id="ExplorerContainer">
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="widget-container col-12">
+                                <div class="widget">
+                                    <div class="widget-container-header has-footer">
+                                        <h4>Clinics Revenues<span class="br"></span></h4>
+                                        <div class="header-tools">
+                                            <a class="fa fa-exchange rt-90 toggle-widget"></a>
+                                            <a class="fa fa-refresh refresh-widget"></a>
+                                            <a class="fa fa-times remove-widget"></a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-container-body collapse show">
+                                        <div class="widget-content">
+                                            <!-- <canvas id="myChart3"></canvas> -->
+                                            <div class="chart-container" id="chartdiv2" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+                                        </div>
+                                    </div>
+                                    <div class="widget-container-footer"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="widget-container">
+                                    <div class="widget">
+                                        <div class="widget-container-header has-footer">
+                                            <h4>Transactions<span class="br"></span></h4>
+                                            <div class="header-tools">
+                                                <a class="fa fa-exchange rt-90 toggle-widget"></a>
+                                                <a class="fa fa-refresh refresh-widget"></a>
+                                                <a class="fa fa-times remove-widget"></a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-container-body collapse show">
+                                            <div class="widget-content">
+                                                <div class="chart-container br-bottom" id="vertical-chart" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+                                                <!-- <div class="data-set row no-gutters col-12">
+                                                    <div class="data-set-item col-6 br br-bottom">
+                                                        <h3>$250</h3>
+                                                        <p>Clinics</p>
+                                                    </div>
+                                                    <div class="data-set-item col-6  br-bottom">
+                                                        <h3>$250</h3>
+                                                        <p>Test Labs</p>
+                                                    </div>
+                                                    <div class="data-set-item col-6 br">
+                                                        <h3>$250</h3>
+                                                        <p>Rays</p>
+                                                    </div>
+                                                    <div class="data-set-item col-6 ">
+                                                        <h3>$250</h3>
+                                                        <p>Emergencies</p>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="widget-container">
+                                    <div class="widget">
+                                        <div class="widget-container-header has-footer">
+                                            <h4>Services Revenues<span class="br"></span></h4>
+                                            <div class="header-tools">
+                                                <a class="fa fa-exchange rt-90 toggle-widget"></a>
+                                                <a class="fa fa-refresh refresh-widget"></a>
+                                                <a class="fa fa-times remove-widget"></a>
+                                            </div>
+                                        </div>
+                                        <div class="widget-container-body collapse show">
+                                            <div class="widget-content">
+                                                <div class="chart-container" id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------- Page Container : End ------------------>
+        </div>
+
+        <!--------------- General Notification :Begin ---------------->
+        <div class="g7-notification ntf-default">
+            <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                <div class="ntf-icon">
+                    <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="ntf-text">
+                    <h4>@ResourceFile.warning</h4>
+                    <p>
+                        @*Please Check Your Data*@
+                    </p>
+                </div>
+            </div>
+            <a class="ntf-close fa fa-times"></a>
+            <div class="ntf-background"></div>
+        </div>
+        <!--------------- General Notification :End ---------------->
+
+        <!--------------- General Form Modal :Begin ---------------->
+        <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+
+            </div>
+        </div>
+        <!--------------- General Form Modal :End ---------------->
+
+        <!------------- General Advanced Modal :Begin -------------->
+        <div class="modal fade g7-modal-n g7-adv-modal form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="advanced-modal">
+            <div class="modal-dialog modal-dialog-centered" id="AdvFormBody">
+
+            </div>
+        </div>
+        <!------------- General Advanced Modal :End -------------->
+
+        <!------------- General Message Modal :Begin -------------->
+        <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+                <form class="modal-content" id="test">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-body row no-gutters">
+                        <div class="modal-icon">
+                            <span></span>
+                        </div>
+                        <p class="msg-type">Confirmation Message</p>
+                        <div class="msg">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">Cancel</button>
+                        <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!------------- General Message Modal :End -------------->
+        <script src="../Content/js/G7/Helper.js"></script>
+        <script>
+            var widgetHint = new Helper({
+                selector:"#WidgetItem",
+                hasHeader :false,
+                hasFooter :true,
+                HeaderMsg: "Helper Header",
+                DetailsMsg: "Helper Detail Message",
+            });
+
+             $("#WidgetItem").on("change",function(){
+                widgetHint.removeHint();
+            });
+            $("#WidgetItem2").on("change",function(){
+                widgetHint2.removeHint();
+            });
+            var widgetHint2 = new Helper({
+                selector:"#WidgetItem2",
+                hasHeader :false,
+                hasFooter :false,
+                HeaderMsg: "Helper Header",
+                DetailsMsg: "Helper Detail Message",
+            });
+        </script>
+
+
+
+        <script>
+            var list=[
+                {Text:"General Settings", Icon : 'fa-wrench', Link:'#', hasNodes: true, Parent: '0', NodeId: '01'},
+                {Text:"Reception", Icon : 'fa-address-book-o', Link:'#', hasNodes: true, Parent: '0', NodeId: '02'},
+                {Text:"Accounting", Icon : 'fa-calculator', Link:'#', hasNodes: true, Parent: '0', NodeId: '03'},
+                {Text:"Clinics", Icon : 'fa-h-square', Link:'#', hasNodes: true, Parent: '0', NodeId: '04'},
+
+                //------------------- General Settings -----------------//
+                {Text:"Patient Settings", Icon : 'fa-users', Link:'../MedicalModule/GeneralSettings-PatientsSettings.html', hasNodes: false, Parent: '01', NodeId: '011'},
+                {Text:"Clinics", Icon : 'fa-h-square', Link:'../MedicalModule/GeneralSettings-Clinics.html', hasNodes: false, Parent: '01', NodeId: '012'},
+                {Text:"Services", Icon : 'fa-stethoscope', Link:'../MedicalModule/GeneralSettings-Services-Index.html', hasNodes: false, Parent: '01', NodeId: '013'},
+                {Text:"Rooms", Icon : 'fa-bed', Link:'../MedicalModule/GeneralSettings-Rooms.html', hasNodes: false, Parent: '01', NodeId: '014'},
+                {Text:"Vacations", Icon : 'fa-calendar-check-o', Link:'../MedicalModule/GeneralSettings-Vacations.html', hasNodes: false, Parent: '01', NodeId: '015'},
+                {Text:"Shifts", Icon : 'fa-clock-o', Link:'../MedicalModule/GeneralSettings-Shifts-Index.html', hasNodes: false, Parent: '01', NodeId: '016'},
+                {Text:"Reservations Codes", Icon : 'fa-ticket', Link:'../MedicalModule/GeneralSettings-ReservationNumbers.html', hasNodes: false, Parent: '01', NodeId: '017'},
+
+                //------------------- Reception -----------------//
+                {Text:"Main Settings", Icon : 'fa-cogs', Link:'#', hasNodes: true, Parent: '02', NodeId: '021'},
+                {Text:"Clinics", Icon : 'fa-h-square', Link:'#', hasNodes: true, Parent: '02', NodeId: '022'},
+                {Text:"Transactions", Icon : 'fa-exchange', Link:'#', hasNodes: true, Parent: '02', NodeId: '023'},
+                {Text:"Reports & Analytics", Icon : 'fa-line-chart', Link:'#', hasNodes: true, Parent: '02', NodeId: '024'},
+
+                    //------------------- Main Settings -----------------//
+                    {Text:"Patients", Icon : 'fa-users', Link:'../MedicalModule/Reception-MainSettings-Patients-Index.html', hasNodes: false, Parent: '021', NodeId: '0211'},
+                    {Text:"Cashiers", Icon : 'fa-user-secret', Link:'../MedicalModule/Reception-MainSettings-Cashiers.html', hasNodes: false, Parent: '021', NodeId: '0212'},
+
+                    //------------------- Clinics -----------------//
+                    {Text:"Doctors", Icon : 'fa-user-md', Link:'../MedicalModule/Reception-ClinicSection-Doctors.html', hasNodes: false, Parent: '022', NodeId: '0221'},
+                    {Text:"Pendding Invoices", Icon : 'fa-clock-o', Link:'../MedicalModule/Reception-ClinicSection-PendingInvoices.html', hasNodes: false, Parent: '022', NodeId: '0222'},
+                    {Text:"Services price", Icon : 'fa fa-money', Link:'../MedicalModule/Reception-ClinicSection-Prices.html', hasNodes: false, Parent: '022', NodeId: '0223'},
+                    {Text:"Reservations", Icon : 'fa-address-book-o', Link:'../MedicalModule/Reception-ClinicSection-Reservations.html', hasNodes: false, Parent: '022', NodeId: '0224'},
+            
+                    //------------------- Transactions -----------------//
+                    {Text:"Cash Receipts", Icon : 'fa-money', Link:'../MedicalModule/Reception-Transactions-Receipts-Index.html', hasNodes: false, Parent: '023', NodeId: '0231'},
+                    {Text:"Cash Payments", Icon : 'fa-money', Link:'../MedicalModule/Reception-Transactions-Payments-Index.html', hasNodes: false, Parent: '023', NodeId: '0231'},
+                    
+                    //------------------- Reports & Analytics -----------------//
+                    {Text:"Revenues", Icon : 'fa-money', Link:'#', hasNodes: true, Parent: '024', NodeId: '0241'},
+                    {Text:"Shifts Reports", Icon : 'fa-clock-o', Link:'#', hasNodes: true, Parent: '024', NodeId: '0242'},
+
+                        //------------------- Revenues -----------------//
+                        {Text:"Clinics Revenue", Icon : 'fa-h-square', Link:'../MedicalModule/Reception-Reports-Revenues-Clinics.html', hasNodes: false, Parent: '0241', NodeId: '02411'},
+                        {Text:"Clinics Revenue Trend Analysis", Icon : 'fa-h-square', Link:'../MedicalModule/Reception-Reports-Revenues-Clinics-TrendAnalysis.html', hasNodes: false, Parent: '0241', NodeId: '02412'},
+                        {Text:"Doctors Revenue", Icon : 'fa-user-md', Link:'../MedicalModule/Reception-Reports-Revenues-Doctors.html', hasNodes: false, Parent: '0241', NodeId: '02413'},
+                        {Text:"Services Revenue", Icon : 'fa-stethoscope', Link:'../MedicalModule/Reception-Reports-Revenues-Services.html', hasNodes: false, Parent: '0241', NodeId: '02414'},
+                        {Text:"Services Revenue Trend Analysis", Icon : 'fa-stethoscope', Link:'../MedicalModule/Reception-Reports-Revenues-Services-TrendAnalysis.html', hasNodes: false, Parent: '0241', NodeId: '02415'},
+
+                        //------------------- Shifts Reports -----------------//
+                        {Text:"Daily Transactions", Icon : 'fa-calendar-check-o', Link:'../MedicalModule/Reception-Reports-Shifts-DailyTransactions.html', hasNodes: false, Parent: '0242', NodeId: '02421'},
+                        {Text:"Shifts Transactions", Icon : 'fa-clock-o', Link:'../MedicalModule/Reception-Reports-Shifts-ShiftTransactions.html', hasNodes: false, Parent: '0242', NodeId: '02422'},
+
+                //------------------- Accounting -----------------//
+                {Text:"Main Settings", Icon : 'fa-cogs', Link:'#', hasNodes: true, Parent: '03', NodeId: '031'},
+                {Text:"Transactions", Icon : 'fa-exchange', Link:'#', hasNodes: true, Parent: '03', NodeId: '032'},
+
+                    //------------------- Main Settings -----------------//
+                    {Text:"Invoices Settings", Icon : 'fa-file-text-o', Link:'../MedicalModule/Accounting-MainSettings-InvoicesSettings.html', hasNodes: false, Parent: '031', NodeId: '0311'},
+                    {Text:"Sub Treasuries", Icon : 'fa-money', Link:'../MedicalModule/Accounting-MainSettings-SubTresuries.html', hasNodes: false, Parent: '031', NodeId: '0312'},
+                    {Text:"Treasuries Serialization", Icon : 'fa-hashtag', Link:'../MedicalModule/Accounting-MainSettings-SubTreasuriesSerials.html', hasNodes: false, Parent: '031', NodeId: '0313'},
+                    {Text:"Additions And Deductions", Icon : 'fa-percent', Link:'../MedicalModule/Accounting-MainSettings-DeductionsAndAdditions-index.html', hasNodes: false, Parent: '031', NodeId: '0314'},
+
+                    //------------------- Transactions -----------------//
+                    {Text:"Pricing", Icon : 'fa-money', Link:'#', hasNodes: true, Parent: '032', NodeId: '0321'},
+                    {Text:"Offers", Icon : 'fa-tags', Link:'../MedicalModule/Accounting-Transactions-Offers-Index.html', hasNodes: false, Parent: '032', NodeId: '0322'},
+                    {Text:"Invoices", Icon : 'fa-file-text-o', Link:'../MedicalModule/Accounting-Transactions-Invoices-Index.html', hasNodes: false, Parent: '032', NodeId: '0323'},
+                        
+                        //------------------- Pricing -----------------//
+                        {Text:"Clincs", Icon : 'gicon gicon-021-hospital', Link:'../MedicalModule/Accounting-Transactions-Pricing-ClinicPricing.html', hasNodes: false, Parent: '0321', NodeId: '03211'},
+
+                //------------------- Clinics -----------------//
+                {Text:"Clinic Settings", Icon : 'fa-gear', Link:'#', hasNodes: true, Parent: '04', NodeId: '041'},
+                {Text:"Transactions", Icon : 'fa-exchange', Link:'#', hasNodes: true, Parent: '04', NodeId: '042'},
+
+                    //------------------- Clinic Settings -----------------//
+                    {Text:"Doctors", Icon : 'fa-user-md', Link:'../MedicalModule/Clinics-DoctorSettings-Doctors-Index.html', hasNodes: false, Parent: '041', NodeId: '0411'},
+                    {Text:"Doctor Shifts", Icon : 'fa-clock-o', Link:'../MedicalModule/Clinics-DoctorSettings-DoctorsShifts-Index.html', hasNodes: false, Parent: '041', NodeId: '0412'},
+                    {Text:"Doctors Schedule", Icon : 'fa-calendar', Link:'../MedicalModule/Clinics-DoctorSettings-DoctorSchedule.html', hasNodes: false, Parent: '041', NodeId: '0413'},
+                    {Text:"Transactions Serialization", Icon : 'fa-hashtag', Link:'../MedicalModule/Clinics-ClinicSettings-TransactionSerialization.html', hasNodes: false, Parent: '041', NodeId: '0414'},
+
+                    //------------------- Transactions -----------------//
+                    {Text:"Sick Leave", Icon : 'fa-thermometer-full', Link:'../MedicalModule/Clinics-Transactions-SickLeave-Index.html', hasNodes: false, Parent: '042', NodeId: '0421'},
+                    {Text:"Referral Form", Icon : 'fa-file-text-o', Link:'../MedicalModule/Clinics-Transactions-ReferralForm-Index.html', hasNodes: false, Parent: '042', NodeId: '0422'},
+                    {Text:"Patient Review", Icon : 'fa-address-card-o', Link:'../MedicalModule/Clinics-Transactions-PatientReview-Index.html', hasNodes: false, Parent: '042', NodeId: '0423'},
+                    {Text:"Initial Medical Data", Icon : 'fa-id-card', Link:'../MedicalModule/Clinics-Transactions-InitialMedicalData-Index.html', hasNodes: false, Parent: '042', NodeId: '0424'},
+                ];
+            function renderIcons(list,selector,parentId){
+                $(selector).empty();
+                //debugger;
+                for(var i=0; i<list.length;i++){
+                    if(list[i].Parent == parentId){
+                        $(selector).append(
+                            "<li class='icon-list-item'>"+
+                            "<a href='"+list[i].Link+"' class='explorer-icon fa "+list[i].Icon+"'  data-text='"+list[i].Text+"' data-hasnodes='"+list[i].hasNodes+"' data-parent='"+list[i].Parent+"' data-nodeid='"+list[i].NodeId+"' data-toggle='tooltip' data-placement='bottom' title='"+list[i].Text+"'><p>"+list[i].Text+"</p></a>"+
+                            "</li>"
+                        );
+                    }
+                }
+                $('[data-toggle="tooltip"]').tooltip();
+            }
+            function AddHeaderLink(NodeId,text,selector){
+                //debugger;
+                $(selector).append(
+                    "<a class='header-nav ' href='#' data-nodeid='"+ NodeId +"'>"+text+"</a>"
+                );
+            }
+            function RemoveHeaderLink(NodeId,selector){
+                //debugger;
+                console.log($(selector +" [data-nodeid="+NodeId+"]"));
+                console.log($(selector +" [data-nodeid='"+NodeId+"']").nextAll());
+                $(selector +" a[data-nodeid='"+NodeId+"']").nextAll().remove();
+            }
+            $(document).ready(function(){
+                //debugger;
+                renderIcons(list,"#ExplorerContainer",'0');
+            });
+            $(document).on("click","#explorer-back-btn",function(){
+                //debugger;
+                //alert($(".explorer-icon").data('parent'));
+                let x= $(".explorer-icon").data('parent');
+                renderIcons(list,"#ExplorerContainer",x.slice(0, -1));
+
+                RemoveHeaderLink(x.slice(0, -1),"#widget-nav");
+            });
+            $(document).on("click",".explorer-icon:not([data-hasnodes = 'false'])",function(){
+                //debugger;
+                $('[data-toggle="tooltip"]').tooltip( 'hide' );
+                renderIcons(list,"#ExplorerContainer",$(this).data('nodeid'));
+                AddHeaderLink($(this).data('nodeid'),$(this).data('text'),"#widget-nav");
+            });
+            $(document).on("click",".header-nav",function(){
+                renderIcons(list,"#ExplorerContainer",$(this).data('nodeid'));
+                RemoveHeaderLink($(this).data('nodeid'),"#widget-nav");
+            });
+        </script>
+
+
+
+        <script>
+            //---- handle tabs Design After Selected [Widget tabs]---------------------------------
+            $(document).on("click", ".tabs-content-header .nav-pills .nav-item", function () {
+                $(".tabs-content-header .nav-pills .nav-item").removeClass("active-item");
+                $(this).addClass("active-item");
+            });
+        </script>
+        <script>
+        InitdataTable("widget-tabs-content .tabs-content-body .tab-pane",
+            ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+            ,[true,false,false,false,10,true]);
+        </script>
+        <script>
+        InitdataTable("widget-table-view",
+            ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+            ,[true,false,false,false,10,true]);
+        $(document).ready(function(){
+            checkTableSize("widget-table-view");
+        });
+        $(window).on('resize', function(e) {
+            if ($('table').closest('div').hasClass('data-table')) {
+                redrawTable();
+            }
+        });
+        </script>
+
+        <script>
+            $(document).on("click",".refresh-widget",function(){
+                var widget = $(this).closest(".widget");
+                widget.LoadingOverlay("show");
+                setTimeout(function(){
+                    widget.LoadingOverlay("hide");
+                }, 3000);
+            });
+            $(document).on("click",".toggle-widget",function(){
+                var widgetbody = $(this).closest(".widget").find(".widget-container-body");
+                if($(this).closest(".widget-container-header").hasClass("has-footer")){
+                    $(this).closest(".widget-container-header").removeClass("has-footer");
+                }else{
+                    $(this).closest(".widget-container-header").addClass("has-footer");
+                }
+                widgetbody.collapse("toggle");
+            });
+            $(document).on("click",".remove-widget",function(){
+                var widget = $(this).closest(".widget-container");
+                widget.remove();
+            });
+        </script>
+        <script>
+			AmCharts.makeChart("counter-lg-chart1",
+            {
+					"type": "serial",
+					"categoryField": "category",
+					"marginBottom": -1,
+					"marginLeft": -86,
+					"marginRight": -88,
+					"marginTop": 0,
+					"sequencedAnimation": false,
+					"startDuration": 2,
+					"startEffect": "bounce",
+					"borderColor": "#FFFFFF",
+					"categoryAxis": {
+						"gridPosition": "start",
+						"position": "top",
+						"autoGridCount": false,
+						"axisAlpha": 0,
+						"axisColor": "#CC0000",
+						"axisThickness": 0,
+						"gridColor": "#FFFFFF",
+						"labelsEnabled": false,
+						"showFirstLabel": false,
+						"showLastLabel": false,
+						"tickLength": 0,
+						"titleBold": false
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"animationPlayed": true,
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#FFFFFF",
+							"bulletBorderThickness": 4,
+							"bulletColor": "#A1B32B",
+							"bulletSize": 12,
+							"fillAlphas": 0.23,
+							"fontSize": 0,
+							"gapPeriod": 4,
+							"gradientOrientation": "horizontal",
+							"id": "AmGraph-1",
+							"lineColor": "#CBDC5A",
+							"lineThickness": 5,
+							"negativeFillAlphas": 0,
+							"negativeLineAlpha": 0,
+							"showBalloon": false,
+							"showBulletsAt": "open",
+							"title": "",
+							"type": "smoothedLine",
+							"valueField": "column-1",
+							"visibleInLegend": false
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisFrequency": 0,
+							"axisTitleOffset": 0,
+							"id": "ValueAxis-3",
+							"minMaxMultiplier": 0,
+							"autoGridCount": false,
+							"axisThickness": 0,
+							"fontSize": 1,
+							"gridCount": 0,
+							"gridThickness": 0,
+							"ignoreAxisWidth": true,
+							"labelOffset": 3,
+							"labelsEnabled": false,
+							"tickLength": 0,
+							"titleBold": false
+						}
+					],
+					"allLabels": [],
+					"balloon": {
+						"borderThickness": 3,
+						"fontSize": 0,
+						"horizontalPadding": 5
+					},
+					"titles": [],
+					"valueAxes": [
+                        {
+                            "axisFrequency": 0,
+                            "axisTitleOffset": 0,
+                            "id": "ValueAxis-3",
+                            "minMaxMultiplier": 0,
+                            "autoGridCount": false,
+                            "axisThickness": 0,
+                            "fontSize": 1,
+                            "gridCount": 0,
+                            "gridThickness": 0,
+                            "ignoreAxisWidth": true,
+                            "labelOffset": 3,
+                            "labelsEnabled": false,
+                            "tickLength": 0,
+                            "titleBold": false
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {
+                        "borderThickness": 3,
+                        "fontSize": 0,
+                        "horizontalPadding": 5
+                    },
+                    "titles": [],
+                    "valueAxes": [
+                        {
+                            "axisFrequency": 0,
+                            "axisTitleOffset": 0,
+                            "id": "ValueAxis-3",
+                            "minMaxMultiplier": 0,
+                            "autoGridCount": false,
+                            "axisThickness": 0,
+                            "fontSize": 1,
+                            "gridCount": 0,
+                            "gridThickness": 0,
+                            "ignoreAxisWidth": true,
+                            "labelOffset": 3,
+                            "labelsEnabled": false,
+                            "tickLength": 0,
+                            "titleBold": false
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {
+                        "borderThickness": 3,
+                        "fontSize": 0,
+                        "horizontalPadding": 5
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "category": "category 1",
+                            "column-1": 6
+                        },
+                        {
+                            "category": "category 2",
+                            "column-1": 4
+                        },
+                        {
+                            "category": "category 3",
+                            "column-1": 2
+                        },
+                        {
+                            "category": "category 4",
+                            "column-1":5
+                        },
+                        {
+                            "category": "category 5",
+                            "column-1": 3
+                        },
+                        {
+                            "category": "category 6",
+                            "column-1": 7
+                        }
+                    ]
+                }
+            );
+        </script>
+        <script>
+			AmCharts.makeChart("counter-lg-chart2",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"marginBottom": -1,
+					"marginLeft": -86,
+					"marginRight": -88,
+					"marginTop": 0,
+					"sequencedAnimation": false,
+					"startDuration": 2,
+					"startEffect": "bounce",
+					"borderColor": "#FFFFFF",
+					"theme": "default",
+					"categoryAxis": {
+						"gridPosition": "start",
+						"position": "top",
+						"autoGridCount": false,
+						"axisAlpha": 0,
+						"axisColor": "#CC0000",
+						"axisThickness": 0,
+						"gridColor": "#FFFFFF",
+						"labelsEnabled": false,
+						"showFirstLabel": false,
+						"showLastLabel": false,
+						"tickLength": 0,
+						"titleBold": false
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"animationPlayed": true,
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#FFFFFF",
+							"bulletBorderThickness": 4,
+							"bulletColor": "RGBA(239,179,52,1)",
+							"bulletHitAreaSize": 0,
+							"bulletSize": 12,
+							"cornerRadiusTop": 5,
+							"cursorBulletAlpha": 0,
+							"fillAlphas": 0.23,
+							"fontSize": 0,
+							"gapPeriod": 4,
+							"gradientOrientation": "horizontal",
+							"id": "AmGraph-1",
+							"lineColor": "#FDC977",
+							"lineThickness": 5,
+							"negativeFillAlphas": 0,
+							"negativeLineAlpha": 0,
+							"showBalloon": false,
+							"showBulletsAt": "high",
+							"title": "",
+							"type": "smoothedLine",
+							"valueField": "column-1",
+							"visibleInLegend": false
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisFrequency": 0,
+							"axisTitleOffset": 0,
+							"id": "ValueAxis-3",
+							"minMaxMultiplier": 0,
+							"autoGridCount": false,
+							"axisThickness": 0,
+							"fontSize": 1,
+							"gridCount": 0,
+							"gridThickness": 0,
+							"ignoreAxisWidth": true,
+							"labelOffset": 3,
+							"labelsEnabled": false,
+							"tickLength": 0,
+							"titleBold": false
+						}
+					],
+					"allLabels": [],
+					"balloon": {
+						"borderThickness": 3,
+						"fontSize": 0,
+						"horizontalPadding": 5
+					},
+					"titles": [],
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 7
+						},
+						{
+							"category": "category 2",
+							"column-1": 3
+						},
+						{
+							"category": "category 3",
+							"column-1": 5
+						},
+						{
+							"category": "category 4",
+							"column-1": 2
+						},
+						{
+							"category": "category 5",
+							"column-1": 5
+						},
+						{
+							"category": "category 6",
+							"column-1": 3
+						}
+					]
+				}
+			);
+		</script>
+        <script>
+            AmCharts.makeChart("counter-lg-chart3",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "marginBottom": -1,
+                    "marginLeft": -86,
+					"marginRight": -88,
+                    "marginTop": 0,
+                    "sequencedAnimation": false,
+                    "startDuration": 2,
+                    "startEffect": "bounce",
+                    "borderColor": "#FFFFFF",
+                    "theme": "default",
+                    "categoryAxis": {
+                        "gridPosition": "start",
+                        "position": "top",
+                        "autoGridCount": false,
+                        "axisAlpha": 0,
+                        "axisColor": "#CC0000",
+                        "axisThickness": 0,
+                        "gridColor": "#FFFFFF",
+                        "labelsEnabled": false,
+                        "showFirstLabel": false,
+                        "showLastLabel": false,
+                        "tickLength": 0,
+                        "titleBold": false
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "animationPlayed": true,
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "bullet": "round",
+                            "bulletBorderAlpha": 1,
+                            "bulletBorderColor": "#FFFFFF",
+                            "bulletBorderThickness": 4,
+                            "bulletColor": "RGBA(212,18,18,1)",
+                            "bulletHitAreaSize": 0,
+                            "bulletSize": 12,
+                            "cornerRadiusTop": 5,
+                            "cursorBulletAlpha": 0,
+                            "fillAlphas": 0.23,
+                            "fontSize": 0,
+                            "gapPeriod": 4,
+                            "gradientOrientation": "horizontal",
+                            "id": "AmGraph-1",
+                            "lineColor": "#F2A095",
+                            "lineThickness": 5,
+                            "negativeFillAlphas": 0,
+                            "negativeLineAlpha": 0,
+                            "showBalloon": false,
+                            "showBulletsAt": "high",
+                            "title": "",
+                            "type": "smoothedLine",
+                            "valueField": "column-1",
+                            "visibleInLegend": false
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "axisFrequency": 0,
+                            "axisTitleOffset": 0,
+                            "id": "ValueAxis-3",
+                            "minMaxMultiplier": 0,
+                            "autoGridCount": false,
+                            "axisThickness": 0,
+                            "fontSize": 1,
+                            "gridCount": 0,
+                            "gridThickness": 0,
+                            "ignoreAxisWidth": true,
+                            "labelOffset": 3,
+                            "labelsEnabled": false,
+                            "tickLength": 0,
+                            "titleBold": false
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {
+                        "borderThickness": 3,
+                        "fontSize": 0,
+                        "horizontalPadding": 5
+                    },
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "category": "category 1",
+                            "column-1": 3
+                        },
+                        {
+                            "category": "category 2",
+                            "column-1": 4
+                        },
+                        {
+                            "category": "category 3",
+                            "column-1": 5
+                        },
+                        {
+                            "category": "category 4",
+                            "column-1": 3
+                        },
+                        {
+                            "category": "category 5",
+                            "column-1": 4
+                        },
+                        {
+                            "category": "category 6",
+                            "column-1": 1
+                        }
+                    ]
+                }
+            );
+        </script>
+        <script>
+			AmCharts.makeChart("counter-lg-chart4",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"marginBottom": -1,
+					"marginLeft": -86,
+					"marginRight": -88,
+					"marginTop": 0,
+					"sequencedAnimation": false,
+					"startDuration": 2,
+					"startEffect": "bounce",
+					"borderColor": "#FFFFFF",
+					"theme": "default",
+					"categoryAxis": {
+						"gridPosition": "start",
+						"position": "top",
+						"autoGridCount": false,
+						"axisAlpha": 0,
+						"axisColor": "#CC0000",
+						"axisThickness": 0,
+						"gridColor": "#FFFFFF",
+						"labelsEnabled": false,
+						"showFirstLabel": false,
+						"showLastLabel": false,
+						"tickLength": 0,
+						"titleBold": false
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"animationPlayed": true,
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#FFFFFF",
+							"bulletBorderThickness": 4,
+							"bulletColor": "#00B1B7",
+							"bulletHitAreaSize": 0,
+							"bulletSize": 12,
+							"cornerRadiusTop": 5,
+							"cursorBulletAlpha": 0,
+							"fillAlphas": 0.23,
+							"fontSize": 0,
+							"gapPeriod": 4,
+							"gradientOrientation": "horizontal",
+							"id": "AmGraph-1",
+							"lineColor": "#78D0D4",
+							"lineThickness": 5,
+							"negativeFillAlphas": 0,
+							"negativeLineAlpha": 0,
+							"showBalloon": false,
+							"showBulletsAt": "high",
+							"title": "",
+							"type": "smoothedLine",
+							"valueField": "column-1",
+							"visibleInLegend": false
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisFrequency": 0,
+							"axisTitleOffset": 0,
+							"id": "ValueAxis-3",
+							"minMaxMultiplier": 0,
+							"autoGridCount": false,
+							"axisThickness": 0,
+							"fontSize": 1,
+							"gridCount": 0,
+							"gridThickness": 0,
+							"ignoreAxisWidth": true,
+							"labelOffset": 3,
+							"labelsEnabled": false,
+							"tickLength": 0,
+							"titleBold": false
+						}
+					],
+					"allLabels": [],
+					"balloon": {
+						"borderThickness": 3,
+						"fontSize": 0,
+						"horizontalPadding": 5
+					},
+					"titles": [],
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 4
+						},
+						{
+							"category": "category 2",
+							"column-1": 3
+						},
+						{
+							"category": "category 3",
+							"column-1": 2
+						},
+						{
+							"category": "category 4",
+							"column-1": 3
+						},
+						{
+							"category": "category 5",
+							"column-1": 5
+						},
+						{
+							"category": "category 6",
+							"column-1": 6
+						}
+					]
+				}
+			);
+		</script>
+        <script>
+			AmCharts.makeChart("vertical-chart",
+                {
+                    "type": "serial",
+                    "categoryField": "category",
+                    "plotAreaBorderColor": "#AAB3B3",
+                    "startDuration": 1,
+                    "borderColor": "#939393",
+                    "color": "#939393",
+                    "theme": "light",
+                    "categoryAxis": {
+                        "gridPosition": "start",
+                        "axisThickness": 0,
+                        "gridAlpha": 0,
+                        "gridThickness": 0,
+                        "tickLength": 0
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "fillAlphas": 1,
+                            "fillColors": "#CBDC5A",
+                            "id": "AmGraph-1",
+                            "lineThickness": 0,
+                            "title": "graph 1",
+                            "type": "column",
+                            "valueField": "column-1"
+                        },
+                        {
+                            "balloonText": "[[title]] of [[category]]:[[value]]",
+                            "bulletBorderThickness": 0,
+                            "bulletSize": 3,
+                            "fillAlphas": 1,
+                            "fillColors": "#78D0D4",
+                            "id": "AmGraph-2",
+                            "lineThickness": 0,
+                            "title": "graph 2",
+                            "type": "column",
+                            "valueField": "column-2"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "axisAlpha": 0,
+                            "axisColor": "#FFFFFF",
+                            "axisThickness": 0,
+                            "dashLength": 5,
+                            "fillAlpha": 0.01,
+                            "gridAlpha": 0.24,
+                            "gridColor": "#939393",
+                            "offset": 5,
+                            "tickLength": 0,
+                            "title": "",
+                            "titleBold": false,
+                            "titleFontSize": 0
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "titles": [],
+                    "dataProvider": [
+                        {
+                            "category": "Clinics",
+                            "column-1": 8,
+                            "column-2": 5
+                        },
+                        {
+                            "category": "Test Labs",
+                            "column-1": 6,
+                            "column-2": 7
+                        },
+                        {
+                            "category": "Rays",
+                            "column-1": 2,
+                            "column-2": 3
+                        },
+                        {
+                            "category": "Emergencies",
+                            "column-1": 2,
+                            "column-2": 3
+                        }
+                    ]
+                }
+			);
+		</script>
+
+        <script>
+            AmCharts.makeChart("chartdiv2",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"startDuration": 1,
+					"color": "#939393",
+					"fontSize": 12,
+					"handDrawScatter": 10,
+					"handDrawThickness": 10,
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+							"bulletColor": "rgba(161,179,43,1)",
+							"bulletSize": 10,
+							"columnWidth": 0,
+							"cursorBulletAlpha": 0,
+							"fixedColumnWidth": 15,
+							"fontSize": 0,
+							"id": "AmGraph-1",
+							"lineColor": "#cbdc5a",
+							"lineThickness": 3,
+							"title": "Clinic Revenues",
+							"valueField": "column-1"
+						},
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"bullet": "round",
+                            "bulletColor": "#027d82",
+                            "lineColor": "#78d0d4",
+							"bulletSize": 10,
+							"fontSize": 12,
+							"id": "AmGraph-2",
+							"lineThickness": 3,
+							"title": "Services Revenues",
+							"valueField": "column-2"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": "Axis title"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"useGraphSettings": true
+					},
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 8,
+							"column-2": 5
+						},
+						{
+							"category": "category 2",
+							"column-1": 6,
+							"column-2": 7
+						},
+						{
+							"category": "category 3",
+							"column-1": 2,
+							"column-2": 3
+						},
+						{
+							"category": "category 4",
+							"column-1": 1,
+							"column-2": 3
+						},
+						{
+							"category": "category 5",
+							"column-1": 2,
+							"column-2": 1
+						},
+						{
+							"category": "category 6",
+							"column-1": 3,
+							"column-2": 2
+						},
+						{
+							"category": "category 7",
+							"column-1": 6,
+							"column-2": 8
+						}
+					]
+				}
+			);
+        </script>
+        <script>
+            AmCharts.makeChart("chartdiv",
+				{
+					"type": "pie",
+					"adjustPrecision": true,
+					"balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+					"innerRadius": "70%",
+					"minRadius": 15,
+                    "pullOutRadius": "10%",
+	                "startRadius": "25%",
+					"startAngle": 93.6,
+					"labelsEnabled": false,
+					"titleField": "category",
+					"valueField": "column-1",
+					"processTimeout": -2,
+					"theme": "light",
+					"export": {
+						"enabled": true
+					},
+					"allLabels": [
+						{
+							"align": "center",
+							"color": "#939393",
+							"id": "Label-2",
+							"size": 15,
+							"text": "TOTAL VALUES",
+							"x": 0,
+							"y": "51%"
+						},
+						{
+							"align": "center",
+							"bold": true,
+							"color": "#939393",
+							"id": "Label-3",
+							"size": 20,
+							"text": "250",
+							"y": "45%"
+						}
+					],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"category": "category 1",
+							"column-1": 8
+						},
+						{
+							"category": "category 2",
+							"column-1": 6
+						},
+						{
+							"category": "category 3",
+							"column-1": 2
+						}
+					]
+				}
+			);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+
+.data-container-body-header{
+    padding: 10px 15px;
+    min-height: 58px;
+    width:100%;
+    background:$ClearWhite;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border: 1px solid $BorderColor;
+    align-items: center;
+    margin-bottom: 5px;
+    h4{
+        margin-#{$Direction-Opposite}:20px;
+        color:$SubColorLight;
+        font-weight: $FW-SBold;
+        font-size: 22px;
+        margin-bottom: 0px;
+        font-family: $MainFont;
+        padding: 8px;
+        padding-#{$Direction-Opposite}: 14px;
+        padding-#{$Direction}: 5px;
+        line-height: 18px;
+    }
+    .data-container-body-header-controls{
+        justify-content: flex-start;
+        margin-#{$Direction}:auto;
+        align-items: center;
+        a{
+            padding: 9px 14px;
+            font-weight: $FW-SBold;
+        }
+        label{
+            border: 2px solid $Danger;
+            padding:2.5px 20px;
+            color: $Danger;
+            font-size: 18px;
+            border-radius: 5px;
+            font-weight: $FW-Bold;
+            font-family: $MainFont;
+            text-align: center;
+            margin-bottom: 0px;
+            margin-#{$Direction-Opposite}: 5px;
+            span{
+                margin:0px 1px;
+                float:left;
+            }
+        } 
+        .active{
+            color: $Success;
+            border-color: $Success;
+        }   
+    }
+    .legends{
+        flex-direction: $FdirectionRow;
+        justify-content: flex-#{$Justification-Opposite};
+        border-#{$Direction}: 1px solid $BorderColor;
+        align-items: center;
+        div{
+            margin-#{$Direction-Opposite}: 15px;
+            span{
+                width: 12px;
+                height: 25px;
+                background: $LegendDefault;
+                margin-#{$Direction-Opposite}:3px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 4px;
+            }
+            p{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0px;
+                color:$MainColor;
+                font-weight: $FW-Regular;
+            }
+        }
+        div.warning{span{background: $LegendWarning;}}
+        div.success{span{background: $LegendSuccess;}}
+        div.danger{span{background: $LegendDanger;}}
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .data-container-body-header{
+        /* div:first-child{ 
+            width:100%;
+            h4{margin-#{$Direction-Opposite}:auto;}
+        } */
+        .data-container-body-header-controls{
+            width: 100%;
+            margin-top: 10px;
+            //padding-top: 15px;
+            a,label{
+                margin-top: 5px;
+            }   
+        }
+    }
+}
+@media only screen and (max-width: 545px){
+    .data-container-body-header{
+        div:first-child{
+            padding-bottom: 0px;
+            select{margin-#{$Direction}: 0px;margin-top: 10px;}
+        }
+    }
+}

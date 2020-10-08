@@ -1,0 +1,141 @@
+.fc-event-container{
+    position: relative;
+    .EventStyle{
+        padding-#{$Direction}: 20px;
+        background: $SubColorLight;
+        border:none;
+        .fc-content{
+            white-space: normal;
+            .fa-times{
+                position: absolute;
+                #{$Direction-Opposite}:0px;
+                z-index: 2;
+                &:hover,&:focus{
+                    color:$Danger;
+                }
+            }
+            .fc-time{
+                font-weight: $FW-Regular;
+            }
+        }
+        .event-data{
+            position: relative;
+            // .event-data-item{
+                
+            // }
+            .event-data-details{
+                padding: 0px;
+                border-radius: 5px;
+                direction: $LTR-RTL;
+                .arrow-up{
+                    position: absolute;
+                    left: 50% !important;
+                    right: auto !important;
+                    transform: translate(-50%, 0) !important;
+                    top: -17px;
+                    font-size: 25px;
+                    z-index: 5;
+                    color: $MainColor;
+                }
+                p{
+                    direction: $LTR-RTL;
+                    margin: 2px 0px;
+                    margin-left: 5px;
+                    border-left: 1px solid $BorderColor;
+                    padding: 0px 10px;
+                    span:first-child{
+                        &:after{
+                            content: ":";
+                            margin: 0px 5px;
+                        }
+                    }
+                }
+                p:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+    .EventStyle.event-hover{
+        background: $Warning !important;
+        cursor: pointer;
+    }
+    .fa-times{
+        position: absolute;
+        z-index: 3;
+        right: 0px;
+        top: 0px;
+        margin: 2px 6px;
+        color: $ClearWhite;
+        &:hover,&:focus,&:active{
+            color:$Danger;
+            cursor: pointer;
+        }
+    }
+    &:hover{
+        .fa-times{
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        } 
+    }
+}
+
+.data-desc-body-container-body{
+    .fc-header-toolbar{
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 1;
+        .fc-left{
+            font-size: 1em;
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+        .fc-right{
+            .btn-group{
+                button{
+                    border:none;
+                    padding: 6px 12px;
+                    background: $SubColorLight-h !important;
+                    color: $ClearWhite !important;
+                    margin:3px;
+                    font-size: 16px;
+                    border-radius: 3px;
+                    font-weight: $FW-Regular;
+                    font-family: $MainFont;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width:auto;
+                    font-weight:$FW-SBold;
+                    text-transform: capitalize;
+                }
+                .fc-prev-button{
+                    span:before{
+                        content:"\f104";
+                    }
+                }
+                .fc-next-button{
+                    span:before{
+                        content:"\f105";
+                    }
+                }
+                .fc-nextYear-button,.fc-next-button{
+                    background: $Success !important;
+                }
+                .fc-today-button{
+                    background: $Warning !important;
+                }
+            }
+        }
+        .fc-left{
+            font-size: 1em;
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

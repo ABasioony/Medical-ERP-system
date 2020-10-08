@@ -1,0 +1,464 @@
+.ag-theme-balham{
+    background: none;
+    &.h-390{
+        height: calc(100vh - 390px) !important;
+    }
+    &.h-500{
+        height: calc(100vh - 500px) !important;
+    }
+    &.Max100vh-600{
+        height: calc(100vh - 600px) !important;
+    }
+    &.no-side{
+        .ag-root-wrapper{
+            .ag-root-wrapper-body{
+                .ag-side-bar{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    &.no-br{
+        .ag-root-wrapper{
+            .ag-root-wrapper-body{
+                .ag-root{
+                    border: none !important;
+                }
+            }
+        }
+    }
+    &.auto-height{
+        .ag-root-wrapper{
+            .ag-root-wrapper-body{
+                .ag-root{
+                    .ag-body{
+                        .ag-body-viewport-wrapper{
+                            .ag-body-viewport{
+                                height: 100% !important;
+                                width: 100% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ag-root-wrapper{
+        .ag-root-wrapper-body{
+            direction: $LTR-RTL !important;
+            .ag-root{
+                border: 1px solid $BorderColor;
+                background: $ClearWhite;
+                padding: 10px;
+                //margin-#{$Direction}: 3px;
+                .ag-header{
+                    background: none;
+                    .ag-header-viewport{
+                        direction: $LTR-RTL;
+                    }
+                    .ag-header-cell{
+                        &[col-id="tools"]{
+                            .ag-header-select-all{
+                                display: none !important;
+                            }
+                            .ag-cell-label-container{
+                                display: flex;
+                                align-content: center;
+                                justify-content: center;
+                                .ag-header-icon{
+                                    display: none !important;
+                                }
+                                .ag-header-cell-label{
+                                    display: flex;
+                                    align-content: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .tools-table-header{
+                            .ag-header-cell-label{
+                                justify-content: center;
+                            }
+                        }
+                    }
+                    .ag-header-cell-label{
+                        .ag-header-cell-text{
+                            font-size: 12px;
+                            text-transform: uppercase;
+                            font-weight: $FW-SBold;
+                            font-family: $MainFont;
+                        }    
+                    }
+                }
+                .ag-body{
+                    .ag-body-viewport-wrapper{
+                        .ag-body-viewport{
+                            direction: $LTR-RTL;
+                            .ag-body-container{
+                                .ag-row-group{
+                                    a{display: none;}
+                                }
+                                .ag-row{
+                                    direction: $LTR-RTL;
+                                    text-align: $Direction;
+                                    .ag-cell{
+                                        direction: $LTR-RTL !important;
+                                        text-align: $Direction !important;
+                                        font-family: $MainFont;
+                                        padding: 0px !important;
+                                        .tools-div{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            height: 100%;
+                                            a{
+                                                color: $MainColorLight;
+                                                font-size: 16px;
+                                                margin: 0px 5px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;  
+                                                &:before{
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                }              
+                                                &:hover,&:focus,&:active{
+                                                    color: $MainColor;
+                                                    cursor: pointer;
+                                                }
+                                                &.success{
+                                                    color:$Success;
+                                                }
+                                                &.default{
+                                                    color:$SubColorLight;
+                                                }
+                                                &.warning{
+                                                    color:$Warning;
+                                                }
+                                                &.danger{
+                                                    color: $Danger;
+                                                }
+                                            }
+                                        }
+                                        &.ag-cell-focus{
+                                            border:none;
+                                            background: $BorderColor;
+                                        }
+                                        &[col-id="ag-Grid-AutoColumn"]{
+                                            direction: $LTR-RTL !important;
+
+                                        }
+                                        .grid-control-div{
+                                            align-items: center;
+                                            justify-content: center;
+                                        }
+                                        &.input-cell{
+                                            padding:0px;
+                                            .form-group{
+                                                margin: 0px;
+                                                input[type="text"]{
+                                                    border: none;
+                                                    // padding: 9px 0px !important;
+                                                    font-size: 14px;
+                                                    border-radius:0px;     
+                                                    background: none;  
+                                                    // margin: -10px 0;                                        
+                                                }
+                                                input[type="number"]{
+                                                    border: none;
+                                                    padding: 0px 6px !important;
+                                                    font-size: 14px;
+                                                    border-radius:0px;     
+                                                    background: none;   
+                                                }
+                                                select{
+                                                    padding: 0 !important;
+                                                    height: 28px;
+                                                }
+                                            }
+                                            &.autocomplete-cell{
+                                                .form-group{
+                                                    display: -webkit-box;      
+                                                    display: -moz-box;         
+                                                    display: -ms-flexbox;      
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    flex-wrap: wrap;
+                                                    a{
+                                                        font-size: 16px;
+                                                        color: $SubColorLight;
+                                                        margin: 0px 10px;
+                                                        position: absolute;
+                                                        left: 0;
+                                                        &:hover,&:focus,&:active{
+                                                            color: $MainColor;
+                                                            cursor: pointer;
+
+                                                        }
+                                                    }
+                                                    input[type="text"]{
+                                                        border: none;
+                                                        padding: 4px 6px;
+                                                        font-size: 14px;
+                                                        border-radius:0px;     
+                                                        background: none;  
+                                                        width: 93%;                                     
+                                                    }
+                                                }
+                                            }
+                                            &.fdatepicker{
+                                                .form-group{
+                                                    display: flex;
+                                                    input[type="text"]{
+                                                        border: none;
+                                                        padding: 4px 6px;
+                                                        font-size: 14px;
+                                                        border-radius:0px;     
+                                                        background: none;  
+                                                        width: 93%;                                     
+                                                    }
+                                                }
+                                            }
+                                            &.DropList{
+                                                .form-group{
+                                                    display: flex;
+                                                    select{
+                                                        border: none;
+                                                        padding: 4px 6px;
+                                                        font-size: 14px;
+                                                        border-radius:0px;     
+                                                        background: none;  
+                                                        width: 93%;   
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.icon-cell{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            &.icon-only{
+                                                justify-content: center;
+                                            }
+                                            .icon-cell-div{
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: flex-start;
+                                                a{
+                                                    font-size: 18px;
+                                                    &.success{
+                                                        color:$Success;
+                                                    }
+                                                    &.default{
+                                                        color:$SubColorLight;
+                                                    }
+                                                    &.warning{
+                                                        color:$Warning;
+                                                    }
+                                                    &.danger{
+                                                        color: $Danger;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.check-cell{
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .ag-cell-wrapper{
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                align-items: center;
+                                                justify-content: center;
+                                                .ag-icon {
+                                                    margin: 0px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.ag-row-odd{
+                                        background-color: $TableHover;
+                                    }
+                                    &.ag-row-selected{
+                                        background: $NInvColor-TableH;
+                                        color: $SubColor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .ag-full-width-viewport-wrapper{
+                        .ag-full-width-viewport{
+                            .ag-full-width-container{
+                                .ag-row{
+                                    direction: $LTR-RTL;
+                                    //direction: rtl;
+                                    text-align: $Direction;
+                                    padding-#{$Direction}: 10px;
+                                    .ag-cell{
+                                        direction: $LTR-RTL !important;
+                                        text-align: $Direction !important;
+                                    }
+                                    &.ag-row-odd{
+                                        background-color: $TableHover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ag-floating-bottom{
+                    .ag-floating-bottom-viewport{
+                        direction: $LTR-RTL !important;
+                        text-align: #{$Direction};
+                        font-size: 14px;
+                        font-family: $MainFont;
+                        .ag-floating-bottom-container{
+                            .ag-row{
+                                background: $LegendSuccess;
+                                color: $ClearWhite;
+                                .ag-cell{
+                                    padding:0px;
+                                    .form-group{
+                                        margin: 0px;
+                                        input[type="text"]{
+                                            border: none;
+                                            padding: 0px 6px !important;
+                                            font-size: 14px;
+                                            border-radius:0px;     
+                                            background: none;     
+                                            color: $ClearWhite;                                     
+                                        }
+                                        input[type="number"]{
+                                            border: none;
+                                            padding: 0px 6px !important;
+                                            font-size: 14px;
+                                            border-radius:0px;     
+                                            background: none;   
+                                            color: $ClearWhite;
+                                        }
+                                        input{
+                                            pointer-events: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .tools{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .ag-side-bar{
+                border-bottom-#{$Direction}-radius: 4px;
+                border-top-#{$Direction}-radius: 4px;
+                border: 1px solid $BorderColor;
+                background: $ClearWhite;
+                padding: 0px 0px 0px 5px;
+                margin-#{$Direction-Opposite}: 3px;
+                padding-bottom: 0px;
+                .ag-tool-panel-wrapper{
+                    border:none;
+                    border-right: 1px solid $BorderColor;
+                    .ag-column-panel{
+                        .ag-column-select-panel{
+                            .ag-primary-cols-header-panel{
+                                direction: $LTR-RTL; 
+                            }
+                        }
+                        .ag-column-tool-panel-column{
+                            direction: $LTR-RTL;
+                        }
+                        .ag-column-drop:last-child{
+                            border-bottom:none;
+                        }        
+                    }
+                }
+                .ag-side-buttons{
+                    border-bottom:none;
+                }
+                .ag-column-drop-title,.ag-column-drop-empty-message{
+                    text-align: $Direction;
+                }
+            }
+        }
+        .ag-status-bar{
+            border:none;
+        } 
+        .ag-paging-panel{
+            border: 1px solid $BorderColor;
+            background: $ClearWhite;
+            margin-top: 6px;
+            border-bottom-#{$Direction}-radius: 4px;
+            border-bottom-#{$Direction-Opposite}-radius: 4px;
+            padding: 10px;
+            .ag-paging-row-summary-panel{
+                direction: $LTR-RTL;
+            }
+        }
+    }
+    .ag-menu{
+        z-index: 999999999999;
+        .ag-tab-header{
+            background: $LegendSuccess;
+           /*  .tabBody{
+                
+            } */
+        }
+        /* .ag-menu-list{
+            
+        } */
+    }
+}
+.ag-rtl{
+    .ag-numeric-cell{
+        text-align: $Direction !important;
+    }
+}
+@media Print{
+    .grid{
+        height: 100% !important;
+        .ag-body{
+            .ag-body-viewport-wrapper{
+                .ag-body-viewport{
+                    .ag-body-container{
+                        .ag-row{
+                            direction: $LTR-RTL;
+                            .ag-cell{
+                                direction: $LTR-RTL !important;
+                                text-align: $Direction !important;
+                            }
+                            &.ag-row-odd{
+                                background-color: $TableHover;
+                            }
+                        }
+                    }
+                }
+            }
+            .ag-full-width-viewport-wrapper{
+                .ag-full-width-viewport{
+                    .ag-full-width-container{
+                        .ag-row{
+                            direction: $LTR-RTL;
+                            direction: rtl;
+                            text-align: right;
+                            padding-right: 10px;
+                            .ag-cell{
+                                direction: $LTR-RTL !important;
+                                text-align: $Direction !important;
+                            }
+                            &.ag-row-odd{
+                                background-color: $TableHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

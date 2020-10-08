@@ -1,0 +1,1107 @@
+ /* .validation-feedback{
+    position: absolute;
+    #{$Direction}: -1px;
+    #{$Direction-Opposite}: -1px;
+    text-align: $Direction;
+    margin: 0px 15px;
+    font-size: 14px;
+    color: $ClearWhite !important;
+    background: $Danger-v;
+    padding: 3px 10px;
+    z-index: 10;
+    border: 1px solid $BorderColor;
+    border-top: 0px;
+    display: none;
+    padding-#{$Direction-Opposite}: 30px;
+    a{
+        //margin-#{$Direction}: 10px;
+        position: absolute;
+        #{$Direction-Opposite}: 0px;
+        top: 0px;
+        margin: 6px 8px;
+        &:hover,&:focus,&:active{
+            cursor: pointer;
+            color: $MainColorDark;
+        }
+    }
+    p{
+        padding: 5px;
+        margin: 0px !important;
+        padding-top: 3px;
+    }
+}
+.validation-show{
+    position: absolute;
+    #{$Direction-Opposite}: 0;
+    bottom: 11%;
+    margin-#{$Direction-Opposite}: 23px;
+    font-size: 23px;
+    color: $Danger-v;
+    display: none;
+    &:hover,&:focus,&:active{
+        cursor: pointer;
+        color: $Danger;
+    }
+}
+.valid{
+    position: absolute;
+    #{$Direction-Opposite}: 0;
+    bottom: 11%;
+    margin-#{$Direction-Opposite}: 23px;
+    font-size: 23px;
+    color: $LegendSuccess;
+    display: none;
+    &:hover,&:focus,&:active{
+        cursor: pointer;
+        color: $Success;
+    }
+}
+.info-show{
+    position: absolute;
+    #{$Direction-Opposite}: 0;
+    bottom: 11%;
+    margin-#{$Direction-Opposite}: 23px;
+    font-size: 23px;
+    color: $LegendWarning;
+    display: none;
+    &:hover,&:focus,&:active{
+        cursor: pointer;
+        color: $Warning;
+    }
+}
+.information{
+    position: absolute;
+    #{$Direction}: -1px;
+    #{$Direction-Opposite}: -1px;
+    text-align: $Direction;
+    margin: 0px 15px;
+    font-size: 14px;
+    color: $ClearWhite !important;
+    background: $Warning;
+    padding: 3px 10px;
+    z-index: 10;
+    border: 1px solid $BorderColor;
+    border-top: 0px;
+    display: none;
+    padding-#{$Direction-Opposite}: 30px; 
+    a{
+        //margin-#{$Direction}: 10px;
+        position: absolute;
+        #{$Direction-Opposite}: 0px;
+        top: 0px;
+        margin: 6px 8px;
+        &:hover,&:focus,&:active{
+            cursor: pointer;
+            color: $MainColor;
+        }
+    }
+    p{
+        padding: 5px;
+        margin: 0px !important;
+        padding-top: 3px;
+    }
+}
+.invalid-input{
+    .validation-feedback,.validation-show{ display: block ;}
+    .information,.info-show{ display: none !important;}
+    .valid{display: none;}
+    label{color:$Danger-v}
+    input,select{
+        padding-#{$Direction-Opposite}: 32px !important;
+        border-color:$Danger-v !important;
+    }
+    input:focus,input:active{box-shadow: 0px 0px 3px $Danger;}
+    &.invalid-input-select{
+        .validation-show{
+            margin-#{$Direction-Opposite}: 32px;
+        }
+    }
+}
+.valid-input{
+    .validation-feedback,.validation-show{ display: none !important;}
+    .information,.info-show{ display: none !important;}
+    .valid{display: block;}
+    label{color:$LegendSuccess}
+    input,select{
+        padding-#{$Direction-Opposite}: 32px !important;
+        border-color:$LegendSuccess !important;
+    }
+    input:focus,input:active{box-shadow: 0px 0px 3px $LegendSuccess;}
+    &.valid-input-select{
+        .valid{
+            margin-#{$Direction-Opposite}: 32px;
+        }
+    }
+}
+.info-input{
+    .info-show{ display: block;}
+    .information{display: none;}
+    .valid{display: none;}
+    .validation-feedback,.validation-show{ display: none;}
+    .arrow-up{ border-bottom-color: $Warning;}
+    //label{color:$Success}
+    input,select{
+        padding-#{$Direction-Opposite}: 32px !important;
+       // border-color:$Warning !important;
+    }
+    input:focus,input:active{box-shadow: 0px 0px 3px $Success;}
+    &.info-input-select{
+        .info-show{
+            margin-#{$Direction-Opposite}: 32px;
+        }
+    }
+}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $Danger-v;
+    position: absolute;
+    #{$Direction}: 6px;
+    top: 0px;
+    margin-top: -8px;
+  } 
+div.error{
+    position: absolute;
+    #{$Direction}: 0px;
+    margin: 0px 15px;
+    font-size: 14px;
+    color: $Danger !important;
+}
+ */
+ .financial-module{
+    .custom-control{
+        margin: 1rem 0;
+        &.m05{
+            margin: 0.5rem 0;
+        }
+    }
+    .form-group{
+        margin-bottom: 0.5rem;
+        &.br-side{
+            border-#{$Direction-Opposite}: 1px solid $BorderColor;
+        }
+        &.bl-side{
+            border-#{$Direction}: 1px solid $BorderColor;
+        }
+    }
+    .custom-file{
+        margin-bottom: 0.5rem;
+    }
+
+ }
+.select-single{
+    .select2-container{
+        width: 100% !important;
+        .selection{
+            .select2-selection--single{
+                min-height: 40px;
+                text-align: $Direction;
+                border-radius: 0px;
+                border-color: $BorderColor;
+                .select2-selection__rendered,.select2-selection__arrow{
+                    min-height: 40px;
+                    // display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+ input.en-desc:focus,input.en-desc:focus{
+     text-align: left !important;
+     direction: ltr !important;
+ }
+select{
+    border-color: $BorderColor;
+    border-radius: 0px; 
+    color: $MainColorLight;
+    padding-top: 3px;
+    padding-bottom: 3px;
+ }
+ select.form-control:not([size]):not([multiple]){
+    height: 38px;
+ }
+
+
+form{
+    .form-check{
+        margin-top:30px;
+    }
+    .disabled{
+        button{background-color: $Disabled !important; pointer-events: none; }
+        select{background-color: $Disabled !important; pointer-events: none; }
+        input{background-color: $Disabled !important; pointer-events: none; }
+        .select2 {
+            pointer-events: none;
+            .select2-selection--multiple{
+                background-color: $Disabled !important;
+            }
+        }
+        #Logo_Browser{pointer-events: none;}
+        .logo{label{display: none !important}}
+    }
+    .disabled-btn{background-color: $BorderColor !important; pointer-events: none; border:none;}
+    .validation-msg{color:$Danger; font-size:14px; text-align:$Direction-Opposite; display:none;}
+    .row{
+        /* flex-direction: row-reverse; */
+        align-items: center;
+        p{
+            text-align: $Direction ;
+        }
+    }
+    textarea{
+        max-width:100%;
+        max-height: 100px;
+        min-height: 100px;
+        border-radius: 0px;
+        border-color: $BorderColor;
+        &:hover,&:focus,&:active{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    .radio-input{
+        display: inline-flex !important;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: $FdirectionRow;
+        input{
+            float: $Direction;
+            margin-#{$Direction-Opposite}: 10px;
+        }
+        label{
+            float: $Direction-Opposite;
+            margin:0px;
+            margin-#{$Direction-Opposite}: 5px;
+        }
+    }
+    input{
+        //height: 40px !important;
+        // padding: 9px 10px !important;
+        text-align: $Direction;
+    }
+    select{
+        //height: 40px !important;
+        padding: 6px !important;
+       // max-height: 36px;
+    } 
+    label{
+        font-weight: $FW-Regular;
+        display:inline-block;
+        //float: $Direction;
+        padding: 0px 15px;
+    }
+    .form-group{
+        //margin-bottom: 5px;
+        margin-bottom: 1.5rem;
+        &.radio-group{
+            margin-bottom:0.5rem;
+        }
+        div.error,.field-validation-error,.ValidationMessage,.field-validation-valid{
+            position: absolute;
+            font-size: 14px;
+            color: $Danger !important;
+            padding-#{$Direction-Opposite}: 10px;
+            #{$Direction}: 12px;
+            bottom: 0px;
+            margin-bottom: -1.3rem;
+        }
+        .custom-radio{
+            margin-top: 6px;
+            margin-bottom: 6px;
+            .custom-control-label{
+                line-height: 23px;
+                padding-#{$Direction}: 15px !important;
+            }
+        }  
+        .input-group{
+            .input-group-prepend{
+                .input-group-text{
+                    background: none;
+                    border:none;
+                    color:$MainColorLight;
+                    font-size: 16px;
+                }
+            }
+        }   
+         label{
+             margin: 0px;
+             font-size: 14px;
+             width: 100%;
+             text-align: $Direction;
+         }
+         input{
+             border-color: $BorderColor;
+             border-radius: 0px; 
+             color: $MainColorLight;
+             padding-top: 3px;
+             padding-bottom: 3px;
+             &.danger{
+                 border-color: $Danger !important;
+             }
+             &.warning{
+                border-color: $Warning !important;
+            }
+            &.success{
+                border-color: $Success !important;
+            }
+         }
+         select{
+            border-color: $BorderColor;
+            border-radius: 0px; 
+            color: $MainColorLight;
+            padding-top: 3px;
+            padding-bottom: 3px;
+         }
+         ::placeholder{
+             color: $BorderColor;
+             font-size: 15px;
+         }
+         :-ms-input-placeholder{
+             color: $BorderColor;
+             font-size: 15px;
+         }
+         ::-ms-input-placeholder{
+             color: $BorderColor;
+             font-size: 15px;
+         }
+         input:active,input:focus,select:active,select:focus{
+             box-shadow: none;
+             outline: none;
+             border-color: $SubColorLight;
+         }
+     }
+    .explanation{
+        display:inline-block;
+        font-size:14px;
+        color:$MainColorLight;
+        float: $Direction;
+        margin-top: 6px;
+        margin-#{$Direction}: 6px;
+    }
+    .btn{
+        padding: 8px 16px;
+        border:none;
+        outline:none;
+    }
+    .btn-success{
+        background: $Success; 
+    }
+    .radio-input{
+        display:inline-block;
+        margin-#{$Direction-Opposite}:15px;
+        input{
+            display:inline-block;
+            vertical-align:middle;
+            height: 30px !important;
+        }
+        label{
+            display:inline-block;
+            vertical-align:sub;
+        }
+    }
+    .multiple-select{
+        width:100%;
+    }
+    .select2-container{
+        width:100% !important;
+        min-height:40px;
+        .selection{
+            .select2-selection--multiple{
+                min-height:40px;
+                border: 1px solid $BorderColor;
+                border-radius: 0px;
+                ul{
+                    .select2-selection__choice{
+                        background:$Success;
+                        color:$ClearWhite;
+                        font-size: 16px;
+                        padding: 1px 10px;
+                        float:$Direction;
+                        span{
+                            color:$ClearWhite;
+                            font-size: 16px;
+                            vertical-align: middle;
+                            margin-#{$Direction-Opposite}: 5px;
+                            float: $Direction;
+                        }
+                        span:hover{
+                            color:$Danger;
+                        }
+                    }
+                    .select2-search--inline{
+                        .select2-search__field{
+                            margin-top:6px;
+                        }
+                        input{
+                            width:auto !important;
+                            min-width:250px;
+                            padding-top:0px !important;
+                            height:27px !important;
+                            border: none !important;
+                            text-align: $Direction;
+                        }          
+                    }
+                }
+            }    
+        }
+    }
+    .select2-container .select2-search--inline{
+        float: $Direction;
+    }
+    .form-section{
+        //display:flex;
+        //flex-direction:$FdirectionRow;
+        .inline-form-group{padding:0px 5px !important;}
+        p{
+            //padding-left:15px;
+            color:$ClearWhite;
+            margin:0px 15px;
+            
+        }
+    }
+    .form-group{
+        label{padding: 0px; min-height: 25px;}
+        .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+            background: $Success;
+        }
+    }
+
+    
+       
+}
+
+.datepicker {
+    padding:15px;
+    direction: $LTR-RTL;
+ }
+ .datepicker.dropdown-menu {
+    #{$Direction}: initial;
+ }
+
+.custom-control{
+    float: $Direction;  
+    padding-#{$Direction} : 1.5rem !important;
+    padding-#{$Direction-Opposite} : 0 !important;
+    margin: 2rem 0;
+    text-align: $Direction;
+    label{
+        text-align: $Direction;     
+       padding-#{$Direction}: 15px !important;
+        margin:0px !important;
+    }
+    label:before,label:after{
+        #{$Direction}:10px;
+        #{$Direction-Opposite}:auto;
+        
+    }
+    
+}
+
+.well-div{
+    background: $BorderColor;
+    border-radius: 20px;
+    padding: 6px;
+    &.default{background: $SubColorLight;}
+    &.success{background: $LegendSuccess;}
+    &.warning{background: $Warning;}
+    &.danger{background:  $Danger;}
+    &.well-div-o{
+        background: none;
+        border: 2px solid $BorderColor;
+        .wel-div-check{
+            color: $MainColor !important;
+        }
+        .stacked-data{
+            .stacked-div{
+                input{
+                    color: $MainColor !important;
+                    &:after{color: $MainColor !important;}
+                }
+            }
+        }
+    }
+    .form-group{
+        margin: 0px;
+    }
+    .wel-div-check{
+        color: $ClearWhite;
+        border-#{$Direction-Opposite}: 1px solid $ClearWhite;
+        padding-#{$Direction-Opposite}: 15px;
+        margin-#{$Direction-Opposite}: 15px;
+    }
+    .stacked-data{
+        .stacked-div{
+            display: flex;
+            align-items: center;
+            &::after{
+                content: "/";
+                color: $ClearWhite;
+            }
+            &:last-child{
+                &::after{
+                    content: "";
+                }
+            }
+            input{
+                
+                color: $ClearWhite !important;
+                font-size: 16px;
+                font-weight: 100;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before{
+        background:$Success;
+    }
+body.en{
+.g7-modal{
+    .modal-dialog {
+        .modal-body{
+            form{
+                .custom-control{
+                        label{
+            padding-#{$Direction}: 0px !important;
+                        }
+                    }
+                }
+                .multi-form{
+                    .custom-control{
+                        label{
+                            padding-#{$Direction}: 0px !important;
+                            }
+                        }
+                }  
+            }
+        }
+    }
+}
+    
+.custom-file{
+    margin-top: 0.5rem;
+    label{
+        &.custom-file-label{
+            padding: 5px;
+            padding-#{$Direction-Opposite}: 15px;
+            right: 15px !important;
+            left: 15px !important;
+        }
+    }
+    
+}
+
+.inputformError{
+    .formErrorContent{
+        border:none;
+        box-shadow:none;
+        border-radius:4px;
+        background: $Danger;
+        color: $ClearWhite;
+        font-size: 14px;
+    }
+    .formErrorArrow{
+        div{
+            border:none;
+            background:$Danger;
+            box-shadow:none;
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 43px;
+    height: 17px;
+    margin: 0px;
+    input {
+        display:none;
+    }
+    input:checked + .slider {
+        background-color: $Success;
+    }  
+    input:focus + .slider {
+        box-shadow: 0 0 1px $SubColor;
+    }
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0px;
+        #{$Direction}: 0;
+        #{$Direction-Opposite}: 0;
+        bottom: 0px;
+        background-color: $Danger;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        top:2px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $ClearWhite;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+}
+  
+.select2-container--open{
+    .select2-dropdown{
+        .select2-results{
+            ul{
+                [aria-selected="true"]{
+                    background:$Danger ;
+                    color:$ClearWhite ;
+                    pointer-events:none;
+                }
+                .select2-results__option--highlighted{
+                    background:$Warning;
+                }
+                .select2-results__option{
+                    text-align: $Direction;
+                }
+            }
+        }
+    }
+}
+  
+.radio-input{
+    display: inline-flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: $FdirectionRow;
+    input{
+        float: $Direction;
+        margin-#{$Direction-Opposite}: 10px;
+    }
+    label{
+        float: $Direction-Opposite;
+        margin:0px;
+        margin-#{$Direction-Opposite}: 5px;
+    }
+}
+  
+.gbtn-o{
+    border-width: 2px;
+    border-style: solid;
+    padding: 6px 12px;
+    color: $SubColorLight !important;
+    margin:3px;
+    border-color: $SubColorLight-h;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: $FW-Regular;
+    font-family: $MainFont;
+    text-align: center;
+    background:transparent;
+    //min-width: 150px;
+    //min-width: 135px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.gbtn-o:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px;
+    margin-#{$Direction-Opposite}: 5px;
+    display: inline-block;
+}
+.gbtn-o.gbtn-success-o{color: $Success-h!important;border-color: $Success-h;}
+.gbtn-o.gbtn-warning-o{color: $Warning-h !important;border-color: $Warning-h;}
+.gbtn-o.gbtn-danger-o{color: $Danger-h !important;border-color: $Danger-h;}
+.gbtn-o.gbtn-dark-o{color: $MainColor-h !important;border-color: $MainColor-h;}
+.gbtn-o.disabledBtn-o{color:$MainColorLight !important; border-color: $MainColorLight !important; pointer-events: none;}
+
+.gbtn-o:hover{cursor:pointer; color: $ClearWhite !important;background: $SubColorLight;}
+.gbtn-success-o:hover{cursor:pointer; color: $ClearWhite !important;background: $Success;}
+.gbtn-warning-o:hover{cursor:pointer; color: $ClearWhite !important;background: $Warning;}
+.gbtn-danger-o:hover{cursor:pointer; color: $ClearWhite !important; background: $Danger;}
+.gbtn-dark-o:hover{cursor:pointer; color: $ClearWhite !important; background: $MainColor;}
+
+.gbtn-o:focus,.gbtn-o:active{outline: none; box-shadow: none;}
+
+.gbtn{
+    /*border-width: 2px;
+    border-style: solid;*/
+    border:none;
+    padding: 6px 12px;
+    background: $SubColorLight-h !important;
+    color: $ClearWhite !important;
+    margin:3px;
+    //border-color: $SubColorLight;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: $FW-Regular;
+    font-family: $MainFont;
+    text-align: center;
+   // min-width: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.icon-gbtn.gbtn:before,.icon-gbtn.gbtn-o:before{
+    margin-#{$Direction-Opposite}:0px;
+}
+.gbtn:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 18px;
+    margin-#{$Direction-Opposite}:10px;
+    display: inline-block;
+}
+.gbtn.gbtn-success{background: #cbdc5a!important;border-color: #cbdc5a;}
+.gbtn.gbtn-warning{background: #ffcc00 !important;border-color: #ffcc00;}
+.gbtn.gbtn-danger{background: $Danger-h !important;border-color: $Danger-h;}
+.gbtn.gbtn-dark{background: #00b1b7 !important;border-color: #00b1b7;}
+.gbtn.disabledBtn{background:$MainColorLight !important; border-color: $MainColorLight !important; pointer-events: none;}
+
+.gbtn:hover{cursor:pointer; background: $SubColorLight !important;}
+.gbtn-success:hover{cursor:pointer;background: $Success !important;}
+.gbtn-warning:hover{cursor:pointer;background: $Warning !important;}
+.gbtn-danger:hover{cursor:pointer; background: $Danger !important;}
+.gbtn-dark:hover{cursor:pointer; background: $MainColor !important;}
+.gbtn.disabledBtn:hover{background:$MainColorLight !important;cursor:default; color: $ClearWhite !important;}
+
+.gbtn:focus,.gbtn:active{outline: none; box-shadow: none;}
+/*.gbtn.gbtn-success{background: $Success!important;border-color: $Success;}
+.gbtn.gbtn-warning{background: $Warning !important;border-color: $Warning;}
+.gbtn.gbtn-danger{background: $Danger !important;border-color: $Danger;}
+.gbtn.gbtn-dark{background: $MainColor !important;border-color: $MainColor;}
+.gbtn.disabledBtn{background:$MainColorLight !important;border-color: $MainColorLight !important;}
+
+.gbtn:hover{cursor:pointer; color: $SubColorLight !important;background: none !important;}
+.gbtn-success:hover{cursor:pointer; color: $Success !important;background: none !important;}
+.gbtn-warning:hover{cursor:pointer; color: $Warning !important;background: none !important;}
+.gbtn-danger:hover{cursor:pointer; color: $Danger !important; background: none !important;}
+.gbtn-dark:hover{cursor:pointer; color: $MainColor !important; background: none !important;}
+.gbtn.disabledBtn:hover{background:$MainColorLight !important;cursor:default; color: $ClearWhite !important;}*/
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/*.discountContainer{
+    .custom-control{
+        label{
+            width: 145px;
+            margin-#{$Direction}: 10px !important;
+                line-height: 1;
+        }
+        label:before,label:after{
+            #{$Direction}:0px;
+            #{$Direction-Opposite }:auto;
+
+        }
+        input:last-child{
+            margin-bottom: 10px;
+        }
+    }
+}*/
+.discountContainer{
+    .custom-control{
+        label{min-width:165px;}
+    }
+}
+.admin-roles,.main-div-body,.txt-align{
+    text-align: $Direction;
+}
+
+
+
+
+/* ----- Upload File Input ------ */
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    width: 100%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+/*.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}*/
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile-6 + label {
+    color: #d3394c;
+}
+.inputfile-6 + label {
+   // border: 1px solid $BorderColor;
+    padding: 0;
+    border-radius: 4px;
+}
+/*.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+    border-color: #722040;
+}*/
+
+.inputfile-6 + label .file-path,
+.inputfile-6 + label strong {
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+.inputfile-6 + label .file-path {
+    width: auto;
+    height: 39px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    font-size:16px;
+    font-weight:100;
+    color: $MainColor;
+    line-height: 1;
+    border:1px solid $BorderColor;
+}
+.inputfile-6 + label strong {
+    height: 40px;
+    color: $ClearWhite;
+    background-color: $SubColorLight;
+    display: inline-block;
+    font-family: $MainFont;
+    font-size: 16px;
+    font-weight:300;
+}
+.inputfile-6 + label strong:before{
+    font:normal normal normal 14px/1 FontAwesome;
+    margin-#{$Direction-Opposite}: 10px;
+}
+.inputfile-6:focus + label strong,
+.inputfile-6.has-focus + label strong,
+.inputfile-6 + label:hover strong {
+    background-color: $Success;
+}
+@media screen and (max-width: 50em) {
+	.inputfile-6 + label strong {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 992px){
+    .custom-control{
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.form-group.required{
+    label{   
+        &:not(.custom-control-label){
+            &:after{
+            content:'*';
+            color:$Danger;
+            margin-#{$Direction}:5px;;
+            font-size: 15px;
+            vertical-align: sub;
+            font-weight: $FW-Bold;
+            }
+        }
+    }
+}
+
+.control-inline{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .float-icon{
+        position: absolute;
+        top: 36px;
+        #{$Direction-Opposite}: 27px;
+        color: $MainColor;
+        &:hover,&:ative,&:focus{
+            cursor: pointer;
+        }
+    }
+    .icon-input{
+        padding-#{$Direction-Opposite}:40px !important;
+    }
+    &.disabled{
+        .float-icon{
+            pointer-events: none;
+            color: $MainColorLight;
+        }
+    }
+}
+
+.form-icons-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    flex-wrap: wrap;
+    li{
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+        label{
+            margin-bottom: 15px;
+        }
+        a{
+            font-size: 40px;
+            padding: 15px;
+            border: 1px solid $BorderColor;
+            color: $BorderColor;
+            border-radius: 15px;
+            max-width: 70px;
+            max-height: 70px;
+            min-width: 70px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &:hover,&:focus,&:active{
+                color: $ClearWhite;
+                cursor: pointer;
+                border-color: $LegendDefault;
+                background: $LegendDefault;
+            }
+        }
+        &.active{
+            a{
+                animation:  none !important;
+                color: $LegendSuccess;
+                border-color: $LegendSuccess;
+                &:hover,&:focus,&:active{
+                    color: $ClearWhite;
+                    border-color: $LegendSuccess  !important;
+                    background: $LegendSuccess  !important;
+                }
+            }
+        }
+        p{
+            font-size: 13px;
+            text-align: center;
+            font-weight: 300;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: $MainColorLight;
+            font-family: $MainFont;
+            min-height: 15px;
+            margin-bottom: 0px;
+        }
+        &.warning{
+            a{
+                -webkit-animation-name: mymove; /* Safari 4.0 - 8.0 */
+                animation-name: mymove; 
+                animation-duration: 0.6s; 
+                animation-timing-function: ease-out; 
+                animation-delay: 0;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-fill-mode: none;
+                animation-play-state: running;
+                &:hover,&:focus,&:active{
+                    border-color: $Warning;
+                    background: none;
+                }
+            }
+        }
+    }
+    &.margin-fixed{
+        li{
+            margin: 0px 15px;
+        }
+    }
+}
+
+.ui-autocomplete{
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    text-align: $Direction;
+}
+
+.dir-15{
+    .datepicker{
+        #{$Direction}:15px !important;
+    }
+}
+
+.min100vh-75vh{
+    min-height: calc(100vh - 75vh) !important;
+}
+.min100vh-60vh{
+    min-height: calc(100vh - 60vh) !important;
+}
+
+
+@-webkit-keyframes mymove {
+    
+    100% {color: $Warning;border-color: $Warning; transform: scale(1);}
+    0% {color: $BorderColor; border-color: $BorderColor; transform: scale(0.8);}
+    
+  }
+  
+  @keyframes mymove {
+    100% {color: $Warning;border-color: $Warning; transform: scale(1);}
+    0% {color: $BorderColor; border-color: $BorderColor; transform: scale(0.8);}
+    
+  }
+
+  .display-radio-group{
+      display: contents;
+  }

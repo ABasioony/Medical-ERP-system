@@ -1,0 +1,309 @@
+.data-section{
+    box-shadow: 0px 0px 0px 1px $BorderColor;
+    /* padding:64px 0px 0px 0px; */
+    overflow: hidden;
+    background:#fbfbfb;
+    .data-container{
+        overflow-y: auto;
+        overflow-x:hidden;
+        position: relative;
+        padding:0px;
+        height: calc(100vh - 60px);
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-direction: row;
+        .mCustomScrollBox{
+            width: 100%;
+        }
+
+        .section-Sub-header{
+            padding: 10px 10px;
+            justify-content:flex-#{$Justification-Opposite};
+            flex-direction: row ;
+            .section-Sub-header-right{
+                /*button,a{
+                    background: $SubColorLight;
+                    padding: 8px 16px;
+                    border-radius: 25px;
+                    color: $ClearWhite;
+                    margin-top: 5px;
+                    margin-#{$Direction}: 5px;
+                    border:none;
+                    outline:none !important;
+                    font-family: $MainFont;
+                }*/
+                button{
+                    padding: 6px 12px;
+                }
+                a:before{
+                    font:normal normal normal 14px/1 FontAwesome;
+                    margin-#{$Direction-Opposite}:10px;
+                }
+                a:hover,a:active,a:focus,button:hover,button:active,button:focus{
+                    cursor: pointer;
+                    background: $Warning;
+                }
+
+                .icon-btn{
+                    padding: 10px 11px;
+                    border-radius: 25px;
+                }
+                .input-group{
+                    display:inline-block;
+                    width:auto;
+                    input{
+                        border:none;
+                        outline:none !important;
+                        box-shadow:none;
+                        text-align:center;
+                        font-weight:$FW-Bold;
+                        color:$SubColorLight;
+                        width: 100px;
+                        display:inline-block;
+                        padding-right:5px;
+                        cursor:pointer;
+                    }
+                    .input-group-addon{
+                       background:none;
+                       border:none;
+                       color:$SubColorLight;
+                       width:auto;
+                       display:inline-block;
+                       height: 34px;
+                       padding:10px 12px;
+                       padding-left:0px;
+                    }
+               }
+            }
+
+            .counter{
+                padding:10px 0px;
+                padding-top: 0px;
+                .counter-item{
+                    .item-content{
+                        display:flex;
+                        align-items:center;
+                        flex-direction:column;
+                        align-items:center;
+                        background:$ClearWhite;
+                        padding:25px;    
+                        .data{
+                            width: 100%;
+                            border-#{$Direction-Opposite}:1px solid $BorderColor;
+                            h5{
+                            margin:0px;
+                            font-weight:$FW-Bold;
+                            color:$SubColorLight;
+                            text-align:center;
+                            }
+                            p{
+                                display:flex;
+                                justify-content:center;
+                                margin:0px;
+                                color:$SubColorLight;
+                                text-align:center;
+                                span{ margin-#{$Direction-Opposite}: 5px;}
+                            }
+                        }
+
+                    }
+                }
+                .counter-item:first-child{
+                    padding-#{$Direction-Opposite}:10px;
+                    .item-content{
+                        .data{border:none;}
+                        border-bottom-#{$Direction}-radius : 5px;
+                        border-top-#{$Direction}-radius : 5px; 
+                    }
+                }
+                .counter-item:last-child{
+                    .item-content{
+                        .data{border:none;}
+                        border-bottom-#{$Direction-Opposite}-radius : 5px;
+                        border-top-#{$Direction-Opposite}-radius : 5px;
+                    }   
+                }
+                .counter-item.danger{
+                    .data{
+                        h5,p{color:$Danger;}
+                    }
+                }
+
+            }
+        }
+        
+        .filter-div{
+            margin-top:15px;  
+            .main-filter-form{
+                border-bottom: 1px dashed $BorderColor;
+                padding:10px 0px;
+                .form-group{
+                    padding: 0px 15px;
+                }
+            }     
+        }
+
+        
+    }
+}
+
+.w-container{
+    background:$ClearWhite;
+}
+
+.index-data-section{
+    .data-container{
+        .data-container-body{
+            padding: 5px;
+            .counter{
+                padding: 0px 5px;
+                //max-width: 140px;
+                color: $ClearWhite;
+                align-content: center;
+                justify-content: center;
+                .body-container-div-body{
+                    padding: 10px !important;
+                    position: relative !important;
+                    flex-direction: row !important;
+                    .counter-data{
+                        align-items: center;
+                        p{
+                            margin-bottom: 0px;
+                            font-size: 18px;
+                            font-weight: $FW-Regular;
+                        }
+                        h3{
+                            font-size: 25px;
+                            font-weight: $FW-Bold;
+                            margin: 0px;
+                            line-height: 17px;
+                            padding: 0px;
+                            display: flex;
+                            flex-direction: column;
+                            margin-#{$Direction}: auto;
+                            align-items: flex-end;
+                            span{
+                                font-size: 14px;
+                                font-weight: $FW-Light;
+                                align-self: flex-end;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                    .icon{
+                        position: absolute;
+                        bottom: 0px;
+                        #{$Direction-Opposite}: 0px;
+                        font-size: 60px;
+                        margin-#{$Direction-Opposite}: 63px;
+                        margin-bottom: -31px;
+                        clip-path: rect(10px, 20px, 30px, 40px);
+                        -webkit-clip-path: inset(6% 0 34% 0);
+                        clip-path: inset(6% 0 34% 0);
+                        opacity: 0.6;
+                    }
+                    &.success{
+                        background: $LegendSuccess !important;
+                        h3{
+                            text-shadow: -1px 1px 0px $Success;
+                        }
+                    }
+                    &.danger{
+                        background: $LegendDanger !important;
+                        h3{
+                            text-shadow: -1px 1px 0px $Danger;
+                        }
+                    }
+                    &.warning{
+                        background: $LegendWarning !important;
+                        h3{
+                            text-shadow: -1px 1px 0px $Warning;
+                        }
+                    }
+                    &.default{
+                        background: $LegendDefault !important;
+                        h3{
+                            text-shadow: -1px 1px 0px $SubColorLight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .data-section{
+        padding-top: 0px;
+        .data-container{
+           height: calc(100vh - 120px);
+            .section-Sub-header{
+                .counter{
+                    .counter-item:first-child{
+                        padding-#{$Direction-Opposite}:0px !important;
+                        .item-content{
+                            border-top-#{$Direction-Opposite}-radius: 5px;
+                            border-bottom-#{$Direction}-radius: 0px;
+                            padding-bottom: 0px;
+                            .data{
+                                border-bottom:1px solid $BorderColor !important;
+                                padding-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+
+    .data-section.schedule-section{
+        padding-top: 0px;
+        .data-container{
+            height: auto;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 770px) {
+    .data-section{
+        .data-container{
+            .section-Sub-header{
+                .counter{
+                    .counter-item:first-child{
+                        padding-#{$Direction-Opposite}:0px !important;
+                        .item-content{
+                            border-top-#{$Direction-Opposite}-radius: 5px;
+                            border-bottom-#{$Direction}-radius: 0px;
+                            padding-bottom: 0px;
+                            .data{
+                                border-bottom:1px solid $BorderColor !important;
+                                padding-bottom: 25px;
+                            }
+                        }
+                    }
+                    .counter-item{
+                        .item-content{
+                            padding-bottom: 0px;
+                            .data{
+                                border:none !important;
+                                border-bottom:1px solid $BorderColor !important;
+                                padding-bottom: 25px;
+                            }
+                        }
+                    }
+                    .counter-item:last-child{
+                        .item-content{
+                            .data{
+                                border:none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

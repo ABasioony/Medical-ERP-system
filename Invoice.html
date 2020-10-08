@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro : Invoice</title>
+    <link rel="shortcut icon" type="image/ico" href="Images/fav.png" />
+    <!-- Styles -->
+    <link href="Content/css/styles.css" rel="stylesheet">
+    <link href="Content/css/datatables.min.css" rel="stylesheet">
+    <!-- /Styles -->
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/G7/functions.js"></script>
+    <script src="js/G7/scripts.js"></script>
+    <!-- /Scripts -->
+
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container row no-gutters col position-relative" id="pageContainer">
+            <div class="data-section d-inline-flex col position-retaive col-12 full-tab-page">
+                <div class="row no-gutters data-container col-12 position-relative">
+                    <!-- <div class="data-container-header row no-gutters col-12 print-tools">
+                        <div class="section-header-tools">
+                            <div class="data-container-body-header-controls row no-gutters">
+                                <a class="gbtn gbtn-danger fa fa-reply-all" href="../MedicalModule/Accounting-Transactions-Invoices-Index.html">Back</a>
+                                <a class="gbtn gbtn-success fa fa-money">Pay Invoice</a>
+                                <a class="gbtn fa fa-file-pdf-o icon-gbtn"></a>
+                                <a class="gbtn gbtn-success fa fa-envelope-o icon-gbtn"></a>
+                                <a class="gbtn gbtn-dark fa fa-print icon-gbtn"></a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="data-container-header row no-gutters col-12">
+                        <div class="section-header-main col-md col-12">
+                            <img src="Images/img.png">
+                            <div class="company-data">
+                                <h3>G7 Software House</h3>
+                                <p>23 Horia Street , Alexandria , Egypt</p>
+                                <p>01100000000</p>
+                            </div>
+                        </div>
+                        <div class="section-header-sub">
+                            <h3>Invoice</h3>
+                            <p class="col-12">
+                                <span> 21 March 2018<!-- @DateTime.Now.Day/@DateTime.Now.Month/@DateTime.Now.Year --> </span> - <span id="digitalClock"> 11:57 AM</span>  
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Data Container Body -->
+                    <div class="data-container-body row no-gutters col-12 ">
+                        <!-- Data Container Body Content-->
+                        <div class="col-12 row no-gutters data-container-body-content">
+                            <div class="col-12 row no-gutters data-container-body-content-main">
+                                <div class="data-container-body-content-main-body col-12 row no-gutters full-h no-footer">
+                                    <div class="data-desc-header row no-gutters col-12 detail-data">
+                                        <div class="data-desc-header-content row no-gutters col-12">
+                                            <div class="main-data col-12">
+                                                <h4> General Data</h4>
+                                                <div class="form-group col-xl-2 col-md-3 col-12 ">
+                                                    <label>Invoice Number</label> 
+                                                    <input type="text" class="form-control" name="InvoiceNumber" id="InvoiceNumber" value="Invoice Number" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-md-3 col-12 ">
+                                                    <label>Date/Time</label> 
+                                                    <input type="text" class="form-control" name="dateTime" id="DateTime" value="Date/Time" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-3 col-md-3 col-12 ">
+                                                    <label>Invoice Type</label> 
+                                                    <input type="text" class="form-control" name="InvoiceType" id="InvoiceType" value="Cash / Postponed" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-md-3 col-12">
+                                                    <label>Branch</label> 
+                                                    <input type="text" class="form-control" name="branch" id="Branch" value="Branch" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                    <label>Patient Code/Name</label> 
+                                                    <input type="text" class="form-control" name="patientCodeName" id="patientCodeName" value="Patient Code / Name" disabled>
+                                                </div> 
+                                                <div class="form-group col-xl-2 col-md-3 col-12 ">
+                                                    <label>Payment Status</label> 
+                                                    <input type="text" class="form-control" name="PaymentStatus" id="PaymentStatus" value="Payment Status" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-md-3 col-12 ">
+                                                    <label>Offer</label> 
+                                                    <input type="text" class="form-control" name="Offer" id="Offer" value="Offer" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-3 col-md-3 col-12 ">
+                                                    <label>Invoice Status</label> 
+                                                    <input type="text" class="form-control" name="InvoiceStatus" id="InvoiceStatus" value="Full Paid / Partial paid / Not paid" disabled>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-md-3 col-12 ">
+                                                    <label>Invoice Source</label> 
+                                                    <input type="text" class="form-control" name="InvoiceSource" id="InvoiceSource" value="Invoice Source" disabled>
+                                                </div>
+                                            </div>
+                                            <!--------------- Personal Informations : End ------------------>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 data-desc-body detail-data">
+                                        <div class="data-desc-body-container row no-gutters col-12">
+                                            <div class="data-desc-body-container-body row no-gutters col-12 ">
+                                                <!--------------- Services List : Begin ------------------>
+                                                <div class="list-collapse-item col-12 row no-gutters pr-2 pl-2">
+                                                    <a class="col-12"><h4>Reservation Number / Dr - Name</h4></a>
+                                                    <div class="list-collapse-item-container col-12">
+                                                        <div class="header row col-12 no-gutters">
+                                                            <div class="form-group">
+                                                                <label>Clinic</label>
+                                                                <input type="text" class="form-control" name="Clinic" id="Clinic" value="Clinic" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Doctor</label>
+                                                                <input type="text" class="form-control" name="Doctor" id="Doctor" value="Doctor" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Room Number</label>
+                                                                <input type="text" class="form-control" name="RoomNumber" id="RoomNumber" value="Room Number" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                    <label>Reservation Number</label>
+                                                                    <input type="text" class="form-control" name="ReservationNumber" id="ReservationNumber" value="Reservation Number" disabled>
+                                                                </div>
+                                                        </div>
+                                                        <div class="result-table col-12 row no-gutters auto-h pr-0 pl-0" id="Services-result">
+                                                            <div class="data-table table-responsive col-12">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Service Type</th>
+                                                                            <th>Service Code / Description</th>
+                                                                            <th>Service Price</th>
+                                                                            <th>Currency</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Service Type</td>
+                                                                            <td>Code / Description</td>
+                                                                            <td class="default">250</td>
+                                                                            <td>LE</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-collapse-item col-12 row no-gutters pr-2 pl-2">
+                                                    <a class="col-12"><h4>Reservation Number / Dr - Name</h4></a>
+                                                    <div class="list-collapse-item-container col-12">
+                                                        <div class="header row col-12 no-gutters">
+                                                            <div class="form-group">
+                                                                <label>Clinic</label>
+                                                                <input type="text" class="form-control" name="Clinic" id="Clinic" value="Clinic" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Doctor</label>
+                                                                <input type="text" class="form-control" name="Doctor" id="Doctor" value="Doctor" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label>Room Number</label>
+                                                                <input type="text" class="form-control" name="RoomNumber" id="RoomNumber" value="Room Number" disabled>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                    <label>Reservation Number</label>
+                                                                    <input type="text" class="form-control" name="ReservationNumber" id="ReservationNumber" value="Reservation Number" disabled>
+                                                                </div>
+                                                        </div>
+                                                        <div class="result-table col-12 row no-gutters auto-h pr-0 pl-0" id="Services-result">
+                                                            <div class="data-table table-responsive col-12">
+                                                                <table class="table">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>Service Type</th>
+                                                                            <th>Service Code / Description</th>
+                                                                            <th>Service Price</th>
+                                                                            <th>Currency</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Service Type</td>
+                                                                            <td>Code / Description</td>
+                                                                            <td class="default">250</td>
+                                                                            <td>LE</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--------------- Services List : End ------------------>
+                                                <div class="col-12"></div>
+                                                <div class="row col-xl-6 col-12 no-gutters">
+                                                    <!--------------- Additions : Begin ------------------>
+                                                    <h4>Additions</h4>
+                                                    <div class="result-table col-12 row no-gutters auto-h" id="Additions-result">
+                                                        <div class="data-table table-responsive col-12">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Addition Name</th>
+                                                                        <th>Percentage</th>
+                                                                        <th>Value</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="warnning">
+                                                                        <td>Addition Name</td>
+                                                                        <td>50%</td>
+                                                                        <td>250</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row col-xl-6 col-12 no-gutters">
+                                                    <!--------------- Deductions : End ------------------>
+                                                    <h4>Deductions</h4>
+                                                    <div class="result-table col-12 row no-gutters auto-h" id="Deductions-result">
+                                                        <div class="data-table table-responsive col-12">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Discount</th>
+                                                                        <th>Percentage</th>
+                                                                        <th>Value</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="danger">
+                                                                        <td>Discount 1</td>
+                                                                        <td>50%</td>
+                                                                        <td>500</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--------------- Payment Methods : Begin ------------------>
+                                                
+                                                <div class="col-xl-7 col-12  row total-data">
+                                                    <h4>Total Values</h4>
+                                                    <div class="col-xl-6 col-md-6 col-12 row sum-values no-gutters">
+                                                        <div class="total-data-item row no-gutters col-12 default">
+                                                            <p>Services</p><span>250</span><span>SR</span>
+                                                        </div>
+                                                        <div class="total-data-item row no-gutters col-12 warning">
+                                                            <p>Additions</p><span>250</span><span>SR</span>
+                                                        </div>
+                                                        <div class="total-data-item row no-gutters col-12 danger">
+                                                            <p>Deductions</p><span>250</span><span>SR</span>
+                                                        </div>
+                                                    </div>
+                                                    <!--   <div class="divider col-12"></div> -->
+                                                    <div class="total-data-item-total col-xl-6 col-md-6 col-12 row no-gutters">
+                                                        <h4 class="col-12">Total</h4>
+                                                        <div class="col-12">
+                                                            <span>750</span><span>SR</span>
+                                                        </div>
+                                                        <p class="col-12">Seven Hundred and Fifty Saudi Riyal</p>
+                                                    </div>
+                                                </div>
+                                                <!--------------- Payment Methods : End ------------------>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-container-footer row no-gutters col-12 ">
+                        <p>Thank You For Your Trust</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        InitdataTable("Services-result",
+                    ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+                    ,[true,false,false,false,-1,false]);
+        InitdataTable("Additions-result",
+                    ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+                    ,[true,false,false,false,-1,false]);
+        InitdataTable("Deductions-result",
+                    ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+                    ,[true,false,false,false,-1,false]);
+
+        $(document).ready(function(){
+            checkTableSize("Services-result");
+            checkTableSize("Additions-result");
+            checkTableSize("Deductions-result");
+        });
+
+        $(window).on('resize', function(e) {
+            if ($('table').closest('div').hasClass('data-table')) {
+                redrawTable();
+            }
+        });
+    </script>
+</body>
+</html>

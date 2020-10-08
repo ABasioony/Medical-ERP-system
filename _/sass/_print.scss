@@ -1,0 +1,287 @@
+﻿.printable{
+    .printed{display: none;}
+    .data-container-header{
+        //border-bottom: 1px solid $BorderColor;
+
+        padding: 0px 10px;
+        img{
+            width:100px;
+        }
+        .company-data{
+            p{margin:0px; text-align: $Direction;}
+            h3{
+                width: 100%;
+                font-weight: $FW-Bold;
+                text-align: $Direction-Opposite;
+                text-transform: uppercase;
+                padding: 0px;
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                text-align: $Direction;
+            }
+        }
+        &.printed{
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+    }
+    .detail-data .total-div .total-data-item-total{
+        margin-bottom: 0px;
+    }
+    .single-col{
+
+        th{
+            text-align: $Direction !important;
+            padding-#{$Direction}:25px !important;
+        }
+        td{
+            text-align: $Direction !important;
+            padding-#{$Direction}:25px !important;
+        }
+    }
+}
+@media print{
+
+    body{
+        width: 21cm;
+        height: 29.7cm;
+    }
+    .comp-logo{
+        display: none;
+    }
+    .data-container,.data-container-body{
+        height: auto !important;
+        min-height: auto !important;
+    }
+    .main-container,.data-container-body-content-main,.data-container-body-content-main-body,.data-table{
+        height: 100% !important;
+        min-height: 100% !important;
+
+    }
+    .data-table{
+        height: 100% !important;
+                min-height: 100% !important;
+        .dataTables_wrapper{
+            height: 100% !important;
+                min-height: 100% !important;
+            .datatable-table{
+                height: 100% !important;
+                min-height: 100% !important;
+                .dataTable{
+                    height: 100% !important;
+                    min-height: 100% !important;
+                }
+            }
+        }
+    }
+    .timeline-item-body{
+      border: none;
+    }
+    .sidebar,.page-header{display:none;}
+    .printed{display: flex !important;}
+   /*  page-break-after:always ; */
+    .printable{
+        padding:0px !important;
+        background: $ClearWhite !important;
+        overflow :auto !important;
+        box-shadow: none !important;
+        .data-container{
+            height: 100vh;
+            .data-container-header{
+                margin-bottom: 15px !important;
+                padding: 0px 10px !important;
+                &.printed{display: flex !important;}
+            }
+            .header-total{
+                display: block;
+                .section-header-tools{
+                    border:none;
+                    border-bottom: 1px solid $MainColor;
+                    .legends{
+                        .gbtn-o {
+                            border:none;
+                            width: auto;
+                            width:50%;
+                            text-align: $Direction-Opposite;
+                        }
+                    }
+                }
+            }
+            .data-container-body {
+                padding: 0px;
+                .data-container-body-content{
+                    .data-container-body-content-main{
+                        .data-container-body-content-main-body{
+                            padding: 0px;
+                            border:none;
+                            .data-desc-header{
+                                padding: 0px;
+                                .data-desc-header-content{
+                                    .main-data{
+                                        h4{
+                                            border-color: $MainColorLight;
+                                            font-size: 20px;
+                                        }
+                                        h2{
+                                            margin-top: 10px;
+                                            border-color: $MainColorLight;
+                                        }
+                                    }
+                                }
+                            }
+                            .data-table {
+                                .dataTables_wrapper {
+                                    .datatable-table{
+                                        border: none !important;
+                                        padding: 0px !important;
+                                        height: 100% !important;
+                                        .table {
+                                            thead{
+                                                tr {
+                                                    th:after,th:before{content: ""}
+                                                    .tools-th{display: none !important;}
+                                                }
+                                            }
+                                            tbody{
+                                                tr{
+                                                    .tools-td{display: none !important;}
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .datatable-footer{
+                                        display: none !important;
+                                    }
+                                }
+                            }
+                        }
+                        .data-desc-body{
+                            .data-desc-body-container{
+                                padding:0px;
+                                .data-desc-body-container-body{
+                                    h4{
+                                        border-color: $MainColorLight;
+                                        font-size: 20px;
+                                    }
+                                    .table{
+                                        thead{
+                                            th{
+                                                border-color: $MainColorLight;
+                                            }
+                                            .check-head{
+                                                width: 0px !important;
+                                                .custom-control{display: none !important;}
+                                            }
+
+                                        }
+                                        tbody tr{
+                                            background: $BorderColor !important;
+                                            .check-data{
+                                                width: 0px !important;
+                                                .custom-control{display: none !important;}
+                                            }
+                                        }
+                                    }
+                                    table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before{
+                                        display: none;
+                                    }
+                                    table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .data-container-body-content-sub{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media print{
+    .dt-print-view{
+        .table{
+            thead{tr{th{font-size: 10px !important;}}}
+            tbody{tr{td{font-size: 10px !important;}}}
+        }
+    }
+}
+
+.dt-print-view{
+    h1{
+       display: none;
+    }
+    .data-container-header{
+        padding: 0px 5px !important;
+        border-bottom: 1px solid $BorderColor;
+        &.header-total{border:none;}
+        min-height: 30px;
+        .section-header-main {
+            img{
+                width: 100px;
+                margin-#{$Direction-Opposite}:10px;
+                height: 100px;
+                object-fit: contain;
+            }
+            h3,p{margin: 0px; text-align: $Direction;}
+        }
+        .section-header-tools {
+            border:none;
+            padding: 10px 0px !important;
+            .legends{
+                padding: 0px;
+                div{
+                    border-#{$Direction-Opposite}: 1px solid $BorderColor;
+                    padding: 0px 10px;
+                    text-align: right;
+                    margin: 0px;
+                    p{
+                        padding: 0px;
+                        color: $MainColor;
+                        font-size: 14px;
+                    }
+                    &:last-child{
+                        border: none;
+                    }
+                    &.warning{p{color: $Warning;}}
+                    &.success{p{color: $Success;}}
+                    &.danger{p{color: $Danger;}}
+                    &.default{p{color: $SubColorLight;}}
+                }
+                .gbtn-o{
+                    &:hover,&:active,&:focus{
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+    .table{
+        padding: 15px;
+        border-collapse: collapse !important;
+        margin: 0px !important;
+        thead{
+            tr{
+                th{
+                    border: 1px solid $BorderColor;
+                    font-size: 12px;
+                    padding: 0.5rem 0.25rem;
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    border: 1px solid $BorderColor;
+                    font-size: 12px;
+                    padding: 0.2rem 0.25rem;
+                }
+            }
+        }
+    }
+}

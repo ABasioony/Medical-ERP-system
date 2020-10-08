@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro : Invoice</title>
+    <link rel="shortcut icon" type="image/ico" href="Images/fav.png" />
+    <!-- Styles -->
+    <link href="Content/css/styles.css" rel="stylesheet">
+    <link href="Content/css/datatables.min.css" rel="stylesheet">
+    <!-- /Styles -->
+    <!-- Scripts -->
+    <script src="Content/js/jquery-3.2.1.min.js"></script>
+    <script src="Content/js/popper.min.js"></script>
+    <script src="Content/js/bootstrap.bundle.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/datatables.min.js"></script>
+    <script src="Content/js/G7/functions.js"></script>
+    <script src="Content/js/G7/scripts.js"></script>
+    <!-- /Scripts -->
+
+</head>
+<body>
+    <div class="invoice-wrapper">
+        <!-------------- Page Header : Begin ---------------->
+        <div class="data-container-header row no-gutters col-12">
+            <div class="section-header-tools flow-tools">
+                <div class="data-container-body-header-controls row no-gutters">
+                    <div class="controls-section row no-gutters ">
+                        <a class="gbtn gbtn-dark fa fa-print icon-gbtn print-html" title="طباعة"><span class="title">طباعة</span></a>
+                        <a class="gbtn gbtn-warning fa fa-adjust icon-gbtn" title="تغيير التصميم" onclick="changeDesign()"><span class="title">تغيير التصميم</span></a>
+                        <a class="gbtn gbtn-danger fa fa-reply-all icon-gbtn" title="رجوع"><span class="title">رجوع</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="row col-12 no-gutters">
+                
+            <div class="col-10 row data">
+                <div class="title col-7 alignStart">
+                    <h1>تقرير الاجازة المرضية</h1>
+                </div>
+                <div class="header-block"></div>
+                <div class="header-block success"></div>
+            </div>
+            <div class="logo col-2">
+                <img src="Content/Images/logo.png">
+            </div>
+            
+        </header> 
+        <section class="col-12 row no-gutters invoice-body">
+            <div class="sub-header row pPatient col-11">               
+            </div> 
+            <h5 class="col-12">البيانات المريض - Patient Data</h5>
+            <div class="PatientDetails DetailsBody col-11">
+                
+                <div class=" details row col-12">
+                    <p class="Arabic col">اسم المريض </p>
+                    <p class="Data col">اسم المريض</p>
+                    <p class="English col">Patient Name </p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">رقم السجل الطبي </p>
+                    <p class="Data col">10212021</p>
+                    <p class="English col">Medical Record </p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">الجنس</p>
+                    <p class="Data col">الجنس</p>
+                    <p class="English col">Gender</p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">الجنسية</p>
+                    <p class="Data col">الجنسية</p>
+                    <p class="English col">Nationality</p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">تاريخ الميلاد</p>
+                    <p class="Data col">تاريخ الميلاد</p>
+                    <p class="English col">Date of Birth</p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">المهنة</p>
+                    <p class="Data col">المهنة</p>
+                    <p class="English col">Occupation</p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">جهة العمل</p>
+                    <p class="Data col">جهة العمل</p>
+                    <p class="English col">Place Of Work</p>
+                </div>
+                <div class=" details row col-12">
+                    <p class="Arabic col">تاريخ المراجعة</p>
+                    <p class="Data col">تاريخ المراجعة</p>
+                    <p class="English col">Date Of Visit</p>
+                </div>
+                <div class=" details row col-12">
+                        <p class="Arabic col">تاريخ الدخول</p>
+                        <p class="Data col">تاريخ الدخول</p>
+                        <p class="English col">ADM Date</p>
+                </div>
+                <div class=" details row col-12">
+                        <p class="Arabic col">تاريخ الخروج</p>
+                        <p class="Data col">تاريخ الخروج</p>
+                        <p class="English col">Discharge Date</p>
+                </div>
+                <!-- <div class="details row col-12">
+                    <p class="Arabic col">الباركود</p>
+                    <img src="./Content/Images/qr-code.png" alt="Quick Reader" class="img-thumbnail" width="100px"/>
+                    <p class="English col">BarCode</p>
+                </div> -->
+            </div>
+            <h5 class="col-12">التوصيات - Recommendations</h5>
+            <div class="ReportDetails DetailsBody col-11">
+                
+                <div class="details row col-12">
+                        <p class="Arabic col">منحه اجازة مرضية لمدة </p>
+                        <p class="Data col">5 ايام</p>
+                        <p class="English col">Sick Leave For</p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">من تاريخ  <span class="fromDate"> 1/1/2019 </span> الى تاريخ <span class="toDate"> 5/1/2019 </span> </p>
+                        <p class="English col">From Date  <span class="fromDate"> 1/1/2019 </span> To Date <span class="toDate"> 5/1/2019 </span> </p>
+                </div>
+            </div>
+            <h5 class="col-12">الطبيب - Doctor</h5>
+            <div class="DoctorDetails DetailsBody col-11 mb-0">
+                <div class="details row col-12">
+                        <p class="Arabic col">اسم الطبيب المعالج </p>
+                        <p class="Data col">اسم الطبيب المعالج</p>
+                        <p class="English col">Doctor Name</p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">التوقيع / </p>
+                        
+                        <p class="English col">/ Signature </p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">اسم المدير الطبي </p>
+                        <p class="Data col">اسم المدير الطبي</p>
+                        <p class="English col">Physician Name</p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">التوقيع / </p>
+                        
+                        <p class="English col">/ Signature </p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">تصديق المدير  </p>
+                        <p class="Data col">اسم المؤسسة</p>
+                        <p class="English col">Director Of</p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">اسم المدير  </p>
+                        <p class="Data col">اسم المدير </p>
+                        <p class="English col">Director Name</p>
+                </div>
+                <div class="details row col-12">
+                        <p class="Arabic col">التوقيع / </p>
+                        
+                        <p class="English col">/ Signature </p>
+                </div>
+            </div>
+            <div class="DetailsBody border-0 mb-0">
+                <div class="details">
+                    <img src="./Content/Images/qr-code.png" alt="Quick Reader" class="img-thumbnail" width="120px"/>
+                    
+                </div>
+            </div>
+        </section>
+        <footer class="row col-12 fixedBottom no-gutters">
+            
+            <div class="main-footer   row col-12">
+                <div class="col-md-3 col-3 thanks">
+                    <p>شكرا على ثقتكم بنا</p>
+                </div>
+                <div class="col-md-6  col-8 footer-data">
+                    <div class="footer-data-div row col-12">
+                        <p>المملكة العربية السعودية- الطائف</p>
+                        <p>التليفون : <span>055923415231</span></p>
+                        <p>الجوال : <span>01224075602</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-block blue"></div>
+            <div class="footer-block"></div>
+            <div class="footer-block white"></div>
+            <div class="flat-block"></div>
+        </footer>
+    </div>
+    <script>
+        function changeDesign(){
+            if(!$(".invoice-wrapper").hasClass("print-wrap")){
+                $(".invoice-wrapper").addClass("print-wrap");
+            }else{
+                $(".invoice-wrapper").removeClass("print-wrap");
+            }
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,1433 @@
+﻿<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro </title>
+    <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png" />
+
+    <!------------------- Styles : Begin ---------------------->
+    <link href="../Content/css/ag-grid.css" rel="stylesheet">
+    <link href="../Content/css/ag-theme-balham.css" rel="stylesheet">
+    <link href="../Content/css/styles.css" rel="stylesheet">
+    <link href="../Content/css/datatables.min.css" rel="stylesheet">
+    <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+    <link href="../Content/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../Content/css/Tree/style.min.css" />
+
+    <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+    <link href="../Content/css/animate.min.css" rel="stylesheet" />
+    <link href="../Content/css/select2.min.css" rel="stylesheet" />
+    <link href="../Content/css/flags.css" rel="stylesheet" />
+    <!------------------- Styles : End ---------------------->
+
+    <!------------------- Scripts : Begin ---------------------->
+    <script src="../Content/js/jquery-3.2.1.min.js"></script>
+    <script src="../Content/js/jquery.custom-file-input.js"></script>
+    <script src="../Content/js/datatables.min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/jquery-ui.min.js"></script>
+
+    <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+    <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+    <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+    <script src="../Content/js/jquery.validationEngine.js"></script>
+    <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="../Content/js/select2.min.js"></script>
+    <script src="../Content/js/jquery.flagstrap.min.js"></script>
+    <script src="../Content/js/downtime.js"></script>
+    <script src="../Content/js/loadingoverlay.min.js"></script>
+
+    <script src="../Content/js/ResizeSensor.js"></script>
+    <script src="../Content/js/ElementQueries.js"></script>
+
+    <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+    <script src="../Content/js/jstree.min.js"></script>
+
+    <script src="../Content/js/G7/DataTableConfig.js"></script>
+    <script src="../Content/js/G7/functions.js"></script>
+    <script src="../Content/js/G7/scripts.js"></script>
+    <script src="../Content/js/G7/Scripts_Html.js"></script>
+    <!------------------- Scripts : End ---------------------->
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <!------------------- Sidebar : Begin ---------------------->
+        <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <!-- Index : Begin -->
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                        </li>
+                        <!-- Index : end -->
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-calculator">النظام المحاسبى</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="2" data-parent="0">
+                            <a class="fi-cash flaticon-profit">ادارة النقدية</a>
+                        </li>
+                        <!-- Financial Module : Begin -->
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>إسم المؤسسة</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>النظام المحاسبى</h3>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-bank-building leaf-node" href="./Definitions-CostCentersDimentions-index.html">
+                                                أبعاد مراكز التكلفة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-contract-1 leaf-node" href="./Definitions-FinancialStatments-index.html">الحسابات
+                                                الختامية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-payment-day leaf-node" href="./Definitions-AccountingPeriods-index.html">الفترات
+                                                المحاسبية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-statistics leaf-node" href="./Definitions-AnalyticalJournalsTypes-index.html">أنواع
+                                                اليوميات التحليلية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-mortgage-loan leaf-node" href="./Definitions_CostCentersTree.html">مراكز
+                                                التكلفة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics-1 leaf-node" href="./Definitions-AuditRatings.html">تصنيفات
+                                                الحسابات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-business-affiliate-network leaf-node" href="./Definitions-ChartOfAccounts.html">شجرة
+                                                الحسابات</a>
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-exchange node">الحركات</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-notepad leaf-node" href="./Transaction-OpeningJornalEntry-index.html">القيد
+                                                الافتتاحى</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics leaf-node" href="./Transactions-DailyJournals_index.html">قيود
+                                                اليوميه العامه</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-task-complete leaf-node" href="./Transactions-ClosingJornalEntry-index.html">قيود
+                                                الاقفال</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-clipboard node">التقارير</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="./Reports-General ledger account-form.html">حساب
+                                                الاستاذ العام</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-scale-1 leaf-node" href="./Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان
+                                                مراجعة الاستاذ العام</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-shopping-list leaf-node" href="./Reports-FinancialMenus.html">القوائم
+                                                الماليه للحسابات الختاميه</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <!-- Financial Module : End -->
+                        <!-- Financial Module - Cash Management : Begin -->
+                        <li class="sub-list-l" data-nodeid="6" data-parent="2">
+                            <div class="sub-list-header">
+                                <h2>إسم المؤسسة</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>النظام المحاسبى</h3>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-safebox leaf-node" href="../FinancialModule_CashManagement/Definitions-ListOfSafesAndBanks.html">
+                                                قائمة الخزائن و البنوك</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet leaf-node" href="../FinancialModule_CashManagement/Definitions-ListOfIncomesAndExpenses.html">الايرادات و المصروفات المتنوعة</a>
+                                        </li>
+                                           
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-exchange node">الحركات</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-money-bag leaf-node" href="../FinancialModule_CashManagement/Transactions-OpenningAccounts-Index.html">الارصدة الافتتاحية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-agreement leaf-node" href="../FinancialModule_CashManagement/Transactions-DailyExpenses-index.html">يومية المصروفات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-money leaf-node" href="../FinancialModule_CashManagement/Transactions-CashAndPaymentStatus-Index.html">حالة اوراق القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-pay leaf-node" href="../FinancialModule_CashManagement/Transactions-BillsOfExchange-index.html">سندات الصرف</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet-1 leaf-node" href="../FinancialModule_CashManagement/Transactions-Receipts-index.html">سندات القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-signing-the-contract  leaf-node" href="../FinancialModule_CashManagement/Transactions-CheckReview-index.html">متابعة الشيكات</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-clipboard node">التقارير</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-money leaf-node" href="../FinancialModule_CashManagement/Reports-CashFlow.html">السيولة النقدية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-bitcoin leaf-node" href="../FinancialModule_CashManagement/Reports-CashStatus.html">حالة الاوراق المالية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-send leaf-node" href="../FinancialModule_CashManagement/Reports-ChequeStatus.html">حالة الشيكات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-pay leaf-node" href="../FinancialModule_CashManagement/Reports-BillsOfExchange.html">سندات الصرف</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet-1 leaf-node" href="../FinancialModule_CashManagement/Reports-Receipts.html">سندات القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-mortgage-loan leaf-node" href="../FinancialModule_CashManagement/Reports-BankStatement.html">كشف حساب البنك و الخزينة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-scale-1 leaf-node" href="../FinancialModule_CashManagement/Reports-CheckBalanceOfBanks.html">ميزان مراجعة الخزائن و البنوك</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-bank leaf-node" href="../FinancialModule_CashManagement/Reports-MaxMinBankCredit.html">مقارنة ارصدة الخزائن و البنوك</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <!-- Financial Module - Cash Management : End -->
+                    </ul>
+                </div>
+            </aside>
+        <!------------------- Sidebar : End ------------------------>     
+
+        <!----------------- Main Header : Begin -------------------->
+        <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+            <div class="container-fluid">
+                <div class="row no-gutters header-container">
+                    <!-- Header Left -->
+                    <div class="header-left col-xl col-12">
+                        <div class="company-logo row no-gutters">
+                            <!-- <img src="../Content/Images/fav.png" /> -->
+                            <h3>G7 Financial Pro</h3>
+                        </div>
+                        <ul class="nav">
+                            <li class="devider"></li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="الروابط المختصرة">
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">الروابط المختصرة</h6>
+                                    <div class="dropdown-body">
+                                        <div class="col-4 tool-link">
+                                            <a class="row success" title="شجرة الحسابات">
+                                                <span class="fi flaticon-business-affiliate-network"></span>
+                                                <p>شجرة الحسابات</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row warning" title="مراكز التكلفه">
+                                                <span class="fi flaticon-mortgage-loan"></span>
+                                                <p>مراكز التكلفه</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row danger" title="قيود الإقفال">
+                                                <span class="fi flaticon-task-complete "></span>
+                                                <p>قيود الإقفال</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row default" title="القيد الإفتتاحى">
+                                                <span class="fi flaticon-notepad"></span>
+                                                <p>القيد الإفتتاحى</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">إضافة المزيد</a>
+                                </div>
+                            </li>
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-globe" title="تغيير اللغة"></a>
+                            </li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill">4</span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">التنبيهات</h6>
+                                    <div class="from-group col-12 search-input">
+                                        <input class="form-control" type="text" placeholder="تصفية الإشعارات" />
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <ul class="dropdown-body notifications" id="notifydata">
+                                        <li class="dropdown-item">
+                                            <a class="warning">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 1</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 6 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="danger">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 2</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="success">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنيه 3</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 10 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="default">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 4</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">عرض المزيد</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <ul class="nav user-tools col">
+                        <li class="devider"></li>
+                        <li class="icon-link normal-link icon-sqr">
+                            <a class="fa fa-user-plus" title="Add New Patient"></a>
+                        </li>
+                        <li class="icon-link normal-link form-div icon-sqr row col">
+                            <span class="fa fa-search"></span>
+                            <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                        </li>
+                    </ul> -->
+                        <div class="row no-gutters header-data col">
+                            <div class="header-data-item col-12 row no-gutters">
+                                <label class="label">اسم الشركة</label>
+                                <label class="data">اسم المؤسسة</label>
+                            </div>
+                            <div class="header-data-item col-12 row no-gutters">
+                                <label class="label">العام المالي</label>
+                                <label class="data">2018/2019</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Header Right -->
+                    <div class="header-right">
+                        <ul class="nav">
+                            <li class="date-time">
+                                <p>21 March 2018</p>
+                                <p class="night fa fa-moon-o">11:57 PM</p>
+                                <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                            </li>
+                            <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <div class="user-img d-inline-block align-middle">
+                                        <img src="../Content/Images/img.jpg" alt="user">
+                                    </div>
+                                    <div class="user-data d-inline-block align-middle">
+                                        <p class="m-0">مرحبا</p>
+                                        <h4 class="m-0">M.Khalifa</h4>
+                                    </div>
+                                    <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Hot Tools</h6>
+                                    <div class="dropdown-body">
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>الملف الشخصى</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>الإعدادات</p>
+                                                    <span class="badge badge-pill">جديد</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>المساعدة</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>تسجيل خروج</p>
+                                                    <span class="fa fa-sign-out icon"></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <a class="dropdown-footer" href="Login.html">
+                                    <div class="row no-gutters">
+                                        <p class="col">Log Out</p>
+                                        <span class="fa fa-sign-out"></span>
+                                    </div>
+                                </a> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!----------------- Main Header : End -------------------->
+
+        <!--------------- Page Container : Begin ------------------>
+        <div class="page-container row no-gutters col position-relative" id="pageContainer">
+            <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                <form class="row no-gutters data-container col-12 position-relative">
+                    <div class="data-container-header row no-gutters col-12">
+                        <div class="section-header-main col-md col-12">
+                            <span class="fi flaticon-scale-1"></span>
+                            <div class="data d-inline-block align-middle">
+                                <h4 class="m-0">مراجعة حساب الاستاذ العام</h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">الرئيسية</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">مراجعة حساب الاستاذ العام</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="section-header-tools">
+                            <div class="data-container-body-header-controls row no-gutters">
+                                <div class="row no-gutters controls-section br">
+                                    <a class="gbtn gbtn form-clear-btn fa fa-eraser" title="مسح"><span class="title">مسح</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-times" title="إلغاء"><span class="title">إلغاء</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-reply-all " title="خروج"><span class="title">خروج</span></a>
+                                </div>
+                                <div class="controls-section row no-gutters ">
+
+                                    <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="طباعة"><span class="title">طباعة</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Data Container Body -->
+                    <div class="data-container-body row no-gutters col-12 ">
+                        <!-- Data Container Body Content-->
+                        <div class="col-12 row no-gutters data-container-body-content">
+                            <div class="col-12 row no-gutters data-container-body-content-main split-container">
+                                <div class="col-12">
+                                    <div class="data-container-body-content-main-body row no-gutters no-footer tree-form h-auto">
+                                        <div class="data-desc-header row no-gutters col-12">
+                                            <div class="data-desc-header-content row no-gutters col-12 no-br">
+                                                <div class="main-data col">
+                                                    <h4>معايير التقرير</h4>
+                                                    <div class="form-group col-xl-3 col-lg-3 col-md-6 col-12 ">
+                                                        <label>من حساب</label>
+                                                        <input type="text" class="form-control" name="FromAccount" id="FromAccount"
+                                                            placeholder="من حساب">
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-lg-3 col-md-6 col-12 ">
+                                                        <label>الي حساب</label>
+                                                        <input type="text" class="form-control" name="ToAccount" id="ToAccount"
+                                                            placeholder="الي حساب">
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-lg-3 col-md-6 col-12 ">
+                                                        <label>من تاريخ</label>
+                                                        <input type="" class="form-control  fdatepickere datepickereStart"
+                                                            name="StartDate" id="StartDate" placeholder="من تاريخ">
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-lg-3 col-md-6 col-12 ">
+                                                        <label>الى تاريخ</label>
+                                                        <input type="" class="form-control  fdatepickere datepickereEnd"
+                                                            name="EndDate" id="EndDate" placeholder="الي تاريخ">
+                                                    </div>
+
+                                                    <div class="form-group col-xl-3 col-lg-3 col-md-6 col-12 ">
+                                                        <label>الحساب الختامي</label>
+                                                        <input type="text" class="form-control" name="FinalAccount" id="finalAccount"
+                                                            placeholder="الحساب الختامي">
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-md-6 col-12 required select-single">
+                                                            <label>مستويات الحساب الختامي</label>
+                                                            <select class="form-control" name="finalAccountsLevel" id="finalAccountsLevel">
+                                                                <option>اختر المستوي</option>
+                                                                <option>نوع 1</option>
+                                                                <option>نوع 2</option>
+                                                                <option>نوع 3</option>
+                                                                <option>نوع 4</option>
+                                                            </select>
+                                                        </div>
+
+                                                    <div class="custom-control custom-checkbox col-xl-2 col-md-3 col-12">
+                                                        <input type="checkbox" class="custom-control-input" id="Draft">
+                                                        <label class="custom-control-label" for="Draft">مسودة</label>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox col-xl-2 col-md-3 col-12">
+                                                        <input type="checkbox" class="custom-control-input" id="verfied">
+                                                        <label class="custom-control-label" for="verfied">معتمدة</label>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </div>
+        </div>
+
+        </form>
+    </div>
+    <!-----------|Choose Account Modal : Begin -->
+    <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="Choose-Account-modal"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+        <div class="modal-dialog modal-dialog-centered" id="FormBody">
+            <form class="modal-content">
+                <div class="modal-indecator"></div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel"><span class="fa fa-sitemap"></span>كود الحساب</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row no-gutters data-container-body-content-main-body">
+                    <div class="col-12 data-desc-body">
+                        <div class="data-desc-body-container row no-gutters col-12">
+                            <div class="data-desc-body-container-body col-12">
+                                <div class="form-group col-md col-12 pl-0 pr-0">
+                                    <input type="text" class="form-control" name="txtTreeSearchInput" id="txtTreeSearchInput"
+                                        placeholder="البحث بالكود و الأسم">
+                                    <span class="fa fa-search search-icon"></span>
+                                </div>
+                                <div id="jstree_demo_div" class="tree-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="gbtn-o gbtn-success-o">إختيار</button>
+                    <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--------------- Choose Account Modal :End ---------------->
+    <!--------------- Page Container : End ------------------>
+    </div>
+</body>
+<!------------- Scripts : Begin -------------->
+<script>
+    var EditableCol = null;
+    var FocustableCol = null;
+    var countries = [{
+            value: 'Andorra',
+            data: 'AD'
+        },
+        {
+            value: 'Zimbabwe',
+            data: 'ZZ'
+        }
+    ];
+    $(document).ready(function () {
+        $(".select-single select").select2({
+            placeholder: "إختر نوع اليومية"
+        });
+    });
+
+    $(".select-single select").select2({
+        placeholder: "@RESOURCES.General.General.Choose"
+    });
+    var culture = "@CultureHelper.GetCurrentUICulture()";
+    $(function () {
+        $('.fdatepickere').datepicker({
+            format: "yyyy/mm/dd",
+            container: '.data-container-body'
+        });
+        $(".yearpicker").datepicker({
+            format: "yyyy",
+            viewMode: "years",
+            minViewMode: "years",
+            container: '.data-container-body'
+        });
+        $(".monthpicker").datepicker({
+            format: "mm",
+            startView: "months",
+            minViewMode: "months",
+            container: '.data-container-body'
+        });
+    });
+    var columns = [
+        {
+            headerName: 'م',
+            feild: 'serial',
+            width: 80
+        }, {
+            headerName: 'مدين',
+            field: "debit",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'دائن',
+            field: "Creditor",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'العملة',
+            field: "Currency",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'سعر الصرف',
+            field: "ExchangeRate",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'مدين عملة محلية',
+            field: "OweLocalCurrency",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'دائن عملة محلية',
+            field: "CreditLocalCurrency",
+            enableValue: true,
+            allowedAggFuncs: ['sum']
+        },
+        {
+            headerName: 'كود الحساب',
+            field: "AccountCode",
+            cellClass: 'input-cell autocomplete-cell table-break',
+            cellRenderer: drawChooseAcountColumn,
+            enableValue: true,
+            allowedAggFuncs: ['sum'],
+            editable: false
+        },
+        {
+            headerName: 'أسم الحساب',
+            field: "AccountName"
+        },
+        {
+            headerName: 'رقم المستند',
+            field: "DocumentNumber",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'تاريخ المستند',
+            field: "DocumentDate",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'مراكز التكلفة',
+            field: "CostCenters",
+            enableRowGroup: true,
+            cellClass: 'input-cell autocomplete-cell table-break',
+            cellRenderer: drawChooseAcountColumn,
+            editable: false
+        },
+        {
+            headerName: 'ملاحظات',
+            field: "Notes",
+            enableRowGroup: true,
+            cellClass: 'table-break'
+        }
+    ];
+    var data = [{
+            debit: "1",
+            Creditor: "13/12/2018",
+            Currency: "JN250",
+            ExchangeRate: "Type1",
+            OweLocalCurrency: "محمد خليفة",
+            CreditLocalCurrency: 250,
+            AccountCode: 500,
+            AccountName: "Notes1",
+            DocumentNumber: "AR250",
+            DocumentDate: "RF250",
+            CostCenters: "تمت المراجعه",
+            Notes: "Done"
+        },
+        {
+            debit: "2",
+            Creditor: "13/12/2018",
+            Currency: "JN251",
+            ExchangeRate: "Type1",
+            OweLocalCurrency: "Mostafa fahmy",
+            CreditLocalCurrency: 90,
+            AccountCode: 350,
+            AccountName: "Notes2",
+            DocumentNumber: "AR500",
+            DocumentDate: "RF300",
+            CostCenters: "جارى المراجعه",
+            Notes: "Done"
+        },
+        {
+            debit: "3",
+            Creditor: "11/12/2018",
+            Currency: "JN252",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "Mostafa fahmy",
+            CreditLocalCurrency: 100,
+            AccountCode: 100,
+            AccountName: "Notes3",
+            DocumentNumber: "AR750",
+            DocumentDate: "RF300",
+            CostCenters: "جارى المراجعه",
+            Notes: "NotDone"
+        },
+        {
+            debit: "4",
+            Creditor: "11/12/2018",
+            Currency: "JN250",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "محمد خليفة",
+            CreditLocalCurrency: 500,
+            AccountCode: 150,
+            AccountName: "Notes4",
+            DocumentNumber: "AR850",
+            DocumentDate: "RF250",
+            CostCenters: "تمت المراجعه",
+            Notes: "NotDone"
+        },
+        {
+            debit: "5",
+            Creditor: "09/12/2018",
+            Currency: "JN240",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "Mohamed Adel",
+            CreditLocalCurrency: 1500,
+            AccountCode: 2500,
+            AccountName: "Notes5",
+            DocumentNumber: "AR200",
+            DocumentDate: "RF500",
+            CostCenters: "تمت المراجعه",
+            Notes: "Done"
+        },
+    ];
+    var columns2 = [
+        {
+            headerName: 'م',
+            feild: 'serial',
+            width: 80
+        }, {
+            headerName: 'كود مركز التكلفة',
+            field: "CostCenterCode",
+            enableRowGroup: true,
+            cellRenderer: drawChooseAcountColumn,
+            cellClass: 'input-cell autocomplete-cell table-break'
+        },
+        {
+            headerName: 'اسم مركز التكلفة',
+            field: "CostCenterName",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'النسبة',
+            field: "persentage",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'المبلغ',
+            field: "Amount",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'المبلغ بالعملة المحلية',
+            field: "LocalAmount",
+            enableRowGroup: true
+        },
+        {
+            headerName: 'ملاحظات',
+            field: "Notes",
+            enableRowGroup: true
+        }
+    ];
+    var data = [{
+            debit: "1",
+            Creditor: "13/12/2018",
+            Currency: "JN250",
+            ExchangeRate: "Type1",
+            OweLocalCurrency: "محمد خليفة",
+            CreditLocalCurrency: 250,
+            AccountCode: 500,
+            AccountName: "Notes1",
+            DocumentNumber: "AR250",
+            DocumentDate: "RF250",
+            CostCenters: "تمت المراجعه",
+            Notes: "Done"
+        },
+        {
+            debit: "2",
+            Creditor: "13/12/2018",
+            Currency: "JN251",
+            ExchangeRate: "Type1",
+            OweLocalCurrency: "Mostafa fahmy",
+            CreditLocalCurrency: 90,
+            AccountCode: 350,
+            AccountName: "Notes2",
+            DocumentNumber: "AR500",
+            DocumentDate: "RF300",
+            CostCenters: "جارى المراجعه",
+            Notes: "Done"
+        },
+        {
+            debit: "3",
+            Creditor: "11/12/2018",
+            Currency: "JN252",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "Mostafa fahmy",
+            CreditLocalCurrency: 100,
+            AccountCode: 100,
+            AccountName: "Notes3",
+            DocumentNumber: "AR750",
+            DocumentDate: "RF300",
+            CostCenters: "جارى المراجعه",
+            Notes: "NotDone"
+        },
+        {
+            debit: "4",
+            Creditor: "11/12/2018",
+            Currency: "JN250",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "محمد خليفة",
+            CreditLocalCurrency: 500,
+            AccountCode: 150,
+            AccountName: "Notes4",
+            DocumentNumber: "AR850",
+            DocumentDate: "RF250",
+            CostCenters: "تمت المراجعه",
+            Notes: "NotDone"
+        },
+        {
+            debit: "5",
+            Creditor: "09/12/2018",
+            Currency: "JN240",
+            ExchangeRate: "Type2",
+            OweLocalCurrency: "Mohamed Adel",
+            CreditLocalCurrency: 1500,
+            AccountCode: 2500,
+            AccountName: "Notes5",
+            DocumentNumber: "AR200",
+            DocumentDate: "RF500",
+            CostCenters: "تمت المراجعه",
+            Notes: "Done"
+        },
+    ];
+    var gridOptions = {
+        columnDefs: columns, //Define Columns
+        rowData: data, //Define Rows
+        rowDragManaged: true, //Enable Drag
+        animateRows: true, //Enable Animation
+        localeText: setLocalization("ar"), //Set Table Language 
+        sideBar: false, //Show SideBar             
+        pagination: false,
+        suppressDragLeaveHidesColumns: true,
+        enableRtl: true,
+        defaultColDef: {
+            editable: true
+        },
+        onGridReady: function (params) {
+            params.api.sizeColumnsToFit();
+
+            //debugger;
+            $('.txt-auto-input').devbridgeAutocomplete({
+                lookup: countries,
+                triggerSelectOnValidInput: false,
+
+                onSelect: function (suggestion) {
+                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                }
+            });
+        },
+        onRowEditingStarted: function (event) {
+            console.log('never called - not doing row editing');
+        },
+        onRowEditingStopped: function (event) {
+            console.log('never called - not doing row editing');
+        },
+        onCellEditingStarted: function (event) {
+            console.log('cellEditingStarted');
+            /* EditableCol.push(event);
+            console.log(EditableCol); */
+            EditableCol = event;
+        },
+        onCellEditingStopped: function (event) {
+            console.log('cellEditingStarted');
+        },
+        onCellFocused: function (event) {
+            //debugger;
+            FocustableCol = event;
+        }
+    }
+    //gridOptions.rowHeight = 50;
+
+    var gridOptions2 = {
+        columnDefs: columns2, //Define Columns
+        rowData: data, //Define Rows
+        rowDragManaged: true, //Enable Drag
+        animateRows: true, //Enable Animation
+        localeText: setLocalization("ar"), //Set Table Language 
+        sideBar: false, //Show SideBar             
+        pagination: false,
+        suppressDragLeaveHidesColumns: true,
+        enableRtl: true,
+        defaultColDef: {
+            editable: true
+        },
+        onGridReady: function (params) {
+            params.api.sizeColumnsToFit();
+
+            //debugger;
+            $('.txt-auto-input').devbridgeAutocomplete({
+                lookup: countries,
+                triggerSelectOnValidInput: false,
+
+                onSelect: function (suggestion) {
+                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                }
+            });
+
+        },
+        onRowEditingStarted: function (event) {
+            console.log('never called - not doing row editing');
+        },
+        onRowEditingStopped: function (event) {
+            console.log('never called - not doing row editing');
+        },
+        onCellEditingStarted: function (event) {
+            console.log('cellEditingStarted');
+            /* EditableCol.push(event);
+            console.log(EditableCol); */
+            EditableCol = event;
+        },
+        onCellEditingStopped: function (event) {
+            console.log('cellEditingStarted');
+        },
+        onCellFocused: function (event) {
+            //debugger;
+            FocustableCol = event;
+        }
+    }
+    var eGridDiv = document.querySelector('#myGrid');
+    var eGridDiv2 = document.querySelector('#myGrid2');
+    var table = new agGrid.Grid(eGridDiv, gridOptions);
+    var table2 = new agGrid.Grid(eGridDiv2, gridOptions2);
+
+    function ageCellRendererFunc(params) {
+        //debugger;
+        console.log("----------ageCellRendererFunc--------");
+        console.log(params);
+        console.log("----------/ageCellRendererFunc--------");
+        //alert(params);
+        //var data = toString(params.data.journalStatus);
+        let col = params.rowIndex;
+        return '<div class="tools-div">' +
+            '<a href="#"class="danger fa fa-times" onclick="deleteRow(' + col + ');"></a>' +
+            '</div>';
+    }
+
+    function onAddRow(rowIndex, colKey) {
+        //debugger;
+        var newItem = {
+            debit: "",
+            Creditor: "",
+            Currency: "",
+            ExchangeRate: "",
+            OweLocalCurrency: "",
+            CreditLocalCurrency: "",
+            AccountCode: "",
+            AccountName: "",
+            DocumentNumber: "",
+            DocumentDate: "",
+            CostCenters: "",
+            Notes: "",
+            tools: ""
+        };
+        var res = gridOptions.api.updateRowData({
+            add: [newItem]
+        });
+
+        let tableH = ($(".grid").css("height"));
+        let newTableH = ((parseInt(tableH.slice(0, -2)) + 26) + "px").toString();
+        $(".grid").css("height", newTableH);
+
+        SetColFocus(parseInt(rowIndex) + 1, colKey);
+    }
+
+    function handelDataTableAddBtn() {
+        //debugger;
+        let rowCount = $(".ag-body-container .ag-row").length;
+        let row = gridOptions.api.getRowNode(rowCount - 1);
+
+        onAddRow(rowCount, row.columnController.allDisplayedColumns[0].colId)
+    }
+
+    function drawChooseAcountColumn(params) {
+        return '<div class="form-group">' +
+            '<input type="text" class="form-control txt-auto-input col" id="' + params.colDef.field + params.rowIndex +
+            '" name="' + params.colDef.field + params.rowIndex + '" />' +
+            '<a class="fa fa-folder-open" onclick="dtEventHandler($(this),[])" data-event="chooseAccount"></a>'
+        '</div>';
+    }
+
+    function SetColEdit(rowIndex, colKey, key, char, pinned) {
+        gridOptions.api.setFocusedCell(rowIndex, colKey);
+
+        gridOptions.api.startEditingCell({
+            rowIndex: rowIndex,
+            colKey: colKey,
+            // set to 'top', 'bottom' or undefined
+            rowPinned: pinned,
+            keyPress: key,
+            charPress: char
+        });
+    }
+
+    function SetColFocus(rowIndex, colKey) {
+        gridOptions.api.setFocusedCell(rowIndex, colKey);
+    }
+
+    function deleteRow(rowIndex) {
+        //debugger;
+        console.log("---------DeleteRow Obj :begin ----------");
+        console.log(rowIndex);
+        console.log("---------DeleteRow Obj :end ----------");
+        let row = gridOptions.api.getRowNode(rowIndex);
+        gridOptions.api.updateRowData({
+            remove: [row.data]
+        });
+    }
+
+
+    $(document).on("keydown", ".ag-cell-edit-input", function (e) {
+        //debugger;
+        if (e.keyCode == 9 || e.keyCode == 13) {
+            let rowCount = gridOptions.api.getModel().getRowCount();
+            let colBreack = EditableCol.colDef.cellClass; //EditableCol[EditableCol.length -1].colDef.cellClass;
+            let rowIndex = EditableCol.rowIndex + 1; //EditableCol[EditableCol.length -1].rowIndex + 1;
+            let row = gridOptions.api.getRowNode(rowIndex - 1);
+            let colKey = row.columnController.allDisplayedColumns[0].colId;
+            if (colBreack == "table-break" && rowIndex == rowCount) {
+                onAddRow(rowIndex, colKey);
+            }
+        }
+    });
+    $(document).on("keydown", ".ag-cell", function (e) {
+        //debugger;
+        if (e.keyCode == 9 || e.keyCode == 13) {
+            let rowCount = gridOptions.api.getModel().getRowCount();
+            let colBreack = FocustableCol.column.colDef.cellClass; //.cellClass;//EditableCol[EditableCol.length -1].colDef.cellClass;
+            let rowIndex = FocustableCol.rowIndex + 1; //EditableCol[EditableCol.length -1].rowIndex + 1;
+            let row = gridOptions.api.getRowNode(rowIndex - 1);
+            let colKey = row.columnController.allDisplayedColumns[0].colId;
+            if (colBreack == "table-break" && rowIndex == rowCount) {
+                onAddRow(rowIndex, colKey);
+            }
+        } else if (e.keyCode == 35) {
+            //debugger; 
+            let rowCount = gridOptions.api.getModel().getRowCount();
+            let rowIndex = rowCount - 1;
+            let row = gridOptions.api.getRowNode(rowIndex);
+            let colKey = row.columnController.allDisplayedColumns[row.columnController.allDisplayedColumns.length -
+                2].colId;
+            SetColFocus(rowIndex, colKey);
+        }
+    });
+
+    function dtEventHandler(clickedIcon, options) {
+        var rowIndex = clickedIcon.closest(".ag-row").index();
+        switch (clickedIcon.data("event")) {
+            case "delechooseAccountte":
+                {
+                    viewMsgModal('danger-modal', 'هل أنت متأكد من إزالة البيانات', 'true', 'true', 'deleteRow(' +
+                        rowIndex + ')');
+                    break;
+                }
+            case "chooseAccount":
+                {
+                    viewStaticModal('add-modal', 'md', 'Choose-Account-modal');
+                    break;
+                }
+            default:
+                {
+                    console.error("Handler Error : This Event Not Listed In Switch Cases");
+                    console.warn("Define Event in Switch Control located in 'dtEventHandler' function ");
+                }
+        }
+    }
+</script>
+<script>
+    var list = [{
+            "text": "Assets",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': '#',
+            'id': 01
+        },
+        {
+            "text": "Fixed Assets *",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': 01,
+            'id': 0101
+        },
+        {
+            "text": "Fixed Assets",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': 0101,
+            'id': 010101
+        },
+        {
+            "text": "Lands",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010101,
+            'id': 01010101
+        },
+        {
+            "text": "Property",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010101,
+            'id': 01010102
+        },
+        {
+            "text": "Machines",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010101,
+            'id': 010101013
+        },
+        {
+            "text": "Equipment",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010101,
+            'id': 01010104
+        },
+        {
+            "text": "Accumulated depreciation",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': 0101,
+            'id': 010102
+        },
+        {
+            "text": "Property Accumulated depreciation",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010102,
+            'id': 01010201
+        },
+        {
+            "text": "Current assets",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': 01,
+            'id': 0102
+        },
+        {
+            "text": "Cash and cash equivalents",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': 0102,
+            'id': 010201
+        },
+        {
+            "text": "Cash On Hand",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 010201,
+            'id': 01020101
+        },
+        {
+            "text": "Equity And liabilities *",
+            'icon': "fa-folder",
+            hasChildren: true,
+            'parent': '#',
+            'id': 02
+        },
+        {
+            "text": "Equity And liabilities",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': 02,
+            'id': 0201
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+        {
+            "text": "Leaf Node",
+            'icon': "fa-file",
+            hasChildren: false,
+            'parent': '#',
+            id: 03,
+        },
+
+    ];
+    $(document).ready(function () {
+        //renderIcons(list,"#tree",0);
+        $(function () {
+            $('#jstree_demo_div').jstree({
+                "core": {
+                    'data': list,
+                    "check_callback": true,
+                    animation: true,
+                    themes: {
+                        name: 'default',
+                        icons: true,
+                        responsive: true,
+                        dots: true,
+                        ellipsis: true,
+                    },
+                },
+                plugins: ["contextmenu", "dnd", "search", "state", "types", "wholerow"],
+                contextmenu: {
+                    items: {
+                        addItem: {
+                            label: "أضف جديد",
+                            action: function () {}
+                        },
+                        editItem: {
+                            label: "تعديل ",
+                            action: function () {}
+                        },
+                        deleteItem: {
+                            label: "حذف",
+                            action: function () {}
+                        }
+                    }
+                },
+                "search": {
+                    "case_insensitive": true,
+                    "show_only_matches": true
+                }
+            });
+        });
+    });
+    $(document).on("keyup", "#txtTreeSearchInput", function () {
+        $("#jstree_demo_div").jstree("search", $(this).val());
+    });
+</script>
+
+</html>

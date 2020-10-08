@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/fullcalendar.min.css" rel="stylesheet" />
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+        
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+
+        <script src="../Content/js/moment.min.js"></script>
+        <script src="../Content/js/fullcalendar.min.js"></script>
+
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Reception-Index.html" class="fa fa-home">R-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Clinics-Transactions-Dashboard.html" class="fa fa-home">D-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../SystemSettings/Admin-Index.html" class="fa fa-home">A-Home</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="1" data-parent="0">
+                            <a class="fa fa-gear">Settings</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="2" data-parent="1">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>System Settings</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">Main Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-globe leaf-node" href="../SystemSettings/MainSettings-Countries-Index.html">Countries & Cities</a>
+                                        </li>
+                                        <li class="sub-list-item " data-parent="1">
+                                            <a class="fa fa-building leaf-node" href="../SystemSettings/MainSettings-Companies-Index.html">Companies</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-sitemap leaf-node" href="../SystemSettings/MainSettings-Branches-Index.html">Branches</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-cogs leaf-node" href="../SystemSettings/MainSettings-GeneralSettings.html">General Settings</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-tags leaf-node" href="../SystemSettings/MainSettings-GeneralFeatures.html">General Features</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-hashtag leaf-node" href="../SystemSettings/MainSettings-SystemCodes.html">System Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-user-secret node">User Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-lock leaf-node" href="../SystemSettings/UsersSettings-Roles.html">Roles</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../SystemSettings/UsersSettings-Users.html">Users</a>
+                                        </li>
+                                        <!-- <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-unlock-alt leaf-node">Forget Password</a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-heartbeat">Medical</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>Medical System</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">General Settings</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../MedicalModule/GeneralSettings-PatientsSettings.html" >Patient Settings</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/GeneralSettings-Clinics.html">Clinics</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/GeneralSettings-Services-Index.html">Services</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-bed leaf-node" href="../MedicalModule/GeneralSettings-Rooms.html">Rooms</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/GeneralSettings-Vacations.html">Vacations</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/GeneralSettings-Shifts-Index.html">Shifts</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-ticket leaf-node" href="../MedicalModule/GeneralSettings-ReservationNumbers.html">Reservations Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-address-book-o node">Reception</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-users leaf-node" href="../MedicalModule/Reception-MainSettings-Patients-Index.html">Patients</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-secret leaf-node" href="../MedicalModule/Reception-MainSettings-Cashiers.html">Cashiers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square node"> Clincs</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-ClinicSection-Doctors.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-ClinicSection-PendingInvoices.html">Pendding Invoices</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-ClinicSection-Prices.html">Services price</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-book-o leaf-node" href="../MedicalModule/Reception-ClinicSection-Reservations.html">Reservations</a>
+                                                </li>
+                                                <!-- <li data-parent="2">
+                                                    <a class="fa fa-history leaf-node">Periodic CheckUps</a>
+                                                </li> -->
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope node">Services Operations</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node" href="../MedicalModule/Reception-Services-ServicesSchedule.html">Services Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-heartbeat leaf-node" href="../MedicalModule/Reception-Services-ServicesManagment-Index.html">Services Managment</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Receipts-Index.html">Cash Receipts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Payments-Index.html">Cash Payments</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-line-chart node">Reports & Analytics</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Revenues</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics.html">Clinics Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics-TrendAnalysis.html">Clinics Revenue Trend Analysis</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Doctors.html">Doctors Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services.html">Services Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services-TrendAnalysis.html">Services Revenue Trend Analysis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o node">Shifts Reports</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-DailyTransactions.html">Daily Transactions</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-ShiftTransactions.html">Shifts Transactions</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-calculator node">Accounting</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-MainSettings-InvoicesSettings.html">Invoices Settings</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTresuries.html">Sub Treasuries</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTreasuriesSerials.html">Treasuries Serialization</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-percent leaf-node" href="../MedicalModule/Accounting-MainSettings-DeductionsAndAdditions-index.html">Additions And Deductions </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Pricing</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-021-hospital leaf-node" href="../MedicalModule/Accounting-Transactions-Pricing-ClinicPricing.html">Clincs</a>
+                                                        </li>
+                                                        <!-- <li data-parent="3">
+                                                            <a class="gicon gicon-015-microscope leaf-node">Test labs</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-hospital-x-ray leaf-node">Rays</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-ambulance-facing-right leaf-node">Emergency</a>
+                                                        </li>  -->
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-tags leaf-node" href="../MedicalModule/Accounting-Transactions-Offers-Index.html">Offers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-Transactions-Invoices-Index.html">Invoices</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-h-square node">Clinics</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-gear node">Clinic Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Clinics-DoctorSettings-Doctors-Index.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorsShifts-Index.html">Doctor Shifts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorSchedule.html">Doctors Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Clinics-ClinicSettings-TransactionSerialization.html">Transactions Serialization</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-thermometer-full leaf-node" href="../MedicalModule/Clinics-Transactions-SickLeave-Index.html">Sick Leave</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node"  href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Referral Form</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-card-o leaf-node" href="../MedicalModule/Clinics-Transactions-PatientReview-Index.html">Patient Review</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-id-card leaf-node" href="../MedicalModule/Clinics-Transactions-InitialMedicalData-Index.html">Initial Medical Data</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>
+
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Medical Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Hot Tools">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="Add Patient">
+                                                    <span class="fa fa-user-plus"></span>
+                                                    <p>Add Patient</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="Search Patients">
+                                                    <span class="fa fa-search"></span>
+                                                    <p>Search Patients</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="End Shift">
+                                                    <span class="fa fa-stop"></span>
+                                                    <p>End Shift</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="Reservations">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <p>Reservations</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="Change Language"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Notifications</h6>
+                                        <a class="dropdown-item warning">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                    <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                    <span>6 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item danger">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                    <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                    <span>30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item success">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                    <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                    <span>10 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item default">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                    <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                    <span>30 seconds ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li>
+                                <li class="icon-link normal-link form-div-container icon-sqr row col">
+                                    <div class="form-div">
+                                        <span class="fa fa-search"></span>
+                                        <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Profile</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Settings</p>
+                                                        <span class="badge badge-pill">New</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Help</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Log Out</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable has-search">
+                    <div class="row no-gutters data-container col-12 position-relative">
+                        <!-- Data Container Header -->
+                        <div class="data-container-header row no-gutters col-12 printed">
+                            <div class="section-header-main col-md col-12">
+                                <img src="../Content/Images/img.png">
+                                <div class="company-data">
+                                    <h3>G7 Software House</h3>
+                                    <p>23 Horia Street , Alexandria , Egypt</p>
+                                    <p>01100000000</p>
+                                </div>
+                            </div>
+                            <div class="section-header-sub">
+                                <h3>Services Managment</h3>
+                                <p class="col-12">
+                                    <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="data-container-header row no-gutters col-12">
+                            <div class="section-header-main col-md col-12">
+                                <span class="fa fa-heartbeat"></span>
+                                <div class="data d-inline-block align-middle">
+                                    <h4 class="m-0">Services Managment</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Services Managment</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="section-header-tools">
+                                <div class="data-container-body-header-controls row no-gutters">
+                                    <a class="gbtn gbtn-success fa fa-file-text-o" href="../MedicalModule/Reception-Services-ServicesManagment-Details.html" title="Generate Report"><span class="title">Generate Report</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-reply-all" title="Exit"><span class="title">Exit</span></a>
+                                    <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="Print"><span class="title">Print</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-search-header row no-gutters col-12">
+                            <div class="form-group col-12">
+                                <span class="fa fa-calendar"></span>
+                                <input type="text" class="form-control fdatepickere" placeholder="Select Date" id="SelectDate">
+                            </div>
+                        </div>
+                        <!-- Data Container Body -->
+                        <div class="col-12 row no-gutters data-container-body">
+                            <div class="col-12 row no-gutters data-container-body-content">
+                                <div class="col-12 row no-gutters data-container-body-content-main">
+                                    <div class="data-desc-body col-12" id="table-tab">
+                                        <div class="data-container-body-content-main-body col-12 row no-gutters no-footer main-table" id="main-content-tv">
+                                            <div class="data-table table-responsive col-12">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Reservation Number</th>
+                                                            <th>Reservation Date</th>
+                                                            <th>Patient Code/Name</th>
+                                                            <th>Service Name</th>
+                                                            <th>Quantity</th>
+                                                            <th>Session Time</th>
+                                                            <th class="tools-th">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>RES-250</td>
+                                                            <td>20/1/2019</td>
+                                                            <td>PAT-250 : Mohamed Khalifa</td>
+                                                            <td>Laser</td>
+                                                            <td>1</td>
+                                                            <td>12:30 pm</td>
+                                                            <td class="tools-td">
+                                                                <a class="gbtn gbtn-success" onclick="viewMsgModal('success-modal','Are you sure you want to Start this Session ?','true','true','function)');">Start</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="warnning">
+                                                            <td>RES-250</td>
+                                                            <td>20/1/2019</td>
+                                                            <td>PAT-250 : Mohamed Khalifa</td>
+                                                            <td>Laser</td>
+                                                            <td>1</td>
+                                                            <td>12:30 pm</td>
+                                                            <td class="tools-td">
+                                                                <a class="gbtn gbtn-danger" onclick="viewMsgModal('warning-modal','Are you sure you want to End this Session ?','true','true','function)');">End</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="success">
+                                                            <td>RES-250</td>
+                                                            <td>20/1/2019</td>
+                                                            <td>PAT-250 : Mohamed Khalifa</td>
+                                                            <td>Laser</td>
+                                                            <td>1</td>
+                                                            <td>12:30 pm</td>
+                                                            <td class="tools-td detail-check">
+                                                                <label class="fa fa-check-circle"></label>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-container-footer row no-gutters col-12 ">
+                            <p>Thank You For Your Trust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------- Page Container : End ------------------>
+        </div>
+
+        <!--------------- General Form Modal :Begin ---------------->
+
+        <!--|Service Modals|-->
+        <!-----------|Edit Edit Modal : Begin -->
+        <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="Edit-Schedule-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+                <form class="modal-content">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel"><span class="fa fa-calendar"></span>Edit Service Schedule</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row no-gutters col-12">
+                        <div class="form-group  col-6">
+                            <label>Reservation Number</label>
+                            <input class="form-control" type="text" disabled value="1">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Service Name</label>
+                            <input class="form-control" type="text" disabled value="Laser">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Reservation Date</label>
+                            <input class="form-control" type="text" disabled value="31/1/2019">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Quantity</label>
+                            <input class="form-control" type="text" disabled value="1">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Service Date</label>
+                            <input class="form-control fdatepickere" type="text"  value="12/2/2019">
+                        </div>
+                        <div class="form-group col-6">
+                            <label>Service Time</label>
+                            <input class="form-control timepickere" type="time"  value="12:30">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">Exit</button>
+                        <button type="submit" class="gbtn-o gbtn-warning-o">Schedule</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-----------|Edit Schedule Modal : End -->
+
+        <!--------------- General Form Modal :End ---------------->
+
+        <!--------------- General Notification :Begin ---------------->
+        <div class="g7-notification ntf-default">
+            <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                <div class="ntf-icon">
+                    <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="ntf-text">
+                    <h4>@ResourceFile.warning</h4>
+                    <p>
+                        @*Please Check Your Data*@
+                    </p>
+                </div>
+            </div>
+            <a class="ntf-close fa fa-times"></a>
+            <div class="ntf-background"></div>
+        </div>
+        <!--------------- General Notification :End ---------------->
+
+        <!------------- General Message Modal :Begin -------------->
+        <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+                <form class="modal-content" id="test">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-body row no-gutters">
+                        <div class="modal-icon">
+                            <span></span>
+                        </div>
+                        <p class="msg-type">Confirmation Message</p>
+                        <div class="msg">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">Cancel</button>
+                        <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!------------- General Message Modal : End -------------->
+
+        <!------------- Scripts : Begin -------------->
+        <script>
+        $(document).ready(function(){
+            checkTableSize("main-content-tv");
+
+            $('.fdatepickere').datepicker({
+                format: "yyyy/mm/dd",
+                container: '.data-container-body'
+            });
+            $('.timepickere').clockpicker({
+                donetext: "Set Time",
+                autoclose: "true"
+            });
+            $('.txt-auto-input').devbridgeAutocomplete({
+                lookup: countries,
+                triggerSelectOnValidInput: false,
+                onSelect: function (suggestion) {
+                    alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
+                }
+            });
+    });
+
+        var countries = [
+            {
+                value: 'Andorra',
+                data: 'AD'
+            },
+            {
+                value: 'Zimbabwe',
+                data: 'ZZ'
+            }
+        ];
+
+
+        $(document).on("click","#table-nav",function(){
+            $("#table-tab").tab('show');
+        });
+        InitdataTable("main-content-tv",
+            ["No data available in table","Entries per Page","All Entries","Search In records","Showing","to","of","entries"]
+            ,[true,false,true,true,10,true]);
+
+        $(window).on('resize', function(e) {
+            if ($('table').closest('div').hasClass('data-table')) {
+                redrawTable();
+            }
+        });
+        function initEditModal(size){
+            viewStaticModal('edit-modal',size,'Edit-Schedule-modal');
+        }
+        </script>
+        <!------------- Scripts : End -------------->
+    </body>
+</html>

@@ -1,0 +1,89 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 10/02/2019 12:42
+    */
+
+    @font-face {
+  font-family: "Cash_Flaticon";
+  src: url("../Fonts/Cash/Flaticon.eot");
+  src: url("../Fonts/Cash/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../Fonts/Cash/Flaticon.woff") format("woff"),
+       url("../Fonts/Cash/Flaticon.ttf") format("truetype"),
+       url("../Fonts/Cash/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Cash_Flaticon";
+    src: url("../Fonts/Cash/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi-cash:before{
+        display: inline-block;
+  font-family: "Cash_Flaticon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-profit:before { content: "\f100"; }
+.flaticon-send:before { content: "\f101"; }
+.flaticon-piggy-bank:before { content: "\f102"; }
+.flaticon-businessman:before { content: "\f103"; }
+.flaticon-money:before { content: "\f104"; }
+.flaticon-bitcoin:before { content: "\f105"; }
+.flaticon-safebox:before { content: "\f106"; }
+.flaticon-dollar-symbol:before { content: "\f107"; }
+.flaticon-wallet:before { content: "\f108"; }
+.flaticon-bitcoin-1:before { content: "\f109"; }
+.flaticon-credit-card:before { content: "\f10a"; }
+.flaticon-receipt:before { content: "\f10b"; }
+.flaticon-credit-card-1:before { content: "\f10c"; }
+.flaticon-tax:before { content: "\f10d"; }
+.flaticon-credit-card-2:before { content: "\f10e"; }
+.flaticon-cash-register:before { content: "\f10f"; }
+.flaticon-check:before { content: "\f110"; }
+.flaticon-invoice:before { content: "\f111"; }
+.flaticon-wallet-1:before { content: "\f112"; }
+.flaticon-pay:before { content: "\f113"; }
+.flaticon-debit-card:before { content: "\f114"; }
+.flaticon-settings:before { content: "\f115"; }
+.flaticon-money-bag:before { content: "\f116"; }
+.flaticon-bank:before { content: "\f117"; }
+.flaticon-diamond:before { content: "\f118"; }
+    
+    $font-Flaticon-profit: "\f100";
+    $font-Flaticon-send: "\f101";
+    $font-Flaticon-piggy-bank: "\f102";
+    $font-Flaticon-businessman: "\f103";
+    $font-Flaticon-money: "\f104";
+    $font-Flaticon-bitcoin: "\f105";
+    $font-Flaticon-safebox: "\f106";
+    $font-Flaticon-dollar-symbol: "\f107";
+    $font-Flaticon-wallet: "\f108";
+    $font-Flaticon-bitcoin-1: "\f109";
+    $font-Flaticon-credit-card: "\f10a";
+    $font-Flaticon-receipt: "\f10b";
+    $font-Flaticon-credit-card-1: "\f10c";
+    $font-Flaticon-tax: "\f10d";
+    $font-Flaticon-credit-card-2: "\f10e";
+    $font-Flaticon-cash-register: "\f10f";
+    $font-Flaticon-check: "\f110";
+    $font-Flaticon-invoice: "\f111";
+    $font-Flaticon-wallet-1: "\f112";
+    $font-Flaticon-pay: "\f113";
+    $font-Flaticon-debit-card: "\f114";
+    $font-Flaticon-settings: "\f115";
+    $font-Flaticon-money-bag: "\f116";
+    $font-Flaticon-bank: "\f117";
+    $font-Flaticon-diamond: "\f118";

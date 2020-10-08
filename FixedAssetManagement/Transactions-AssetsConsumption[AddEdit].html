@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>G7 Medical Pro</title>
+    <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png" />
+
+    <!------------------- Styles : Begin ---------------------->
+    <link href="../Content/css/ag-grid.css" rel="stylesheet" />
+    <link href="../Content/css/ag-theme-balham.css" rel="stylesheet" />
+    <link href="../Content/css/styles.css" rel="stylesheet" />
+    <link href="../Content/css/datatables.min.css" rel="stylesheet" />
+    <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+    <link href="../Content/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../Content/css/Tree/style.min.css" />
+
+    <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+    <link href="../Content/css/animate.min.css" rel="stylesheet" />
+    <link href="../Content/css/select2.min.css" rel="stylesheet" />
+    <link href="../Content/css/flags.css" rel="stylesheet" />
+    <!------------------- Styles : End ---------------------->
+
+    <!------------------- Scripts : Begin ---------------------->
+    <script src="../Content/js/jquery-3.2.1.min.js"></script>
+    <script src="../Content/js/jquery.custom-file-input.js"></script>
+    <script src="../Content/js/datatables.min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/jquery-ui.min.js"></script>
+
+    <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+    <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+    <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+    <script src="../Content/js/jquery.validationEngine.js"></script>
+    <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="../Content/js/select2.min.js"></script>
+    <script src="../Content/js/jquery.flagstrap.min.js"></script>
+    <script src="../Content/js/downtime.js"></script>
+    <script src="../Content/js/loadingoverlay.min.js"></script>
+
+    <script src="../Content/js/ResizeSensor.js"></script>
+    <script src="../Content/js/ElementQueries.js"></script>
+
+    <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+    <script src="../Content/js/jstree.min.js"></script>
+
+    <script src="../Content/js/G7/DataTableConfig.js"></script>
+    <script src="../Content/js/G7/functions.js"></script>
+    <script src="../Content/js/G7/scripts.js"></script>
+    <script src="../Content/js/G7/Scripts_Html.js"></script>
+    <script src="../Content/js/G7/ag-grid-config.js"></script>
+    <!------------------- Scripts : End ---------------------->
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <!------------------- Sidebar : Begin ---------------------->
+        <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <!-- Index : Begin -->
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                        </li>
+                        <!-- Index : end -->
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-calculator">النظام المحاسبى</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="2" data-parent="0">
+                            <a class="fi-cash flaticon-profit">ادارة النقدية</a>
+                        </li>
+                        <!-- Financial Module : Begin -->
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>إسم المؤسسة</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>النظام المحاسبى</h3>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-bank-building leaf-node" href="../FinancialModule/Definitions-CostCentersDimentions-index.html">
+                                                أبعاد مراكز التكلفة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-contract-1 leaf-node" href="../FinancialModule/Definitions-FinancialStatments-index.html">الحسابات
+                                                الختامية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-payment-day leaf-node" href="../FinancialModule/Definitions-AccountingPeriods-index.html">الفترات
+                                                المحاسبية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-statistics leaf-node" href="../FinancialModule/Definitions-AnalyticalJournalsTypes-index.html">أنواع
+                                                اليوميات التحليلية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-mortgage-loan leaf-node" href="../FinancialModule/Definitions_CostCentersTree.html">مراكز
+                                                التكلفة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics-1 leaf-node" href="../FinancialModule/Definitions-AuditRatings.html">تصنيفات
+                                                الحسابات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-business-affiliate-network leaf-node" href="../FinancialModule/Definitions-ChartOfAccounts.html">شجرة
+                                                الحسابات</a>
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-exchange node">الحركات</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-notepad leaf-node" href="../FinancialModule/Transaction-OpeningJornalEntry-index.html">القيد
+                                                الافتتاحى</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics leaf-node" href="../FinancialModule/Transactions-DailyJournals_index.html">قيود
+                                                اليوميه العامه</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-task-complete leaf-node" href="../FinancialModule/Transactions-ClosingJornalEntry-index.html">قيود
+                                                الاقفال</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-clipboard node">التقارير</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="../FinancialModule/Reports-General ledger account-form.html">حساب
+                                                الاستاذ العام</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-scale-1 leaf-node" href="../FinancialModule/Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان
+                                                مراجعة الاستاذ العام</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-shopping-list leaf-node" href="../FinancialModule/Reports-FinancialMenus.html">القوائم
+                                                الماليه للحسابات الختاميه</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <!-- Financial Module : End -->
+                        <!-- Financial Module - Cash Management : Begin -->
+                        <li class="sub-list-l" data-nodeid="6" data-parent="2">
+                            <div class="sub-list-header">
+                                <h2>إسم المؤسسة</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>النظام المحاسبى</h3>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-safebox leaf-node" href="./Definitions-ListOfSafesAndBanks.html">
+                                                قائمة الخزائن و البنوك</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet leaf-node" href="./Definitions-ListOfIncomesAndExpenses.html">الايرادات و المصروفات المتنوعة</a>
+                                        </li>
+                                           
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-exchange node">الحركات</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-money-bag leaf-node" href="./Transactions-OpenningAccounts-Index.html">الارصدة الافتتاحية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-agreement leaf-node" href="./Transactions-DailyExpenses-index.html">يومية المصروفات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-money leaf-node" href="./Transactions-CashAndPaymentStatus-Index.html">حالة اوراق القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-pay leaf-node" href="./Transactions-BillsOfExchange-index.html">سندات الصرف</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Transactions-Receipts-index.html">سندات القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-signing-the-contract  leaf-node" href="./Transactions-CheckReview-index.html">متابعة الشيكات</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-clipboard node">التقارير</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-money leaf-node" href="./Reports-CashFlow.html">السيولة النقدية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-bitcoin leaf-node" href="./Reports-CashStatus.html">حالة الاوراق المالية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-send leaf-node" href="./Reports-ChequeStatus.html">حالة الشيكات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-pay leaf-node" href="./Reports-BillsOfExchange.html">سندات الصرف</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Reports-Receipts.html">سندات القبض</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-mortgage-loan leaf-node" href="./Reports-BankStatement.html">كشف حساب البنك و الخزينة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-scale-1 leaf-node" href="./Reports-CheckBalanceOfBanks.html">ميزان مراجعة الخزائن و البنوك</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi-cash flaticon-bank leaf-node" href="./Reports-MaxMinBankCredit.html">مقارنة ارصدة الخزائن و البنوك</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </li>
+                        <!-- Financial Module - Cash Management : End -->
+                    </ul>
+                </div>
+            </aside>
+        <!------------------- Sidebar : End ------------------------>
+
+        <!----------------- Main Header : Begin -------------------->
+        <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+            <div class="container-fluid">
+                <div class="row no-gutters header-container">
+                    <!-- Header Left -->
+                    <div class="header-left col-xl col-12">
+                        <div class="company-logo row no-gutters">
+                            <!-- <img src="../Content/Images/fav.png" /> -->
+                            <h3>G7 Financial Pro</h3>
+                        </div>
+                        <ul class="nav">
+                            <li class="devider"></li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false" title="الروابط المختصرة">
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">الروابط المختصرة</h6>
+                                    <div class="dropdown-body">
+                                        <div class="col-4 tool-link">
+                                            <a class="row success" title="شجرة الحسابات">
+                                                <span class="fi flaticon-business-affiliate-network"></span>
+                                                <p>شجرة الحسابات</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row warning" title="مراكز التكلفه">
+                                                <span class="fi flaticon-mortgage-loan"></span>
+                                                <p>مراكز التكلفه</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row danger" title="قيود الإقفال">
+                                                <span class="fi flaticon-task-complete "></span>
+                                                <p>قيود الإقفال</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row default" title="القيد الإفتتاحى">
+                                                <span class="fi flaticon-notepad"></span>
+                                                <p>القيد الإفتتاحى</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">إضافة المزيد</a>
+                                </div>
+                            </li>
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-globe" title="تغيير اللغة"></a>
+                            </li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill">4</span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">التنبيهات</h6>
+                                    <div class="from-group col-12 search-input">
+                                        <input class="form-control" type="text" placeholder="تصفية الإشعارات" />
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <ul class="dropdown-body notifications" id="notifydata">
+                                        <li class="dropdown-item">
+                                            <a class="warning">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">
+                                                            تنبيه 1
+                                                        </h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 6 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="danger">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">
+                                                            تنبيه 2
+                                                        </h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="success">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">
+                                                            تنيه 3
+                                                        </h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 10 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a class="default">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">
+                                                            تنبيه 4
+                                                        </h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">عرض المزيد</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <ul class="nav user-tools col">
+                        <li class="devider"></li>
+                        <li class="icon-link normal-link icon-sqr">
+                            <a class="fa fa-user-plus" title="Add New Patient"></a>
+                        </li>
+                        <li class="icon-link normal-link form-div icon-sqr row col">
+                            <span class="fa fa-search"></span>
+                            <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                        </li>
+                    </ul> -->
+                        <div class="row no-gutters header-data col">
+                            <div class="header-data-item col-12 row no-gutters">
+                                <label class="label">اسم الشركة</label>
+                                <label class="data">اسم المؤسسة</label>
+                            </div>
+                            <div class="header-data-item col-12 row no-gutters">
+                                <label class="label">العام المالي</label>
+                                <label class="data">2018/2019</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Header Right -->
+                    <div class="header-right">
+                        <ul class="nav">
+                            <li class="date-time">
+                                <p>21 March 2018</p>
+                                <p class="night fa fa-moon-o">11:57 PM</p>
+                                <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                            </li>
+                            <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="user-img d-inline-block align-middle">
+                                        <img src="../Content/Images/img.jpg" alt="user" />
+                                    </div>
+                                    <div class="user-data d-inline-block align-middle">
+                                        <p class="m-0">مرحبا</p>
+                                        <h4 class="m-0">M.Khalifa</h4>
+                                    </div>
+                                    <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Hot Tools</h6>
+                                    <div class="dropdown-body">
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>الملف الشخصى</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>الإعدادات</p>
+                                                    <span class="badge badge-pill">جديد</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>المساعدة</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>تسجيل خروج</p>
+                                                    <span class="fa fa-sign-out icon"></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <a class="dropdown-footer" href="Login.html">
+                                    <div class="row no-gutters">
+                                        <p class="col">Log Out</p>
+                                        <span class="fa fa-sign-out"></span>
+                                    </div>
+                                </a> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!----------------- Main Header : End -------------------->
+
+        <!--------------- Page Container : Begin ------------------>
+        <div class="page-container row no-gutters col position-relative" id="pageContainer">
+            <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                <form class="row no-gutters data-container col-12 position-relative">
+                    <div class="data-container-header row no-gutters col-12">
+                        <div class="section-header-main col-xl col-12">
+                            <span class="fi-cash flaticon-wallet-1"></span>
+                            <div class="data d-inline-block align-middle">
+                                <h4 class="m-0">  إضافة/تعديل استهلاك الاصول </h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="../SystemSettings/Admin-Index.html">الرئيسية</a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="../FinancialModule_CashManagement/Transactions-Receipts-index.html">استهلاك الاصول</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        تعديل استهلاك الاصول
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="section-header-tools">
+                            <div class="data-container-body-header-controls row no-gutters">
+                                <div class="row no-gutters controls-section br">
+                                    <a class="gbtn gbtn-success fa fa-check" title="حفظ"><span class="title">حفظ</span></a>
+                                    <a class="gbtn gbtn-warning fa gicon gicon-edit" title="تعديل"><span class="title">تعديل</span></a>
+                                    <a class="gbtn gbtn fa fa-plus" title="جديد"><span class="title">جديد</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-times" title="إلغاء"><span class="title">إلغاء</span></a>
+                                    <a class="gbtn gbtn-success fa fa-times" title="فك إلغاء"><span class="title">فك
+                                            إلغاء</span></a>
+                                    <a class="gbtn gbtn-dark fa fa-thumbs-o-up " title="إعتماد"><span class="title">إعتماد</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-reply-all " title="خروج"><span class="title">خروج</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-thumbs-o-down " title="إلغاء إعتماد"><span class="title">
+                                            إلغاء إعتماد</span></a>
+                                    <a class="gbtn fa fa-share-square " title="ترحيل"><span class="title">ترحيل</span></a>
+                                </div>
+                                <div class="controls-section navigate-controls row no-gutters br">
+                                    <a class="fa fa-angle-double-right icon-gbtn tools-icons" title="الأخير"></a>
+                                    <a class="fa fa-angle-right  icon-gbtn tools-icons" title="التالى"></a>
+                                    <a class="fa fa-angle-left  icon-gbtn tools-icons" title="السابق"></a>
+                                    <a class="fa fa-angle-double-left  icon-gbtn tools-icons" title="الاول"></a>
+                                </div>
+                                <div class="controls-section row no-gutters ">
+                                    <a class="gbtn gbtn-dark-o fa fa-file-text icon-gbtn" onclick="pageEventsHandler($(this),[])" data-event="openLogModal" title="log"><span class="title">log</span></a>
+                                    <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="طباعة"><span class="title">طباعة</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Data Container Body -->
+                    <div class="data-container-body row no-gutters col-12 ">
+                        <!-- Data Container Body Content-->
+                        <div class="col-12 row no-gutters data-container-body-content">
+                            <div class="col-12 row no-gutters data-container-body-content-main split-container">
+                                <div class="data-container-body-content-main-body row no-gutters no-footer full-h">
+                                    <div class="data-desc-header row no-gutters col-12 pb-0">
+                                        <div class="data-desc-header-content row no-gutters col-12 ">
+                                            <div class="main-data col-12">
+                                                <div class="main-data-header row no-gutters col-12">
+                                                    <h5>البيانات الرئيسية</h5>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 required">
+                                                    <label>تاريخ الحركة</label>
+                                                    <input type="text" class="form-control fdatepickere" name="DocDate"
+                                                        id="DocDate" placeholder="تاريخ السند" />
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 ">
+                                                    <label>رقم الحركة</label>
+                                                    <input type="text" class="form-control" name="DocNumber" id="DocNumber"
+                                                        placeholder="رقم السند" disabled/>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 ">
+                                                    <label>الشركة</label>
+                                                    <input type="text" class="form-control " name="Company" id="Company"
+                                                        placeholder="الشركة" disabled/>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 ">
+                                                    <label>الفرع</label>
+                                                    <input type="text" class="form-control " name="Branch" id="Branch"
+                                                        placeholder="الفرع" disabled/>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 ">
+                                                    <label>تاريخ التسجيل</label>
+                                                    <input type="text" class="form-control fdatepickere" name="RegisterDate"
+                                                        id="RegisterDate" placeholder="تاريخ التسجيل" disabled/>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-3 col-md-6 col-12 ">
+                                                    <label>الحالة</label>
+                                                    <input type="text" class="form-control " name="state" id="state"
+                                                        placeholder="الحالة" disabled/>
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-2 col-md-6 col-12 ">
+                                                    <label>رقم المرجع</label>
+                                                    <input type="text" class="form-control" name="RefrenceNumber" id="RefrenceNumber"
+                                                        placeholder="رقم المرجع" />
+                                                </div>
+                                                <div class="form-group col-xl-2 col-lg-2 col-md-6 col-12 ">
+                                                    <label>رقم الارشيف</label>
+                                                    <input type="text" class="form-control " name="ArcheiveNumber" id="ArcheiveNumber"
+                                                        placeholder="رقم الارشيف" />
+                                                </div>
+                                                <div class="custom-control custom-checkbox col-lg-3">
+                                                    <input type="checkbox" class="custom-control-input" id="UnderRevesion" />
+                                                    <label class="custom-control-label" for="UnderRevesion">تحت المراجعه</label>
+                                                </div>
+                                                <div
+                                                class="form-group col-xl-5 col-lg-6 col-md-8 col-12 main-data-header-tools">
+                                                <div class=" row well well-sm well-div no-gutters success">
+                                                    <div class="form-group wel-div-check">
+                                                        <div
+                                                            class="custom-control custom-checkbox col-xl-3 col-lg-3 col-md-6 col-12 m-0">
+                                                            <input type="checkbox" class="custom-control-input"
+                                                                id="Auto" />
+                                                            <label class="custom-control-label"
+                                                                for="Auto">الي</label>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="form-group col detail-data stacked-data row no-gutters">
+                                                        <div class="stacked-div col" data-toggle="tooltip"
+                                                            data-placement="bottom" title="فرع الحركة"><input
+                                                                type="text" class="form-control" name="ActionBranch"
+                                                                id="ActionBranch" value=" فرع الحركة" disabled />
+                                                        </div>
+                                                        <div class="stacked-div col" data-toggle="tooltip"
+                                                            data-placement="bottom" title="تاريخ الحركة"><input
+                                                                type="text" class="form-control" name="ActionDate"
+                                                                id="ActionDate" value="تاريخ الحركة" disabled />
+                                                        </div>
+                                                        <div class="stacked-div col" data-toggle="tooltip"
+                                                            data-placement="bottom" title="رقم الحركة"><input
+                                                                type="text" class="form-control" name="ActionNumber"
+                                                                id="ActionNumber" value="رقم الحركة" disabled />
+                                                        </div>
+                                                        <div class="stacked-div col" data-toggle="tooltip"
+                                                            data-placement="bottom" title="نوع الحركة"><input
+                                                                type="text" class="form-control" name="ActionType"
+                                                                id="ActionType" value="نوع الحركة" disabled /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 data-desc-body row no-gutters">
+                                            <div class="data-desc-body-container row no-gutters col-12">
+                                                <div class="data-desc-body-container-body col-12 pt-0">
+                                                    <div class="data-desc-body-container-body-section col-12">
+                                                        <div class="section-header row no-gutters col-12">
+                                                            <h5>حتى شهر</h5>
+                                                        </div>
+                                                        <div class="form-group col-xl-4 col-lg-4 col-md-6 col-12  select-single">
+                                                            <label>الشهر</label>
+                                                            <select class="form-control" name="Branch" id="Branch">
+                                                                <option>إختر الشهر</option>
+                                                                <option>الشهر 1</option>
+                                                                <option>الشهر 2</option>
+                                                                <option>الشهر 3</option>
+                                                                <option>الشهر 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-xl-4 col-lg-4 col-md-6 col-12 ">
+                                                            <label>السنة</label>
+                                                            <input type="text" class="form-control" name="RefrenceNumber" id="RefrenceNumber"
+                                                                placeholder="السنة" />
+                                                        </div>
+                                                        <div class="form-group col-xl-4 col-lg-4 col-md-6 col-12 ">
+                                                                <label>الى تاريخ</label>
+                                                                <input type="text" class="form-control fdatepickere" name="RefrenceNumber" id="RefrenceNumber"
+                                                                    placeholder="الى تاريخ" />
+                                                            </div>
+                                                    </div>
+                                                    <div class="border-bottom col-12"></div>
+                                                    <div class="data-desc-body-container-body-section col-12">
+                                                        <div class="section-header row no-gutters col-12">
+                                                            <h5>تفاصيل</h5>
+                                                            <div class="header-tools row">
+                                                                <button type="button" class="gbtn gbtn-success fa fa-plus"
+                                                                    onclick="handelDataTableAddBtn()">
+                                                                    إضافة صف
+                                                                </button>
+                                                                <button type="button" class="gbtn  fa fa-filter"
+                                                                onclick="dtEventHandler($(this),[])" data-event="DragOptions">
+                                                                    معايير الادراج
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="myGrid" class="ag-theme-balham grid no-side max100vh-65vh"></div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="col-12 border-bottom"></div>
+                                                    
+                                                    <div class=" col-xl-6 form-group row col-12 no-gutters  ">
+                                                        <label>الملاحظات</label>
+                                                        <input class="form-control col-12" type="text" />
+                                                    </div>
+                                                    <div class="col-12 border-bottom"></div>
+                                                </div>
+                                                <div class="col-12 data-desc-footer row ">
+                                                    <div class="col-12 row data-desc-footer-container">
+                                                        <div class="form-group col detail-data">
+                                                            <label>أنشأ بواسطة</label>
+                                                            <input type="text" class="form-control" value="محمد خليفة"
+                                                                disabled />
+                                                        </div>
+                                                        <div class="form-group col detail-data">
+                                                            <label>تاريخ الانشاء</label>
+                                                            <input type="text" class="form-control" value="24/12/2018"
+                                                                disabled />
+                                                        </div>
+                                                        <div class="form-group col detail-data">
+                                                            <label>آخر تعديل بواسطة</label>
+                                                            <input type="text" class="form-control" value="محمد خليفة"
+                                                                disabled />
+                                                        </div>
+                                                        <div class="form-group col detail-data">
+                                                            <label>تاريخ آخر تعديل</label>
+                                                            <input type="text" class="form-control" value="24/12/2018"
+                                                                disabled />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-----------|Log Modal : Begin -->
+        <div class="modal fade g7-modal-n form-modal g7-account-modal" tabindex="-1" role="dialog" data-source="Log-modal"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+                <form class="modal-content">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-header main-data">
+                        <h5 class="modal-title" id="myModalLabel">
+                            <span class="fa fa-file-text"></span>قائمة الاجراءات
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row no-gutters data-container-body-content-main-body body-table">
+                        <div class="col-12 data-desc-body">
+                            <div class="col-12 data-desc-body-container">
+                                <div class="data-desc-body-container-body">
+                                    <div id="myGridLog" class="ag-theme-balham grid no-side col-12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">
+                            إلغاء
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--------------- Log Modal :End ---------------->
+
+        <!-----------|Choose Categories Modal : Begin -->
+        <div class="modal fade g7-modal-n form-modal g7-account-modal" tabindex="-1" role="dialog"
+        data-source="choose-Categories-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+        id="form-modal">
+        <div class="modal-dialog modal-dialog-centered" id="FormBody">
+            <form class="modal-content">
+                <div class="modal-indecator"></div>
+                <div class="modal-header main-data">
+                    <h5 class="modal-title" id="myModalLabel"><span class="fa fa-cubes"></span>التفاصيل</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row no-gutters data-container-body-content-main-body">
+                    <div class="col-12 data-desc-body">
+                        <div class="data-desc-body-container row no-gutters col-12">
+                            <div class="data-desc-body-container-body col-12">
+                                <div id="myGridCategories" class="ag-theme-balham grid no-side col-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="gbtn-o gbtn-success-o">إختيار</button>
+                    <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--------------- Choose Extra Modal :End ---------------->
+
+<!-----------|Choose DragOptions Modal : Begin -->
+<div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog"
+data-source="choose-DragOptions-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"
+id="form-modal">
+<div class="modal-dialog modal-dialog-centered" id="FormBody">
+    <form class="modal-content">
+        <div class="modal-indecator"></div>
+        <div class="modal-header main-data">
+            <h5 class="modal-title" id="myModalLabel"><span class="fa fa-cubes"></span>اختر معايير الادراج</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body row no-gutters data-container-body-content-main-body">
+            <div class="col-12 modal-details row no-gutters">
+                    <div class="form-group col-xl-6 col-lg-6  col-12  select-single">
+                            <label>اصول الشركة</label>
+                            <select class="form-control" name="Company" id="Company">
+                                <option>إختر الشركة</option>
+                                <option>الشركة 1</option>
+                                <option>الشركة 2</option>
+                                <option>الشركة 3</option>
+                                <option>الشركة 4</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group col-xl-6 col-lg-6 col-12  select-single">
+                            <label>اصول فرع</label>
+                            <select class="form-control" name="Branch" id="Branch">
+                                <option>إختر فرع</option>
+                                <option>فرع 1</option>
+                                <option>فرع 2</option>
+                                <option>فرع 3</option>
+                                <option>فرع 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-xl-6 col-lg-6 col-12  select-single">
+                            <label>اصول ادارة</label>
+                            <select class="form-control" name="Management" id="Management">
+                                <option>إختر ادارة</option>
+                                <option>ادارة 1</option>
+                                <option>ادارة 2</option>
+                                <option>ادارة 3</option>
+                                <option>ادارة 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-xl-6 col-lg-6 col-12  select-single">
+                            <label>اصول قسم</label>
+                            <select class="form-control" name="Department" id="Department">
+                                <option>إختر قسم</option>
+                                <option>قسم 1</option>
+                                <option>قسم 2</option>
+                                <option>قسم 3</option>
+                                <option>قسم 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-xl-6 col-lg-6 col-12  select-single">
+                            <label>اصول عيادة</label>
+                            <select class="form-control" name="Department" id="Department">
+                                <option>إختر عيادة</option>
+                                <option>عيادة 1</option>
+                                <option>عيادة 2</option>
+                                <option>عيادة 3</option>
+                                <option>عيادة 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-xl-6 col-lg-6 col-12  select-single">
+                            <label>مجموعة اصول</label>
+                            <select class="form-control" name="Position" id="Position">
+                                <option>إختر مجموعة</option>
+                                <option>مجموعة 1</option>
+                                <option>مجموعة 2</option>
+                                <option>مجموعة 3</option>
+                                <option>مجموعة 4</option>
+                            </select>
+                        </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="gbtn-o gbtn-success-o">ادراج</button>
+            <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">إلغاء</button>
+        </div>
+    </form>
+</div>
+</div>
+<!--------------- Choose DragOptions Modal :End ---------------->
+        <!--------------- Page Container : End ------------------>
+    </div>
+</body>
+<!------------- Scripts : Begin -------------->
+<script>
+    $(document).ready(function () {
+        $(".fdatepickere").datepicker({
+            format: "yyyy/mm/dd",
+            container: ".data-container-body"
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".select-single select").select2({
+            placeholder: "إختر نوع اليومية"
+        });
+        $(".g7-modal-n .modal-dialog .modal-content").draggable({
+            handle: ".modal-header"
+        });
+    });
+
+</script>
+
+<script>
+    var EditableCol = null;
+    var FocustableCol = null;
+    var countries = [
+        {value: "Andorra",data: "AD" },
+        {value: "Zimbabwe", data: "ZZ" }
+    ];
+    var columns = [
+        { headerName: "م",field: "Serials", },
+        { headerName: "من تاريخ",field: "From", },
+        { headerName: "الى تاريخ",field: "To", },
+        { headerName: "كود الاصل الثابت",field: "Code", },
+        { headerName: "اسم الاصل الثابت",field: "Name", },
+        { headerName: "الكمية",field: "Quantity", },
+        { headerName: "تكلفة الاصل",field: "cost", },
+        { headerName: "قيمة الاصل",field: "assetValue", },
+        { headerName: "الحد الادنى",field: "Minimum", },
+        { headerName: "فترة الاستهلاك",field: "ConsumptionPeriod", },
+        { headerName: "نسبة الاستهلاك",field: "ConsumptionRate", },
+        { headerName: "قيمة الاستهلاك",field: "ConsumptionValue", },
+        { headerName: "مجمع الاهلاك السابق",field: "Last", },
+        { headerName: "مجمع الاهلاك الحالي",field: "Current", },
+        { headerName: "صافي القيمة الدفترية",field: "Netvalue", },
+        { headerName: "ملاحظات",field: "Notes",}
+    ];
+    var data = [
+        {},
+        {}
+    ];
+    var gridOptions = {
+        columnDefs: columns, //Define Columns
+        rowData: data, //Define Rows
+        rowDragManaged: true, //Enable Drag
+        animateRows: true, //Enable Animation
+        localeText: setLocalization("ar"), //Set Table Language
+        sideBar: false, //Show SideBar
+        pagination: false,
+        enableRtl: true,
+        suppressDragLeaveHidesColumns: true,
+        suppressMakeColumnVisibleAfterUnGroup: true,
+        rowGroupPanelShow: 'always',
+        defaultColDef: {
+            editable: true
+        },
+        onGridReady: function (params) {
+            params.api.sizeColumnsToFit();
+            $(".txt-auto-input").devbridgeAutocomplete({
+                lookup: countries,
+                triggerSelectOnValidInput: false,
+                onSelect: function (suggestion) {
+                    alert("You selected: " + suggestion.value + ", " + suggestion.data);
+                }
+            });
+        },
+        onRowEditingStarted: function (event) {
+            console.log("never called - not doing row editing");
+        },
+        onRowEditingStopped: function (event) {
+            console.log("never called - not doing row editing");
+        },
+        onCellEditingStarted: function (event) {
+            console.log("cellEditingStarted");
+            /* EditableCol.push(event);
+                console.log(EditableCol); */
+            EditableCol = event;
+        },
+        onCellEditingStopped: function (event) {
+            console.log("cellEditingStarted");
+            getTotals();
+        },
+        onCellFocused: function (event) {
+            FocustableCol = event;
+        }
+    };
+    
+    function ageCellRendererFunc(params) {
+        //debugger;
+        console.log("----------ageCellRendererFunc--------");
+        console.log(params);
+        console.log("----------/ageCellRendererFunc--------");
+        //alert(params);
+        //var data = toString(params.data.journalStatus);
+        let col = params.rowIndex;
+        return (
+            '<div class="tools-div">' +
+            '<a href="#"class="danger fa fa-times" onclick="deleteRow(' +
+            col +
+            ');"></a>' +
+            "</div>"
+        );
+    }
+
+    function SetColFocus(rowIndex, colKey) {
+        gridOptions.api.setFocusedCell(rowIndex, colKey);
+    }
+    var Grid = new AgGrid({
+        Selector: "#myGrid",
+        GridOptions: gridOptions,
+        GridData: data,
+        hasTools: true,
+        hasFooter: true,
+        onReady: function(params){
+            Grid.InitTableData(); 
+        }, 
+        RenderTools: function(params){
+                    let colKey = params.colDef.field;
+                    let rowNode = params.node;
+                    return '<div class="tools-div">' +
+                            '<a href="#"class="danger fa fa-times" onclick="CostyCentersGrid.deleteRow(\'' + rowNode.id + '\',\'' + colKey + '\');"></a>' + 
+                        '</div>';
+                },
+        FooterStruct: [{ ProductName: 'الاجمالي',ExtraHours: 0, Bonus:0, DelayHours:0, DelayPenalties:0, AbsentHours:0, AbsentPenalties:0}],
+        TotalStruct : {ExtraHours: 0, Bonus:0, DelayHours:0, DelayPenalties:0, AbsentHours:0, AbsentPenalties:0}
+    });
+    function deleteRow(rowIndex) {
+        //debugger;
+        console.log("---------DeleteRow Obj :begin ----------");
+        console.log(rowIndex);
+        console.log("---------DeleteRow Obj :end ----------");
+        let row = gridOptions.api.getRowNode(rowIndex);
+        gridOptions.api.updateRowData({
+            remove: [row.data]
+        });
+    }
+    $(document).on("keydown", ".ag-cell-edit-input", function (e) {
+        //debugger;
+        if (e.keyCode == 9 || e.keyCode == 13) {
+            let rowCount = gridOptions.api.getModel().getRowCount();
+            let colBreack = EditableCol.colDef.cellClass; //EditableCol[EditableCol.length -1].colDef.cellClass;
+            let rowIndex = EditableCol.rowIndex + 1; //EditableCol[EditableCol.length -1].rowIndex + 1;
+            let row = gridOptions.api.getRowNode(rowIndex - 1);
+            let colKey = row.columnController.allDisplayedColumns[0].colId;
+            if (colBreack == "table-break" && rowIndex == rowCount) {
+                onAddRow(rowIndex, colKey);
+            }
+        }
+    });
+
+    function drawCheckColumn(params) {
+        //Note : Name & Id of Input is concatinate between header field & rowIndex like [Cash0,Cash1,Cash2,....]
+        console.log(params.data);
+        return '<div class="grid-control-div col-12 row no-gutters">' +
+            '<div class="custom-control custom-checkbox my-1 mr-sm-2">' +
+            '<input type="checkbox" class="custom-control-input" id="' + params.colDef.field + params.rowIndex +
+            '" name="' + params.colDef.field + params.rowIndex + '">' +
+            '<label class="custom-control-label" for="' + params.colDef.field + params.rowIndex + '"></label>' +
+            '</div> </div>';
+    }
+    
+    function dtEventHandler(clickedIcon, options) {
+        var rowIndex = clickedIcon.closest(".ag-row").index();
+        switch (clickedIcon.data("event")) {
+            case "delechooseAccountte":
+                {
+                    viewMsgModal(
+                        "danger-modal",
+                        "هل أنت متأكد من إزالة البيانات",
+                        "true",
+                        "true",
+                        "deleteRow(" + rowIndex + ")"
+                    );
+                    break;
+                }
+            case "DragOptions":
+                {
+                    viewStaticModal('add-modal', 'lg', 'choose-DragOptions-modal');
+                    break;
+                }
+            default:
+                {
+                    console.error(
+                        "Handler Error : This Event Not Listed In Switch Cases"
+                    );
+                    console.warn(
+                        "Define Event in Switch Control located in 'dtEventHandler' function "
+                    );
+                }
+        }
+    }
+</script>
+
+
+<!----------------Log Table : Begin ------------------>
+<script>
+    var columnsLog = [{
+            headerName: "م",
+            field: "Number",
+            enableRowGroup: true,
+            width: 100
+        },
+        {
+            headerName: "تاريخ",
+            field: "date",
+            enableRowGroup: true,
+            width: 150
+        },
+        {
+            headerName: "الوقت",
+            field: "Time",
+            enableRowGroup: true,
+            width: 130
+        },
+        {
+            headerName: "المستخدم",
+            field: "Name",
+            enableRowGroup: true,
+            width: 195
+        },
+        {
+            headerName: "الاجراءات",
+            field: "Action",
+            enableRowGroup: true,
+            width: 120
+        }
+    ];
+    var dataLog = [{
+        Number: "1",
+        Date: "12/12/1212",
+        Time: "12:12",
+        Name: "Ahmed",
+        Action: "معتمد"
+    }];
+    var gridOptionsLog = {
+        columnDefs: columnsLog, //Define Columns
+        rowData: dataLog, //Define Rows
+        rowDragManaged: true, //Enable Drag
+        animateRows: true, //Enable Animation
+        localeText: setLocalization("ar"), //Set Table Language
+        sideBar: false, //Show SideBar
+        pagination: false,
+        enableRtl: true,
+        defaultColDef: {
+            editable: false
+        },
+        suppressDragLeaveHidesColumns: true,
+        suppressMakeColumnVisibleAfterUnGroup: true,
+        rowGroupPanelShow: "always",
+        onGridReady: function (params) {
+            params.api.sizeColumnsToFit();
+        },
+
+        onRowEditingStarted: function (event) {
+            console.log("never called - not doing row editing");
+        },
+        onRowEditingStopped: function (event) {
+            console.log("never called - not doing row editing");
+        },
+        onCellEditingStarted: function (event) {
+            console.log("cellEditingStarted");
+            /* EditableCol.push(event);
+                console.log(EditableCol); */
+            EditableCol = event;
+        },
+        onCellEditingStopped: function (event) {
+            console.log("cellEditingStarted");
+        },
+        onCellFocused: function (event) {
+            //debugger;
+            FocustableCol = event;
+        }
+    };
+    var GridLog = new AgGrid({
+        Selector: "#myGridLog",
+        GridOptions: gridOptionsLog,
+        GridData: dataLog,
+        hasTools: false,
+        hasFooter: false,
+        onReady: function(params){
+            GridLog.InitTableData(); 
+        }, 
+    });
+</script>
+<!----------------Log Table : End ------------------>
+
+
+    
+<script>
+
+    function pageEventsHandler(eventSource){
+    switch (eventSource.data("event")) {
+        case "openLogModal":
+        {
+            viewStaticModal("details-modal", "lg", "Log-modal");
+            break;
+        }
+        case "openInventoryModal":
+        {
+            viewStaticModal("add-modal", "md", "InventoryModal");
+            break;
+        }
+        default:
+            {
+                console.error(
+                    "Handler Error : This Event Not Listed In Switch Cases"
+                );
+                console.warn(
+                    "Define Event in Switch Control located in 'dtEventHandler' function "
+                );
+            }
+    }
+}
+</script>
+<script>
+    $(document).on("click","#CurrenciesLink",function(){
+        var icon = $(this).find("span");
+        if(icon.hasClass("fa-plus-square")){
+            icon.removeClass("fa-plus-square");
+            icon.addClass("fa-minus-square");
+        }else if(icon.hasClass("fa-minus-square")){
+            icon.removeClass("fa-minus-square");
+            icon.addClass("fa-plus-square");
+        }
+    });
+</script>
+</html>

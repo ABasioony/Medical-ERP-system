@@ -1,0 +1,92 @@
+//------ Colors -------------
+
+$Menu: #e0e7f1;
+$MenuSub: #012943;
+
+$MainColorDark: #00111d;
+$MainColor : rgba(1,41,67,1);
+//$MainColor : rgba(55,66,72,1);
+$MainColorLight : #939393;
+$MainColorVLight: #f0f0f0;
+$Darkgray: #55585a;
+
+$SubColor : #027d82;
+$SubColorLight : rgba(0,177,183,1);
+
+$Warning:rgba(239,179,52,1);
+$Success:rgba(161,179,43,1);
+$Danger:rgba(255,51,51,1);
+$Danger-v:rgba(212,18,18,1);
+
+$ClearWhite:#ffffff;
+
+$BorderColor: #ced4da; //#e6e6e66e;
+$TableHover: #fbfbfb;
+$Disabled: #e9ecef;
+
+$ListHover: rgba(251, 251, 251, 0.7);
+
+$Warning-h:rgba(239,179,52,0.85);
+$Success-h:rgba(161,179,43,0.85);
+$Danger-h:rgba(212,18,18,0.85);
+//$MainColor-h : rgba(55,66,72,0.85);
+$MainColor-h  : rgba(1,41,67,0.85);
+$SubColorLight-h : rgba(0,177,183,0.85);
+
+
+
+$InvColor1: #193b7b;
+$InvColor2: #1c993b;
+$InvColor3: #496ca6;
+
+$InvColor1L: #c9d6e6;
+$InvColor2L: #cceac8;
+
+
+$LegendDefault: #78d0d4;
+$LegendSuccess: #cbdc5a;
+$LegendWarning: #fdc977;
+$LegendDanger: #f2a095;
+
+
+$NInvColor-SubH: #3fb0d4;
+$NInvColor-TableH: #c4ecf3;
+$NInvColor-HeadSuccess: #dbec68;
+
+$BlockColor: rgba(0,0,0,0.4);
+
+//$MainFont: calibri;
+//$MainFont:'Cairo', sans-serif;
+
+//------ LTR -------------
+/*body.ltr{
+$LTR-RTL : ltr;
+$Direction : left;
+$Direction-Opposite : right;
+
+$Justification : start; 
+$Justification-Opposite : end;
+
+$FdirectionRow : row;
+$FdirectionRow-Opposite:row-reverse;
+
+$FdirectionColumn: column;
+}*/
+//------ RTL  -------------
+
+/*body.rtl{
+  $LTR-RTL : rtl;
+    $Direction : right;
+    $Direction-Opposite : left;
+
+    $Justification : end; 
+    $Justification-Opposite : start;
+
+    //$FdirectionRow : row-reverse;
+    //$FdirectionRow-Opposite:row;
+    $FdirectionRow : row;
+    $FdirectionRow-Opposite:row-reverse;
+
+    $FdirectionColumn: column;
+  }*/
+

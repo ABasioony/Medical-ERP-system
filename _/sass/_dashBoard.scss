@@ -1,0 +1,1762 @@
+.data-section-dashb{
+    .dashb-container{
+        .dashb-content{
+            padding:15px;
+            padding-top:0px;
+            .dashb-main-div{
+                background:$ClearWhite;
+                border-radius:8px;
+                border:1px solid $BorderColor;
+                padding:0px;
+                flex-direction:$FdirectionRow;
+                .dashb-section-tabs{
+                    padding:0px;           
+                    .section-tabs-header{
+                        align-items:center;
+                        flex-direction:$FdirectionRow;
+                        padding: 15px;
+                        padding-bottom: 0px;
+                        .tabs{
+                            flex-direction:$FdirectionRow;
+                            border-bottom:4px solid $BorderColor;
+                           li{
+                               position:relative;
+                               a{
+                                   color:$MainColorLight;
+                                   font-size:14px;
+                                  span{
+                                        display: block;
+                                        font-size: 25px;
+                                        font-weight: $FW-Bold;
+                                        line-height: 1;
+                                  }
+                              
+                               }
+                               .active{
+                                    background:none;
+                                    color:$SubColorLight;
+                                }
+                               .selected{
+                                    width: 100%;
+                                    height: 4px;
+                                    position: absolute;
+                                    bottom: 0;
+                                    background: $SubColorLight;
+                                    margin-bottom:-4px;
+                                    display:none;
+                               }
+                           }
+                           .active-item{
+                                .selected{
+                                    display:block;
+                                }
+                           }
+                        }
+                        .icon-refresh{
+                            color: $ClearWhite;
+                            background: $SubColorLight;
+                            padding: 12px 14px;
+                            font-size: 28px;
+                            border-radius: 5px;
+                            margin-#{$Direction}:15px;
+                            margin-top: 5px;
+                        }
+                    }                   
+                    .section-tabs-content{
+                        padding: 15px;
+                        .list-container{
+                            padding:15px 0px;
+                            .patient-list{ 
+                                .search-form{
+                                    .form-group{
+                                        span{
+                                            position:absolute;
+                                            #{$Direction-Opposite}:25px;
+                                            top:10px;
+                                            color:$MainColorLight;
+                                            outline-color:$SubColorLight;
+                                        }
+                                        inupt{text-align:$Direction;}
+                                    }
+                                }
+                                .patient-list-item{
+                                    border-#{$Direction}: 15px solid $Warning;
+                                    padding: 3px 10px;
+                                    align-items: center;
+                                    justify-content:flex-#{$Justification};
+                                    align-items:center;
+                                    margin-bottom:5px;
+                                    flex-direction:$FdirectionRow;
+                                    .data-item{
+                                        h6{
+                                            color: $MainColorLight;
+                                            text-align:$Direction;
+                                        }
+                                        h5{
+                                            color:$SubColor;
+                                            text-align:$Direction;
+                                        }
+                                        
+                                        .service-type{
+                                            font-size:16px;
+                                        }
+                                    }
+                                    .Status{
+                                        width:20px;
+                                        height:20px;
+                                        background:$SubColorLight;
+                                        border-radius:20px;
+                                        display:none;
+                                        margin-#{$Direction-Opposite}:20px;
+                                    }
+                                }
+                                .active-item{
+                                    .Status{
+                                        display:block;
+                                    }
+                                }
+                                .patient-list-item:hover{
+                                    cursor:pointer;
+                                    background: $BorderColor;
+                                }
+                                .warnning{                   
+                                    border-color:$Warning;
+                                    .data-item{
+                                        .service-type{
+                                            color:$Warning;
+                                        }
+                                    }
+                                }
+                                .success{                   
+                                    border-color:$Success;
+                                    .data-item{
+                                        .service-type{
+                                            color:$Success;
+                                        }
+                                    }
+                                }
+                                .danger{                   
+                                    border-color:$Danger;
+                                    .data-item{
+                                        .service-type{
+                                            color:$Danger;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .patient-detail-containers{
+                    padding:15px;
+                    form{padding:5px;}
+                    .patient-details{
+                        .patient-details-header{
+                            align-items:center;
+                            flex-direction:row;
+                            a{
+                                font-size:25px;
+                                color:$MainColorLight;
+                            }
+                            .nextPatient{
+                                transform: rotate(#{$IconTransForm}deg);
+                            }
+                            .header-data {
+                                h5{
+                                   text-align:center; 
+                                   color:$MainColorLight;
+                                   margin:0px;
+                                }
+                                h6{
+                                    text-align:center;
+                                    color:$SubColorLight;
+                                    font-weight:$FW-Bold;
+                                }
+                            }
+                        }
+                        .profile{
+                            border-#{$Direction}: 15px solid $Warning;
+                            background:$MainColorVLight;
+                        }
+                        .patient-details-section{  
+                            margin-top:10px;
+                            align-items:unset;
+                            .section-header{
+                                justify-content: flex-#{$Justification};
+                                align-items:center;
+                                border-bottom: 1px solid $BorderColor;
+                                padding: 5px 5px;
+                                h5{
+                                    margin-#{$Direction-Opposite}:auto;
+                                    font-size:16px;
+                                }
+                                span{
+                                    color:$MainColorLight;
+                                    transition:all .15s linear;
+                                    transform-origin: center;
+                                }
+                            }
+                            .section-header:hover{cursor:pointer;}
+                            .section-body{
+                                flex-direction:$FdirectionRow;
+                                padding: 10px 0px;
+                                display:none;
+                                justify-content:flex-#{$Justification};
+                                align-items:flex-start;
+                                margin-bottom:5px;  
+                                .data-item{
+                                    justify-content:flex-start;
+                                h6{
+                                    color: $MainColorLight;
+                                    text-align:$Direction;
+                                }
+                                input{
+                                    color:$SubColor;
+                                    border: none;
+                                    background: none;
+                                    padding: 0px !important;
+                                    font-weight: 500;
+                                    font-family: $MainFont;
+                                    font-size: 20px;
+                                    outline:0px;
+                                    pointer-events: none;
+                                    height: 25px !important;
+                                    text-align:$Direction;
+                                }                       
+                                .service-type{
+                                    font-size:16px;
+                                }
+                                .service-id{
+                                    font-size:16px;
+                                    font-weight:$FW-Regular;
+                                    color:$MainColor;
+                                }
+                            }
+                                textarea{
+                                    max-height:90px;
+                                    min-height:90px;
+                                    height:90px;
+                                    text-align: $Direction;
+                                }
+                                .service-nav{
+                                    .nav-link{
+                                        float: $Direction;
+                                        border: 1px solid $BorderColor;
+                                        border-#{$Direction-Opposite}:none;
+                                        color: $MainColor;
+                                        margin-bottom:5px;
+                                        position:relative;
+                                        font-weight:$FW-SBold;
+                                        border-top-#{$Direction-Opposite}-radius:0px;
+                                        border-bottom-#{$Direction-Opposite}-radius:0px;
+                                        align-items: center;
+                                        display: flex;
+                                        flex-direction:$FdirectionRow;
+                                        span{
+                                            margin-#{$Direction-Opposite}:5px;
+                                            color:$SubColorLight;
+                                            font-weight:$FW-Bold;
+                                        }
+                                        h6{
+                                            float: $Direction-Opposite;
+                                            margin:0px;
+                                        }
+                                        .v-border{
+                                            height:100%;
+                                            width:3px;
+                                            top:0px;
+                                            position:absolute;
+                                            #{$Direction-Opposite}:0px;
+                                            margin-#{$Direction-Opposite}:-3px;
+                                            background:$ClearWhite;
+                                            z-index: 9;
+                                            display:none;
+                                        }
+                                    }
+                                    .warnning{span{ color:$Warning;}}
+                                    .success{span{ color:$Success;}}
+                                    .danger{span{ color:$Danger;}}
+                                    .nav-link.active{
+                                        background:none;
+                                        border-color: $SubColorLight;
+                                        border-width:2px;
+                                        .v-border{ display:block;}
+                                    }
+                                    .warnning.active{
+                                        border-color: $Warning;
+                                        .v-border{ display:block;}
+                                    }
+                                    .success.active{
+                                        border-color: $Success;
+                                        .v-border{ display:block;}
+                                    }
+                                    .danger.active{
+                                        border-color: $Danger;
+                                        .v-border{ display:block;}
+                                    }
+                                }
+                                .service-tabs-container{
+                                    padding:0px;
+                                    height: 100%;
+                                    .tab-pane{
+                                        &.scrollable{
+                                            max-height: 460px;
+                                            overflow-y: auto;
+                                            overflow-x: hidden;
+                                        } 
+                                        height: 100%;
+                                        border-radius:5px;
+                                        border-top-#{$Direction}-radius:0px;
+                                        padding:5px 15px;
+                                        border: 2px solid $SubColorLight;
+                                        .tab-pane-content{
+                                            display: flex;
+                                            height: 100%;
+                                            justify-content:flex-start;
+                                            flex-direction:$FdirectionRow;
+                                            .form-group{
+                                                label{
+                                                    margin:0px; 
+                                                    margin-bottom:3px;
+                                                    color:$SubColorLight;
+                                                    font-weight:$FW-SBold;
+                                                }
+                                                .select2-container{
+                                                    border: 1px solid $BorderColor;
+                                                    border-radius:5px;
+                                                }
+                                                .select2-selection__choice{
+                                                    background:$SubColorLight;
+                                                }
+                                            }
+                                            .payment-link{
+                                                align-self: flex-end;
+                                                color: $SubColorLight;
+                                                margin-#{$Direction}:auto;
+                                            }
+                                            .payment-link:hover{
+                                                color: $SubColor;
+                                                cursor:pointer;
+                                            }
+                                            .payment-option-form{
+                                                display: flex;
+                                                flex-direction: $FdirectionRow;
+                                                align-items: flex-start;
+                                                .form-section{
+                                                    display:flex;
+                                                    flex-direction:$FdirectionRow;
+                                                    align-items: baseline;
+                                                    flex-wrap: wrap;
+                                                    .custom-radio{
+                                                        padding-#{$Direction}:0px;
+                                                        padding-#{$Direction-Opposite}: 10px;
+                                                            margin-#{$Direction-Opposite}: 10px;
+                                                        label{
+                                                            padding-#{$Direction}: 20px !important;
+                                                        }
+                                                        .custom-control-input:checked ~ .custom-control-label::before{
+                                                            background:$Warning;
+                                                        }
+                                                    }
+                                                    /*.discount-group{
+                                                        padding-#{$Direction}:0px;
+                                                        margin-top:3px;
+                                                        margin-bottom:3px;
+                                                    }*/
+                                                    .form-group{
+                                                        input{
+                                                            border: 1px solid #ced4da;
+                                                            border-radius: 0.25rem;
+                                                        }
+                                                    }
+                                                }
+                                                p{
+                                                    margin:0px;
+                                                }
+                                                span{margin:10px 0px; color: $Success}
+                                                #payment{
+                                                    display:flex;
+                                                    flex-direction: $FdirectionRow;
+                                                    align-items: baseline;
+                                                }
+                                            }
+                                            #PaymentOptionContainer{
+                                                display:none;
+                                                flex-direction: $FdirectionColumn;
+                                                align-items: flex-start;
+                                                border-top:1px solid $BorderColor;
+                                                padding-top: 8px;
+                                                margin-top: 10px;
+                                            }
+                                            .result-div{
+                                                padding:10px;
+                                                border-top:1px dashed $BorderColor;
+                                                text-align:$Direction;
+                                                h6{
+                                                    color: $Warning;
+                                                    span{
+                                                        font-weight:$FW-Regular;
+                                                        margin-#{$Direction}:5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .row{align-items:unset !important;}
+                                    }
+                                    .tab-pane.warnning{
+                                        border-color:$Warning;
+                                        .form-group{
+                                            label{
+                                                color:$Warning;
+                                            }
+                                            .select2-selection__choice{
+                                                background:$Warning;
+                                            }
+                                        }
+                                    }
+                                    .tab-pane.success{
+                                        border-color:$Success;
+                                        .form-group{
+                                            label{
+                                                color:$Success;
+                                            }
+                                            .select2-selection__choice{
+                                                background:$Success;
+                                            }
+                                        }
+                                    }
+                                    .tab-pane.danger{
+                                        border-color:$Danger;
+                                        .form-group{
+                                            label{
+                                                color:$Danger;
+                                            }
+                                            .select2-selection__choice{
+                                                background:$Danger;
+                                                span:hover{color:$Warning}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .patient-details-section.show{
+                            .section-body{display:flex;}
+                            .section-header{span{transform:rotate(-180deg);}}
+                        }
+                        .patient-details-section.warnning{                   
+                            border-color:$Warning;
+                            .section-body{
+                                .data-item{
+                                    .service-type{
+                                        color:$Warning;
+                                    }
+                                }
+                            }
+                        }
+                        .patient-details-section.success{                   
+                            border-color:$Success;
+                            .section-body{
+                                .data-item{
+                                    .service-type{
+                                        color:$Success;
+                                    }
+                                }
+                            }
+                        }
+                        .patient-details-section.danger{                   
+                            border-color:$Danger;
+                            .section-body{
+                                .data-item{
+                                    .service-type{
+                                        color:$Danger;
+                                    }
+                                }
+                            }
+                        }
+                        .section-footer{
+                                background:none;
+                                padding:5px 0px;
+                                margin-top:10px;
+                                justify-content:flex-#{$Justification-Opposite};
+                                flex-direction:row;
+                                button{
+                                    margin-#{$Direction}:5px;
+                                    background:$Warning;
+                                    color: $ClearWhite;
+                                    padding: 0px 32px;
+                                    font-weight:$FW-SBold;
+                                    line-height: 1;
+                                    height: 35px;
+                                }
+                                .btn-success{
+                                    background:$Success;
+                                    color: $ClearWhite;
+                                }
+                            }
+                    }
+                }
+            }
+        }
+        .rdashb-content{
+            display: flex;
+            flex-direction: row;
+            .dashb-main-div{
+                background:$MainColorVLight;
+                border: none;
+                .dashb-section-tabs{
+                    .rdashb-section-tabs-header{
+                        padding-right: 0px !important;
+                        padding-left: 0px !important;
+                        padding-top: 0px !important;
+                        box-shadow: 0px 1px 5px  $MainColorLight;
+                        margin-bottom: 4px;
+                        background:$ClearWhite;
+                        border-radius:6px;
+                        .tabs{
+                            border: none;
+                            li{
+                                flex-grow: initial;
+                                min-width: 180px;
+                                a{
+                                    font-size: 18px;
+                                    font-weight:$FW-Regular;
+                                    padding: 15px 5px;
+                                }
+                                a.active{
+                                    font-weight:$FW-Bold;
+                                }
+                            }       
+                        }
+                    }
+                    .section-tabs-content{
+                        //background:$ClearWhite;
+                        border-radius:6px;
+                        padding: 0px;
+                        .tab-container{
+                            position: relative;
+                            .tab-container-header{
+                                padding: 0px 20px;
+                                background:$ClearWhite;
+                                border-top-right-radius: 6px;
+                                border-top-left-radius: 6px;
+                                border: 1px solid $BorderColor;
+                                border-bottom: none;
+                                div{
+                                    flex-direction: $FdirectionRow;
+                                    align-items: center;
+                                    border-bottom: 1px solid $BorderColor;
+                                    padding:15px 0px;
+                                    h4{
+                                        margin-#{$Direction-Opposite}:auto;
+                                        color:$SubColor;
+                                        font-size: 22px;
+                                        margin-bottom: 0px;
+                                    }
+                                    a{
+                                        color:$SubColorLight;  
+                                        font-size: 25px;
+                                        margin-#{$Direction}:5px;
+                                        font-size: 22px;
+                                        margin-left: 10px; 
+                                    }
+                                    a:hover{color:$Warning; cursor: pointer;}
+                                }
+                            }
+                            .tab-container-body{
+                                padding: 20px 20px 20px 20px;
+                                position: relative;
+                                background:$ClearWhite;
+                                margin-bottom: 15px;
+                                border-bottom-right-radius: 6px;
+                                border-bottom-left-radius: 6px;
+                                border: 1px solid $BorderColor;
+                                border-top: none;
+                                .v-top-border{
+                                    position: absolute;
+                                    top: -2px;
+                                    width:100%;
+                                    height: 5px;
+                                }
+                                .dataTables_wrapper{
+                                    padding: 15px !important;
+                                    padding-top: 0px !important;
+                                    .table{
+                                        border-collapse: separate !important;
+                                        border-spacing: 0px 8px;
+                                        thead{ 
+                                            tr{
+                                                position: relative;
+                                                th{
+                                                    font-weight:$FW-Regular;
+                                                    text-align: center !important;
+                                                }
+                                                /* th:first-child{
+                                                    text-align: $Direction !important;
+                                                }  */ 
+                                                .tools-th:before,.tools-th:after{ display: none;}
+                                            }
+                                        }
+                                        tbody{
+                                            tr{
+                                                position: relative; 
+                                                height: 55px;
+                                                background: $TableHover !important;
+                                                td{
+                                                    border-top: 0px;
+                                                    text-align: Direction ;  
+                                                    color: $SubColor;
+                                                    font-weight:$FW-Regular;        
+                                                    text-align: center;    
+                                                    white-space: nowrap;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    font-size: 14px;
+                                                }
+                                                td.danger{color:$Danger;}
+                                                td.success{color:$Success;}
+                                                td.warning{color:$Warning;}
+                                                td.default{color:$SubColorLight;}
+                                                td:first-child{
+                                                    border-#{$Direction}:12px solid $SubColorLight;
+                                                    /* text-align: $Direction ;  */
+                                                } 
+                                                td.tools-td{a{color:$MainColorLight;}a:hover{color:$MainColor;}}
+                                                td.tools-td.success{a{color:$Success;}a:hover{color:$SubColor !important;}} 
+                                            }
+                                            tr.child{td:first-child{border-right: none;}}
+                                            tr.odd{background: none;}
+                                            tr.danger{ td:first-child{border-color:$Danger;}}
+                                            tr.success{ td:first-child{border-color:$Success;}}
+                                            tr.warnning{ td:first-child{border-color:$Warning;}}
+                                        }
+                                        .table-footer{      
+                                            border-top:1px solid $BorderColor !important;                
+                                            tr{
+                                                th{color:$ClearWhite;background:$Success;border-#{$Direction-Opposite}:5px solid  $ClearWhite; }
+                                                .total{
+                                                    background: $SubColorLight;
+                                                    color: $ClearWhite;
+                                                }
+                                                th:last-child{background:none;}
+                                            }
+                                        }
+                                    }
+                                    table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th:first-child:before{
+                                        top: 25px;
+                                        #{$Direction}: 5px;    
+                                    }
+                                    table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child{
+                                        padding-#{$Direction}: 35px;
+                                    }
+                                }
+                                .legends{
+                                    flex-direction: $FdirectionRow;
+                                    justify-content: flex-#{$Justification-Opposite};
+                                    div{
+                                        margin-#{$Direction-Opposite}: 10px;
+                                        span{
+                                            width:25px;
+                                            height: 25px;
+                                            background: $SubColorLight;
+                                            margin-#{$Direction-Opposite}:10px;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            border-radius: 4px;
+                                        }
+                                        p{
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            margin: 0px;
+                                            color:$MainColor;
+                                            font-weight:$FW-Light;
+                                        }
+                                    }
+                                    div.warning{span{background: $Warning;}}
+                                    div.success{span{background: $Success;}}
+                                    div.danger{span{background: $Danger;}}
+                                }
+                                /* .form-container{
+                                    flex-direction: $FdirectionColumn;
+                                    align-items: center;
+                                    padding: 15px;
+                                    .form-main-container{
+                                        display:flex;
+                                        flex-direction: $FdirectionColumn ;
+                                        justify-content: center;
+                                        align-items:center;
+                                    }
+                                    .form-controllers{
+                                        padding: 7px;
+                                        justify-content: center;
+                                        a{
+                                            margin-#{$Direction-Opposite}: 10px;
+                                        }
+                                        .gbtn-o,.gbtn{
+                                            justify-content: flex-start;
+                                            display: flex;
+                                            align-items: center;
+                                            padding-top: 3px;
+                                            padding-bottom: 3px;
+                                            font-size: 20px;
+                                        }
+                                        .gbtn-o:before{
+                                            border-#{$Direction-Opposite}: 2px solid $SubColorLight;
+                                            padding: 4px 10px;
+                                            font-size: 36px;
+                                            margin-#{$Direction-Opposite}:15px; 
+                                            padding-#{$Direction}: 12px; 
+                                        }
+                                        .gbtn:before{
+                                            border-#{$Direction-Opposite}: 2px solid $ClearWhite;
+                                            padding: 4px 10px;
+                                            font-size: 36px;
+                                            margin-#{$Direction-Opposite}:15px; 
+                                            padding-#{$Direction}: 12px; 
+                                        }
+                                        .gbtn-o:before:hover{border-color: $SubColorLight}
+                                        .gbtn:before:hover{border-color: $Warning}
+                                    }
+                                    .main-conatiner{
+                                        .form-container{
+                                            display: flex;
+                                            flex-direction: $FdirectionColumn;
+                                            align-items: center;
+                                            .form-content{
+                                                flex-direction: $FdirectionColumn;
+                                                align-items: center;
+                                                p{font-weight:$FW-Light !important;}
+                                                .upload-control{
+                                                    input{
+                                                       border: 1px solid $BorderColor; 
+                                                    }
+                                                }
+                                                .form-group{
+                                                    padding: 0px 5px;
+                                                    label{
+                                                        font-weight: $FW-SBold;
+                                                        color: $SubColor;
+                                                        margin: 3px;
+                                                    }       
+                                                }
+                                                .gbtn{
+                                                    font-weight: $FW-Regular;
+                                                    font-size: 20px;
+                                                    padding: 4px 35px;
+                                                }
+                                                .date-input{
+                                                    position: relative;
+                                                    span{
+                                                        position: absolute;
+                                                        bottom: 12px;
+                                                        #{$Direction-Opposite}: 20px;
+                                                        color: $SubColorLight;
+                                                    }
+                                                }
+                                                  
+                                                .disabled{
+                                                    button{background-color: $BorderColor !important; pointer-events: none; } 
+                                                    select{background-color: $BorderColor !important; pointer-events: none; }
+                                                    input{background-color: $BorderColor !important; pointer-events: none; }      
+                                                }
+                                                .insurance-container{
+                                                    .insurance{
+                                                        padding: 0px;  
+                                                    }
+                                                }
+                                                .form-section{
+                                                    display: flex;
+                                                    flex-direction: $FdirectionRow;
+                                                    .discountContainer{
+                                                        .custom-control{
+                                                            margin-bottom:10px;
+                                                        }
+                                                    }
+                                                    p{
+                                                        font-weight: $FW-SBold !important;
+                                                        color: $SubColor;
+                                                        margin: 0px;
+                                                        margin-bottom: 5px;
+                                                    }  
+                                                    .radio-container{
+                                                        padding-top: 7px;
+                                                        padding-left: 10px;
+                                                    }
+                                                    .custom-radio .custom-control-input:checked ~ .custom-control-label::before{
+                                                        background: $SubColorLight;
+                                                    }         
+                                                    .flagstrap{
+                                                       button{
+                                                        display: flex;
+                                                        flex-direction: $FdirectionRow;
+                                                        align-items: center;
+                                                        width: 100%;
+                                                        font-size: 1rem;
+                                                        line-height: 1.5;
+                                                        color: $MainColor;
+                                                        background-color: $ClearWhite;
+                                                        background-clip: padding-box;
+                                                        border: 1px solid $BorderColor;
+                                                        border-radius: 0.25rem;
+                                                        text-align: $Direction;
+                                                        .caret{
+                                                            margin-#{$Direction}:auto !important;
+                                                        }
+                                                       }
+                                                    }
+                                                    .form-group.method-item{
+                                                        padding:0px 10px;
+                                                    }
+                                                    .method-item{
+                                                        .custom-control{
+                                                            position: absolute;
+                                                            #{$Direction}: 0px;
+                                                            top: 0px;
+                                                            margin-top: -15px;
+                                                            margin-#{$Direction-Opposite}: 5px;
+                                                            z-index: 9;
+                                                        }
+                                                        .custom-control-label:before{
+                                                            width:30px;
+                                                            height: 30px;
+                                                            border-radius: 15px !important;
+                                                            border: 2px solid $MainColorLight;
+                                                        }
+                                                        .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+                                                            background: $SubColorLight;
+                                                        }
+                                                        .custom-control-label::after{
+                                                            top: 10px;
+                                                            #{$Direction}: 5px;
+                                                            display: block;
+                                                            width: 20px;
+                                                            height: 20px;
+                                                            background-size: auto;
+                                                        }
+                                                        .method-item-data{
+                                                            display: flex;
+                                                            flex-direction: $FdirectionRow;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            color:$MainColorLight;
+                                                            border: 2px solid $MainColorLight;
+                                                            padding: 5px 10px;
+                                                            border-radius: 4px;
+                                                            margin-bottom: 10px;
+                                                            h6{
+                                                                margin: 0px;
+                                                                font-size: 16px;
+                                                                font-weight: $FW-SBold;
+                                                            }
+                                                            span{
+                                                                margin-#{$Direction-Opposite}: 15px;
+                                                                font-size: 35px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .method-item.active{
+                                                        .method-item-data{border-color: $SubColorLight;}
+                                                        .custom-control-label:before{border-color: $SubColorLight !important;}
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                        .result-container{
+                                            flex-direction: $FdirectionColumn;
+                                            align-items: center;
+                                            padding: 15px;
+                                            .result-item{
+                                                padding: 10px 20px;
+                                                flex-direction:$FdirectionRow;
+                                                background: $TableHover;
+                                                justify-content: flex-#{$Justification};
+                                                align-items: center;
+                                                margin-bottom: 10px;
+                                                border-radius: 4px;
+                                                border:1px solid $BorderColor;
+                                                .data-item{
+                                                    h5{
+                                                        color: $MainColorLight;
+                                                        text-align:$Direction;
+                                                        padding: 0px 10px;
+                                                        font-weight: $FW-Regular;
+                                                        font-size: 15px;
+                                                    }
+                                                    h6{
+                                                        color:$SubColor;
+                                                        text-align:$Direction;
+                                                        padding: 0px 10px;
+                                                        font-size: 15px;
+                                                    }
+                                                }
+                                                .custom-checkbox{
+                                                    //margin-#{$Direction-Opposite}:15px;
+                                                    margin-top: -8px;
+                                                    label:hover{
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                                .custom-control-label:before{
+                                                    width:25px;
+                                                    height: 25px;
+                                                }
+                                                .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+                                                    background: $SubColorLight;
+                                                }
+                                                .custom-control-label::after{
+                                                    top: 7px;
+                                                    left: 0px;
+                                                    display: block;
+                                                    width: 25px;
+                                                    height: 20px;
+                                                    background-size: auto;
+                                                }
+                                            } 
+                                            .result-item.active{
+                                                box-shadow: 0 0 5px 1px $SubColorLight;
+                                            }
+                                        }
+                                        .switch-container{
+                                            display:flex;
+                                            flex-direction: $FdirectionRow;
+                                            align-items:center;
+                                            justify-content:center;
+                                            padding-top:35px;
+                                            button{
+                                                max-width:200px;
+                                                padding: 15px;
+                                            }
+                                            .devider{
+                                                display:flex;
+                                                flex-direction: $FdirectionRow;
+                                                align-items:center;
+                                                justify-content:center;
+                                                border-bottom:2px solid $BorderColor;
+                                                margin:25px 0px 15px 0px;
+                                                h4{
+                                                    color:$SubColorLight;
+                                                    margin-bottom: -15px;
+                                                    background: $ClearWhite;
+                                                    padding: 0px 15px;
+                                                    font-size: 30px;
+                                                    font-weight: $FW-Bold;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .wizard-controllers{
+                                        display:flex;
+                                        justify-content:center;
+                                        align-items:center;
+                                        button,a{
+                                            padding: 5px 35px;
+                                        }
+                                        #patientSearch{order: $OrderFirst;}
+                                        #PatientSearchNext{order: $OrderLast;}
+                                    }
+                                    .items-list{
+                                        flex-direction: $FdirectionRow;
+                                        align-items: center;
+                                        padding: 15px;
+                                        justify-content:center;
+                                        a{
+                                            padding: 20px 32px;
+                                            border: 2px solid $MainColorLight;
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            border-radius: 4px;
+                                            color: $MainColorLight;
+                                            font-family: $MainFont;
+                                            max-width:110.31px;
+                                            margin: 0px 20px;
+                                            font-size: 13px;
+                                            font-weight: $FW-SBold;
+                                            margin-bottom:5px;
+                                        }
+                                        a:before{
+                                            margin-bottom: 3px;
+                                            font: normal normal normal 35px/1 FontAwesome;
+                                        }
+                                        a.active{
+                                            color:$SubColorLight;
+                                            border-color: $SubColorLight;
+                                        }
+                                        a:hover{
+                                            cursor: pointer;
+                                            color:$Warning;
+                                            border-color: $Warning;
+                                        }
+                                    }
+                                    .inv{
+                                        font-family:"NeoSansArabic" !important;  
+                                        direction:rtl;
+                                        font-size:14px;
+                                        .inv-top-header{
+                                            display:flex;
+                                            align-items:center;
+                                            justify-content:center;
+                                           // flex-direction:$PRow;
+                                            border:5px solid $InvColor1;
+                                            border-radius:10px;
+                                            padding:15px;
+                                            margin-bottom:10px;
+                                            .inv-logo{
+                                               display:block  !important;
+                                               width: 50%;
+                                               margin-left: auto;
+                                               margin-bottom:15px;
+                                            }
+                                            .contact{
+                                                p{
+                                                    font-size:18px;
+                                                    color:$InvColor3;
+                                                    text-align: center;
+                                                    font-weight: 900;
+                                                }
+                                                p:last-child{
+                                                    margin:0px;
+                                                }
+                                            }                   
+                                        }
+                                        .inv-body-container{
+                                            padding-left: 25px;
+                                            .inv-sub-header{
+                                                margin-bottom:10px;
+                                                .sub-header-col{
+                                                    display:flex;
+                                                    align-items:center;
+                                                    justify-content:flex-start;
+                                                    flex-direction:column;
+                                                    .data-item{
+                                                        display:flex;
+                                                        align-items:center;
+                                                        justify-content:flex-start;
+                                                      //  flex-direction:$PRow;
+                                                        flex-wrap:wrap;
+                                                        margin-bottom:5px;
+                                                        label{
+                                                            background:$InvColor1;
+                                                            margin:0px;
+                                                            margin-left:5px;
+                                                            color: $ClearWhite;
+                                                            padding: 5px 10px;
+                                                            border-radius: 4px;
+                                                            min-width: 115px;
+                                                            text-align: right;
+                                                        }
+                                                        input{
+                                                            background-color:$InvColor1L !important;
+                                                            padding: 4px 10px !important;
+                                                            color: $MainColor;
+                                                            height:auto !important;
+                                                            border:none;
+                                                            font-weight:900;
+                                                            text-align:right;
+                                                        }
+                                                        label:last-child{
+                                                            background:none;
+                                                            color: $InvColor1;
+                                                            margin-right:5px;
+                                                            font-weight:900;
+                                                            min-width: unset;
+                                                            text-align: left;
+                                                        }
+                                                    }
+                                                    .success{
+                                                        label{background:$InvColor2}
+                                                        input{background-color:$InvColor2L !important;}
+                                                        label:last-child{color:$InvColor2}
+                                                    }
+                                                }   
+                                                .sub-header-col:first-child{
+                                                    padding-right:0px;
+                                                    .data-item{padding:0px;}
+                                                }
+                                                .sub-header-col:last-child{
+                                                    padding-right:0px;
+                                                    .data-item{padding:0px;}
+                                                }
+                                            }
+                                            .inv-body{
+                                                table{
+                                                    border:none;
+                                                    thead{
+                                                        tr{
+                                                            th{
+                                                                border:2px solid $InvColor3;
+                                                                text-align: center;
+                                                                vertical-align: middle;
+                                                                padding:0px;
+                                                                min-width: 100px;
+                                                                span{
+                                                                    display:block;
+                                                                    width:100%;
+                                                                    color: $InvColor3;
+                                                                    font-weight:900;
+                                                                }
+                                                                span:last-child{
+                                                                    color: $InvColor2;
+                                                                }
+                                                            }
+                                                            th[colspan="2"],th[colspan="3"]{
+                                                                span{color: $InvColor3;}
+                                                            }
+                                                            th:first-child{min-width: 110px;}
+                                                            .desc{min-width: 500px;}
+                                                        }
+                                                    }
+                                                    tbody{
+                                                        tr{
+                                                            td{
+                                                                text-align: center;
+                                                                vertical-align: middle;
+                                                                border:2px solid $InvColor1;
+                                                                border-bottom:none;
+                                                                border-top:none;
+                                                            }
+                                                        }
+                                                        tr:last-child{
+                                                            td{
+                                                                border-bottom:2px solid $InvColor1;
+                                                                border-top:2px solid $InvColor1;
+                                                                background:$InvColor1L;
+                                                                .table-footer{
+                                                                    padding-top:5px;
+                                                                    .table-footer-item{
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: center;
+                                                                        border:2px solid $InvColor1;
+                                                                        border-radius:10px;
+                                                                        padding:5px;
+                                                                        text-align: center;
+                                                                        vertical-align: middle;
+                                                                        min-height: 55px;
+                                                                        span{
+                                                                            display:block;
+                                                                            width:100%;
+                                                                            color: $InvColor3;
+                                                                            font-weight:900;
+                                                                            font-size:14px;
+                                                                        }
+                                                                        span:last-child{
+                                                                            color: $InvColor2;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            td:first-child,td:nth-child(2){
+                                                                border:none;
+                                                                border-top:2px solid $InvColor1;
+                                                                background:none;
+                                                                padding:0px;
+                                                            }
+                                                            td:nth-child(2){
+                                                                .table-footer{
+                                                                    padding-top:5px;
+                                                                    display:flex;
+                                                                    justify-content:center;
+                                                                    align-items:center;
+                                                                    .table-footer-item{
+                                                                        margin:0px 5px;
+                                                                        padding: 0px 10px;
+                                                                    }
+                                                                    .table-footer-item:last-child{
+                                                                        margin-right:0px;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .inv-footer{
+                                                padding:0px 5px;
+                                                .footer-item{
+                                                    display:flex;
+                                                    justify-content:flex-start;
+                                                    align-items:center;
+                                                    padding:5px 0px;
+                                                    border-bottom:2px solid $InvColor3;
+                                                    .item-title{
+                                                        display:flex;
+                                                        flex-direction:column;
+                                                        justify-content:flex-start;
+                                                        align-items:center;
+                                                        text-align:right;
+                                                        vertical-align:middle;
+                                                        span{
+                                                            display:block;
+                                                            width:100%;
+                                                            color: $InvColor3;
+                                                            font-weight:900;
+                                                        }
+                                                        span:last-child{
+                                                            color: $InvColor2;
+                                                        }
+                                                    }
+                                                    .item-result{
+                                                        margin:5px;
+                                                        border:2px solid $InvColor3;
+                                                        background:$InvColor1L;
+                                                        height: 55px;
+                                                        display:flex;
+                                                        align-items:center;
+                                                        justify-content:center;
+                                                    }
+                                                }
+                                                .footer-item:last-child{
+                                                    border-bottom:none;
+                                                }
+                                            }
+                                        }
+                                        .inv-note{
+                                            transform: rotate(-90deg);
+                                            position: absolute;
+                                            left: -130px;
+                                            top: 400px;
+                                            font-weight: 900;
+                                            font-size: 18px;
+                                            color: $InvColor3;
+                                        }                                      
+                                    }
+                                    .result-header{
+                                        display: flex;
+                                        flex-direction: $FdirectionRow ;
+                                        align-items: center;
+                                        border-bottom: 1px dashed $BorderColor;
+                                        padding: 15px;
+                                        padding-top: 0px;
+                                        .result-data{
+                                            h6{
+                                                display: inline-block;
+                                                margin: 0px;
+                                                margin-#{$Direction-Opposite}:10px;
+                                                color:$MainColor;
+                                                font-weight: $FW-Bold;
+                                            }
+                                            p{
+                                                display: inline-block;
+                                                margin: 0px;
+                                                color:$MainColor;
+                                            }
+                                        }
+                                        h3{
+                                            color:$Danger;
+                                            margin-right: auto;
+                                            margin-left: auto;
+                                        }
+                                        
+                                    }
+                                    .result-body{
+                                        display: flex;
+                                        flex-direction: $FdirectionColumn ;
+                                        align-items: center;
+                                        .result-section{
+                                            display: flex;
+                                            flex-direction: $FdirectionRow ;
+                                            align-items: center;
+                                            padding: 30px 0px;
+                                            .result-section-header{
+                                                position: relative;
+                                                border: 1px dashed $BorderColor;
+                                                margin-bottom: 25px;
+                                                h6{
+                                                    position: absolute;
+                                                    background: $ClearWhite;
+                                                    font-size: 18px;
+                                                    font-weight: $FW-Bold;
+                                                    padding: 5px 7px;
+                                                    #{$Direction}: -3px;
+                                                    top: -20px;
+                                                }
+                                            }
+                                            .disabled{
+                                                input{background-color: $BorderColor !important; pointer-events: none; }      
+                                            }
+                                            .result-item{
+                                                display: flex;
+                                                flex-direction: $FdirectionRow;
+                                                align-items: center;
+                                                padding: 10px 35px;
+                                                label{
+                                                    margin-#{$Direction-Opposite}: 15px;
+                                                    font-weight: $FW-Bold;
+                                                    color:$MainColor;
+                                                    margin-bottom: 0px;
+                                                    width: 110px;
+                                                }
+                                                input{
+                                                    padding: 10px 15px;
+                                                }
+                                                p{
+                                                    margin-bottom: 3px;
+                                                }
+                                            }
+                                            .main-label{
+                                                padding-right: 0px;
+                                                width: 130px;
+                                                label{
+                                                    margin-top: 25px;
+                                                    margin-right: 0px;    
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .result-footer{
+                                        display: flex;
+                                        flex-direction: $FdirectionRow;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding: 15px;
+                                        a{
+                                            padding: 5px 45px;
+                                            margin: 15px 20px;
+                                        }
+                                    }
+                                } */
+                            }
+                            .section-footer{
+                                border-radius: 6px;
+                                position: relative !important;
+                            }
+                            .tab-container-main{
+                                display: flex;
+                                flex-direction: $FdirectionRow;
+                                flex-wrap: wrap;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                margin-top: 10px;
+                                .tab-container:first-child{
+                                    padding: 0px;
+                                }
+                                .tab-container:last-child{
+                                    padding-#{$Direction-Opposite}: 0px;
+                                }
+                                .tab-container{
+                                    .tab-container-div{
+                                        .tab-container-header{  
+                                            padding: 0px 15px;    
+                                            .header-content{
+                                                display: flex;
+                                                flex-direction: $FdirectionRow;
+                                                justify-content: flex-start;
+                                                padding: 10px 0px;
+                                                padding-bottom: 12px;
+                                                border-bottom: 1px solid $BorderColor;
+                                                img{
+                                                    width: 100px;
+                                                    height: 100px;
+                                                    border-radius: 8px;
+                                                    margin-#{$Direction-Opposite}: 15px;
+                                                    border: 1px solid $BorderColor;
+                                                }
+                                                .patient-data{
+                                                    display: flex;
+                                                    flex-direction: $FdirectionColumn;
+                                                    justify-content: flex-start;
+                                                    align-items: flex-start;
+                                                    border-bottom: none;
+                                                    padding-top: 5px;
+                                                    h4{
+                                                        margin-bottom: 3px;
+                                                    }
+                                                    .data-item{
+                                                        display: flex;
+                                                        flex-direction: $FdirectionRow;
+                                                        justify-content: flex-start;
+                                                        align-items: center;
+                                                        flex-wrap: wrap;
+                                                        padding: 2px 0px;
+                                                        border-bottom: none;
+                                                        span{color:$SubColorLight;margin-#{$Direction-Opposite}:10px;}
+                                                        p{padding: 0; font-weight: $FW-Light; color:$MainColor; text-align: $Direction-Opposite; margin: 0;}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .tab-container-body{
+                                            padding-bottom: 15px;
+                                            margin-bottom: 10px;
+                                            .data-item{
+                                                flex-direction: $FdirectionRow;
+                                                flex-wrap: wrap;
+                                                justify-content: center;
+                                                align-items: center;
+                                                padding: 12px 0px;
+                                                border-bottom: 1px solid $BorderColor;
+                                                h6{
+                                                    margin: 0px;
+                                                    margin-#{$Direction-Opposite}: auto;
+                                                    color: $SubColor;    
+                                                }
+                                                p{
+                                                    margin: 0px;
+                                                    color: $SubColor;
+                                                }  
+                                            }
+                                            .data-item:last-child{
+                                                border: none;
+                                            }
+                                            .footer{
+                                                flex-direction: $FdirectionRow;
+                                                flex-wrap: wrap;
+                                                justify-content: center;
+                                                align-items: center;
+                                                padding: 15px 5px;
+                                                padding-bottom: 0px;
+                                                border:none;
+                                                a{
+                                                    padding: 2px 10px;
+                                                    font-weight: $FW-Regular;
+                                                }
+                                            } 
+                                        }
+                                    }
+                                    .timeline{
+                                        .timeline-item{
+                                            padding: 5px 0px;
+                                            .timeline-item-header{
+                                                display: flex;
+                                                flex-direction: $FdirectionRow;
+                                                justify-content: flex-#{$Justification};
+                                                align-items: flex-end;
+                                                .header-data{
+                                                    margin-#{$Direction-Opposite}:auto;
+                                                    text-align:$Direction;
+                                                    h6:first-child{margin-#{$Direction}: 0px;}
+                                                    h6{
+                                                        padding: 5px 8px;
+                                                    }
+                                                    a{
+                                                        margin-#{$Direction}: 0px;
+                                                        padding:3px 14px;
+                                                    }
+                                                }
+                                                .header-tools{
+                                                    display: flex;
+                                                    flex-direction: $FdirectionRow;
+                                                    a{
+                                                        padding: 5px 8px;
+                                                    }   
+                                                    .collapse-icon{
+                                                        transition: all .1s linear;
+                                                        transform-origin: center;
+                                                    }  
+                                                }
+                                            }
+                                            .timeline-item-body{
+                                                margin-#{$Direction}:90px;
+                                                border-#{$Direction}:5px solid $BorderColor;
+                                                .timeline-item{
+                                                    margin: 5px;
+                                                    margin-#{$Direction}: -26px;
+                                                    display: flex;
+                                                    flex-direction: $FdirectionRow;
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    .timeline-icon{
+                                                        background: $TableHover;
+                                                        width:50px;
+                                                        height: 50px;
+                                                        margin-#{$Direction-Opposite}:15px;
+                                                        border-radius: 25px;
+                                                        text-align: center;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        span{
+                                                            color:$SubColorLight ;
+                                                            font-size: 22px;                                             
+                                                        }  
+                                                    }     
+                                                    .item-content{
+                                                        background: $TableHover;
+                                                        border-radius: 8px;
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        flex-direction: $FdirectionRow;
+                                                        align-items: center;
+                                                        justify-content: flex-start;
+                                                        padding: 10px 0px;
+                                                        padding-#{$Direction-Opposite}: 25px;
+                                                        padding-#{$Direction}: 5px;
+                                                        h6{
+                                                            color:$SubColorLight;
+                                                            padding: 10px;
+                                                            margin: 0px;
+                                                            font-weight: $FW-Bold;
+                                                            line-height: 1.5;
+                                                            min-width: 100px;
+                                                            text-align: $Direction;
+                                                        }
+                                                        p{
+                                                            padding: 10px;
+                                                            color: $MainColorLight;
+                                                            border-#{$Direction}:3px solid $SubColorLight; 
+                                                            margin: 0px;
+                                                            padding-#{$Direction-Opposite}:0px; 
+                                                            text-align: $Direction;
+                                                        }                                                        
+                                                    }
+                                                }
+                                                .timeline-item.success-item{
+                                                    span{color:$Success;}
+                                                    .item-content{h6{color:$Success;}p{border-color:$Success;}}
+                                                }
+                                                .timeline-item.warning-item{
+                                                    span{color:$Warning;}
+                                                    .item-content{h6{color:$Warning;}p{border-color:$Warning;}}
+                                                }
+                                                .timeline-item.danger-item{
+                                                    span{color:$Danger;}
+                                                    .item-content{h6{color:$Danger;}p{border-color:$Danger;}}
+                                                }
+                                                .timeline-item.dark-item{
+                                                    span{color:$MainColor;}
+                                                    .item-content{h6{color:$MainColor;}p{border-color:$MainColor;}}
+                                                }
+                                            }
+                                        }
+                                        .timeline-item.open{
+                                            .timeline-item-header{
+                                                .header-tools{
+                                                    .timeline-collapse-icon{
+                                                        transform: rotate(-180deg);
+                                                    }  
+                                                }
+                                            }    
+                                        }
+                                    }
+                                }               
+                            }
+                            .sub-tab-content{
+                                background:$MainColorVLight;
+                                padding-#{$Direction-Opposite}: 0px !important;
+                                padding-#{$Direction}: 5px !important;
+                                border: none;
+                                padding: 0px 15px;
+                                width: 0px !important;
+                                .sub-tab-container{
+                                    background:$ClearWhite;
+                                    border-radius: 6px; 
+                                    box-shadow: 0px 1px 5px  $MainColorLight;
+                                    padding: 15px;
+                                    height: 100%;
+                                    .sub-div-header{
+                                        position: relative;
+                                        padding-bottom: 15px;
+                                        display: flex;
+                                        flex-direction: $FdirectionRow;
+                                        align-items: center;
+                                        border-bottom: 1px solid $BorderColor;
+                                        text-align:$Direction;
+                                        span{
+                                            font-size: 25px;
+                                            margin-#{$Direction-Opposite}:5px;
+                                            color: $Warning;
+                                        }
+                                        span.danger{color: $Danger;}
+                                        h5{
+                                            margin: 0px;
+                                            padding-#{$Direction}: 5px;
+                                            color: $Warning;
+                                        }
+                                        h5.danger{color: $Danger;}
+                                        a{
+                                            font-size: 25px;
+                                            color:$Danger;
+                                        }
+                                    }
+                                    .sub-div-body{
+                                        padding: 15px 0px;
+                                        p{
+                                            text-align:$Direction;
+                                            font-size: 16px;
+                                            font-weight: $FW-Bold;
+                                            margin-bottom: 5px;
+                                        }
+                                        .form-group{
+                                            padding:0px 5px;
+                                        }
+                                        .sub-form-btns{
+                                            display:flex;
+                                            align-items:center;
+                                            justify-content:center;
+                                            margin-top:20px;
+                                            button{
+                                                padding: 8px 50px;
+                                            }
+                                        }
+                                        .print-header{
+                                            display:none;
+                                            align-items:center;
+                                            justify-content:flex-start;
+                                            img{height:50px;}
+                                            h4{text-align:center;}
+                                        }
+                                    }
+                                }
+                           }
+                        }
+                    }
+                }
+            }
+            /*.dashb-sub-div{
+                background:$MainColorVLight;
+                border: none;
+                padding: 0px 15px;
+                width: 0px !important;
+                .sub-div-container{
+                    background:$ClearWhite;
+                    border-radius: 6px; 
+                    box-shadow: 0px 1px 5px  $MainColorLight;
+                    padding: 15px;
+                    height: 100%;
+                    .sub-div-header{
+                        position: relative;
+                        padding-bottom: 15px;
+                        display: flex;
+                        flex-direction: $FdirectionRow;
+                        align-items: center;
+                        border-bottom: 1px solid $BorderColor;
+                        text-align:$Direction;
+                        span{
+                            font-size: 25px;
+                            margin-#{$Direction-Opposite}:5px;
+                            color: $Warning;
+                        }
+                        span.danger{color: $Danger;}
+                        h5{
+                            margin: 0px;
+                            padding-#{$Direction}: 5px;
+                            color: $Warning;
+                        }
+                        h5.danger{color: $Danger;}
+                        a{
+                            font-size: 25px;
+                            color:$Danger;
+                        }
+                    }
+                    .sub-div-body{
+                        padding: 15px 0px;
+                        p{
+                            text-align:$Direction;
+                            font-size: 16px;
+                            font-weight: 700;
+                            margin-bottom: 5px;
+                        }
+                        .form-group{
+                            padding:0px 5px;
+                        }
+                        button{
+                            margin-left:auto;
+                            margin-right:auto;
+                            padding: 10px 50px;
+                            margin-top:20px;
+                        }
+                    }
+                }
+            }*/
+        }
+        
+    }
+}
+@media only screen and (max-width: 1200px){
+    .inv-sub-header{
+        .sub-header-col{
+            .data-item{
+                padding:0px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1132px){
+    .data-section-dashb{
+        padding-top:65px;
+        .dashb-container{
+            .dashb-content{
+                .dashb-main-div{
+                    .patient-list-container{
+                        .list-container-header{
+                            align-items: flex-start;
+                            .taps{
+                                li{
+                                    flex-basis: auto;
+                                    width:50%;
+                                  }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 992px){
+    .data-section-dashb{
+        padding-top:65px;
+        .dashb-container{
+            
+            .dashb-content{
+                .dashb-main-div{
+                    .patient-list-container{ 
+                        .list-container-header{
+                            align-items:flex-start;
+                            .taps{
+                                li{
+                                    flex-basis: 0;
+                                    width:auto;
+                                  }
+                            }      
+                        }
+                        .tab-content{border-bottom: 1px solid $BorderColor;}
+                    }
+                    .patient-detail-containers{
+                        padding-top:0px;
+                        .patient-details{
+                            .patient-details-section{
+                                .section-header{
+                                    flex-direction: $FdirectionRow  !important;
+                                }
+                            }
+                        }  
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media only screen and (max-width: 992px){
+    .data-section-dashb{
+        padding-top:65px;
+        .dashb-container{
+            
+        }
+    }
+}
+@media only screen and (max-width: 576px){
+    .data-section-dashb{
+        padding-top:65px;
+        .dashb-container{
+            .dashb-content{
+                .dashb-main-div{
+                    .patient-list-container{
+                        .tab-content{
+                            .tab-pane{
+                                .patient-list{
+                                    .Status{margin-#{$Direction-Opposite}:0px !important;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

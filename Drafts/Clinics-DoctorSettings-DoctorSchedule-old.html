@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/fullcalendar.min.css" rel="stylesheet" />
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+
+        <script src="../Content/js/moment.min.js"></script>
+        <script src="../Content/js/fullcalendar.min.js"></script>
+
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script>
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Reception-Index.html" class="fa fa-home">R-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Clinics-Transactions-Dashboard.html" class="fa fa-home">D-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../SystemSettings/Admin-Index.html" class="fa fa-home">A-Home</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="1" data-parent="0">
+                            <a class="fa fa-gear">Settings</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="2" data-parent="1">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>System Settings</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">Main Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-globe leaf-node" href="../SystemSettings/MainSettings-Countries-Index.html">Countries & Cities</a>
+                                        </li>
+                                        <li class="sub-list-item " data-parent="1">
+                                            <a class="fa fa-building leaf-node" href="../SystemSettings/MainSettings-Companies-Index.html">Companies</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-sitemap leaf-node" href="../SystemSettings/MainSettings-Branches-Index.html">Branches</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-cogs leaf-node" href="../SystemSettings/MainSettings-GeneralSettings.html">General Settings</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-tags leaf-node" href="../SystemSettings/MainSettings-GeneralFeatures.html">General Features</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-hashtag leaf-node" href="../SystemSettings/MainSettings-SystemCodes.html">System Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-user-secret node">User Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-lock leaf-node" href="../SystemSettings/UsersSettings-Roles.html">Roles</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../SystemSettings/UsersSettings-Users.html">Users</a>
+                                        </li>
+                                        <!-- <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-unlock-alt leaf-node">Forget Password</a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-heartbeat">Medical</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>Medical System</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">General Settings</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../MedicalModule/GeneralSettings-PatientsSettings.html" >Patient Settings</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/GeneralSettings-Clinics.html">Clinics</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/GeneralSettings-Services-Index.html">Services</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-bed leaf-node" href="../MedicalModule/GeneralSettings-Rooms.html">Rooms</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/GeneralSettings-Vacations.html">Vacations</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/GeneralSettings-Shifts-Index.html">Shifts</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-ticket leaf-node" href="../MedicalModule/GeneralSettings-ReservationNumbers.html">Reservations Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-address-book-o node">Reception</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-users leaf-node" href="../MedicalModule/Reception-MainSettings-Patients-Index.html">Patients</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-secret leaf-node" href="../MedicalModule/Reception-MainSettings-Cashiers.html">Cashiers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square node"> Clincs</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-ClinicSection-Doctors.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-ClinicSection-PendingInvoices.html">Pendding Invoices</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-ClinicSection-Prices.html">Services price</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-book-o leaf-node" href="../MedicalModule/Reception-ClinicSection-Reservations.html">Reservations</a>
+                                                </li>
+                                                <!-- <li data-parent="2">
+                                                    <a class="fa fa-history leaf-node">Periodic CheckUps</a>
+                                                </li> -->
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Receipts-Index.html">Cash Receipts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Payments-Index.html">Cash Payments</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-line-chart node">Reports & Analytics</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Revenues</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics.html">Clinics Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics-TrendAnalysis.html">Clinics Revenue Trend Analysis</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Doctors.html">Doctors Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services.html">Services Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services-TrendAnalysis.html">Services Revenue Trend Analysis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o node">Shifts Reports</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-DailyTransactions.html">Daily Transactions</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-ShiftTransactions.html">Shifts Transactions</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-calculator node">Accounting</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-MainSettings-InvoicesSettings.html">Invoices Settings</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTresuries.html">Sub Treasuries</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTreasuriesSerials.html">Treasuries Serialization</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-percent leaf-node" href="../MedicalModule/Accounting-MainSettings-DeductionsAndAdditions-index.html">Additions And Deductions </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Pricing</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-021-hospital leaf-node" href="../MedicalModule/Accounting-Transactions-Pricing-ClinicPricing.html">Clincs</a>
+                                                        </li>
+                                                        <!-- <li data-parent="3">
+                                                            <a class="gicon gicon-015-microscope leaf-node">Test labs</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-hospital-x-ray leaf-node">Rays</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-ambulance-facing-right leaf-node">Emergency</a>
+                                                        </li>  -->
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-tags leaf-node" href="../MedicalModule/Accounting-Transactions-Offers-Index.html">Offers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-Transactions-Invoices-Index.html">Invoices</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-h-square node">Clinics</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-gear node">Clinic Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Clinics-DoctorSettings-Doctors-Index.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorsShifts-Index.html">Doctor Shifts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorSchedule.html">Doctors Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Clinics-ClinicSettings-TransactionSerialization.html">Transactions Serialization</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-thermometer-full leaf-node" href="../MedicalModule/Clinics-Transactions-SickLeave-Index.html">Sick Leave</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node"  href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Referral Form</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-card-o leaf-node" href="../MedicalModule/Clinics-Transactions-PatientReview-Index.html">Patient Review</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-id-card leaf-node" href="../MedicalModule/Clinics-Transactions-InitialMedicalData-Index.html">Initial Medical Data</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>
+
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Medical Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Hot Tools">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="Add Patient">
+                                                    <span class="fa fa-user-plus"></span>
+                                                    <p>Add Patient</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="Search Patients">
+                                                    <span class="fa fa-search"></span>
+                                                    <p>Search Patients</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="End Shift">
+                                                    <span class="fa fa-stop"></span>
+                                                    <p>End Shift</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="Reservations">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <p>Reservations</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="Change Language"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Notifications</h6>
+                                        <a class="dropdown-item warning">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                    <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                    <span>6 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item danger">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                    <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                    <span>30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item success">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                    <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                    <span>10 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item default">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                    <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                    <span>30 seconds ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li>
+                                <li class="icon-link normal-link form-div-container icon-sqr row col">
+                                    <div class="form-div">
+                                        <span class="fa fa-search"></span>
+                                        <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Profile</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Settings</p>
+                                                        <span class="badge badge-pill">New</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Help</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Log Out</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable">
+                    <div class="row no-gutters data-container col-12 position-relative">
+                        <!-- Data Container Header -->
+                        <div class="data-container-header row no-gutters col-12 printed">
+                            <div class="section-header-main col-md col-12">
+                                <img src="../Content/Images/img.png">
+                                <div class="company-data">
+                                    <h3>G7 Software House</h3>
+                                    <p>23 Horia Street , Alexandria , Egypt</p>
+                                    <p>01100000000</p>
+                                </div>
+                            </div>
+                            <div class="section-header-sub">
+                                <h3>Doctor Schedule</h3>
+                                <p class="col-12">
+                                    <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="data-container-header row no-gutters col-12">
+                            <div class="section-header-main col-md col-12">
+                                <span class="fa fa-calendar"></span>
+                                <div class="data d-inline-block align-middle">
+                                    <h4 class="m-0">Doctor Schedule</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Doctor Schedule</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="section-header-tools">
+                                <div class="data-container-body-header-controls row no-gutters">
+                                        <select id="Shift" name="Shift">
+                                            <option>Choose From Shifts</option>
+                                            <option>Shift1</option>
+                                            <option>Shift2</option>
+                                            <option>Shift3</option>
+                                            <option>Shift4</option>
+                                        </select>
+                                        <select id="Branch" name="Branch">
+                                            <option>Choose From Branches</option>
+                                            <option>Branch 1</option>
+                                            <option>Branch 2</option>
+                                            <option>Branch 3</option>
+                                            <option>Branch 4</option>
+                                        </select>
+                                    <a class="gbtn gbtn-success fa fa-plus" onclick="viewStaticModal('add-modal','lg','Add-Schedule-modal');">Schedule</a>
+                                    <a class="gbtn gbtn-dark fa fa-print icon-gbtn"  title="Print"></a>
+                                    <a class="gbtn fa fa-list icon-gbtn" title="Table View"></a>
+                                    <a class="gbtn fa fa-calendar icon-gbtn" title="Calendar View"></a>
+                                    <!-- <a class="gbtn gbtn-danger fa fa-trash icon-gbtn" id="DeleteCalendarEvent"></a>
+                                    <a class="gbtn fa fa-refresh icon-gbtn" id="RefreshCalendarEvent"></a>
+                                    <a class="gbtn fa fa-angle-double-left icon-gbtn" id="calendarPrevYear"></a>
+                                    <a class="gbtn fa fa-angle-left icon-gbtn" id="calendarPrevMounth"></a>
+                                    <a class="gbtn gbtn-warning fa" id="calendarToday">Today</a>
+                                    <a class="gbtn gbtn-success fa fa-angle-right icon-gbtn" id="calendarNextMounth"></a>
+                                    <a class="gbtn gbtn-success fa fa-angle-double-right icon-gbtn" id="calendarNextYear"></a> -->
+                                    <!-- <a class="gbtn fa fa-angle-double-left icon-gbtn" id="calendarPrevYear"></a>
+                                    <a class="gbtn fa fa-angle-left icon-gbtn" id="calendarPrevMounth"></a>
+                                    <a class="gbtn gbtn-warning fa" id="calendarToday">Today</a>
+                                    <a class="gbtn gbtn-success fa fa-angle-right icon-gbtn" id="calendarNextMounth"></a>
+                                    <a class="gbtn gbtn-success fa fa-angle-double-right icon-gbtn" id="calendarNextYear"></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Data Container Body -->
+                        <div class="data-container-body row no-gutters col-12 ">
+                            <!-- Data Container Body Content-->
+                            <div class="col-12 row no-gutters data-container-body-content">
+                                <div class="col-12 row no-gutters data-container-body-content-main">
+                                    <div class="data-container-body-content-main-body col-12 row no-gutters full-h no-footer">
+                                        <div class="col-12 data-desc-body">
+                                            <div class="data-desc-body-container row no-gutters col-12">
+                                                <div class="data-desc-body-container-body row no-gutters col-12" id="calendar">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-container-footer row no-gutters col-12 ">
+                            <p>Thank You For Your Trust</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------- Page Container : End ------------------>
+        </div>
+
+        <!--------------- General Form Modal :Begin ---------------->
+
+        <!--|Schedule Modals|-->
+        <!-----------|Add Schedule Modal : Begin -->
+        <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="Add-Schedule-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+                <form class="modal-content">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel"><span class="fa fa-calendar"></span>Edit Schedule</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row no-gutters">
+                        <div class="form-group col-lg-6 col-12 required">
+                            <label>Branch</label>
+                            <select class="form-control" name="Branch-add" id="Branch-add">
+                                <option>Branch 1</option>
+                                <option>Branch 2</option>
+                                <option>Branch 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6 col-12 required">
+                            <label>Shift</label>
+                            <select class="form-control" name="Shift-add" id="Shift-add">
+                                <option>Shift 1</option>
+                                <option>Shift 2</option>
+                                <option>Shift 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-12 required">
+                            <label>From Date</label>
+                            <input type="text" class="form-control fdatepickere" name="FromDate-add" id="FromDate-add" placeholder="From Date">
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-12 required">
+                            <label>To Date</label>
+                            <input type="text" class="form-control fdatepickere" name="ToDate-add" id="ToDate-add" placeholder="To Date">
+                        </div>
+                        <div class="form-group col-lg-4 col-12 required">
+                            <label>Number of Days</label>
+                            <input type="text" class="form-control" name="NoOFDays-add" id="NoOFDays-add" placeholder="Number of Days" disabled>
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>1st From Time </label>
+                            <input type="time" class="form-control timepickere" name="first-FromTime-add" id="first-FromTime-add" placeholder="From Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>1st To Time</label>
+                            <input type="time" class="form-control timepickere" name="first-ToTime-add" id="first-ToTime-add" placeholder="To Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>2nd From Time</label>
+                            <input type="time" class="form-control timepickere" name="secound-FromTime-add" id="secound-FromTime-add" placeholder="From Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>2nd To Time</label>
+                            <input type="time" class="form-control timepickere" name="secound-ToTime-add" id="secound-ToTime-add" placeholder="To Time">
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Clinic</label>
+                            <select class="form-control" name="Clinic-add" id="Clinic-add">
+                                <option>Clinic 1</option>
+                                <option>Clinic 2</option>
+                                <option>Clinic 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Doctor</label>
+                            <select class="form-control" name="Doctor-add" id="Doctor-add">
+                                <option>Doctor 1</option>
+                                <option>Doctor 2</option>
+                                <option>Doctor 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Room Code</label>
+                            <select class="form-control" name="RoomCode-add" id="RoomCode-add">
+                                <option>RoomCode 1</option>
+                                <option>RoomCode 2</option>
+                                <option>RoomCode 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">Exit</button>
+                        <button type="button" class="gbtn-o form-clear-btn">Clear</button>
+                        <button type="submit" class="gbtn-o gbtn-success-o">Schedule</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-----------|Add Schedule Modal : End -->
+        <!-----------|Edit Schedule Modal : Begin -->
+        <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="Edit-Schedule-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+                <form class="modal-content">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="myModalLabel"><span class="fa fa-calendar"></span>Edit Schedule</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body row no-gutters">
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>Branch</label>
+                            <select class="form-control" name="Branch-edit" id="Branch-edit">
+                                <option value="">Choose From Branches</option>
+                                <option value="1">cairo</option>
+                                <option value="2">alex</option>
+                                <option value="3">Branch 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>Shift</label>
+                            <select class="form-control" name="Shift-edit" id="Shift-edit">
+                                <option value="">Choose From Shifts</option>
+                                <option value="99">Shift 1</option>
+                                <option value="100">Shift 2</option>
+                                <option value="1">Shift 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-12 required">
+                            <label>From Date</label>
+                            <input type="text" class="form-control fdatepickere" name="FromDate-edit" id="FromDate-edit" placeholder="From Date">
+                        </div>
+                        <div class="form-group col-lg-4 col-md-6 col-12 required">
+                            <label>To Date</label>
+                            <input type="text" class="form-control fdatepickere" name="ToDate-edit" id="ToDate-edit" placeholder="To Date">
+                        </div>
+                        <div class="form-group col-lg-4 col-12 required">
+                            <label>Number of Days</label>
+                            <input type="text" class="form-control" name="NoOFDays-edit" id="NoOFDays-edit" placeholder="Number of Days" disabled>
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>1st From Time </label>
+                            <input type="time" class="form-control timepickere" name="first-FromTime-edit" id="first-FromTime-add" placeholder="From Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>1st To Time</label>
+                            <input type="time" class="form-control timepickere" name="first-ToTime-edit" id="first-ToTime-add" placeholder="To Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>2nd From Time</label>
+                            <input type="time" class="form-control timepickere" name="secound-FromTime-edit" id="secound-FromTime-add" placeholder="From Time">
+                        </div>
+                        <div class="form-group col-md-6 col-12 required">
+                            <label>2nd To Time</label>
+                            <input type="time" class="form-control timepickere" name="secound-ToTime-edit" id="secound-ToTime-add" placeholder="To Time">
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Clinic</label>
+                            <select class="form-control" name="Clinic-edit" id="Clinic-edit">
+                                <option value="">Choose From Clinics</option>
+                                <option>Bones</option>
+                                <option>Clinic 2</option>
+                                <option>Clinic 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Doctor</label>
+                            <select class="form-control" name="Doctor-edit" id="Doctor-edit">
+                                <option>Doctor 1</option>
+                                <option>Doctor 2</option>
+                                <option>Doctor 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Room Code</label>
+                            <select class="form-control" name="RoomCode-edit" id="RoomCode-edit">
+                                <option>RoomCode 1</option>
+                                <option>RoomCode 2</option>
+                                <option>RoomCode 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">Exit</button>
+                        <button type="button" class="gbtn-o form-clear-btn">Clear</button>
+                        <button type="submit" class="gbtn-o gbtn-success-o">Schedule</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-----------|Edit Schedule Modal : End -->
+
+        <!--------------- General Form Modal :End ---------------->
+
+        <!--------------- General Notification :Begin ---------------->
+        <div class="g7-notification ntf-default">
+            <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                <div class="ntf-icon">
+                    <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="ntf-text">
+                    <h4>@ResourceFile.warning</h4>
+                    <p>
+                        @*Please Check Your Data*@
+                    </p>
+                </div>
+            </div>
+            <a class="ntf-close fa fa-times"></a>
+            <div class="ntf-background"></div>
+        </div>
+        <!--------------- General Notification :End ---------------->
+
+        <!------------- General Message Modal :Begin -------------->
+        <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+                <form class="modal-content" id="test">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-body row no-gutters">
+                        <div class="modal-icon">
+                            <span></span>
+                        </div>
+                        <p class="msg-type">Confirmation Message</p>
+                        <div class="msg">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">Cancel</button>
+                        <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!------------- General Message Modal : End -------------->
+
+        <!------------- Scripts : Begin -------------->
+        <script>
+         /*  var eventsArray = [
+              { branchId:1 ,shiftId: 99,roomId : 250,clinicId: 55 , DoctorID:22 ,
+                branchName:'cairo', shiftName:'Shift1', roomCode:'R350',clinicName:'Bones', doctorName:'MK',
+                title : '| R350 - MK - Bones',
+                start :'2018-07-10T01:30:00',end :'2018-07-20T05:30:00',
+                allDay : false,
+                className : 'EventStyle',
+                overlap : true,
+                droppable:false,
+                editable : false},
+                { branchId:2 ,shiftId: 100,roomId : 350,clinicId: 66 , DoctorID:88 ,
+                branchName:'alex', shiftName:'Shift2', roomCode:'R650' , clinicName:'Teeth', doctorName:'EK',
+                title : '| R650 - EK - Teeth',
+                start :'2018-07-07T01:30:00',end :'2018-07-07T05:30:00',
+                allDay : false,
+                className : 'EventStyle',
+                overlap : true,
+                droppable:false,
+                editable : false}
+        ]; */
+        var eventsArray = [
+              { shiftId: 99,
+                branchName:'cairo', shiftName:'Shift1', roomCode:'R350',clinicName:'Bones', doctorName:'MK',
+                title : '| R350 - MK - Bones',
+                start :'2018-07-10T01:30:00',end :'2018-07-20T05:30:00',
+                allDay : false,
+                className : 'EventStyle',
+                overlap : true,
+                droppable:false,
+                editable : false},
+                { branchId:2 ,shiftId: 100,roomId : 350,clinicId: 66 , DoctorID:88 ,
+                branchName:'alex', shiftName:'Shift2', roomCode:'R650' , clinicName:'Teeth', doctorName:'EK',
+                title : '| R650 - EK - Teeth',
+                start :'2018-07-10T01:30:00',end :'2018-07-30T05:30:00',
+                allDay : false,
+                className : 'EventStyle',
+                overlap : true,
+                droppable:false,
+                editable : false}
+        ];
+
+        var res = [ {
+                        id: 'a',
+                        title: 'Room A'
+                        },
+                        {
+                        id: 'b',
+                        title: 'Room B'
+                        }
+                    ];
+
+            $(document).ready(function(){
+                $('.fdatepickere').datepicker({
+                    format: "yyyy/mm/dd",
+                    container: '.data-container-body'
+                });
+                $('.timepickere').clockpicker({
+                    donetext: "Set Time",
+                    autoclose: "true",
+                });
+
+                $('#calendar').fullCalendar({
+                    header:{left:'title', center: '', right:  'prevYear,prev,today,next,nextYear'},
+                    titleFormat: 'MMMM YYYY',
+                    locale: "en",
+                    isRTL: false,
+                    themeSystem: 'bootstrap4',
+                    selectable: true, // Enable Multi Select
+                    unselectAuto: true, // Enable and disable unselect
+                    selectOverlap:true, // Can Select Overlap Exisit Event
+                    unselectCancel:'', //slector to element you dont to remove selector on click them
+                    timeFormat: 'h(:mm)t',
+                    displayEventTime : true,
+                    displayEventEnd  : true,
+                    navLinks: true,
+                    eventOrder: 'start',
+
+                    resources:[ {
+                        id: 'a',
+                        title: 'Room A'
+                        },
+                        {
+                        id: 'b',
+                        title: 'Room B'
+                        }
+                    ],
+
+                    //---- Set the Value Of The Header
+                    columnHeaderText: function(index) {
+                        if (index.weekday() === 0) {return 'Sat';}
+                        if (index.weekday() === 1) {return 'Fri';}
+                        if (index.weekday() === 2) {return 'Thr';}
+                        if (index.weekday() === 3) {return 'Wed';}
+                        if (index.weekday() === 4) {return 'Thu';}
+                        if (index.weekday() === 5) {return 'Mon';}
+                        if (index.weekday() === 6) {return 'Sun';}
+                    },
+
+                    //-------------------Triggered on window Resize : begin-------------------
+                    /* windowResize: function(view) {
+                        alert('The calendar has adjusted to a window resize');
+                    }, */
+                    //-------------------Triggered on window Resize : end-------------------
+                    
+
+                    //-------------------Triggered on Day clicked : begin-------------------
+                    /* dayClick: function(date, jsEvent, view) {
+                        alert('Clicked on: ' + date.format());
+                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                        alert('Current view: ' + view.name);
+                        // change the day's background color just for fun
+                        $(this).css('background-color', 'red');
+                    }, */
+                    //-------------------Triggered on Day clicked : end-------------------
+
+                    //-------------------Triggered when selection happened : begin-------------------
+                    /* select: function( start, end, jsEvent, view ){
+                        alert('Clicked on: ' + start.format());
+                        alert('Clicked on: ' + end.format());// calculate as all day fo it return the day after selected
+                        initaiteAddModal(start.format(),end.format());
+                    }, */
+                    //-------------------Triggered when selection happened : end-------------------
+
+                    //-------------------Triggered when selection cleared : begin-------------------
+                    /* unselect: function( jsEvent, view ){
+                        alert('uselect');
+                    }, */
+                    //-------------------Triggered when selection cleared : end-------------------
+
+                    events: eventsArray, //Define The Calendar Source
+
+                    //-------------------Handle Event render : begin-------------------
+                    eventRender: function(event, element,view) {
+                        element.attr('data-room-id', event.roomId);
+                        element.attr('data-doctor-id', event.DoctorID);
+                        element.attr('data-clinc-id', event.clinicId);
+                        element.attr('data-shift-id', event.shiftId);
+                        
+                        element.attr('data-srart-time', event.start.format('h:mm:ss a'));
+                        element.attr('data-end-time', event.end.format('h:mm:ss a'));
+                        element.attr('data-srart-date', event.start.format('DD MM YYYY'));
+                        element.attr('data-end-date', event.end.format('DD MM YYYY'));
+                        console.log(element);
+                    },
+                    eventAfterAllRender : function(){
+                        console.log($('.fc-event-container'));
+                        $('.fc-event-container').append("<a class='fa fa-times hidden'></a>");
+                    },
+                    //-------------------Handle Event render: end-------------------
+
+                    //-------------------Triggered when event clicked : begin-------------------
+                    eventClick: function(event, element,view) {
+                        initiateEditModal(event, this);
+                    },
+                    //-------------------Triggered when event clicked : end-------------------
+
+                    //-------------------Triggered when Mouse hover on Event : begin-------------------
+                    eventMouseover: function( event, jsEvent, view ) {
+                        var shiftId = $(this).data("shift-id");
+                        $(this).addClass("event-hover");
+                        $(".fc-day-grid-event").each(function( index ) {
+                            if($(this).data("shift-id") == shiftId){
+                                $(this).addClass("event-hover");
+                            }
+                        });
+                    },
+                    //-------------------Triggered when Mouse hover on Event : end-------------------
+                    //-------------------Triggered when Mouse out from Event : begin-------------------
+                    eventMouseout: function( event, jsEvent, view ) {
+                        var shiftId = $(this).data("shift-id");
+                        $(this).removeClass("event-hover");
+                        $(this).closest(".fc-event-container").children(".fa-times").addClass("hidden");
+                        $(".fc-day-grid-event").each(function( index ) {
+                            if($(this).data("shift-id") == shiftId){
+                                $(this).removeClass("event-hover");
+                            }
+                        });
+                    }
+                    //-------------------Triggered when Mouse out from Event : end-------------------
+                });
+            });
+
+            $(document).on('click','#DeleteCalendarEvent',function(){
+                $('#calendar').fullCalendar( 'removeEvents', [1] );
+            });
+
+            $(document).on('click','#RefreshCalendarEvent',function(){
+                $('#calendar').fullCalendar( 'refetchEvents' );
+            });
+
+
+        //------------------Calendar Navigation : begin -----------------------------
+            $(document).on('click','#calendarToday',function(){
+                $('#calendar').fullCalendar('today');
+            });
+            $(document).on('click','#calendarNextMounth',function(){
+                $('#calendar').fullCalendar('next');
+            });
+            $(document).on('click','#calendarPrevMounth',function(){
+                $('#calendar').fullCalendar('prev');
+            });
+            $(document).on('click','#calendarNextYear',function(){
+                $('#calendar').fullCalendar('nextYear');
+            });
+            $(document).on('click','#calendarPrevYear',function(){
+                $('#calendar').fullCalendar('prevYear');
+            });
+        //------------------Calendar Navigation : end -----------------------------
+
+        //------------------Delete Event : begin -----------------------------
+            $(document).on('click','.fc-event-container .fa-times',function(){
+                var id= $(this).closest("td").children(".fc-day-grid-event").data("shift-id");
+                viewMsgModal('danger-modal','Are you sure you want to delete this item?','true','true','deleteItem("'+id+'")');
+            })
+             function deleteItem(deletedID){
+                alert("id =" + deletedID);
+            }
+        //------------------Delete Event : end -----------------------------
+
+        //------------------initiate and view Schedule modal : begin -----------------------------
+            function initaiteAddModal(startDate , EndDate){
+                $("#FromDate-add").val(startDate);
+                $("#ToDate-add").val(EndDate);
+                viewStaticModal('add-modal','lg','Add-Schedule-modal');
+            }
+        //------------------initiate and view Schedule modal : end -----------------------------
+
+        //------------------initiate and view Edit Schedule modal : begin -----------------------------
+            function initiateEditModal(event, anchorObj){
+                console.log($(anchorObj).data());
+                alert($(anchorObj).data("shiftId"));
+                viewStaticModal('edit-modal','lg','Edit-Schedule-modal');
+                //event.title = "CLICKED!";
+                $('#calendar').fullCalendar('updateEvent', event);
+            }
+        //------------------initiate and view Edit Schedule modal : begin -----------------------------
+
+        /* $(documnet).on("mouseenter",".fc-event-container .fa-times",function(){
+            debugger;
+            $(this).closest(".fc-event-container").children(".EventStyle").addClass("event-hover");
+        }); */
+/*         $(".fc-event-container .fa-times").on("mouseenter",function(){
+            debugger;
+            $(this).closest(".fc-event-container").children(".EventStyle").addClass("event-hover");
+        }); */
+        /* $(documnet).on("mouseleave",".fc-event-container .fa-times",function(){
+            debugger;
+            $(this).closest(".fc-event-container").children(".EventStyle").removeClass("event-hover");
+        });  */
+        </script>
+        <!------------- Scripts : End -------------->
+    </body>
+</html>

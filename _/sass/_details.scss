@@ -1,0 +1,120 @@
+
+.data-desc-header.detail-data{
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+    .data-desc-header-content{
+        border: none !important;
+    }
+}
+.detail-data{
+    .main-data{
+        align-items: center !important;
+    }
+    .result-table{
+        margin-bottom: 10px;
+    }
+    .total-div{
+        .divider{
+            border-bottom: 1px solid $BorderColor;
+            height: 0px;
+            margin: 5px 0px;
+        }
+        .total-data-item-total{
+            margin-bottom: 15px;
+            justify-content: flex-end;
+            h4{
+                margin: 0px !important;
+                margin-#{$Direction-Opposite}:20px !important;
+                font-weight: $FW-SBold;
+                font-size: 25px !important;
+                width:auto !important;
+                padding: 0px !important;
+                border: none !important;
+                line-height: 1.5 !important;
+            }
+            span{
+                margin: 0px 3px;
+                font-weight: $FW-SBold;
+                font-size: 25px;
+                color: $Success;
+            }
+        }
+    }
+    h4{
+        padding: 8px 0px;
+        margin: 0px 10px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid $BorderColor;
+    }
+    label{
+        color:$MainColor !important;
+        padding: 0px !important;
+        font-weight: $FW-Regular;
+        margin: unset !important;
+        margin-bottom: .5rem !important;
+        min-height: auto !important;
+        text-align: right !important;
+    }
+
+    .custom-control{
+        margin: auto 0 !important;
+    }
+   .custom-control label {
+        text-align: $Direction;
+        padding-#{$Direction}: 15px !important;
+        margin: 0px !important;
+    }
+    input{
+        border:none;
+        padding: 0px !important;
+        text-transform: uppercase;
+        color: $Success !important;
+        background: none;
+        line-height: 20px !important;
+        font-size: 14px;
+        font-weight: $FW-SBold;
+        text-align: right;
+        margin-right: 8px;
+    }
+    .has-description{
+        border-#{$Direction-Opposite}:1px solid $BorderColor;
+    }
+    .sub-detail{
+        font-size: 14px;
+        color: $warning !important;
+    }
+    textarea{
+        border:none;
+        background: none;
+        min-height: auto;
+        max-height: auto;
+        height: auto;
+        pointer-events: none;
+        font-weight: $FW-SBold;
+        padding: 0px !important;
+        text-transform: uppercase;
+        color: $Success !important;
+    }
+    .detail-check{
+        padding: 11px;
+        text-align: $Direction;
+        label{
+            font-family:  $MainFont;
+            font-size: 16px;
+            &:before{
+                font-family: FontAwesome;
+                margin-#{$Direction-Opposite}: 10px;
+                font-size: 18px;
+            }
+            &.fa-check-circle:before{color: $Success;}
+            &.fa-times-circle:before{color: $Danger;}
+            &.fa-minus-circle:before{color: $Warning;}
+        }
+    }
+    .form-group{
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .has-description{border:none !important;}
+}

@@ -1,0 +1,185 @@
+.block-overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $BlockColor;
+    z-index: 30;
+    &.un-blocked{
+        animation-name: BlockerVanish;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease-out;
+        animation-fill-mode:both;
+    }
+    &.blocked{
+        animation-name: BlockerShow;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease-out;
+        animation-fill-mode:both;
+    }
+}
+.focused-item{
+    position: relative !important;
+    z-index: 999 !important;
+    &::after{
+        content:"";
+        border: 3px solid $Warning;
+        border-radius: 2px;
+        z-index: 1;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        margin: 0px;
+    }
+    input{
+        z-index: 10;
+    }
+    .helper-content{
+    animation-name: HelperShow;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+    animation-fill-mode:both;
+    }
+}
+.unfocused-item{
+    .helper-content{
+        animation-name: HelperVanish;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease-out;
+        animation-fill-mode:both;
+    }
+}
+
+
+.helper-content{
+    opacity: 0;
+    position: absolute;
+    background: $ClearWhite;
+    margin-top: 12px;
+    min-width: 350px;
+    border-radius: 4px;
+    padding: 0px 5px;
+    //z-index: 9999999999;
+    bottom: -160px;
+    .helper-content-anchor{
+        color: $ClearWhite;
+        position: absolute;
+        #{$Direction}: 50% !important;
+        #{$Direction-Opposite}: auto !important;
+        transform: translate(-50%, 0) !important;
+        top: -16px;
+        font-size: 25px;
+        z-index: 5;
+    }
+    .helper-content-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 10px;
+        border-bottom: 1px solid $BorderColor;
+        h4{
+            font-size: 16px;
+            font-weight: $FW-SBold;
+            margin: 0px;
+        }
+    }
+    .helper-content-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 10px;
+        h4{
+            display: none;
+        }
+        p{
+            font-size: 14px;
+            font-weight: $FW-Regular;
+            margin: 0px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .helper-content-footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        padding-top: 5px;
+        button{
+            padding: 5px 16px !important;
+            font-size: 14px !important;
+            margin: 0px !important;
+        }
+    }
+    &.no-header{
+        bottom: -145px;
+        .helper-content-header{
+            display: none;
+        }
+        .helper-content-body{
+            h4{
+                display: block;
+                font-weight: $FW-Bold;
+                margin: 0px;
+                text-align: $Direction;
+                width: 100%;
+                padding-bottom: 5px;
+            }
+            p{
+                text-align: $Direction;
+            }
+            justify-content: flex-start;
+        }
+        .helper-content-footer{
+            justify-content: flex-end;
+        }
+        &.no-footer{
+            bottom: -100px;
+        }
+    }
+    &.no-footer{
+        .helper-content-footer{
+            display: none;
+        }
+    }
+}
+
+
+@keyframes HelperVanish{
+    0%{opacity: 1; visibility: visible;}
+    50%{opacity: 0.5;}
+    100%{opacity: 0; visibility: hidden;}
+}
+@keyframes HelperShow{
+    0%{opacity: 0; visibility: hidden;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1; visibility: visible;}
+}
+
+
+
+@keyframes BlockerVanish{
+    0% {opacity: 1; visibility: visible;}
+    50%{opacity: 0.5;}
+    100%{opacity: 0; visibility: hidden;}
+}
+@keyframes BlockerShow{
+    0% {opacity: 0; visibility: visible;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}

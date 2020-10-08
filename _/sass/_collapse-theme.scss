@@ -1,0 +1,38 @@
+.collapse-theme{
+    .data-container-body-content-main-body{
+        margin-bottom: 5px !important;
+        .data-desc-body{
+            height: auto !important;
+            min-height: 0px !important;
+            .data-desc-body-content{
+                .main-data{
+                    padding-top: 10px;
+                    padding-#{$Direction}: 10px;
+                    .main-data-header{
+                        a{
+                            font-size: 18px;
+                            font-weight: 600;
+                            &:hover,&:active,&:focus{
+                                color: $SubColorLight;
+                                cursor: pointer;
+                            }
+                        }
+                        h4{
+                            margin-#{$Direction-Opposite}:auto;
+                            font-size: 18px;
+                            font-weight: 600;
+                            text-align: $Direction;
+                            margin-bottom: 0px;
+                        }
+                    }
+                    .main-data-body{
+                        .form-group{
+                            margin-bottom: 1.5rem;
+                        }
+                    } 
+                }
+            }
+            
+        }
+    }
+}

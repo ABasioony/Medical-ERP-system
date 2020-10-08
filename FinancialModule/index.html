@@ -1,0 +1,690 @@
+﻿<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/ag-grid.css" rel="stylesheet">
+        <link href="../Content/css/ag-theme-balham.css" rel="stylesheet">
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+        <script src="../Content/js/G7/DataTableConfig.js"></script>
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-calculator">النظام المحاسبى</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>إسم المؤسسة</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>النظام المحاسبى</h3>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-008-cogwheel node">التعريفات الأساسية</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-bank-building leaf-node" href="./Definitions-CostCentersDimentions-index.html">
+                                                أبعاد مراكز التكلفة</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-contract-1 leaf-node" href="./Definitions-FinancialStatments-index.html">الحسابات الختامية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-payment-day leaf-node" href="./Definitions-AccountingPeriods-index.html">الفترات المحاسبية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-statistics leaf-node" href="./Definitions-AnalyticalJournalsTypes-index.html">أنواع اليوميات التحليلية</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics-1 leaf-node" href="./Definitions-AuditRatings.html">تصنيفات الحسابات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-business-affiliate-network leaf-node" href="./Definitions-ChartOfAccounts.html">شجرة الحسابات</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-mortgage-loan leaf-node" href="./Definitions_CostCentersTree.html">مراكز التكلفة</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-004-flow-chart-1 node">التقارير</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-shopping-list leaf-node" href="./Reports-FinancialMenus.html">القوائم الماليه للحسابات الختاميه</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="./Reports-General ledger account-form.html">حساب الاستاذ العام</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-scale-1 leaf-node" href="./Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان مراجعة الاستاذ العام</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fi flaticon-002-exchange node">الحركات</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-notepad leaf-node" href=".Transaction-OpeningJornalEntry-index.html">القيد الافتتاحى</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-task-complete leaf-node" href="./Transactions-ClosingJornalEntry-index.html">قيود الاقفال</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fi flaticon-analytics leaf-node" href="./Transactions-DailyJournals_index.html">قيود اليوميه العامه</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>     
+    
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Financial Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="الروابط المختصرة">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">الروابط المختصرة</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="شجرة الحسابات">
+                                                    <span class="fi flaticon-business-affiliate-network"></span>
+                                                    <p>شجرة الحسابات</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="مراكز التكلفه">
+                                                    <span class="fi flaticon-mortgage-loan"></span>
+                                                    <p>مراكز التكلفه</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="قيود الإقفال">
+                                                    <span class="fi flaticon-task-complete "></span>
+                                                    <p>قيود الإقفال</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="القيد الإفتتاحى">
+                                                    <span class="fi flaticon-notepad"></span>
+                                                    <p>القيد الإفتتاحى</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">إضافة المزيد</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="تغيير اللغة"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">التنبيهات</h6>
+                                        <div class="from-group col-12 search-input">
+                                            <input class="form-control" type="text" placeholder="تصفية الإشعارات"/>
+                                            <span class="fa fa-search"></span>
+                                        </div>
+                                        <ul class="dropdown-body notifications" id="notifydata">
+                                            <li class="dropdown-item"><a class="warning">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 1</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 6 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                            <li class="dropdown-item"><a class="danger">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 2</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                            <li class="dropdown-item"><a class="success">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنيه 3</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 10 دقائق</span>
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                            <li class="dropdown-item"><a class="default">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <h4 class="dropdown-item-container-header">تنبيه 4</h4>
+                                                        <p>تفاصيل التنبيه</p>
+                                                        <span>من 30 دقيقة</span>
+                                                    </div>
+                                                </div>
+                                            </a></li>
+                                        </ul>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">عرض المزيد</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li>
+                                <li class="icon-link normal-link form-div icon-sqr row col">
+                                    <span class="fa fa-search"></span>
+                                    <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                </li>
+                            </ul> -->
+                        </div>
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">مرحبا</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الملف الشخصى</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الإعدادات</p>
+                                                        <span class="badge badge-pill">جديد</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>المساعدة</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>تسجيل خروج</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                    <div class="row no-gutters data-container col-12 position-relative">
+                        <!-------------- Printed Header : Begin ---------------->
+                        <div class="data-container-header row no-gutters col-12 printed">
+                            <div class="section-header-main col-md col-12">
+                                <img src="../Content/Images/img.png">
+                                <div class="company-data">
+                                    <h3>G7 Software House</h3>
+                                    <p>23 Horia Street , Alexandria , Egypt</p>
+                                    <p>01100000000</p>
+                                </div>
+                            </div>
+                            <div class="section-header-sub">
+                                <h3>Clinics</h3>
+                                <p class="col-12">
+                                    <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-------------- Printed Header : End ---------------->
+                        <!-------------- Page Header : Begin ---------------->
+                        <div class="data-container-header row no-gutters col-12">
+                            <div class="section-header-main col-md col-12">
+                                <span class="fa fa-folder-open"></span>
+                                <div class="data d-inline-block align-middle">
+                                    <h4 class="m-0">تصنيفات الحسابات</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">الرئيسية</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">تصنيفات الحسابات</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="section-header-tools">
+                                <div class="data-container-body-header-controls row no-gutters">
+                                    <div class="row no-gutters controls-section br">
+                                        <a class="gbtn gbtn-success fa fa-plus" title="إضافة قيد جديد"><span class="title">إضافة قيد جديد</span></a>
+                                        <a class="gbtn gbtn-warning  filter-btn fa fa-filter" title="بحث"><span class="title">بحث</span></a>
+                                    </div>
+                                    <div class="controls-section row no-gutters ">
+                                        <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="طباعة"><span class="title">طباعة</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-------------- Page Header : End ---------------->
+                        <!-- Data Container Body -->
+                        <div class="data-container-body row no-gutters col-12 ">
+                            <div class="col-12 row no-gutters data-container-body-content">
+                                <div class="col-12 row no-gutters data-container-body-content-main no-header">
+                                    <div class="data-container-body-content-main-body col-12 row no-gutters no-footer main-table" id="main-content-tv">
+                                        <div id="myGrid" class="ag-theme-balham grid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------- Scripts : Begin -------------->
+        <script>
+            var columns = [
+                {field: 'RowSelect',headerName: ' ',checkboxSelection: true,suppressMenu: true, suppressSorting: true,headerCellRenderer: selectAllRenderer},
+                {headerName: 'رقم قيد اليومية', field: "journalIndex" ,enableRowGroup: true },
+                {headerName: 'التاريخ', field: "journalDate" ,enableRowGroup: true},
+                {headerName: 'رقم القيد', field: "journalNumber" ,enableRowGroup: true},
+                {headerName: 'نوع اليومية', field: "journalType" ,enableRowGroup: true},
+                {headerName: 'أسم المستخدم', field: "UserName" ,enableRowGroup: true},
+                {headerName: 'إجمالى مدين القيود', field: "TotalDebitRestrictions" ,enableValue: true, allowedAggFuncs: ['sum'] },
+                {headerName: 'إجمالى دائن القيود', field: "TotalCreditRestrictions" ,enableValue: true, allowedAggFuncs: ['sum'] },
+                {headerName: 'ملاحظات', field: "Notes"},
+                {headerName: 'رقم الارشيف', field: "archiveNumber" ,enableRowGroup: true},
+                {headerName: 'رقم المرجع', field: "refrenceNumber" ,enableRowGroup: true},
+                {headerName: 'تحت المراجعه', field: "inspection" ,enableRowGroup: true},
+                {headerName: 'الحالة', field: "journalStatus" ,enableRowGroup: true},
+                {headerName: 'قيد مباشر / قيد أوتوماتيك', field: "journalAuto" ,enableRowGroup: true},
+                {headerName: 'الإجراءات', field: "tools", cellRenderer: ageCellRendererFunc} 
+            ];
+            var data = [
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"1", journalDate:"13/12/2018", journalNumber:"JN250",journalType:"Type1",UserName:"محمد خليفة",TotalDebitRestrictions:250,TotalCreditRestrictions:500,Notes:"Notes1",archiveNumber:"AR250",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"2", journalDate:"13/12/2018", journalNumber:"JN251",journalType:"Type1",UserName:"Mostafa fahmy",TotalDebitRestrictions:90,TotalCreditRestrictions:350,Notes:"Notes2",archiveNumber:"AR500",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+                {journalIndex:"3", journalDate:"11/12/2018", journalNumber:"JN252",journalType:"Type2",UserName:"Mostafa fahmy",TotalDebitRestrictions:100,TotalCreditRestrictions:100,Notes:"Notes3",archiveNumber:"AR750",refrenceNumber:"RF300",inspection:"جارى المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"4", journalDate:"11/12/2018", journalNumber:"JN250",journalType:"Type2",UserName:"محمد خليفة",TotalDebitRestrictions:500,TotalCreditRestrictions:150,Notes:"Notes4",archiveNumber:"AR850",refrenceNumber:"RF250",inspection:"تمت المراجعه",journalStatus:"NotDone",journalAuto:"مباشر",tools:" "},
+                {journalIndex:"5", journalDate:"09/12/2018", journalNumber:"JN240",journalType:"Type2",UserName:"Mohamed Adel",TotalDebitRestrictions:1500,TotalCreditRestrictions:2500,Notes:"Notes5",archiveNumber:"AR200",refrenceNumber:"RF500",inspection:"تمت المراجعه",journalStatus:"Done",journalAuto:"أوتوماتيك",tools:" "},
+            ];
+           /*  var tableOptions = {
+                lang:"ar", 
+                DragEnable: true, 
+                sorting:true,
+                rangeSelect:true,
+                showSideBar: true,
+                pagination: true ,
+                onGridReady: function(params) {
+                    params.api.sizeColumnsToFit();
+                },              
+            } */
+            var gridOptions = {
+                columnDefs: columns,                     //Define Columns
+                rowData: data,                           //Define Rows
+                enableSorting: true,             //Enable Sorting
+                enableFilter: true,               //Enable Filter
+                rowDragManaged: true,         //Enable Drag
+                animateRows: true,                          //Enable Animation
+                localeText: setLocalization("ar"),          //Set Table Language 
+                enableRangeSelection: true,  //Enable Range Select
+                rowSelection: 'multiple',       
+                sideBar: true,               //Show SideBar             
+                pagination:true,
+                enableRtl: true,
+                onFirstDataRendered(params) {
+                    params.api.sizeColumnsToFit();
+                },   
+                getContextMenuItems: getContextMenuItems,
+                allowContextMenuWithControlKey: true
+            }      
+            //var gridOptions = InitiatDataTable(columns,data,tableOptions);
+            
+            var eGridDiv = document.querySelector('#myGrid');
+            var table= new agGrid.Grid(eGridDiv, gridOptions); 
+            
+            sizeToFit(gridOptions);
+        
+            function selectAllRenderer(params) {
+                debugger;
+                var cb = document.createElement('input');
+                cb.setAttribute('type', 'checkbox');
+
+                var eHeader = document.createElement('label');
+                var eTitle = document.createTextNode(params.colDef.headerName);
+                eHeader.appendChild(cb);
+                eHeader.appendChild(eTitle);
+
+                cb.addEventListener('change', function (e) {
+                    if ($(this)[0].checked) {
+                        params.api.selectAll();
+                    } else {
+                        params.api.deselectAll();
+                    } 
+                });
+                return eHeader; 
+            }
+
+            function ageCellRendererFunc(params) {
+                console.log(params.data);
+                //alert(params);
+             //   var data = toString(params.data.journalStatus);
+                return '<div class="tools-div">'+
+                '<a href="#"class="default gicon gicon-eyee"></a>'+
+                '<a href="#"class="warning gicon gicon-edit"></a>'+
+                '<a href="#"class="success fa fa-toggle-on" onclick="getdata();"></a>'+
+                '<a href="#"class="danger fa fa-toggle-off" onclick="getdata();"></a>'+
+                '<a href="#"class="success fa fa-thumbs-o-up" onclick="getdata();"></a>'+
+                '<a href="#"class="danger fa fa-thumbs-o-down" onclick="getdata();"></a>'+
+                '</div>';
+            }
+            function getdata(data) {
+                window.alert("mk");
+            }
+            
+            function getContextMenuItems(params) {
+                debugger;
+                var result = [
+                    {
+                        // custom item
+                        name: 'Alert ' + params.value,
+                        action: function() {
+                            window.alert('Alerting about ' + params.value);
+                        },
+                        cssClasses: ['redFont', 'bold']
+                    },
+                    {
+                        // custom item
+                        name: 'Always Disabled',
+                        disabled: true,
+                        tooltip: 'Very long tooltip, did I mention that I am very long, well I am! Long!  Very Long!'
+                    },
+                    {
+                        name: 'Country',
+                        subMenu: [
+                            {
+                                name: 'Ireland',
+                                action: function() {
+                                    console.log('Ireland was pressed');
+                                }
+                            },
+                            {
+                                name: 'UK',
+                                action: function() {
+                                    console.log('UK was pressed');
+                                }
+                            },
+                            {
+                                name: 'France',
+                                action: function() {
+                                    console.log('France was pressed');
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Person',
+                        subMenu: [
+                            {
+                                name: 'Niall',
+                                action: function() {
+                                    console.log('Niall was pressed');
+                                }
+                            },
+                            {
+                                name: 'Sean',
+                                action: function() {
+                                    console.log('Sean was pressed');
+                                }
+                            },
+                            {
+                                name: 'John',
+                                action: function() {
+                                    console.log('John was pressed');
+                                }
+                            },
+                            {
+                                name: 'Alberto',
+                                action: function() {
+                                    console.log('Alberto was pressed');
+                                }
+                            },
+                            {
+                                name: 'Tony',
+                                action: function() {
+                                    console.log('Tony was pressed');
+                                }
+                            },
+                            {
+                                name: 'Andrew',
+                                action: function() {
+                                    console.log('Andrew was pressed');
+                                }
+                            },
+                            {
+                                name: 'Kev',
+                                action: function() {
+                                    console.log('Kev was pressed');
+                                }
+                            },
+                            {
+                                name: 'Will',
+                                action: function() {
+                                    console.log('Will was pressed');
+                                }
+                            },
+                            {
+                                name: 'Armaan',
+                                action: function() {
+                                    console.log('Armaan was pressed');
+                                }
+                            }
+                        ]
+                    }, // built in separator
+                    'separator',
+                    {
+                        // custom item
+                        name: 'Windows',
+                        shortcut: 'Alt + W',
+                        action: function() {
+                            console.log('Windows Item Selected');
+                        },
+                        icon: '<img src="../images/skills/windows.png"/>'
+                    },
+                    {
+                        // custom item
+                        name: 'Mac',
+                        shortcut: 'Alt + M',
+                        action: function() {
+                            console.log('Mac Item Selected');
+                        },
+                        icon: '<img src="../images/skills/mac.png"/>'
+                    }, // built in separator
+                    'separator',
+                    {
+                        // custom item
+                        name: 'Checked',
+                        checked: true,
+                        action: function() {
+                            console.log('Checked Selected');
+                        },
+                        icon: '<img src="../images/skills/mac.png"/>'
+                    }, // built in copy item
+                    'copy'
+                ];
+                return result;
+            }
+        </script>
+    </body>
+</html>

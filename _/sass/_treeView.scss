@@ -1,0 +1,162 @@
+/* .jstree-container-ul{
+    li{
+        background: #000;
+        a:first-child{
+            i{
+                color:red;
+            }
+        }
+    }
+} */
+
+.list-tree{
+    list-style: none;
+    padding: 0px;
+    ul{
+        list-style: none;
+        margin-#{$Direction}: 6px;
+        border-#{$Direction}: 1px solid $BorderColor;
+        padding-#{$Direction}: 10px;
+    }
+    li{
+        font-family: $MainFont;
+    }
+    .list-tree-item{
+        &[data-hasChildren="false"]{
+            .list-tree-item-a {
+                font-weight: $FW-Regular;
+                &::before{
+                    color: $MainColor;
+                }
+            }  
+        }
+        &.selected{
+            background: $MainColorVLight;
+        }
+        .list-tree-item-a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5px;
+            font-family: $MainFont;
+            color: $MainColor;
+            transition: transform .2s;
+            font-weight: $FW-SBold;
+            font-size: 14px;
+            &:hover{
+                transform: scale(1.04);
+            }
+            &::before{
+                //font-size: 18px;
+                font-family: FontAwesome;
+                margin-#{$Direction-Opposite}:10px;
+                color: $Warning;
+            }
+        }
+    }
+}
+
+.tree-container{
+    direction: $LTR-RTL;
+    text-align: $Direction;
+    width: 100%;
+    .jstree-children{
+        li:not(.jstree-leaf) {
+         
+        }
+      
+    }
+}
+.tree-container{
+    max-height: calc(100vh - 330px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.jstree-icon{
+    &::before{
+        font-family: FontAwesome;
+        font-style: normal;
+    }
+    &.fa-folder{
+        color: $Warning;
+    }
+
+}
+.add-new-root:hover,.add-new-root:focus,.add-new-root:active{
+    cursor: pointer;
+    color: $Success !important;
+}
+
+.jstree-wholerow-clicked{
+    background:  $MainColorVLight;
+}
+.jstree-search{
+    color: $SubColor;
+    font-weight: $FW-Regular;
+    font-style: inherit;
+}
+.vakata-context{
+    background: #fff;
+    z-index: 9999999999999999;
+    li{
+        text-align: $Direction;
+        a{
+            text-align: $Direction;
+            font-size: 14px;
+            padding: 2px 2em;
+            padding-#{$Direction}: 10px;
+            line-height: 1.9em;
+            border-bottom: 1px solid $BorderColor;
+            
+            i{
+                height: auto;
+            }
+            .vakata-contextmenu-sep{
+                height: auto;
+            }
+        }
+        &:last-child{
+            a{border: none;}
+        }
+
+    }
+}
+.root{
+    color: $SubColor;
+}
+/* .jstree {
+    list-style: none;
+    padding: 0px;
+    ul{
+        list-style: none;
+        margin-#{$Direction}: 6px;
+        border-#{$Direction}: 1px solid $BorderColor;
+        padding-#{$Direction}: 10px;
+    }
+    li{
+        font-family: $MainFont;
+    }
+    .jstree-node{
+        .jstree-anchor{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 5px;
+            font-family: $MainFont;
+            color: $MainColor;
+            transition: transform .2s;
+            font-weight: $FW-SBold;
+            font-size: 14px;
+        }
+    }
+}
+ */
+ 
+
+@media only screen and(max-width: 1200px){
+    .tree-container{
+        max-height: unset;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}

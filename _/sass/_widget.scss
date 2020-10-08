@@ -1,0 +1,988 @@
+.widget-container{
+    padding: 10px;
+    padding-bottom: 0px;
+    .widget{
+        background: $ClearWhite;
+        border: 1px solid $BorderColor;
+        border-radius: 4px;
+        padding: 0px;
+        .widget-container-header{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 20px;
+            h4{
+                font-weight: $FW-SBold;
+                color: $MainColor;
+                font-size: 15px;
+                margin-bottom: 0px;
+                position: relative;
+                text-transform: uppercase;
+                margin-#{$Direction-Opposite}: auto;
+                .br{
+                    bottom: -9px;
+                    width: 40px;
+                    position: absolute;
+                    #{$Direction}: -1px;
+                    height: 4px;
+                    background: $SubColorLight;
+                    display: none;
+                }
+            }
+            .widget-nav{
+                margin-#{$Direction-Opposite}: auto;
+                position: relative;
+                margin-bottom: 0px;
+                display: flex;
+                align-items: center;
+                .back-btn{
+                    padding: 3px;
+                    margin-#{$Direction-Opposite}: 15px;
+                    border-#{$Direction-Opposite}: 1px solid $BorderColor;
+                    padding-#{$Direction-Opposite}: 15px;
+                    &:hover{
+                        color:$Warning;
+                        cursor: pointer;
+                    }
+
+                }
+                .widget-nav-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    a{
+                        font-weight: $FW-SBold;
+                        color: $MainColor;
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        &:hover,&:focus{
+                            color:$SubColorLight;
+                        }
+                    }
+                    span{margin: 0px 5px;}
+                    .header-nav{
+                        &:first-child::before{
+                            content: '';
+                        }
+                        &::before{
+                            content: '/';
+                            margin: 0px 5px;
+                            color: $MainColor;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .br{
+                    bottom: -9px;
+                    width: 40px;
+                    position: absolute;
+                    #{$Direction}: -1px;
+                    height: 4px;
+                    background: $SubColorLight;
+                    display: none;
+                }
+            }
+            .header-tools{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+                padding: 5px 0px;
+                a{
+                    margin: 0px;
+                    margin-#{$Direction}:15px;
+                    &:before{
+                        font-weight: 100;
+                        font-size: 15px;
+                        color: $BorderColor;
+                    }
+                    &:hover:before,&:focus:before,&:active:before{
+
+                        color:$MainColor;
+                        cursor: pointer;
+                    }
+                }
+            }
+            &.has-footer{
+                h4,.widget-nav{.br{display: block;}}
+            }
+            select{
+                border-color: $ClearWhite;
+                border-bottom-color: $BorderColor;
+                min-width: 160px;
+                padding: 0px;
+                margin-#{$Direction-Opposite}: 10px;
+                border-radius: 0px;
+                &:focus,&:active{
+                    box-shadow: none;
+                    outline: none;
+                    border-color: $BorderColor;
+                }
+            }
+        }
+        .widget-container-body{
+            position: relative;
+            .widget-content{
+                padding: 0px 15px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                position: relative;
+                .list{
+                    padding: 0px;
+                    list-style: none;
+                    color: $MainColorLight;
+                    width: 100%;
+                    .list-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        padding: 10px 0px;
+                        label{
+                            margin: 0px;
+                            text-align: center;
+                        }
+                    }
+                    .list-item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        border-top: 1px solid $BorderColor;
+                        padding: 10px 0px;
+                        span{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 25px;
+                            &:hover{cursor: pointer;}
+                        }
+                        label{
+                            margin: 0px;
+                            text-align: center;
+                            &:hover{cursor: pointer;}
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            span{color: $MainColor;}
+                            label{color:$SubColorLight;}
+                        }
+                    }
+                }
+                &.system-info{
+                    padding: 10px;
+                    .date{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        width: 95px;
+                        border-#{$Direction-Opposite}:1px solid $BorderColor;
+                        height: 100px;
+                        .month{
+                            width: 100%;
+                            text-align: center;
+                            font-size: 16px;
+                            color:$SubColor;
+                        }
+                        .day{
+                            font-size: 55px;
+                            font-weight: 900;
+                            width: 100%;
+                            line-height: 56px;
+                            text-align: center;
+                        }
+                        .year{
+                            width: 100%;
+                            text-align: center;
+                            font-size: 14px;
+                            color:$MainColor;
+                        }
+                    }
+                    .data{
+                        padding: 0px 15px;
+                        padding-#{$Direction-Opposite}:0px;
+                        h3{
+                            font-family: $MainFont;
+                            width: 100%;
+                            font-size: 14px;
+                            margin: 0px;
+                            padding: 3px 6px;
+                            text-align: $Direction;
+                            span{
+                                color: $Success;
+                            /*   font-size: 2.5vw; */
+                            }
+                        }
+                        h3:before{
+                            font-family: FontAwesome;
+                            margin-#{$Direction-Opposite}:5px;
+                            font-size: 16px;
+                            display: inline-block;
+                        }
+                        .time{
+                            padding: 5px;
+                            margin-bottom: 5px;
+                            border-bottom: 1px solid $BorderColor;
+                            padding-top: 0px;
+                            h3{
+                                font-size: 45px;
+                                font-weight: $FW-Light;
+                                line-height: 50px;
+                            }
+                        }
+                        .user-data{
+                            h3{
+                                /*white-space: nowrap;*/
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                max-width: 170px;
+                            }
+                        }
+                    }
+                }
+                &.counter-data{
+                    padding: 10px 15px;
+                    .icon{
+                        width:55px;
+                        height: 55px;
+                        font-size: 30px;
+                        background: $LegendDefault;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $ClearWhite;
+                    }
+                    .data{
+                        padding-#{$Direction}:20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        h3{
+                            font-weight: $FW-Light;
+                            width: 100%;
+                            margin: 0;
+                            font-size: 20px;
+                            color:$MainColor;
+                            text-align: $Direction;
+                        }
+                        p{
+                            font-weight: $FW-Regular;
+                            width: 100%;
+                            margin: 0;
+                            font-size: 14px;
+                            color:$MainColorLight;
+                            text-align: $Direction;
+                            span{
+                                margin-#{$Direction-Opposite}: 5px;
+                            }
+                        }
+                    }
+                }
+                &.counter-data-lg{
+                    padding: 15px 10px;
+                    width: 100%;
+                    position: absolute;
+                    .data{
+                        p{
+                            margin: 0px;
+                            text-transform: uppercase;
+                            width: 100%;
+                            text-align: $Direction;
+                            font-weight: $FW-Regular;
+                            color:$MainColor;
+                            font-size: 14px;
+                        }
+                        h3{
+                            font-weight: $FW-Light;
+                            color:$MainColorLight;
+                        }
+                    }
+                    .icon{
+                        font-size: 42px;
+                        color: $BorderColor;
+                        padding: 5px 10px;
+                    }
+                }
+                &.success{
+                    .icon{background: $LegendSuccess;}
+                }
+                &.warning{
+                    .icon{background: $LegendWarning;}
+                }
+                &.danger{
+                    .icon{background: $LegendDanger;}
+                }
+                &.plan-data{
+                    padding: 0px;
+                    .data-set{
+                        .data-set-item{
+                            h3,p{text-align: $Direction;}
+                            span{    
+                                font-size: 33px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin: 0px 5px;
+                            }
+                        }
+                    }
+                }
+                .sliders{
+                    padding-bottom: 10px;
+                    padding-top: 5px;
+                    .slider-item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        padding: 5px 0px;
+                        p{
+                            margin:0px;
+                            font-weight: $FW-SBold;
+                            font-size: 11px;
+                            text-transform: uppercase;
+                            color: $Darkgray;
+                        }
+                        span{
+                            margin-#{$Direction}:10px;
+                            font-size: 12px;
+                            font-weight: $FW-SBold;
+                            text-transform: uppercase;
+                            color: $SubColorLight;
+                        }
+                        .progress{
+                            width: 100%;
+                            margin-top: 5px;
+                            height: 10px;
+                            .current{background-color: $SubColorLight;}
+                            .latest{background-color: $LegendDefault;}
+                        }
+                        &.success{
+                            span{color: $Success;}
+                            .progress{
+                                .current{background-color: $Success;}
+                                .latest{background-color: $LegendSuccess;}
+                            }
+                        }
+                        &.danger{
+                            span{color: $Danger;}
+                            .progress{
+                                .current{background-color: $Danger;}
+                                .latest{background-color: $LegendDanger;}
+                            }
+                        }
+                        &.warning{
+                            span{color: $Warning;}
+                            .progress{
+                                .current{background-color: $Warning;}
+                                .latest{background-color: $LegendWarning;}
+                            }
+                        }
+                    }
+                }
+                &.widget-table{
+                    padding-bottom: 15px;
+                    .data-table{
+                        .dataTables_wrapper{
+                            padding: 0px 5px;
+                            .datatable-table{
+                                margin-bottom: 10px;
+                                height: auto !important;
+                                .table{
+                                    margin: 0px !important;
+                                    thead{
+                                        tr{
+                                            th{
+                                                text-transform: uppercase;
+                                                text-align: center;
+                                                font-size: 12px;
+                                                margin: 0px;
+                                                color: $Darkgray;
+                                                font-weight: $FW-SBold;
+                                            }
+                                        }
+                                    }
+                                    tbody{
+                                        tr{
+                                            td{
+                                                padding: 2px !important;
+                                                font-weight: $FW-Regular;
+                                                &[tabindex="0"]{
+                                                    padding: 10px 2px !important;
+                                                    padding-#{$Direction}:20px !important;
+                                                }
+                                            }
+                                            .tools-td{
+                                                a{
+                                                    margin: 0px !important;
+                                                    padding: 3px 5px !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .datatable-footer{
+                                justify-content: flex-end;
+                                .dataTables_paginate{
+                                    width: auto !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.tabs-content{
+                    .tabs-content-header{
+                        padding: 0px;
+                        ul{
+                            flex-direction: row;
+                            border-bottom: 4px solid $BorderColor;
+                            li{
+                                position: relative;
+                                a{
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: transparent;
+                                    text-transform: uppercase;
+                                    font-size: 13px;
+                                    span{
+                                        font-size: 20px;
+                                        font-weight: 900;
+                                        line-height: 1;
+                                    }
+                                }
+                                .selected{
+                                    width: 100%;
+                                    height: 4px;
+                                    position: absolute;
+                                    bottom: 0;
+                                    background: $SubColorLight;
+                                    margin-bottom: -4px;
+                                    display: none;
+                                }
+                                &.active-item{
+                                    .selected{
+                                        display: block;
+                                    }
+                                }
+                                &.warning{
+                                    a{color: $Warning; span{color: $Warning;}}
+                                    .selected{background: $Warning;}
+                                }
+                                &.danger{
+                                    a{color: $Danger; span{color: $Danger;}}
+                                    .selected{background: $Danger;}
+                                }
+                                &.success{
+                                    a{color: $Success; span{color: $Success;}}
+                                    .selected{background: $Success;}
+                                }
+                            }
+                        }
+                        .icon-refresh{
+                            color: $ClearWhite;
+                            background: $SubColorLight;
+                            padding: 12px 14px;
+                            font-size: 28px;
+                            border-radius: 5px;
+                            margin-left: 15px;
+                            margin-top: 5px;
+                        }
+                    }
+                    .tabs-content-body{
+                        padding: 0px;
+                        .tab-pane{
+                            .search-form{
+                                margin: 10px 0px;
+                                .form-group{
+                                    padding: 0px;
+                                    margin: 0px;
+                                    span{
+                                        position: absolute;
+                                        right: 15px;
+                                        top: 10px;
+                                        color: $MainColorLight;
+                                        outline-color: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.profile{
+                    display: flex;
+                    align-items: flex-start;
+                    align-content: flex-start;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    padding: 27px 20px;
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 100px;
+                        border: 8px solid $ClearWhite;
+                        margin-bottom: 5px;
+                        box-shadow: 0px 0px 4px $BorderColor;
+                    }
+                    .profile-data{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px 15px;
+                        h4{
+                            text-align: center;
+                            margin: 0px;
+                            font-weight: $FW-Bold;
+                            color: $MainColor;
+                            font-size: 25px;
+                        }
+                        span{
+                            text-align: center;
+                            text-transform: uppercase;
+                            color: $Darkgray;
+                            font-size: 14px;
+                        }
+                    }
+                    .shift-form{
+                        padding: 10px 0px 0px 0px;
+                        border-top: 1px solid $BorderColor;
+                        margin-top: 5px;
+                        .form-group{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                .icon-list{
+                    list-style: none;
+                    padding: 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    .icon-list-title{
+                        width: 100%;
+                        padding: 5px;
+                        padding-bottom: 0px;
+                        p{
+                            text-transform: uppercase;
+                            text-align: $Direction;
+                            font-size: 12px;
+                            margin: 0px;
+                            color: $Darkgray;
+                            width: 100%;
+                        }
+                        &.large{
+                            font-size: 14px !important;
+                        }
+                    }
+                    .icon-list-item{
+                        padding: 3px;
+                        a{
+                            height: 68px;
+                            width: 68px;
+                            background: $ClearWhite;
+                            border: 1px solid $BorderColor;
+                            border-radius: 4px;
+                            padding: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            color: $BorderColor;
+                            &:before{
+                                font-size: 32px;
+                            }
+                            &:hover,&:focus{
+                               cursor: pointer;
+                               border-color: $LegendDefault;
+                               background:$LegendDefault;
+                               color: $ClearWhite;
+                            }
+                        }
+                        &.success{a{&:hover,&:focus{border-color: $LegendSuccess; background:$LegendSuccess}}}
+                        &.warning{a{&:hover,&:focus{border-color: $LegendWarning; background:$LegendWarning;}}}
+                        &.danger{a{&:hover,&:focus{border-color: $LegendDanger; background:$LegendDanger;}}}
+                    }
+                    
+                    .icon-list-item-large{
+                        padding: 5px;
+                        a{
+                            position: relative;
+                            border-radius: 4px;
+                            padding: 10px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 35px;
+                            height: 125px ;
+                            width: 125px ;
+                            color:$ClearWhite;
+                            background:$LegendDefault;
+                            span{
+                                width: 100%;
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0px;
+                                margin: 5px;
+                                color: #ffffff;
+                                font-size: 14px;
+                                font-family: $MainFont;
+                                text-align: left;
+                            }
+                            &:hover,&:focus{background: $SubColorLight ; border-color: $SubColorLight ;}
+                        }
+                        
+                        &.success{a{color:$ClearWhite;background:$LegendSuccess ;  &:hover,&:focus{border-color: $Success ;  background:$Success ; }}}
+                        &.warning{a{color:$ClearWhite;background:$LegendWarning ;  &:hover,&:focus{border-color: $Warning ;  background:$Warning ; }}}
+                        &.danger{a{color:$ClearWhite;background:$LegendDanger ; &:hover,&:focus{border-color: $Danger ;  background:$Danger ; }}}
+                    }
+
+                }
+                
+                .explorer-container{
+                    padding: 5px 25px;
+                    .icon-list-item{
+                        a{
+                            height: auto !important;
+                            width: auto !important;
+                            background: none;
+                            border: none;
+                            margin: 0px 15px;
+                            padding: 0px;
+                            p{
+                                font-size: 13px;
+                                text-align: center;
+                                font-weight: 300;
+                                width: 100%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                color: $MainColorLight;
+                                font-family: $MainFont;
+                                min-height: 15px;
+                                margin-bottom: 0px;
+                            }
+                            &::before{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 10px;
+                                transition: transform 0.5s;
+                            }
+                            &:hover,&:focus,&:active{
+                                background: none;
+                                color:$LegendDefault;
+                                &::before{
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+                }
+                &.admin-form-container{
+                    align-items: center;
+                    justify-content: center;
+                    min-height: calc(100vh - 85px);
+                    .form-container{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        .main-logo-div{
+                            padding: 60px;
+                           img{
+                                height: 130px;
+                           }
+                        }
+                        .admin-program-form{
+                            .form-div{
+                                position: relative;
+                                span{
+                                    position: absolute;
+                                    #{$Direction}: 0px;
+                                    margin: 12px 15px;
+                                    z-index: 9;
+                                }
+                                select{
+                                    padding-#{$Direction}: 40px !important;
+                                    min-height: 40px;
+                                }
+                            }
+                        }
+                        .prog-div{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            p{
+                                margin-#{$Direction}: 15px;
+                                margin-bottom: 0px;
+                                font-size: 16px;
+                            }
+                            img{
+                                width:120px;
+                            }
+                        }
+                        
+                    }
+                    .prog-widget-footer{
+                        align-items: center;
+                        justify-content: center;
+                        padding: 15px;
+                        align-self: flex-end;
+                        img{
+                            height: 50px;
+                        }
+                        p{
+                            margin-#{$Direction-Opposite}: 5px;
+                            margin-bottom: 0px;
+                            font-weight: $FW-Bold;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .chart-container{
+                .amcharts-main-div{
+                    .amcharts-chart-div{
+                        a{display:none !important;}
+                    }
+                }
+                &.br-bottom{
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid $BorderColor;
+                }
+            }
+            .data-set{
+                padding: 10px;
+                .data-set-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    padding: 10px 5px;
+                    padding-top: 5px;
+                    h3{
+                        width: 100%;
+                        color: $Darkgray;
+                        text-align: center;
+                        margin: 0px;
+                        font-weight: 700;
+                        font-size: 26px;
+                    }
+                    p{
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 12px;
+                        margin:0px;
+                        color: $MainColorLight;
+                    }
+                    &.br{
+                        border-#{$Direction-Opposite}: 1px solid $BorderColor;
+                    }
+                    &.br-bottom{
+                        border-bottom: 1px solid $BorderColor;
+                    }
+                }
+            }
+        }
+    }
+    &.no-back{
+        .widget{
+            background: none;
+            border: none;
+            .widget-container-header{
+                padding: 15px 5px;
+                padding-top: 5px;
+            }
+            .widget-container-body{
+                .widget-content{
+                    padding:0px;
+                    .icon-list{
+                        list-style: none;
+                        padding: 0px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        .icon-list-title{
+                            width: 100%;
+                            padding: 5px;
+                            padding-bottom: 0px;
+                            p{
+                                text-transform: uppercase;
+                                text-align: $Direction;
+                                font-size: 16px;
+                                margin: 0px;
+                                color: #000000;
+                                width: 100%;
+                                font-weight: 600;
+                            }
+                        }
+                        .icon-list-item{
+                            padding: 3px;
+                            a{
+                                height: 68px;
+                                width: 68px;
+                                background: $ClearWhite;
+                                border: 1px solid $BorderColor;
+                                border-radius: 4px;
+                                padding: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                color: $BorderColor;
+                                &:before{
+                                    font-size: 32px;
+                                }
+                                &:hover,&:focus{
+                                   cursor: pointer;
+                                   border-color: $LegendDefault;
+                                   background:$LegendDefault;
+                                   color: $ClearWhite;
+                                }
+                            }
+                            &.success{a{&:hover,&:focus{border-color: $LegendSuccess; background:$LegendSuccess}}}
+                            &.warning{a{&:hover,&:focus{border-color: $LegendWarning; background:$LegendWarning;}}}
+                            &.danger{a{&:hover,&:focus{border-color: $LegendDanger; background:$LegendDanger;}}}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    button{
+        padding: 12px;
+        margin: 10px 0px;
+    }
+}
+
+
+.rt-90{
+    transform: rotate(90deg);
+}
+.index-data-section{
+    padding-bottom: 15px !important;
+}
+
+.b-dir{
+    border-#{$Direction}: 1px solid $BorderColor;
+}
+.b-op{
+    border-#{$Direction-Opposite}: 1px solid $BorderColor;
+}
+@media only screen and(max-width: 1522px) {
+    .widget{
+        .system-info{
+            .date{
+                width: 30% !important;
+                padding: 5px 10px !important;
+                height: auto !important;
+                .month{
+                    font-size: 14px;
+                }
+                .day{
+                    font-size: 38px !important;
+                    line-height: 38px !important;
+                }
+            }
+            .data{
+                width: 100%;
+                padding: 0px 10px !important;
+                .time{
+                    h3{
+                        font-size: 30px !important;
+                        line-height: 35px !important;
+                    }
+                }
+                .user-data{
+                    h3{
+                        max-width: 110px !important;
+                        &:before{
+                            font-size: 14px !important;
+                        } 
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 700px){
+    .widget-container{
+        .widget{
+            .widget-container-body{
+                .widget-content{
+                    &.admin-form-container{
+                        .form-container{
+                            .main-logo-div{
+                                img{
+                                    height: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and(max-width: 1199px) {
+    .widget{
+        .system-info{
+            .date{
+                width: 95px!important;
+                border: none !important;
+                border-#{$Direction-Opposite}:1px solid $BorderColor !important;
+                padding: 5px 10px !important;
+                height: 100px !important;
+                .month{
+                    font-size: 16px;
+                }
+                .day{
+                    font-size: 55px !important;
+                    line-height: 56px !important;
+                }
+            }
+            
+            .data{
+                width: auto !important;
+                padding: 0px 15px !important;
+                padding-#{$Direction-Opposite}:0px !important;
+                .time{
+                    h3{
+                        font-size: 45px !important;
+                        line-height: 50px !important;
+                    }
+                }
+                .user-data{
+                    h3{
+                        max-width: 100% !important;
+                        &:before{
+                            font-size: 16px !important;
+                        } 
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+/* @media only screen and(max-width: 575px){
+
+} */
+

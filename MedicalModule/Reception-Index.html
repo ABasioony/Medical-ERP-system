@@ -1,0 +1,892 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro</title>
+    <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png" />
+
+    <!------------------- Styles : Begin ---------------------->
+    <link href="../Content/css/styles.css" rel="stylesheet">
+    <link href="../Content/css/datatables.min.css" rel="stylesheet">
+    <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+    <link href="../Content/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+    <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+    <link href="../Content/css/m-styles.css" rel="stylesheet">
+
+    <link href="../Content/css/animate.min.css" rel="stylesheet" />
+    <link href="../Content/css/select2.min.css" rel="stylesheet" />
+    <link href="../Content/css/flags.css" rel="stylesheet" />
+    <!------------------- Styles : End ---------------------->
+    <!------------------- Scripts : Begin ---------------------->
+    <script src="../Content/js/jquery-3.2.1.min.js"></script>
+    <script src="../Content/js/jquery.custom-file-input.js"></script>
+    <script src="../Content/js/datatables.min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/jquery-ui.min.js"></script>
+
+    <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+    <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+    <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+    <script src="../Content/js/jquery.validationEngine.js"></script>
+    <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="../Content/js/select2.min.js"></script>
+    <script src="../Content/js/jquery.flagstrap.min.js"></script>
+    <script src="../Content/js/downtime.js"></script>
+    <script src="../Content/js/loadingoverlay.min.js"></script>
+
+    <script src="../Content/js/ResizeSensor.js"></script>
+    <script src="../Content/js/ElementQueries.js"></script>
+
+    <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="../Content/js/G7/functions.js"></script>
+    <script src="../Content/js/G7/scripts.js"></script>
+    <script src="../Content/js/G7/Scripts_Html.js"></script>
+    <!------------------- Scripts : End ---------------------->
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <!------------------- Sidebar : Begin ---------------------->
+        <div id='cssmenu'>
+            <ul class="main-menu">
+                <li class='active has-sub'>
+                    <a href='#'><i class="fa fa-cog fa-2x" style="display: block;"></i><span>الاعدادات</span></a>
+                    <ul>
+                        <li class='has-sub'>
+                            <a href='#'><span>الاعدادات العامة</span><i class="fa fa-wrench"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href='../SystemSettings/MainSettings-Countries-Index.html'><span>الدول والمدن</span><i class="fa fa-globe"></i></a></li>
+                                <li><a href='../SystemSettings/MainSettings-Companies-Index.html'><span>الشركات</span><i class="fa fa-building"></i></a></li>
+                                <li><a href='../SystemSettings/MainSettings-Branches-Index.html'><span>الفروع</span><i class="fa fa-sitemap"></i></a></li>
+                                <li><a href='../SystemSettings/MainSettings-SystemCodes.html'><span>أكواد النظام</span><i class="fa fa-hashtag"></i></a></li>
+                                <li><a href='../MedicalModule/GeneralSettings-Shifts-Index.html'><span>اعدادات الورديات</span><i class="fa fa-clock-o"></i></a></li>
+                                <li><a href='../MedicalModule/GeneralSettings-Vacations.html'><span>اعدادات الاجازات</span><i class="fa fa-calendar-check-o"></i></a></li>
+                                <li><a href='../SystemSettings/MainSettings-GeneralSettings.html'><span>الخصائص العامة</span><i class="fa fa-cogs"></i></a></li>
+                                <li class='last'><a href='../SystemSettings/UsersSettings-Users.html'><span>المستخدمين</span><i class="fa fa-users"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class='has-sub'>
+                    <a href='#'><i class="fa fa-heartbeat fa-2x" style="display: block;"></i><span>المرضي</span></a>
+                    <ul class="sub-menu">
+                        <li><a href='#'><span>تكويد المرضي</span><i class="fa fa-hashtag"></i></a></li>
+                        <li><a href='../MedicalModule/Reception-MainSettings-Patients-Index.html'><span>المرضي</span><i class="fa fa-users"></i></a></li>
+                        <li class='last'><a href='#'><span>ارصدة المرضي</span><i class="fa fa-ticket"></i></a></li>
+                    </ul>
+                </li>
+                <li class='has-sub'>
+                    <a href='#'><i class="fa fa-h-square fa-2x" style="display: block;"></i><span>العيادات</span></a>
+                    <ul class="sub-menu">
+                        <li><a href='#'><span>تصنيف التشخيصات</span><i class="fa fa-thermometer-full"></i></a></li>
+                        <li><a href='#'><span>التشخيصات</span><i class="fa fa-thermometer-full"></i></a></li>
+                        <li><a href='#'><span>تصنيف العلاجات</span><i class="fa fa-thermometer-full"></i></a></li>
+                        <li><a href='#'><span>العلاجات</span><i class="fa fa-thermometer-full"></i></a></li>
+                        <li><a href='../MedicalModule/GeneralSettings-Clinics.html'><span>العيادات</span><i class="fa fa-h-square"></i></a></li>
+                        <li><a href='../MedicalModule/GeneralSettings-Rooms.html'><span>الغرف</span><i class="fa fa-bed"></i></a></li>
+                        <li class="last"><a href='../MedicalModule/GeneralSettings-ReservationNumbers.html'><span>أكواد حجز العيادات</span><i class="fa fa-ticket"></i></a></li>
+                        <li class='has-sub last'>
+                            <a href='#' style="text-align: center;"><span>حركة العيادات</span><i class="fa fa-wrench"></i></a>
+                            <ul class="sub-menu">
+                                <li><a href='#'><span>تكويد الحركات</span><i class="fa fa-hashtag"></i></a></li>
+                                <li><a href='#'><span>استمارة احالة</span><i class="fa fa-file-text-o"></i></a></li>
+                                <li><a href='#'><span>اشعار مراجعة مريض</span><i class="fa fa-address-card-o"></i></a></li>
+                                <li><a href='#'><span>الاجازات المرضية</span><i class="fa fa-calendar-check-o"></i></a></li>
+                        </li>
+                    </ul>
+            </ul>
+            </li>
+            <li class='has-sub'>
+                <a href='#'><i class="fa fa-stethoscope fa-2x" style="display: block;"></i><span>الخدمات</span></a>
+                <ul class="sub-menu">
+                    <li><a href='#'><span>أنواع الخدمات</span><i class="fa fa-stethoscope"></i></a></li>
+                    <li><a href='#'><span>الخدمات</span><i class="fa fa-stethoscope"></i></a></li>
+                    <li><a href='../MedicalModule/Reception-ClinicSection-Prices.html'><span>أسعار خدمات العيادة</span><i class="fa fa-money"></i></a></li>
+                    <li><a href='#'><span>الأضافات والخصومات</span><i class="fa fa-percent"></i></a></li>
+                    <li class="last"><a href='#'><span>العروض</span><i class="fa fa-tags"></i></a></li>
+                </ul>
+            </li>
+            <li class='has-sub'>
+                <a href='#'><i class="fa fa-user-md fa-2x" style="display: block;"></i><span>الاطباء</span></a>
+                <ul class="sub-menu">
+                    <li><a href='../MedicalModule/Reception-ClinicSection-Doctors.html'><span>الاطباء</span><i class="fa fa-user-md"></i></a></li>
+                    <li><a href='#'><span>عيادات الاطباء</span><i class="fa fa-h-square"></i></a></li>
+                    <li><a href='#'><span>ورديات الاطباء</span><i class="fa fa-clock-o"></i></a></li>
+                    <li><a href='#'><span>ورديات العيادات</span><i class="fa fa-clock-o"></i></a></li>
+                    <li class="last"><a href='#'><span>أكواد حجز العيادات</span><i class="fa fa-hashtag"></i></a></li>
+                </ul>
+            </li>
+            <li class='has-sub'>
+                <a href='#'><i class="fa fa-user fa-2x" style="display: block;"></i><span>الاستقبال</span></a>
+                <ul class="sub-menu">
+                    <li><a href='#'><span>الخزينة الفرعية</span><i class="fa fa-money"></i></a></li>
+                    <li><a href='#'><span>تكويد الخزينة</span><i class="fa fa-hashtag"></i></a></li>
+                    <li class="last"><a href='#'><span>موظفين الاستقبال</span><i class="fa fa-users"></i></a></li>
+                </ul>
+            </li>
+            <li class='has-sub'>
+                <a href='#'><i class="fa fa-file-text-o fa-2x" style="display: block;"></i><span>الفواتير</span></a>
+                <ul class="sub-menu">
+                    <li><a href='#'><span>مسلسل الفواتير</span><i class="fa fa-file-text-o"></i></a></li>
+                    <li><a href='#'><span>الفواتير</span><i class="fa fa-file-text-o"></i></a></li>
+                    <li><a href='#'><span>الفواتير المعلقة</span><i class="fa fa-clock-o"></i></a></li>
+                    <li><a href='#'><span>المتحصلات</span><i class="fa fa-money"></i></a></li>
+                    <li><a href='#'><span>المدفوعات</span><i class="fa fa-money"></i></a></li>
+                    <li class="last"><a href='#'><span>التسويات</span><i class="fa fa-money"></i></a></li>
+                </ul>
+            </li>
+        </div>
+        <button class="btn-toggle"><i class="fa fa-bars fa-2x"></i></button>
+        <!----------------- Main Header : Begin -------------------->
+        <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+            <div class="container-fluid">
+                <div class="row no-gutters header-container">
+                    <!-- Header Left -->
+                    <div class="dropdown settings col-12">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-th-large"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-globe" title="Change Language"></a>
+                            </li>
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-user-plus" title="Add New Patient"></a>
+                            </li>
+                            <li class="icon-link g7-dropdown g7-dropdown-lg notify has-sub">
+                                <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill">4</span>
+                                </a>
+                                <ul class="notification m-0 border-top-0 sub-menu">
+                                    <h6 class="dropdown-header text-center">Notifications</h6>
+                                    <a class="dropdown-item">
+                                        <li><span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header title-1">Pending Invoice</h4>
+                                                <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                <span>6 minutes ago</span>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <li><span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header  title-2">Incomplete Data</h4>
+                                                <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                <span>30 minutes ago</span>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <li><span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header  title-3">Reservation Request</h4>
+                                                <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                <span>10 minutes ago</span>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <li><span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header  title-4">Reservation Forward</h4>
+                                                <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                <span>30 seconds ago</span>
+                                            </div>
+                                        </li>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer text-center" href="../Notifications.html">View More</a>
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="header-left col-xl col-12">
+                        <div class="company-logo row no-gutters">
+                            <!-- <img src="../Content/Images/fav.png" /> -->
+                            <h3>G7 Medical Pro</h3>
+                        </div>
+
+                        <ul class="nav user-tools">
+                            <li class="devider"></li>
+                            <!--
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Hot Tools">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="Add Patient">
+                                                    <span class="fa fa-user-plus"></span>
+                                                    <p>Add Patient</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="Search Patients">
+                                                    <span class="fa fa-search"></span>
+                                                    <p>Search Patients</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="End Shift">
+                                                    <span class="fa fa-stop"></span>
+                                                    <p>End Shift</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="Reservations">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <p>Reservations</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                    </div>
+                                </li>
+                            -->
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-globe" title="Change Language"></a>
+                            </li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill">4</span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Notifications</h6>
+                                    <a class="dropdown-item warning">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                <span>6 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item danger">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                <span>30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item success">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                <span>10 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item default">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                <span>30 seconds ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                </div>
+                            </li>
+                            <li class="devider"></li>
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-user-plus" title="Add New Patient"></a>
+                            </li>
+                            <li class="icon-link normal-link form-div-container icon-sqr row col">
+                                <div class="form-div">
+                                    <span class="fa fa-search"></span>
+                                    <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="dropdown mx-3 d-inline-block  profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <span class="activity"></span>
+                                            <img src="../Content/Images/user-m.png" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Profile</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Settings</p>
+                                                        <span class="badge badge-pill">New</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Help</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Log Out</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-footer danger" onclick="viewStaticModal('delete-modal','md','End-Shift-modal');">
+                                                <div class="row no-gutters">
+                                                    <p class="col">Close Shift</p>
+                                                    <!-- <span class="fa fa-sign-out"></span> -->
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-footer success" onclick="viewStaticModal('add-modal','md','Begin-Shift-modal');">
+                                                <div class="row no-gutters">
+                                                    <p class="col">Begin Shift</p>
+                                                    <!-- <span class="fa fa-sign-out"></span> -->
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!----------------- Main Header : End -------------------->
+        <!-- Page Container -->
+        <!--------------- Page Container : Begin ------------------>
+        <div class="page-container row no-gutters col position-relative" id="pageContainer">
+            <!--------------- Data Section : Begin ---------------->
+            <div class="data-section d-inline-flex col position-retaive col-12 index-data-section">
+                <div class="row no-gutters data-container col-12 position-relative">
+                    <!----------- Data Container Body : Begin ------------>
+                    <div class="data-container-body row no-gutters col-12 ">
+                        <!----------- Data Container Body Content : Begin ------------>
+                        <div class="col-12 row no-gutters data-container-body-content">
+                            <div class="col-12 row no-gutters data-container-body-content-main">
+                                <div class="data-container-body-content-main-body col-12 row no-gutters no-back full-h" id="main-content">
+                                    <!----------- body-container Main : Begin ------------>
+                                    <div class="col-xl-3 col-lg-4 col-12 body-container row no-gutters">
+                                        <!----------- system-info : Begin ------------>
+                                        <div class="body-container-div system-info col-12">
+                                            <div class="row no-gutters body-container-div-body no-header col-12">
+                                                <div class="date">
+                                                    <span class="month">May</span>
+                                                    <span class="day">27</span>
+                                                    <span class="year">2018</span>
+                                                </div>
+                                                <div class="data col">
+                                                    <div class="time">
+                                                        <h3> 10:51 <span>AM</span></h3>
+                                                    </div>
+                                                    <div class=" col-12 row no-gutters">
+                                                        <h3 class="fa fa-sitemap "> Cairo Branch </h3>
+                                                        <h3 class="fa fa-money "> Sub Treasury </h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!----------- system-info : End ------------>
+                                        <div class="body-container-div patient-btns row no-gutters col-12">
+                                            <a class="gbtn gbtn-success  fa fa-plus" href="../MedicalModule/Reception-MainSettings-Patients-AddEdit.html">Add New patient</a>
+                                            <a class="gbtn gbtn-warning fa fa-search" href="../MedicalModule/Reception-MainSettings-Patients-Index.html">Search In patients</a>
+                                        </div>
+                                        <form class="body-container-div profile-home col-12">
+                                            <div class="body-container-div-header">
+                                                <div class="header-content">
+                                                    <img src="../Content/Images/user-m.png">
+                                                    <div class="profile-data row no-gutters col-12">
+                                                        <h4 class="col-12">Mohamed Khalifa</h4>
+                                                        <span class="col-12">Receptionist</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row no-gutters body-container-div-body col-12">
+                                                <div class="v-top-border"></div>
+                                                <div class="form-group col-12 required">
+                                                    <label>Base Amount In Treasury</label>
+                                                    <input type="text" class="form-control" name="baseAmountSubTreasury" id="BaseAmountSubTreasury" placeholder="Current Amount in Treasury">
+                                                </div>
+                                                <div class="form-group col-12 required">
+                                                    <label>Currency</label>
+                                                    <input type="text" class="form-control" name="currency" id="Currency" placeholder="Currency">
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="gbtn gbtn-success fa fa-play shift-btn col-12">Begin Shift</button>
+                                        </form>
+                                        <!-------- Begin Shift Form : End -------->
+                                        <!-------- End Shift Form : Begin -------->
+                                        <!-- <form class="body-container-div profile-home col-12">
+                                                <div class="body-container-div-header">
+                                                    <div class="header-content">
+                                                        <img src="../Content/Images/user-m.png">
+                                                        <div class="profile-data row no-gutters col-12">
+                                                            <h4 class="col-12">Mohamed Khalifa</h4>
+                                                            <span class="col-12">Receptionist</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters body-container-div-body col-12">
+                                                    <div class="v-top-border"></div>
+                                                    <div class="form-group col-12 required">
+                                                        <label>Left Amount In Treasury</label>
+                                                        <input type="text" class="form-control" name="leftAmountSubTreasury" id="LeftAmountSubTreasury" placeholder="Left Amount in Treasury">
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="gbtn gbtn-danger fa fa-stop shift-btn col-12" onclick="viewMsgModal('warning-modal','Do you want to Print Shift Report ?','true','true','') ">End Shift</button>
+                                            </form> -->
+                                        <!-------- End Shift Form : End -------->
+                                        <!----------- patient-btns : End ------------>
+                                    </div>
+                                    <!----------- body-container Main : End ------------>
+                                    <div class="col-xl-9 col-lg-8 col-12 row no-gutters  pl-1 pr-1 body-container">
+                                        <div class=" body-container row col-12 no-gutters">
+                                            <div class="body-container-div counter col-xl-3 col-md-6 col-12">
+                                                <div class="row no-gutters body-container-div-body no-header col-12 warning">
+                                                    <div class="row no-gutters counter-data col-12">
+                                                        <p>Clinics</p>
+                                                        <h3>120<span>Patients</span></h3>
+                                                    </div>
+                                                    <span class="gicon gicon-021-hospital icon"></span>
+                                                </div>
+                                            </div>
+                                            <div class="body-container-div counter col-xl-3 col-md-6 col-12">
+                                                <div class="row no-gutters body-container-div-body no-header col-12 default">
+                                                    <div class="row no-gutters counter-data col-12">
+                                                        <p>Test Labs</p>
+                                                        <h3>120<span>Patients</span></h3>
+                                                    </div>
+                                                    <span class="gicon gicon-015-microscope icon"></span>
+                                                </div>
+                                            </div>
+                                            <div class="body-container-div counter col-xl-3 col-md-6 col-12">
+                                                <div class="row no-gutters body-container-div-body no-header col-12 success">
+                                                    <div class="row no-gutters counter-data col-12">
+                                                        <p>Rays</p>
+                                                        <h3>22<span>Patients</span></h3>
+                                                    </div>
+                                                    <span class="gicon gicon-hospital-x-ray icon"></span>
+                                                </div>
+                                            </div>
+                                            <div class="body-container-div counter col-xl-3 col-md-6 col-12">
+                                                <div class="row no-gutters body-container-div-body no-header col-12 danger">
+                                                    <div class="row no-gutters counter-data col-12">
+                                                        <p>Emergency</p>
+                                                        <h3>05<span>Patients</span></h3>
+                                                    </div>
+                                                    <span class="gicon gicon-ambulance-facing-right icon"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="body-container-div col-xl-5 col-12 clincs-status-widget">
+                                            <div class="row no-gutters body-container-div-header col-12">
+                                                <a class="fa fa-arrow-left arrow-left"></a>
+                                                <select class="col-6">
+                                                    <option>Teeth</option>
+                                                    <option>Bones</option>
+                                                </select>
+                                                <a class="fa fa-arrow-right arrow-right"></a>
+                                            </div>
+                                            <div class="row no-gutters body-container-div-body col-12">
+                                                <!--------------- Patient List : Begin ------------------>
+                                                <div class="col-12 dashb-section-tabs">
+                                                    <div class="row no-gutters col-12 section-tabs-header">
+                                                        <ul class="nav nav-pills nav-justified tabs col" role="tablist">
+                                                            <li class="nav-item warning active-item">
+                                                                <a class="nav-link active " id="Waiting-tab" data-toggle="tab" href="#Waiting" role="tab" aria-controls="Waiting" aria-selected="false">
+                                                                    <span>10</span> Waiting
+                                                                </a>
+                                                                <div class="selected"></div>
+                                                            </li>
+                                                            <li class="nav-item danger">
+                                                                <a class="nav-link " id="UnFinished-tab" data-toggle="tab" href="#UnFinished" role="tab" aria-controls="UnFinished" aria-selected="false">
+                                                                    <span>2</span> UnFinished
+                                                                </a>
+                                                                <div class="selected"></div>
+                                                            </li>
+                                                            <li class="nav-item success">
+                                                                <a class="nav-link " id="Finished-tab" data-toggle="tab" href="#Finished" role="tab" aria-controls="Finished" aria-selected="false">
+                                                                    <span>13</span> Finished
+                                                                </a>
+                                                                <div class="selected"></div>
+                                                            </li>
+                                                        </ul>
+                                                        <a class="fa fa-refresh icon-refresh"></a>
+                                                    </div>
+                                                    <div class="tab-content section-tabs-content">
+                                                        <div class="tab-pane active list-container" id="Waiting" role="tabpanel" aria-labelledby="Finished-tab">
+                                                            <div class="patient-list">
+                                                                <form class="search-form">
+                                                                    <div class="form-group col-12 pl-0 pr-0">
+                                                                        <span class="fa fa-search"></span>
+                                                                        <input type="text" class="form-control" id="patientSearch" placeholder="Secrch">
+                                                                    </div>
+                                                                </form>
+                                                                <a class="patient-list-item warnning row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item active-item warnning row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item  warnning row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane list-container" id="UnFinished" role="tabpanel" aria-labelledby="UnFinished-tab">
+                                                            <div class="patient-list">
+                                                                <form class="search-form">
+                                                                    <div class="form-group col-12 pl-0 pr-0">
+                                                                        <span class="fa fa-search"></span>
+                                                                        <input type="text" class="form-control" id="patientSearch" placeholder="Secrch">
+                                                                    </div>
+                                                                </form>
+                                                                <a class="patient-list-item danger row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item active-item danger row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item  danger row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane list-container" id="Finished" role="tabpanel" aria-labelledby="Waiting-tab">
+                                                            <div class="patient-list">
+                                                                <form class="search-form">
+                                                                    <div class="form-group col-12 pl-0 pr-0">
+                                                                        <span class="fa fa-search"></span>
+                                                                        <input type="text" class="form-control" id="patientSearch" placeholder="Secrch">
+                                                                    </div>
+                                                                </form>
+                                                                <a class="patient-list-item success row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item active-item success row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                                <a class="patient-list-item  success row no-gutters">
+                                                                    <div class="data-item col-7">
+                                                                        <h6>Patient name</h6>
+                                                                        <h5>Mohamed khalifa</h5>
+                                                                    </div>
+                                                                    <div class="data-item col">
+                                                                        <h6>Reservation No.</h6>
+                                                                        <h5 class="warnning service-type">250</h5>
+                                                                    </div>
+                                                                    <span class="Status"></span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--------------- Patient List : End ------------------>
+                                            </div>
+                                        </div>
+                                        <div class="body-container-div btns-container row no-gutters col-xl-7 col-12">
+                                            <a class="icon-btn warning" href="../MedicalModule/Reception-ClinicSection-Doctors.html">
+                                                <div class="icon-btn-container fa fa-user-md">
+                                                    <span>Doctors</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn warning" href="../MedicalModule/Reception-ClinicSection-Reservations.html">
+                                                <div class="icon-btn-container fa fa-address-book-o">
+                                                    <span>Reservations</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn warning" href="../MedicalModule/Reception-ClinicSection-PendingInvoices.html">
+                                                <div class="icon-btn-container fa fa-clock-o">
+                                                    <span>Pending Invoices</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn warning" href="../MedicalModule/Reception-ClinicSection-Prices.html">
+                                                <div class="icon-btn-container fa fa-money">
+                                                    <span>Prices</span>
+                                                </div>
+                                            </a>
+                                            <div class="col-12"></div>
+                                            <a class="icon-btn">
+                                                <div class="icon-btn-container fa fa-user-md">
+                                                    <span>Doctors</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn ">
+                                                <div class="icon-btn-container fa fa-address-book-o">
+                                                    <span>Reservations</span>
+                                                </div>
+                                            </a>
+                                            <div class="col-12"></div>
+                                            <a class="icon-btn success">
+                                                <div class="icon-btn-container fa fa-user-md">
+                                                    <span>Doctors</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn success">
+                                                <div class="icon-btn-container fa fa-address-book-o">
+                                                    <span>Reservations</span>
+                                                </div>
+                                            </a>
+                                            <a class="icon-btn success">
+                                                <div class="icon-btn-container fa fa-clock-o">
+                                                    <span>Pending Invoices</span>
+                                                </div>
+                                            </a>
+                                            <div class="col-12"></div>
+                                            <a class="icon-btn danger">
+                                                <div class="icon-btn-container fa fa-address-book-o">
+                                                    <span>Reservations</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!----------- Data Container Body Content : End ------------>
+                    </div>
+                    <!----------- Data Container Body : End ------------>
+                </div>
+            </div>
+            <!--------------- Data Section : End ---------------->
+        </div>
+        <!--------------- Page Container : End ------------------>
+    </div>
+
+    <!--------------- General Notification :Begin ---------------->
+    <div class="g7-notification ntf-default">
+        <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+            <div class="ntf-icon">
+                <span class="fa fa-exclamation-triangle"></span>
+            </div>
+            <div class="ntf-text">
+                <h4>@ResourceFile.warning</h4>
+                <p>
+                    @*Please Check Your Data*@
+                </p>
+            </div>
+        </div>
+        <a class="ntf-close fa fa-times"></a>
+        <div class="ntf-background"></div>
+    </div>
+    <!--------------- General Notification :End ---------------->
+    <!--------------- General Form Modal :Begin ---------------->
+    <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="Begin-Shift-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+        <div class="modal-dialog modal-dialog-centered" id="FormBody">
+            <form class="modal-content">
+                <div class="modal-indecator"></div>
+                <div class="modal-header profile-main-header">
+                    <h5 class="modal-title" id="myModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row no-gutters">
+                    <div class="profile-header row no-gutters  col-12">
+                        <img src="../Content/Images/user-m.png">
+                        <div class="profile-data row no-gutters col-12">
+                            <h4 class="col-12">Mohamed Khalifa</h4>
+                            <span class="col-12">Receptionist</span>
+                        </div>
+                    </div>
+                    <div class="profile-body row no-gutters  col-12">
+                        <div class="v-top-border"></div>
+                        <div class="form-group col-12 required">
+                            <label>Base Amount In Treasury</label>
+                            <input type="text" class="form-control" name="baseAmountSubTreasury" id="BaseAmountSubTreasury" placeholder="Current Amount in Treasury">
+                        </div>
+                        <div class="form-group col-12 required">
+                            <label>Currency</label>
+                            <input type="text" class="form-control" name="currency" id="Currency" placeholder="Currency">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer row no-gutters  col-12 profile-footer">
+                    <button type="submit" class="gbtn-o gbtn-success-o col-12 ">Begin Shift</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" data-source="End-Shift-modal" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+        <div class="modal-dialog modal-dialog-centered" id="FormBody">
+            <form class="modal-content">
+                <div class="modal-indecator"></div>
+                <div class="modal-header profile-main-header">
+                    <h5 class="modal-title" id="myModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row no-gutters">
+                    <div class="profile-header row no-gutters  col-12">
+                        <img src="../Content/Images/user-m.png">
+                        <div class="profile-data row no-gutters col-12">
+                            <h4 class="col-12">Mohamed Khalifa</h4>
+                            <span class="col-12">Receptionist</span>
+                        </div>
+                    </div>
+                    <div class="profile-body row no-gutters  col-12">
+                        <div class="v-top-border"></div>
+                        <div class="form-group col-12 required">
+                            <label>Left Amount In Treasury</label>
+                            <input type="text" class="form-control" name="leftAmountSubTreasury" id="LeftAmountSubTreasury" placeholder="Left Amount in Treasury">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer row no-gutters col-12 profile-footer">
+                    <button type="submit" class="gbtn-o gbtn-danger-o col-12">End Shift</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--------------- General Form Modal :End ---------------->
+    <!------------- General Message Modal :Begin -------------->
+    <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+        <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+            <form class="modal-content" id="test">
+                <div class="modal-indecator"></div>
+                <div class="modal-body row no-gutters">
+                    <div class="modal-icon">
+                        <span></span>
+                    </div>
+                    <p class="msg-type">Confirmation Message</p>
+                    <div class="msg">
+                        <h5></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">Cancel</button>
+                    <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!------------- General Message Modal :End -------------->
+    <script>
+        $(".top-header-tools").mouseenter(function() {
+            //debugger;
+            $(this).removeClass("tools-out");
+            $(this).addClass("tools-in");
+        });
+        $(".top-header-tools").mouseleave(function() {
+            //debugger;
+            $(this).removeClass("tools-in");
+            $(this).addClass("tools-out");
+        });
+        $('.btn-toggle').on('click', function() {
+            $('#cssmenu').fadeToggle(500);
+        });
+       
+    </script>
+</body>
+
+</html>

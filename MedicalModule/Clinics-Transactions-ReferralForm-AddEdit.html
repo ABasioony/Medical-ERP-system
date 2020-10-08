@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="../Content/Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Reception-Index.html" class="fa fa-home">R-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../MedicalModule/Clinics-Transactions-Dashboard.html" class="fa fa-home">D-Home</a>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <a href="../SystemSettings/Admin-Index.html" class="fa fa-home">A-Home</a>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="1" data-parent="0">
+                            <a class="fa fa-gear">Settings</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="2" data-parent="1">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>System Settings</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">Main Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-globe leaf-node" href="../SystemSettings/MainSettings-Countries-Index.html">Countries & Cities</a>
+                                        </li>
+                                        <li class="sub-list-item " data-parent="1">
+                                            <a class="fa fa-building leaf-node" href="../SystemSettings/MainSettings-Companies-Index.html">Companies</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-sitemap leaf-node" href="../SystemSettings/MainSettings-Branches-Index.html">Branches</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-cogs leaf-node" href="../SystemSettings/MainSettings-GeneralSettings.html">General Settings</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-tags leaf-node" href="../SystemSettings/MainSettings-GeneralFeatures.html">General Features</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-hashtag leaf-node" href="../SystemSettings/MainSettings-SystemCodes.html">System Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-user-secret node">User Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-lock leaf-node" href="../SystemSettings/UsersSettings-Roles.html">Roles</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../SystemSettings/UsersSettings-Users.html">Users</a>
+                                        </li>
+                                        <!-- <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-unlock-alt leaf-node">Forget Password</a>
+                                        </li> -->
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <a class="fa fa-heartbeat">Medical</a>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>Medical System</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">General Settings</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" href="../MedicalModule/GeneralSettings-PatientsSettings.html" >Patient Settings</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/GeneralSettings-Clinics.html">Clinics</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/GeneralSettings-Services-Index.html">Services</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-bed leaf-node" href="../MedicalModule/GeneralSettings-Rooms.html">Rooms</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/GeneralSettings-Vacations.html">Vacations</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/GeneralSettings-Shifts-Index.html">Shifts</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-ticket leaf-node" href="../MedicalModule/GeneralSettings-ReservationNumbers.html">Reservations Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-address-book-o node">Reception</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-users leaf-node" href="../MedicalModule/Reception-MainSettings-Patients-Index.html">Patients</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-secret leaf-node" href="../MedicalModule/Reception-MainSettings-Cashiers.html">Cashiers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square node"> Clincs</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-ClinicSection-Doctors.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-ClinicSection-PendingInvoices.html">Pendding Invoices</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-ClinicSection-Prices.html">Services price</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-book-o leaf-node" href="../MedicalModule/Reception-ClinicSection-Reservations.html">Reservations</a>
+                                                </li>
+                                                <!-- <li data-parent="2">
+                                                    <a class="fa fa-history leaf-node">Periodic CheckUps</a>
+                                                </li> -->
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Receipts-Index.html">Cash Receipts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Reception-Transactions-Payments-Index.html">Cash Payments</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-line-chart node">Reports & Analytics</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Revenues</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics.html">Clinics Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-h-square leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Clinics-TrendAnalysis.html">Clinics Revenue Trend Analysis</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-user-md leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Doctors.html">Doctors Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services.html">Services Revenue</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-stethoscope leaf-node" href="../MedicalModule/Reception-Reports-Revenues-Services-TrendAnalysis.html">Services Revenue Trend Analysis</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o node">Shifts Reports</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-calendar-check-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-DailyTransactions.html">Daily Transactions</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Reception-Reports-Shifts-ShiftTransactions.html">Shifts Transactions</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-calculator node">Accounting</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-MainSettings-InvoicesSettings.html">Invoices Settings</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTresuries.html">Sub Treasuries</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Accounting-MainSettings-SubTreasuriesSerials.html">Treasuries Serialization</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-percent leaf-node" href="../MedicalModule/Accounting-MainSettings-DeductionsAndAdditions-index.html">Additions And Deductions </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Pricing</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-021-hospital leaf-node" href="../MedicalModule/Accounting-Transactions-Pricing-ClinicPricing.html">Clincs</a>
+                                                        </li>
+                                                        <!-- <li data-parent="3">
+                                                            <a class="gicon gicon-015-microscope leaf-node">Test labs</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-hospital-x-ray leaf-node">Rays</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-ambulance-facing-right leaf-node">Emergency</a>
+                                                        </li>  -->
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-tags leaf-node" href="../MedicalModule/Accounting-Transactions-Offers-Index.html">Offers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" href="../MedicalModule/Accounting-Transactions-Invoices-Index.html">Invoices</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-h-square node">Clinics</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-gear node">Clinic Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" href="../MedicalModule/Clinics-DoctorSettings-Doctors-Index.html">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorsShifts-Index.html">Doctor Shifts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node" href="../MedicalModule/Clinics-DoctorSettings-DoctorSchedule.html">Doctors Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" href="../MedicalModule/Clinics-ClinicSettings-TransactionSerialization.html">Transactions Serialization</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-thermometer-full leaf-node" href="../MedicalModule/Clinics-Transactions-SickLeave-Index.html">Sick Leave</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node"  href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Referral Form</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-card-o leaf-node" href="../MedicalModule/Clinics-Transactions-PatientReview-Index.html">Patient Review</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-id-card leaf-node" href="../MedicalModule/Clinics-Transactions-InitialMedicalData-Index.html">Initial Medical Data</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>
+
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Medical Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Hot Tools">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="Add Patient">
+                                                    <span class="fa fa-user-plus"></span>
+                                                    <p>Add Patient</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="Search Patients">
+                                                    <span class="fa fa-search"></span>
+                                                    <p>Search Patients</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="End Shift">
+                                                    <span class="fa fa-stop"></span>
+                                                    <p>End Shift</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="Reservations">
+                                                    <span class="fa fa-calendar"></span>
+                                                    <p>Reservations</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="Change Language"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Notifications</h6>
+                                        <a class="dropdown-item warning">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                    <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                    <span>6 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item danger">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                    <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                    <span>30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item success">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                    <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                    <span>10 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item default">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                    <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                    <span>30 seconds ago</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li>
+                                <li class="icon-link normal-link form-div-container icon-sqr row col">
+                                    <div class="form-div">
+                                        <span class="fa fa-search"></span>
+                                        <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+                                            
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Profile</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Settings</p>
+                                                        <span class="badge badge-pill">New</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Help</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>Log Out</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <div class="data-section d-inline-flex col position-retaive col-12 ">
+                    <div class="row no-gutters data-container col-12 position-relative">
+                        <!-- Data Container Header -->
+                        <div class="data-container-header row no-gutters col-12">
+                            <div class="section-header-main col-md col-12">
+                                <span class="fa fa-file-text-o d-inline-block align-middle"></span>
+                                <div class="data d-inline-block align-middle">
+                                    <h4 class="m-0">Add/Edit Referral Form</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Referral Forms</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Add/Edit Referral Form</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data Container Body -->
+                        <div class="data-container-body row no-gutters col-12" id="picker-container">
+                            <!-- Data Container Body Content-->
+                            <div class="col-12 row no-gutters data-container-body-content">
+                                <div class="col-12 row no-gutters data-container-body-content-main">
+                                    <form class="data-container-body-content-main-body col-12 row no-gutters full-h no-footer no-header">
+                                       
+                                       <!--------------- General Data : Begin ------------------>
+                                       <div class="data-desc-header row no-gutters col-12">
+                                            <div class="data-desc-header-content row no-gutters col-12">
+                                                <h4 class="col-12 form-header">General Data</h4>
+                                                <div class="main-data col">
+                                                    <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                        <label>Transaction Number</label>
+                                                        <input type="text" class="form-control" name="TransactionNumber" id="TransactionNumber" placeholder="Transaction Number" disabled>
+                                                    </div>
+                                                    <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                        <label>Branch</label>
+                                                        <input type="text" class="form-control" name="Branch" id="Branch" placeholder="Branch" disabled>
+                                                    </div>
+                                                    <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                        <label>Transaction Date</label>
+                                                        <input type="text" class="form-control fdatepickere" name="TransactionDate" id="TransactionDate" placeholder="Transaction Date" disabled>
+                                                    </div>
+                                                    <div class="form-group col-xl-6 col-12 required">
+                                                        <label>Patient Code/Name</label>
+                                                        <select multiple="multiple" class="form-control multiple-select" name="PatientCodeName" id="PatientCodeName">
+                                                            <option>Code/Name 1</option>
+                                                            <option>Code/Name 2</option>
+                                                            <option>Code/Name 3</option>
+                                                            <option>Code/Name 4</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                        <label>Mobile Number</label>
+                                                        <input type="text" class="form-control" name="MobileNumber" id="MobileNumber" placeholder="Mobile Number">
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-md-6 col-12">
+                                                        <label>Age</label>
+                                                        <input type="text" class="form-control" name="Age" id="Age" placeholder="Age" disabled>
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                        <label>Nationality</label>
+                                                        <input type="text" class="form-control" name="Nationality" id="Nationality" placeholder="Nationality" disabled>
+                                                    </div>
+                                                    <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                        <label>Gender</label>
+                                                        <input type="text" class="form-control " name="Gender" id="Gender" placeholder="Gender" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--------------- General Data : End ------------------>
+                                         <div class="col-12 data-desc-body">
+                                            <div class="data-desc-body-container row no-gutters col-12">
+                                                <div class="data-desc-body-container-body col-12" id="PatientsEncodingDiv">
+                                                    <h4>Examination Data</h4>
+                                                    <div class="form-section row col-12 pr-0 pl-0">
+                                                        <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                            <label>Branch</label>
+                                                            <select class="form-control" name="Branch" id="Branch">
+                                                                <option>Branch 1</option>
+                                                                <option>Branch 2</option>
+                                                                <option>Branch 3</option>
+                                                                <option>Branch 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                            <label>Clinic</label>
+                                                            <select class="form-control" name="Clinic" id="Clinic">
+                                                                <option>Clinic 1</option>
+                                                                <option>Clinic 2</option>
+                                                                <option>Clinic 3</option>
+                                                                <option>Clinic 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                            <label>Examination Date</label>
+                                                            <select class="form-control" name="ExaminationDate" id="ExaminationDate">
+                                                                <option>Date 1</option>
+                                                                <option>Date 2</option>
+                                                                <option>Date 3</option>
+                                                                <option>Date 4</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group col-xl-2 col-md-6 col-12 ">
+                                                            <label>Examination Time</label>
+                                                            <input type="text" class="form-control " name="ExaminationTime" id="ExaminationTime" placeholder="Examination Time" disabled>
+                                                        </div>
+                                                        <div class="form-group col-xl-3 col-md-6 col-12 ">
+                                                            <label>Doctor</label>
+                                                            <input type="text" class="form-control " name="Doctor" id="Doctor" placeholder="Doctor" disabled>
+                                                        </div>
+                                                        <div class="form-group col-xl-6 col-12 ">
+                                                            <label>Signs and Symptoms</label>
+                                                            <input type="text" class="form-control " name="SignsAndSymptoms" id="SignsAndSymptoms" placeholder="Signs And Symptoms" disabled>
+                                                        </div>
+                                                        <div class="form-group col-xl-6 col-12 ">
+                                                            <label>Clinical Examination</label>
+                                                            <input type="text" class="form-control " name="ClinicalExamination" id="ClinicalExamination" placeholder="Clinical Examination" disabled>
+                                                        </div>
+                                                        <div class="form-group col-xl-6 col-12 ">
+                                                            <label>Initial Diagnosis</label>
+                                                            <input type="text" class="form-control " name="InitialDiagnosis" id="InitialDiagnosis" placeholder="Initial Diagnosis" disabled>
+                                                        </div>
+                                                        <div class="form-group col-xl-6 col-12 ">
+                                                            <label>Treatments</label>
+                                                            <input type="text" class="form-control " name="Treatments" id="Treatments" placeholder="Treatments" disabled>
+                                                        </div>
+                                                    </div>
+                                                    <h4 class="pt-2">Referral Data</h4>
+                                                    <div class="form-section row col-12 pr-0 pl-0">
+                                                        <div class="form-group col-xl-6 col-12 required">
+                                                            <label>Referral To</label>
+                                                            <input type="text" class="form-control" name="ReferralTo" id="ReferralTo" placeholder="Referral To" >
+                                                        </div>
+                                                        <div class="form-group col-xl-6 col-12 required">
+                                                            <label>Referral Reason</label>
+                                                            <input type="text" class="form-control" name="ReferralTo" id="ReferralTo" placeholder="Referral To" >
+                                                        </div>
+                                                        <div class="form-group col-12 required">
+                                                            <label>Recommendations</label>
+                                                            <textarea name="offerDetails" class="form-control" rows="3" placeholder="Recommendations" id="Recommendations"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data-desc-body-container-footer row no-gutters col-12">
+                                                    <a class="gbtn gbtn-danger" href="../MedicalModule/Clinics-Transactions-ReferralForm-Index.html">Exit</a>
+                                                    <button type="button" class="gbtn form-clear-btn">Clear</button>
+                                                    <button type="button" class="gbtn gbtn-dark">Print</button>
+                                                    <button type="submit" class="gbtn gbtn-success">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------- Page Container : End ------------------>
+        </div>
+
+        <!--------------- General Notification :Begin ---------------->
+        <div class="g7-notification ntf-default">
+            <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                <div class="ntf-icon">
+                    <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="ntf-text">
+                    <h4>@ResourceFile.warning</h4>
+                    <p>
+                        @*Please Check Your Data*@
+                    </p>
+                </div>
+            </div>
+            <a class="ntf-close fa fa-times"></a>
+            <div class="ntf-background"></div>
+        </div>
+        <!--------------- General Notification :End ---------------->
+
+        <!------------- Scripts : Begin -------------->
+        <script>
+            $(document).on("click","#Other",function(){
+                if($("#OtherDetails").prop("disabled")== true){
+                $("#OtherDetails").prop("disabled",false);
+                }else{
+                    $("#OtherDetails").prop("disabled",true);
+                }
+            });
+            $(document).ready(function () {
+                $('#PatientCodeName').select2({
+                    placeholder : 'Choose From Patients',
+                    maximumSelectionLength: 1
+                });
+                $('.fdatepickere').datepicker({
+                    format: "yyyy/mm/dd",
+                    container: '.data-container-body'
+                });
+            });
+        </script>
+        <!------------- Scripts : End -------------->
+    </body>
+</html>

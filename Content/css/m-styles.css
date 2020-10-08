@@ -1,0 +1,889 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+
+@font-face{
+  font-family: "Material-Icons";
+  src: url("../Fonts/Matrialfont/Material-Design-Icons.ttf");
+}
+/* Please Keep this font import at the very top of any CSS file */
+@charset "UTF-8";
+
+
+/* Starter CSS for Flyout Menu */
+*{
+    padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'NeoSansArabic';
+  src: url('../Fonts/NeoSansArabic.ttf') format('truetype');
+}
+html[dir='rtl'] .fa-li{
+    position: absolute;
+    right: 2% !important;
+    width: 2.1428571429em;
+    text-align: center;
+    padding-left: 8px;
+    top: 0.5%;
+}
+
+html[dir='ltr'] .fa-li{
+    position: absolute;
+    left: 2%;
+    width: 2.1428571429em;
+    text-align: center;
+}
+
+
+/* Start Main Header */
+#logo-2{
+   position: absolute;
+   top: 9%;
+   right: 1%;
+   display: none;
+}
+
+#small-logo{
+    position: absolute;
+   top: 9%;
+   right: 1%;
+   display: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    #logo-1{
+        display: none;
+    }
+    #logo-2{
+        display: none;
+    }
+    #small-logo{
+        display: block;
+    }
+    .header-left .nav{
+        position: absolute;
+        right: 42%;
+        top: 9%;
+        margin-right: -43px;
+    }
+    .header-right .nav{
+        position: absolute;
+        top: 5%;
+        right: 72%;
+        margin-right: -43px;
+        
+    }
+    html[dir="rtl"] .page-header .container-fluid .header-container .header-right .nav .g7-dropdown .profile-link .user-img img {
+        width: 29px !important;
+        height: 29px !important;
+    }
+ }
+
+@media (min-width: 481px) and (max-width: 576px){
+     #logo-1{
+        display: block;
+    }
+    #logo-2{
+        display: none;
+    }
+    .header-left .nav{
+        position: absolute;
+        right: 42%;
+        top: 9%;
+         margin-right: -30px;
+
+    }
+     .header-right .nav{
+        position: absolute;
+        top: 5%;
+        right: 72%;
+        margin-right: -60px;
+    }
+     html[dir="rtl"] .page-header .container-fluid .header-container .header-right .nav .g7-dropdown .profile-link .user-img img {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+     #logo-1{
+        display: block;
+    }
+    #logo-2{
+        display: none;
+    }
+    .header-left .nav{
+        position: absolute;
+        right: 42%;
+        top: 9%;
+         margin-right: -30px;
+
+    }
+    html[dir="rtl"] .header-right .nav{
+        position: absolute;
+        top: 5%;
+        right: 72%;
+        margin-right: -60px;
+    }
+    html[dir="ltr"] .header-right .nav{
+      position: absolute;
+      top: 5%;
+      left: 72%;
+      margin-left: -60px;
+    }
+
+     html[dir="rtl"] .page-header .container-fluid .header-container .header-right .nav .g7-dropdown .profile-link .user-img img {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+/* End Main Header */
+/* start dtp-btn*/
+.dtp-btn{
+  width: 120px !important;
+  font-size: 15px !important;
+}
+/* end dtp-btn*/
+
+
+#cssmenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 1;
+  position: relative;
+}
+
+.show-370{
+    display: none;
+}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu ul {
+  position: relative;
+  z-index: 9;
+  float: left;
+}
+#cssmenu ul li {
+  float: left;
+  min-height: 1px;
+  line-height: 1em;
+  vertical-align: middle;
+  position: relative;
+}
+
+#cssmenu ul li i{
+    vertical-align: middle;
+    padding: 3px;
+}
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 598;
+  width: 100%;
+  display:none;
+}
+#cssmenu ul ul li {
+  float: none;
+}
+#cssmenu ul ul ul {
+  top: -2px;
+  right: 0;
+}
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+  display:block;
+}
+#cssmenu ul li:hover{
+    background-color:cornflowerblue;
+}
+html[dir="rtl"] #cssmenu ul ul {
+  top: 1px;
+  right: 99%;
+}
+html[dir="ltr"] #cssmenu ul ul {
+  top: 1px;
+  left: 99%;
+  bottom: 0;
+}
+#cssmenu ul li {
+  float: none;
+}
+#cssmenu ul ul {
+  margin-top: 1px;
+}
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+/* Custom CSS Styles */
+#cssmenu {
+    margin-top :60px;
+  width: 210px;
+  background: #00111d;
+  font-family: 'Oxygen Mono', 'NeoSansArabic', Tahoma, Arial, sans-serif;
+  zoom: 1;
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media only screen and (max-width: 700px){
+    .show-370{
+        display: block;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .footer-menu-logo {
+        display: none;
+    }
+    #cssmenu ul li{
+        padding-top: 3px !important;
+    }
+    #cssmenu{
+        z-index: 8;
+    }
+}
+
+#cssmenu:before {
+  content: '';
+  display: block;
+}
+#cssmenu:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#cssmenu a {
+  display: block;
+  padding: 3px 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#cssmenu > ul {
+  width: 210px;
+}
+#cssmenu ul ul {
+  width: 210px;
+}
+
+
+html[dir='rtl'] #border {
+  border-left: 4px solid #025ca0;
+  position:absolute;
+  top: 70%;
+  bottom:0;
+  right: 0;
+  left: 0;
+}
+
+html[dir='ltr'] #border {
+  border-right: 4px solid #025ca0;
+  position:absolute;
+  top: 70%;
+  bottom:0;
+  right: 0;
+}
+
+html[dir='rtl'] #cssmenu  li{
+    border-bottom: 1px solid #014a87;
+     color:#fff;
+     text-align: right;
+     vertical-align: middle;
+     padding-right: 30px;
+}
+
+html[dir='ltr'] #cssmenu  li{
+    border-bottom: 1px solid #014a87;
+     color:#fff;
+     text-align: left;
+     vertical-align: middle;
+      padding-left: 30px;
+}
+html[dir="rtl"] #cssmenu li.sub-m{
+    background: #025ca0;
+    line-height: 1.9;
+}
+
+html[dir="ltr"] #cssmenu li.sub-m{
+    background: #025ca0;
+    line-height: 1.9;
+}
+html[dir='rtl'] #cssmenu li:last-of-type{
+    border-bottom: none;
+   
+}
+html[dir='ltr'] #cssmenu  li:last-of-type{
+    border-bottom: none;
+}
+
+
+html[dir='rtl'] #cssmenu ul li.main-menu{
+    padding-right: 50px;
+    padding-top: 5px;
+    line-height: 2.75;
+    font-size: 14px;
+}
+
+html[dir='ltr'] #cssmenu ul li.main-menu{
+    padding-left: 50px;
+    padding-top: 5px;
+    line-height: 2.75;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    html[dir='rtl'] #cssmenu ul li.main-menu{
+        line-height: 1.9;
+    }
+    html[dir='rtl'] #border{
+        border-left: none;
+    }
+    html[dir='ltr'] #cssmenu ul li.main-menu{
+        line-height: 1.9;
+    }
+    html[dir='ltr'] #border{
+        border-right: none;
+}
+
+html[dir='ltr'] #cssmenu ul li.main-menu{
+    padding-left: 50px;
+    padding-top: 5px;
+    line-height: 3.25;
+}
+
+
+#cssmenu > ul > li > a:hover {
+  color: #ffffff;
+}
+
+html[dir='rtl'] #cssmenu > ul > li.active{
+    padding-right: 50px;
+    background: #025ca0;
+    vertical-align: middle;
+    line-height: 2.5;
+}
+
+html[dir='ltr'] #cssmenu > ul > li.active{
+    padding-left: 50px;
+    background: #025ca0;
+    vertical-align: middle;
+    line-height: 2.5;
+}
+#cssmenu > ul > li a:hover,
+#cssmenu > ul > li:hover a {
+  background: #00111d;
+}
+#cssmenu li {
+  position: relative;
+}
+html[dir="rtl"] #cssmenu ul li.has-sub:after {
+  content: '+';
+  position: absolute;
+  top: 17%;
+  right: 87%;
+  margin-top: -6px;
+}
+
+html[dir='ltr'] #cssmenu ul li.has-sub:after {
+  content: '+';
+  position: absolute;
+  top: 17%;
+  left: 87%;
+  margin-top: -6px;
+}
+#cssmenu ul ul li.first {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+#cssmenu ul ul li.last {
+  -webkit-border-radius: 0 0 3px 0;
+  -moz-border-radius: 0 0 3px 0;
+  border-radius: 0 0 3px 0;
+  border-bottom: 0;
+}
+#cssmenu ul ul {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+#cssmenu ul ul {
+  border: 1px solid #00111d;
+}
+#cssmenu ul ul a {
+  font-size: 15px;
+  color: #ffffff;
+}
+#cssmenu ul ul a:hover {
+  color: #ffffff;
+}
+
+#cssmenu ul ul li:hover > a {
+    color: #ffffff;
+}
+#cssmenu.align-right > ul > li > a {
+  border-left: 4px solid #00111d;
+  border-right: none;
+}
+#cssmenu.align-right {
+  float: right;
+}
+#cssmenu.align-right li {
+  text-align: right;
+}
+#cssmenu.align-right ul li.has-sub > a:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  margin-top: -6px;
+}
+#cssmenu.align-right ul li.has-sub > a:after {
+  content: none;
+}
+#cssmenu.align-right ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 598;
+  width: 100%;
+}
+#cssmenu.align-right ul ul li.first {
+  -webkit-border-radius: 3px 0 0 0;
+  -moz-border-radius: 3px 0 0 0;
+  border-radius: 3px 0 0 0;
+}
+#cssmenu.align-right ul ul li.last {
+  -webkit-border-radius: 0 0 0 3px;
+  -moz-border-radius: 0 0 0 3px;
+  border-radius: 0 0 0 3px;
+}
+#cssmenu.align-right ul ul {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+/* Start Icons */
+fa-fw {
+    width: 1.5em !important;
+}
+.fa-lg {
+    font-size: 29px !important;
+}
+.main-menu i{
+  color: #f0f0f0;
+  padding: 7px;
+  vertical-align: middle;
+}
+
+.has-sub i{
+  display: inline;
+  padding: 0 8px 0 14px;
+  vertical-align: middle;
+
+}
+.btn-toggle{
+  position: absolute;
+  top: 2%;
+  left: 20px;
+  z-index: 15;
+  display: none;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+
+}
+.btn-toggle i{
+  color: #00111d;
+}
+/* End Icons */
+/* Start Footer Logo */
+.footer-menu-logo{
+    position: absolute;
+    bottom: 0;
+}
+/* End Footer Logo */
+
+/* Main Menu Text Align in English Menu */
+html[dir='ltr'] #cssmenu a{
+    text-align: left;
+}
+
+/* Start Sub Menu Text Align in English Menu */
+html[dir="ltr"] #cssmenu ul ul a{
+  text-align: left;
+  font-size: 13px;
+}
+html[dir="ltr"] #cssmenu ul ul{
+    width: 230px;
+}
+
+html[dir="ltr"] #cssmenu ul ul a i{
+    float: left;
+    padding: 0 5px;
+}
+/* End Sub Menu Text Align in English Menu */
+
+/* Main Menu Text Align in Arabic Menu */
+html[dir='rtl'] #cssmenu a{
+    text-align: right;
+}
+
+/*  Start Sub Menu Text Align in Arabic Menu */
+html[dir="rtl"] #cssmenu ul ul a{
+  text-align: right;
+  padding-right: 35px;
+    padding-top: 3px;
+    line-height: 1.9;
+}
+
+html[dir="ltr"] #cssmenu ul ul a{
+  text-align: left;
+  padding-left: 35px;
+  padding-top: 3px;
+  line-height: 1.9;
+}
+html[dir="rtl"] #cssmenu ul ul{
+    width: 210px;
+}
+
+html[dir="rtl"] #cssmenu ul ul a i{
+    float: right;
+    padding: 0 5px;
+}
+/* End Sub Menu Text Align in Arabic Menu */
+
+/* Start Header */
+
+
+html[dir="ltr"] .page-header .container-fluid .header-container .header-left .user-tools{
+     background-color: #fff !important;
+}
+.profile-menu{
+    position: absolute;
+    top: 0;
+    right: 1%;
+}
+
+html[dir="ltr"] .page-header .container-fluid .header-container .header-right .nav .g7-dropdown .profile-link{
+  border-left: none;
+}
+@media screen and (max-width: 767px){
+  .header-container .header-right .date-time{
+    display: none;
+  }
+  .page-header .container-fluid .header-container .header-left .nav .form-div-container .form-div input,
+  .page-header .container-fluid .header-container .header-left .nav .form-div-container .form-div span{
+    display: none;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .company-logo h3{
+    padding: 0;
+  }
+  html[dir="ltr"] .page-header{
+    box-shadow: none;
+    padding-left: 60px;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .nav .icon-link a:first-child {
+    width: 38px !important;
+  }
+
+  }
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .header-container .header-right .date-time{
+    display: none;
+  }
+  .page-header .container-fluid .header-container .header-left .nav .form-div-container .form-div input,
+  .page-header .container-fluid .header-container .header-left .nav .form-div-container .form-div span{
+    display: none;
+  }
+}
+@media screen and (max-width: 900px){
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-right .nav .dropdown .dropdown-menu {
+    right: -9% !important;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-right .nav .g7-dropdown .dropdown-menu .top-arrow{
+    left: 77% !important;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+
+}
+@media screen and (max-width: 1448px){
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .user-tools{
+    padding: 0;
+    width: 100%;
+}
+html[dir="ltr"] .page-header .container-fluid .header-container .header-left{
+  padding: 7px 0;
+}
+}
+
+
+html[dir="ltr"] .btn {
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    z-index: 5;
+    color: #00111d;
+    width: 0;
+}
+.page-header .container-fluid .header-container .header-left .nav .icon-link.g7-dropdown.g7-dropdown-lg .dropdown-menu .user-tools{
+    position: absolute;
+    top: 20px;
+}
+
+.settings a.fa{
+    color: #012943;
+}
+
+.settings a.fa:hover{
+    color: #efb334;
+
+}
+.notification{
+    position: absolute;
+    right: -20%;
+    background-color: #fff;
+    visibility: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    width: 530px;
+    list-style: none;
+}
+
+.notification span,
+.notification p{
+    color: #012943;
+}
+
+
+li.notify:hover ul.notification {
+    visibility: visible;
+}
+
+.dropdown-footer{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 8px !important;
+    background: #012943;
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.dropdown-footer:hover{
+    background: #00b1b7;
+     color: #ffffff;
+}
+.title-1{
+    color: #fdc977;
+}
+
+.title-2{
+    color: #f2a095;
+}
+.title-3{
+    color: #cbdc5a;
+}
+.title-4{
+    color: #78d0d4;
+}
+
+.title-1:hover{
+    color: #efb334;
+}
+.title-2:hover{
+    color: #ff3333;
+}
+.title-3:hover{
+    color: #00111d;
+}
+.title-4:hover{
+    color: #00b1b7;
+}
+
+.settings .dropdown-menu li{
+    padding-left:15px;
+}
+
+/* End Header */
+
+/* Start Arabic Menu */
+html[dir="rtl"] #cssmenu ul li.has-sub > a::after{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 90%;
+    margin-top: -6px;
+}
+
+html[dir="rtl"] #cssmenu ul ul{
+    right: 100%;
+    background: #00111d;
+}
+
+/* End Arabic Menu */
+
+/* Start Admin Dash Board 
+@media (min-width: 320px) and (max-width: 480px){
+    #main-logo{
+        display: none;
+    }
+    #logo-mid{
+        display: block;
+    }
+    html[dir="rtl"] .page-header .container-fluid .header-container .header-left .nav .icon-link.g7-dropdown.g7-dropdown-lg .dropdown-menu{
+        width: 280px !important;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 576px){
+    #main-logo{
+        display: none;
+    }
+    #logo-mid{
+        display: block;
+    }
+     html[dir="rtl"] .page-header .container-fluid .header-container .header-left .nav .icon-link.g7-dropdown.g7-dropdown-lg .dropdown-menu{
+        width: 280px !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+    #main-logo{
+        display: block;
+    }
+    #logo-mid{
+        display: none;
+    }
+     html[dir="rtl"] .page-header .container-fluid .header-container .header-left .nav .icon-link.g7-dropdown.g7-dropdown-lg .dropdown-menu{
+        width: 280px !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+     #main-logo{
+        display: block;
+    }
+    #logo-mid{
+        display: none !important;
+    }
+     html[dir="rtl"] .page-header .container-fluid .header-container .header-left .nav .icon-link.g7-dropdown.g7-dropdown-lg .dropdown-menu{
+        width: 380px;
+    }
+}
+
+*/
+
+/* End Admin Dash Board */
+
+/* Start Media Queries */
+@media screen  and (min-width: 320px) and (min-device-pixel-ratio: 2){
+    .settings{
+        top: 26px;
+    }
+}
+@media screen and (max-width: 767px){
+  #cssmenu{
+    display: none;
+  }
+    .btn-toggle{
+    display: block;
+  }
+
+     .btn-toggle-settings{
+    display: block;
+  }
+  #cssmenu ul ul ul{
+    top: 42px;
+    left: 0;
+  }
+  .settings{
+      display: block;
+  }
+  .user-tools{
+      display: none;
+  }
+  .notification{
+      width: 376px;
+  }
+  .notification p{
+      font-size: 14px;
+  }
+   
+ }
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  #cssmenu{
+    display: block !important;
+  }
+  .btn-toggle{
+    display: none;
+  }
+  .settings{
+      display: none;
+  }
+  .user-tools{
+      display: contents;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .user-tools .devider{
+      display: block;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  #cssmenu{
+    display: block !important;
+  }
+  .btn-toggle{
+    display: none;
+  }
+  .settings{
+      display: none;
+  }
+  .user-tools{
+      display: contents;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .user-tools .devider{
+      display: block;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  #cssmenu{
+    display: block !important;
+  }
+  .btn-toggle{
+    display: none;
+  }
+  .settings{
+      display: none;
+  }
+  .user-tools{
+      display: contents;
+  }
+  html[dir="ltr"] .page-header .container-fluid .header-container .header-left .user-tools .devider{
+      display: block;
+  }
+}
+/* End Media Queries */

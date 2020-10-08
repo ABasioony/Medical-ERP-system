@@ -1,0 +1,488 @@
+.data-section{
+    .data-container-header{
+        padding-bottom: 6px;
+        padding-top: 10px;
+        padding-#{$Direction-Opposite}: 15px;
+        padding-#{$Direction}: 20px;
+        align-items: flex-end;
+    }
+    .data-container-body {.data-container-body-content {.data-container-body-content-sub{  .main-container{margin-top: 0px;} }}}
+}
+.data-container-header{
+    flex-direction: $FdirectionRow ;
+    padding: 15px 20px;
+    .section-header-main{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: $FdirectionRow ;
+        padding: 7px 0px;
+        flex-wrap: wrap;
+        span{
+            background: $Success;
+            color: $ClearWhite;
+            width: 45px;
+            height: 45px;
+            font-size: 23px;
+            border-radius: 5px;
+            &:before{
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        span:first-child{
+            background:$SubColorLight;
+        }
+        .data{
+            margin-#{$Direction}: 10px;
+            h4{
+                font-size: 22px;
+                font-family: $MainFont;
+                font-weight: $FW-Bold;
+                text-align:$Direction;
+                color:#025ca0;
+            }
+            p{
+                color:$MainColorLight;
+                margin: 0px;
+                font-weight: $FW-Light;
+                flex-direction: $FdirectionRow ;
+                align-items: center;
+                margin-bottom:0px;
+                justify-content:flex-end;
+                display: none;
+                span{
+                    color: $MainColorLight;
+                    font-size:14px;
+                    margin-#{$Direction}: 5px;
+                    padding: 0;
+                    background: none;
+                }
+                span:first-child{
+                    margin-#{$Direction-Opposite}:5px;
+                    margin-#{$Direction}: 0px;
+                }
+            }
+            .breadcrumb{
+                padding: 0px;
+                background: none;
+                margin-bottom: 0px;
+                .breadcrumb-item{
+                    a{
+                        color: #025ca0;
+                        font-size: 15px;
+                        &:hover{
+                            color:$Success;
+                        }
+                    }
+                    &.active{
+                        font-size: 15px;
+                        color: #025ca0 ;
+                    }
+                }
+                .breadcrumb-item + .breadcrumb-item::before{
+                    font-size: 14px;
+                    color: #025ca0;
+                }
+            }
+        }
+        .nav{
+            align-items: center;
+            padding: 10px 15px;
+            border-#{$Direction}: 1px solid $BorderColor;
+            margin-#{$Direction} : 15px;
+            .nav-item{
+                /* min-width: 125px; */
+                a{
+                    color:#025ca0;
+                    font-weight: 100;
+                }
+                .active{
+                    background: transparent;
+                    color:$SubColorLight;
+                    font-weight: 700;
+                }  
+                .disabled{
+                    pointer-events: none;
+                }   
+            }
+            
+        }
+    }
+    .section-header-sub{
+        min-width:20%;
+        display: block;
+        margin-#{$Direction}:auto;
+        //flex-wrap: wrap;
+        padding: 10px;
+        p{
+            color:$MainColor;
+            margin: 0px;
+            font-weight: $FW-SBold;
+            display:flex;
+            flex-direction: $FdirectionRow ;
+            align-items: center;
+            margin-bottom:0px;
+            justify-content:flex-end;
+            span{
+                color: $MainColor;
+                margin-#{$Direction}: 5px;
+
+            }
+            span:first-child{
+                margin-#{$Direction-Opposite}:5px;
+                margin-#{$Direction}: 0px;
+            }
+        }
+        h3{
+            width: 100%;
+            font-weight: $FW-Bold;
+            text-align: $Direction-Opposite;
+            text-transform: uppercase;
+            padding: 10px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            font-size: 2.7vw;
+        }
+    }
+    .section-header-tools{
+        display: flex;
+        flex-wrap: wrap;
+        background: $ClearWhite;
+        padding: 10px 15px;
+        border-radius: 6px;
+        border-bottom-#{$Direction}-radius: 6px;
+        border-bottom-#{$Direction-Opposite}-radius: 6px;
+        border: 1px solid $BorderColor;
+        margin-#{$Direction}:auto;
+        .data-container-body-header-controls{
+            justify-content: flex-end;
+            margin: 0 auto;
+            align-items: center;
+            select{
+                padding: 6px;
+                margin-#{$Direction}: 3px;
+                margin-#{$Direction-Opposite}: 3px;
+                border: 1px solid $BorderColor;
+                letter-spacing: 0.5px;
+                min-width: 200px;
+                max-width: 200px;
+            }
+            .select2{
+                margin-#{$Direction}: 3px;
+                margin-#{$Direction-Opposite}: 3px;
+                letter-spacing: 0.5px;
+                min-width: 200px;
+                max-width: 200px;
+            }
+            button,a{
+                padding: 9px 15px;
+                font-weight: $FW-Regular;
+            }
+            .icon-gbtn{
+                .title{display: none;}
+            }
+            .multi-delete-btn{
+                display: none;
+            }
+            label{
+                border: 2px solid $Danger;
+                padding: 4.5px 25px;
+                color: $Danger;
+                font-size: 18px;
+                border-radius: 5px;
+                font-weight: $FW-Bold;
+                font-family: $MainFont;
+                text-align: center;
+                margin-bottom: 0px;
+                margin-#{$Direction-Opposite}: 5px;
+                span{
+                    margin:0px 1px;
+                    float:left;
+                }
+            }
+            .active{
+                color: $Success;
+                border-color: $Success;
+            }
+        }
+        .legends{
+            flex-direction: $FdirectionRow;
+            justify-content: flex-#{$Justification};
+            align-items: center;
+            padding: 6px;
+            div{
+                margin-#{$Direction-Opposite}: 15px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                span{
+                    width: 12px;
+                    height: 25px;
+                    background: $LegendDefault;
+                    margin-#{$Direction-Opposite}:3px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border-radius: 4px;
+                }
+                p{
+                    display: flex;
+                    padding-#{$Direction}: 10px;
+                    vertical-align: middle;
+                    margin: 0px;
+                    color:#025ca0;
+                    font-weight: $FW-Regular;
+                    span{
+                        background: none !important;
+                        width: auto;
+                        &::before{
+                            content:":";
+                            margin : 0px 5px;
+                        }
+                    }
+                }
+            }
+            div.warning{span{background: $LegendWarning;}}
+            div.success{span{background: $LegendSuccess;}}
+            div.danger{span{background: $LegendDanger;}}
+        }
+        &.tools-show{
+            animation-name: ToolsShow;
+            animation-duration: 0.5s;
+            animation-delay: 0s ;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease;
+            animation-fill-mode:both;
+        }
+        &.tools-hide{
+            animation-name: ToolsHide;
+            animation-duration: 0.5s;
+            animation-delay: 0s ;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease;
+            animation-fill-mode:both;
+        }
+    }
+    .flow-tools{
+        position: fixed;
+        #{$Direction-Opposite}: 0px;
+        top: 50%;
+        z-index: 9;
+        border-top-#{$Direction-Opposite}-radius: 0px !important;
+        border-bottom-#{$Direction-Opposite}-radius: 0px !important;
+        border-bottom-#{$Direction}-radius: 6px !important;
+        padding: 10px 5px 15px 5px;
+        .legends{
+            display: none;
+        }
+        .data-container-body-header-controls{
+            flex-direction: column;
+            .controls-section{
+                flex-direction: column;
+                a{
+                    width: 40px;
+                    height: 35px;
+                }
+                &.br{
+                    border:none !important;
+                }
+                &.navigate-controls{
+                    display: none;
+                }
+            }
+            button,a{
+                span{
+                    display: none;
+                }
+                &:before{
+                    margin-#{$Direction-Opposite}: 0px;
+                }
+                .title{
+                    display: none;
+                    position: absolute;
+                    font-weight: 300;
+                    font-size: 14px;
+                    background: $SubColorLight;
+                    padding: 6px 12px;
+                    #{$Direction-Opposite}: 68px;
+                    white-space: nowrap;
+                    &.tools-show{
+                        animation-name: ToolsShow;
+                        animation-duration: 0.5s;
+                        animation-delay: 0s ;
+                        animation-iteration-count: 1;
+                        animation-direction: normal;
+                        animation-timing-function: ease;
+                        animation-fill-mode:both;
+                    } 
+                    &.tools-hide{
+                        animation-name: ToolsHide;
+                        animation-duration: 0.5s;
+                        animation-delay: 0s ;
+                        animation-iteration-count: 1;
+                        animation-direction: normal;
+                        animation-timing-function: ease;
+                        animation-fill-mode:both;
+                    } 
+                }
+                &:hover{
+                    .title{display: block !important;}
+                }
+            }
+            ul{
+                flex-basis: auto;
+                flex-direction: column;
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                position: relative;
+            }
+            label,select,.select2{display:none;}
+            .gbtn-danger{ .title{background: $Danger;} }
+            .gbtn-warning{ .title{background: $Warning;} }
+            .gbtn-dark{ .title{background: $MainColor;} }
+            .gbtn-success{ .title{background: $Success;} }
+
+        }
+        &.tools-in{
+            animation-name: $ToolsSlideIn;
+            animation-duration: 1s;
+            animation-delay: 0s ;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease;
+            animation-fill-mode:both;
+        } 
+        &.tools-out{
+            animation-name: $ToolsSlideOut;
+            animation-duration: 0.5s;
+            animation-delay: 0s ;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-timing-function: ease;
+            animation-fill-mode:both;
+        }
+    }
+    &.header-total{
+        .flow-tools{
+            display: none;
+        }
+        padding: 0px 0px 5px 0px;
+        .section-header-tools {
+            border-radius: 0px;
+            border-top-right-radius: 5px;
+            .legends{
+                padding: 0px;
+                div{
+                    border-#{$Direction-Opposite}: 1px solid $BorderColor;
+                    padding: 0px 10px;
+                    text-align: right;
+                    margin: 0px;
+                    p{
+                        padding: 0px;
+                        color: $MainColor;
+                    }
+                    &:last-child{
+                        border: none;
+                    }
+                    &.warning{p{color: $Warning;}}
+                    &.success{p{color: $Success;}}
+                    &.danger{p{color: $Danger;}}
+                    &.default{p{color: $SubColorLight;}}
+                }
+                .gbtn-o{
+                    &:hover,&:active,&:focus{
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.data-search-header{
+    padding-#{$Direction-Opposite}: 15px;
+    padding-#{$Direction}: 15px;
+    margin-bottom: 5px;
+    direction: $LTR-RTL;
+    .form-group{
+        margin-bottom: 0px;
+        span{
+            position: absolute;
+            margin: 7px 14px;
+            font-size: 25px;
+            color: $MainColor;
+            border-#{$Direction-Opposite}: 1px solid $BorderColor;
+            padding-#{$Direction-Opposite}: 10px;
+            #{$Direction}:0px;
+        }
+        input{
+            border-radius: 0px;
+            padding-#{$Direction}: 55px;
+            border-top-#{$Direction}-radius: 6px;
+            font-size: 16px;
+            &::placeholder,&:-ms-input-placeholder &::-ms-input-placeholder{
+                color: $BorderColor;
+            }
+            &:focus,&:active{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px){
+    .data-container-header{
+        .section-header-main{
+            p{display: block !important;}
+        }
+        .section-header-sub{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    .data-container-header{
+        .section-header-main{
+            .nav{
+                border:none;
+                margin-#{$Direction}: 0px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@keyframes ToolsHide{
+    from{opacity: 1;}
+    to{ opacity: 0;}
+}
+@keyframes ToolsShow{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+@keyframes ToolsSlidingOutLeft{
+    from{opacity: 1; left: 0px;}
+    to{ opacity: 0; left: -65px;}
+}
+@keyframes ToolsSlidingInLeft{
+    from{opacity: 0;left: -65px;}
+    to{opacity: 1;left: 0px;}
+}
+
+@keyframes ToolsSlidingOutRight{
+    from{ opacity: 1;right: 0px;}
+    to{opacity: 0;right: -65px;}
+}
+
+@keyframes ToolsSlidingInRight{
+    from{ opacity: 0;right: -65px;}
+    to{ opacity: 1; right: 0px;}
+}

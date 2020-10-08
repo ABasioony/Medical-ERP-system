@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro : Invoice</title>
+    <link rel="shortcut icon" type="image/ico" href="Images/fav.png" />
+    <!-- Styles -->
+    <link href="Content/css/styles.css" rel="stylesheet">
+    <link href="Content/css/datatables.min.css" rel="stylesheet">
+    <!-- /Styles -->
+    <!-- Scripts -->
+    <script src="Content/js/jquery-3.2.1.min.js"></script>
+    <script src="Content/js/popper.min.js"></script>
+    <script src="Content/js/bootstrap.bundle.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/datatables.min.js"></script>
+    <script src="Content/js/G7/functions.js"></script>
+    <script src="Content/js/G7/scripts.js"></script>
+    <!-- /Scripts -->
+
+</head>
+<body>
+    <div class="invoice-wrapper receipt">
+        <!-------------- Page Header : Begin ---------------->
+        <div class="data-container-header row no-gutters col-12">
+            <div class="section-header-tools flow-tools">
+                <div class="data-container-body-header-controls row no-gutters">
+                    <div class="controls-section row no-gutters ">
+                        <a class="gbtn gbtn-dark fa fa-print icon-gbtn print-html" title="طباعة"><span class="title">طباعة</span></a>
+                        <a class="gbtn gbtn-warning fa fa-retweet icon-gbtn" title="تغيير التصميم" onclick="changeDesign()"><span class="title">تغيير التصميم</span></a>
+                        <a class="gbtn gbtn-danger fa fa-reply-all icon-gbtn" title="رجوع"><span class="title">رجوع</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="row col-12 no-gutters">
+                
+            <div class="col-10 row data">
+                <div class="title col-3">
+                    <h1>إيصال</h1>
+                </div>
+                <div class="invoice-info col-7">
+                    <div class="row no-gutters col-12">
+                        <div class="col-6">
+                            <p class="col-12">رقم الإيصال :  <span>5172</span></p>
+                            <p class="col-12">نوع الإيصال :  <span>إيداع</span></p>
+                        </div>
+                        <div class="col-6">
+                            <p class="col-12">الفرع :  <span>الفرع الأول</span></p>
+                            <p class="col-12">الخزينة الفرعية :  <span>خزينة فرعية أولى الفرع الأول</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-block"></div>
+                <div class="header-block success"></div>
+            </div>
+            <div class="logo col-2">
+                <img src="Content/Images/logo.png">
+            </div>
+            
+        </header> 
+        <section Class="col-12 row no-gutters invoice-body">
+            <div class="sub-header row col-12">
+                <p>أسم العميل :  <span>محمد خليفة محمد</span></p>
+                <p>كود / إسم الموظف :  <span>303 / عمرو سعد</span></p>
+                <p>التاريخ :  <span>27 نوفمبر 2018</span></p>
+                <p>الوردية :  <span>وردية النهار</span></p>
+            </div>
+            <div class="table-container row no-gutters col-11">
+                <table class="table table-bordered col-12">
+                    <thead>
+                        <tr><th>نقدي</th></tr>
+                        <tr>
+                            <th>المبلغ</th>
+                            <th>العملة</th>
+                            <th>سعر الصرف</th>
+                            <th>عملة محلية</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>ريال</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td>دولار</td>
+                            <td>5</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1200</td>
+                            <td>الإجمالي (فقط وقدره)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-container row no-gutters col-11">
+                <table class="table table-bordered col-12">
+                    <thead>
+                        <tr><th>شبكة</th></tr>
+                        <tr>
+                            <th>المبلغ</th>
+                            <th>العملة</th>
+                            <th>سعر الصرف</th>
+                            <th>عملة محلية</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>ريال</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td>دولار</td>
+                            <td>5</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1200</td>
+                            <td>الإجمالي (فقط وقدره)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-container row no-gutters col-11">
+                <table class="table table-bordered col-12">
+                    <thead>
+                        <tr><th>شيكات تحت التحصيل</th></tr>
+                        <tr>
+                            <th>المبلغ</th>
+                            <th>العملة</th>
+                            <th>سعر الصرف</th>
+                            <th>عملة محلية</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>ريال</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td>دولار</td>
+                            <td>5</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1200</td>
+                            <td>الإجمالي (فقط وقدره)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-container row no-gutters col-11">
+                <table class="table table-bordered col-12">
+                    <thead>
+                        <tr><th>شيكات تحت الدفع</th></tr>
+                        <tr>
+                            <th>المبلغ</th>
+                            <th>العملة</th>
+                            <th>سعر الصرف</th>
+                            <th>عملة محلية</th>
+                            <th>ملاحظات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>100</td>
+                            <td>ريال</td>
+                            <td>2</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>200</td>
+                            <td>دولار</td>
+                            <td>5</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1200</td>
+                            <td>الإجمالي (فقط وقدره)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="col-12 notes">ملاحظات : <span> ملاحظات على الإيداع و الصرف</span></p>
+        </section>
+        <div class="sub-footer row col-12">
+            <div class="col-3 signature">
+                <p>التوقيع / ................................................................................</p>
+            </div>
+            <div class="col-6 totals">
+                <div class="row no-gutters col-12 totals-container">
+                    <div class="col-md-4 col-5">
+                        <p class="col-12">إجمالى نقدى : <span>796.00</span></p>
+                        <p class="col-12">إجمالى شبكة :  <span>0.00</span></p>
+                    </div>
+                    <div class="col-md-4 col-5">
+                        <p class="col-12 success"> إجمالى المبلغ : <span>796.00</span></p>
+                        <p class="col-12">العملة : <span>ريال سعودى</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 text-right">
+                 <img src="./Content/Images/qr-code.png" alt="Quick Reader" class="img-thumbnail" width="130px"/>      
+            </div>
+        </div>
+        <footer class="row col-12 no-gutters">
+            <div class="main-footer row col-12">
+                <div class="col-md-3 col-3 thanks">
+                    <p>شكرا على ثقتكم بنا</p>
+                </div>
+                <div class="col-md-6  col-8 footer-data">
+                    <div class="footer-data-div row col-12">
+                        <p>المملكة العربية السعودية- الطائف</p>
+                        <p>التليفون : <span>055923415231</span></p>
+                        <p>الجوال : <span>01224075602</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-block blue"></div>
+            <div class="footer-block"></div>
+            <div class="footer-block white"></div>
+            <div class="flat-block"></div>
+        </footer>
+    </div>
+    <script>
+        function changeDesign(){
+            if(!$(".invoice-wrapper").hasClass("print-wrap")){
+                $(".invoice-wrapper").addClass("print-wrap");
+            }else{
+                $(".invoice-wrapper").removeClass("print-wrap");
+            }
+        }
+    </script>
+</body>
+
+
+</html>

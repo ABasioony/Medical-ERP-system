@@ -1,0 +1,29 @@
+iframe.data-container-body-content-main-body{
+    padding:0px !important;
+    height: calc(100vh - 160px) !important;
+}
+.iframe-body{
+    margin:0px  !important;
+    form{
+        .viewer-container{
+            #rptViewer{
+                width: 100% !important;
+                height: 100% !important;
+                #rptViewer__UI{
+                    width: 99% !important;
+                    height: 100vh !important;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+/* @media only screen and (max-width: 992px){
+    iframe.data-container-body-content-main-body{
+        height: calc(100vh - 270px) !important;
+    }
+}
+
+ */

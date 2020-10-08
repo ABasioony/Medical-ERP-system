@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro : Invoice</title>
+    <link rel="shortcut icon" type="image/ico" href="Images/fav.png" />
+    <!-- Styles -->
+    <link href="Content/css/styles.css" rel="stylesheet">
+    <link href="Content/css/datatables.min.css" rel="stylesheet">
+    <!-- /Styles -->
+    <!-- Scripts -->
+    <script src="Content/js/jquery-3.2.1.min.js"></script>
+    <script src="Content/js/popper.min.js"></script>
+    <script src="Content/js/bootstrap.bundle.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/datatables.min.js"></script>
+    <script src="Content/js/G7/functions.js"></script>
+    <script src="Content/js/G7/scripts.js"></script>
+    <!-- /Scripts -->
+
+</head>
+<body>
+    <div class="invoice-wrapper receipt general-receipt receipt-document hasback">
+        <!-------------- Page Header : Begin ---------------->
+        <div class="data-container-header row no-gutters col-12">
+            <div class="section-header-tools flow-tools">
+                <div class="data-container-body-header-controls row no-gutters">
+                    <div class="controls-section row no-gutters ">
+                        <a class="gbtn gbtn-dark fa fa-print icon-gbtn print-html" title="طباعة"><span class="title">طباعة</span></a>
+                        <a class="gbtn gbtn-warning fa fa-retweet icon-gbtn" title="تغيير التصميم" onclick="changeDesign()"><span class="title">تغيير التصميم</span></a>
+                        <a class="gbtn gbtn-danger fa fa-reply-all icon-gbtn" title="رجوع"><span class="title">رجوع</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header class="row col-12 no-gutters">
+            <div class="col-10 row data">
+                <div class="title col-7 alignStart">
+                    <h3>اشعار مراجعة مريض</h3>
+                </div>
+                <div class="header-block"></div>
+                <div class="header-block success"></div>
+            </div>
+            <div class="logo col-2">
+                <img src="Content/Images/logo.png">
+            </div>
+        </header>
+        <section Class="col-11 row no-gutters invoice-body">
+            <div class="sub-header row col-12">
+                <div class="col-12 row no-gutters data-row">
+                    <div class="data-row-item col-4 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>اسم المريض</span><span>Name</span></p>
+                        </div>
+                        <p class="col bold">اسم المريض</p>
+                    </div>
+                    <div class="data-row-item col-4 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>عمره</span><span>Age</span></p>
+                        </div>
+                        <p class="col bold">18 سنة</p>
+                    </div>
+                    <div class="data-row-item col-4 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>نوعه</span><span>Gender</span></p>
+                        </div>
+                        <p class="col bold">ذكر</p>
+                    </div>
+                </div>
+                <div class="col-12 row no-gutters data-row">
+                        <div class="data-row-item col-4 p-0">
+                                <div class="data-row-item-label">
+                                    <p><span>جنسيته</span><span>Nationality</span></p>
+                                </div>
+                                <p class="col bold">سعودي</p>
+                            </div>
+                        <div class="data-row-item col-4 p-0">
+                            <div class="data-row-item-label">
+                                <p><span>التاريخ</span><span>Date</span></p>
+                            </div>
+                            <p class="col bold">19/3/2019</p>
+                        </div>
+                        <div class="data-row-item col-4 p-0">
+                            <div class="data-row-item-label">
+                                <p><span>الساعة</span><span>Time</span></p>
+                            </div>
+                            <p class="col bold">1:30 pm</p>
+                    </div>
+                </div>
+                <div class="br-bottom col-12"></div>
+  
+                <div class="col-12 row no-gutters data-row">
+                    <div class="data-row-item col-12 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>اجري الكشف الطبي على المذكور اعلاه.</span></p>
+                        </div>
+                    </div>
+                    <div class="data-row-item col-12 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>التشخيص :</span></p>
+                        </div>
+                        <p class="col-10 row">........................................................................................................................................................................................................................................................................................................................................................................................................................</p>
+                    </div>
+                </div>
+                <div class="col-12 row no-gutters data-row">
+                    <div class="data-row-item col-12 p-0">
+                        <div class="data-row-item-label">
+                            <p><span>و ينصح له بالراحة:</span></p>
+                        </div>
+                        <p class="col bold"> مدة: <Span>3 ايام </Span></p>
+                        <p class="col bold"> اعتبارا من: <Span>21/3/2019</Span></p>
+                        <p class="col bold"> و حتى: <Span>21/3/2019</Span></p>
+                    </div>
+                </div>
+                <div class="br-bottom col-12"></div>
+                <p>و قد اعطي له العلاج اللازم,,</p>
+            </div>
+        </section>
+        <div class="sub-footer row col-11">
+                <div class="col-12 row no-gutters data-row">
+                        <div class="data-row-item col-12 p-0">
+                            <div class="data-row-item-label">
+                                <p><span class="bold alignstart">ملاحظات</span></p>
+                            </div>
+                            <div class="col-12 Notes">
+                                <ol>
+                                    <li><p>.................................................................</p></li>
+                                    <li><p>.................................................................</p></li>
+                                    <li><p>.................................................................</p></li>
+                                    <li><p>.................................................................</p>
+                                        <ul>
+                                            <li><p>.................................................................</p></li>
+                                            <li><p>.................................................................</p></li>
+                                            <li><p>.................................................................</p></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+            <div class="col-12 row no-gutters data-row">
+                <div class="data-row-item col-6 p-0">
+                    <div class="data-row-item-label">
+                        <p><span>اسم الطبيب</span></p>
+                    </div>
+                    <p class="col bold"> اسم الطبيب</p>
+                </div>
+                <div class="data-row-item justify-content-center col-3 p-0">
+                    <div class="data-row-item-label">
+                        <p><span>توقيعه</span></p>
+                    </div>
+                    <p class="col">.......................................................................................................................................................................................................................................................................................................................................................................................................................</p>
+                </div>
+                <div class="col-3">
+                        <img src="./Content/Images/qr-code.png" alt="Quick Reader" class="img-thumbnail" width="130px"/>      
+                    </div>
+            </div>
+        </div>
+        <footer class="row col-12 no-gutters">
+            <div class="main-footer row col-12">
+                <div class="col-md-3 col-3 thanks">
+                    <p>شكرا على ثقتكم بنا</p>
+                </div>
+                <div class="col-md-6  col-8 footer-data">
+                    <div class="footer-data-div row col-12">
+                        <p>المملكة العربية السعودية- الطائف</p>
+                        <p>التليفون : <span>055923415231</span></p>
+                        <p>الجوال : <span>01224075602</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-block blue"></div>
+            <div class="footer-block"></div>
+            <div class="footer-block white"></div>
+            <div class="flat-block"></div>
+        </footer>
+    </div>
+    <script>
+        function changeDesign(){
+            if(!$(".invoice-wrapper").hasClass("print-wrap")){
+                $(".invoice-wrapper").addClass("print-wrap");
+            }else{
+                $(".invoice-wrapper").removeClass("print-wrap");
+            }
+        }
+    </script>
+</body>
+
+
+</html>

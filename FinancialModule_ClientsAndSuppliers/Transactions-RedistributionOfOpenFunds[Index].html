@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Financial Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/ag-grid.css" rel="stylesheet">
+        <link href="../Content/css/ag-theme-balham.css" rel="stylesheet">
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+        <script src="../Content/js/G7/DataTableConfig.js"></script>
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <script src="../Content/js/G7/ag-grid-config.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                    <div class="sidebar-bg"></div>
+                    <div class="logo-div">
+                        <div class="logo">
+                            <img src="../Content/Images/prog-logo.png" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="list-div">
+                        <ul class="sidebar-list">
+                            <!-- Index : Begin -->
+                            <li class="list-item " data-nodeid="5" data-parent="0">
+                                <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                            </li>
+                            <!-- Index : end -->
+                            <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                                <a class="fa fa-calculator">النظام المحاسبى</a>
+                            </li>
+                            <li class="list-item node-item" data-nodeid="2" data-parent="0">
+                                <a class="fi-cash flaticon-profit">ادارة النقدية</a>
+                            </li>
+                            <!-- Financial Module : Begin -->
+                            <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                                <div class="sub-list-header">
+                                    <h2>إسم المؤسسة</h2>
+                                </div>
+                                <ul class="sub-list-inner">
+                                    <h3>النظام المحاسبى</h3>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-bank-building leaf-node" href="../FinancialModule/Definitions-CostCentersDimentions-index.html">
+                                                    أبعاد مراكز التكلفة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-contract-1 leaf-node" href="../FinancialModule/Definitions-FinancialStatments-index.html">الحسابات
+                                                    الختامية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-payment-day leaf-node" href="../FinancialModule/Definitions-AccountingPeriods-index.html">الفترات
+                                                    المحاسبية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-statistics leaf-node" href="../FinancialModule/Definitions-AnalyticalJournalsTypes-index.html">أنواع
+                                                    اليوميات التحليلية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-mortgage-loan leaf-node" href="../FinancialModule/Definitions_CostCentersTree.html">مراكز
+                                                    التكلفة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-analytics-1 leaf-node" href="../FinancialModule/Definitions-AuditRatings.html">تصنيفات
+                                                    الحسابات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-business-affiliate-network leaf-node" href="../FinancialModule/Definitions-ChartOfAccounts.html">شجرة
+                                                    الحسابات</a>
+                                            </li>
+        
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fa fa-exchange node">الحركات</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-notepad leaf-node" href="../FinancialModule/Transaction-OpeningJornalEntry-index.html">القيد
+                                                    الافتتاحى</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-analytics leaf-node" href="../FinancialModule/Transactions-DailyJournals_index.html">قيود
+                                                    اليوميه العامه</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-task-complete leaf-node" href="../FinancialModule/Transactions-ClosingJornalEntry-index.html">قيود
+                                                    الاقفال</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-clipboard node">التقارير</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="../FinancialModule/Reports-General ledger account-form.html">حساب
+                                                    الاستاذ العام</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-scale-1 leaf-node" href="../FinancialModule/Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان
+                                                    مراجعة الاستاذ العام</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-shopping-list leaf-node" href="../FinancialModule/Reports-FinancialMenus.html">القوائم
+                                                    الماليه للحسابات الختاميه</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                </ul>
+                            </li>
+                            <!-- Financial Module : End -->
+                            <!-- Financial Module - Cash Management : Begin -->
+                            <li class="sub-list-l" data-nodeid="6" data-parent="2">
+                                <div class="sub-list-header">
+                                    <h2>إسم المؤسسة</h2>
+                                </div>
+                                <ul class="sub-list-inner">
+                                    <h3>النظام المحاسبى</h3>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-safebox leaf-node" href="./Definitions-ListOfSafesAndBanks.html">
+                                                    قائمة الخزائن و البنوك</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet leaf-node" href="./Definitions-ListOfIncomesAndExpenses.html">الايرادات و المصروفات المتنوعة</a>
+                                            </li>
+                                               
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fa fa-exchange node">الحركات</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-money-bag leaf-node" href="./Transactions-OpenningAccounts-Index.html">الارصدة الافتتاحية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-agreement leaf-node" href="./Transactions-DailyExpenses-index.html">يومية المصروفات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-money leaf-node" href="./Transactions-CashAndPaymentStatus-Index.html">حالة اوراق القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-pay leaf-node" href="./Transactions-BillsOfExchange-index.html">سندات الصرف</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Transactions-Receipts-index.html">سندات القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-signing-the-contract  leaf-node" href="./Transactions-CheckReview-index.html">متابعة الشيكات</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-clipboard node">التقارير</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-money leaf-node" href="./Reports-CashFlow.html">السيولة النقدية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-bitcoin leaf-node" href="./Reports-CashStatus.html">حالة الاوراق المالية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-send leaf-node" href="./Reports-ChequeStatus.html">حالة الشيكات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-pay leaf-node" href="./Reports-BillsOfExchange.html">سندات الصرف</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Reports-Receipts.html">سندات القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-mortgage-loan leaf-node" href="./Reports-BankStatement.html">كشف حساب البنك و الخزينة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-scale-1 leaf-node" href="./Reports-CheckBalanceOfBanks.html">ميزان مراجعة الخزائن و البنوك</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-bank leaf-node" href="./Reports-MaxMinBankCredit.html">مقارنة ارصدة الخزائن و البنوك</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                </ul>
+                            </li>
+                            <!-- Financial Module - Cash Management : End -->
+                        </ul>
+                    </div>
+                </aside>
+            <!------------------- Sidebar : End ------------------------>     
+    
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Financial Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="الروابط المختصرة">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">الروابط المختصرة</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="شجرة الحسابات">
+                                                    <span class="fi flaticon-business-affiliate-network"></span>
+                                                    <p>شجرة الحسابات</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="مراكز التكلفه">
+                                                    <span class="fi flaticon-mortgage-loan"></span>
+                                                    <p>مراكز التكلفه</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="قيود الإقفال">
+                                                    <span class="fi flaticon-task-complete "></span>
+                                                    <p>قيود الإقفال</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="القيد الإفتتاحى">
+                                                    <span class="fi flaticon-notepad"></span>
+                                                    <p>القيد الإفتتاحى</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">إضافة المزيد</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="تغيير اللغة"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">التنبيهات</h6>
+                                        <div class="from-group col-12 search-input">
+                                            <input class="form-control" type="text" placeholder="تصفية الإشعارات" />
+                                            <span class="fa fa-search"></span>
+                                        </div>
+                                        <ul class="dropdown-body notifications" id="notifydata">
+                                            <li class="dropdown-item">
+                                                <a class="warning">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 1</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 6 دقائق</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="danger">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 2</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 30 دقيقة</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="success">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنيه 3</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 10 دقائق</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="default">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 4</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 30 دقيقة</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">عرض المزيد</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <ul class="nav user-tools col">
+                        <li class="devider"></li>
+                        <li class="icon-link normal-link icon-sqr">
+                            <a class="fa fa-user-plus" title="Add New Patient"></a>
+                        </li>
+                        <li class="icon-link normal-link form-div icon-sqr row col">
+                            <span class="fa fa-search"></span>
+                            <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                        </li>
+                    </ul> -->
+                            <div class="row no-gutters header-data col">
+                                <div class="header-data-item col-12 row no-gutters">
+                                    <label class="label">اسم الشركة</label>
+                                    <label class="data">اسم المؤسسة</label>
+                                </div>
+                                <div class="header-data-item col-12 row no-gutters">
+                                    <label class="label">العام المالي</label>
+                                    <label class="data">2018/2019</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">مرحبا</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الملف الشخصى</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الإعدادات</p>
+                                                        <span class="badge badge-pill">جديد</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>المساعدة</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>تسجيل خروج</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                    <div class="row no-gutters">
+                                        <p class="col">Log Out</p>
+                                        <span class="fa fa-sign-out"></span>
+                                    </div>
+                                </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                    <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                        <div class="row no-gutters data-container col-12 position-relative">
+                            <!-------------- Printed Header : Begin ---------------->
+                            <div class="data-container-header row no-gutters col-12 printed">
+                                <div class="section-header-main col-md-12 col-12 ">
+                                    <img src="../Content/Images/img.png">
+                                    <div class="company-data">
+                                        <h3>G7 Software House</h3>
+                                        <p>23 Horia Street , Alexandria , Egypt</p>
+                                        <p>01100000000</p>
+                                    </div>
+                                </div>
+                                <div class="section-header-sub">
+                                    <h3>Clinics</h3>
+                                    <p class="col-12">
+                                        <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-------------- Printed Header : End ---------------->
+                            <!-------------- Page Header : Begin ---------------->
+                            <div class="data-container-header row no-gutters col-12">
+                                <div class="section-header-main col-md col-12">
+                                    <span class="fi-cash flaticon-wallet-1"></span>
+                                    <div class="data d-inline-block align-middle">
+                                        <h4 class="m-0">اعادة توزيع المبالغ المفتوحة</h4>
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">الرئيسية</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">اعادة توزيع المبالغ المفتوحة</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="section-header-tools">
+                                    <div class="data-container-body-header-controls row no-gutters">
+                                        <div class="row no-gutters controls-section controls-section-table br hidden">
+                                            <!-- <a class="gbtn gbtn-warning fa gicon gicon-edit icon-gbtn" title="تعديل" onclick="editSelectedTableData(gridOptions);"><span class="title">تعديل</span></a> -->
+                                            <a class="gbtn gbtn-danger fa fa-trash icon-gbtn" title="حذف" data-event="delete" onclick="pageHeaderToolsHandler($(this));"><span class="title">حذف</span></a>
+                                        </div>
+                                        <div class="row no-gutters controls-section br">
+                                            <a class="gbtn gbtn-success fa fa-plus" title="إضافة سند جديد" href="./Transactions-RedistributionOfOpenFunds[AddEdit].html"><span class="title">إضافة سند جديد</span></a>
+                                            <!--<a class="gbtn gbtn-success fa fa-plus" title="إضافة قيد جديد" data-event="add"  onclick="pageHeaderToolsHandler($(this));"><span class="title">إضافة قيد جديد</span></a>-->
+                                            <a class="gbtn gbtn-warning fa fa-filter" title="بحث" data-event="showFilter" onclick="pageHeaderToolsHandler($(this));"><span class="title">بحث</span></a>
+                                            <a class="gbtn gbtn-danger fa fa-reply-all " title="خروج"><span class="title">خروج</span></a>
+                                        </div>
+                                       
+                                        <div class="controls-section row no-gutters ">
+                                            <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="طباعة" data-event="print" onclick="pageHeaderToolsHandler($(this),{gridOptions});"><span class="title">طباعة</span></a>
+                                            <a class="gbtn fa fa-file-excel-o icon-gbtn" title="اكسل" data-event="exportExcel" onclick="pageHeaderToolsHandler($(this),{gridOptions});"><span class="title">اكسل</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-------------- Page Header : End ---------------->
+                            <!-------------- Data Container Body : Begin ---------------->
+                            <div class="data-container-body row no-gutters col-12 ">
+                                <div class="col-12 row no-gutters data-container-body-content ">
+                                    <div class="col-12 row no-gutters data-container-body-content-main no-header">
+                                        <form class="data-container-body-content-main-header col-12 row no-gutters ver-search-div collapse">
+                                            <div class="header-tools col-12 row no-gutters">
+                                                <h6> بحث فى اعادة توزيع المبالغ المفتوحة</h6>
+                                                <a class="fa fa-times close-search"></a>
+                                            </div>
+                                            <div class="search-container-div col-12">
+                                                <div class="form-group col-md-6 col-12 mb-0">
+                                                    <input type="text" class="form-control" name="BeginDate" id="BeginDate" placeholder="إبحث" onkeyup="onQuickFilterChanged($(this))">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="data-container-body-content-main-body col-12 row no-gutters no-footer main-table" id="main-content-tv">
+                                            <div id="myGrid" class="ag-theme-balham grid no-side" style="width: ''; height: ''"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-------------- Data Container Body : End ---------------->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------- General Message Modal :Begin -------------->
+            <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+                <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+                    <form class="modal-content" id="test">
+                        <div class="modal-indecator"></div>
+                        <div class="modal-body row no-gutters">
+                            <div class="modal-icon">
+                                <span></span>
+                            </div>
+                            <p class="msg-type">رسالة تأكيد</p>
+                            <div class="msg">
+                                <h5></h5>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">إلغاء</button>
+                            <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">تأكيد</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!------------- General Message Modal : End -------------->
+    
+            <!--------------- General Notification :Begin ---------------->
+            <div class="g7-notification ntf-default">
+                <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                    <div class="ntf-icon">
+                        <span class="fa fa-exclamation-triangle"></span>
+                    </div>
+                    <div class="ntf-text">
+                        <h4>@ResourceFile.warning</h4>
+                        <p>
+                            @*Please Check Your Data*@
+                        </p>
+                    </div>
+                </div>
+                <a class="ntf-close fa fa-times"></a>
+                <div class="ntf-background"></div>
+            </div>
+            <!--------------- General Notification :End ---------------->
+    
+            <!------------- Scripts : Begin -------------->
+            <script>
+                $(document).on("click",".close-search",function(){
+                    $(".ver-search-div").collapse("toggle");
+                    gridOptions.api.sizeColumnsToFit();
+                });
+            </script>
+            <script>
+                var columns = [
+                    {headerName: '' , field: "SelectionCol", headerCheckboxSelection: true,headerCheckboxSelectionFilteredOnly: true ,checkboxSelection: true , width: 80},
+                    {headerName: 'رقم السند', field: "ExchangeNumber"},
+                    {headerName: 'التاريخ', field: "Date"},
+                    {headerName: 'نوع العميل/المورد', field: "Deliverertype"},
+                    {headerName: 'كود / اسم العميل/المورد', field: "DelivererCode"},
+                    {headerName: 'اجمالي مدين', field: "DebitorTotal"},
+                    {headerName: 'اجمالي دائن', field: "CreditorTotal"},
+                    {headerName: 'ملاحظات', field: "Notes"},
+                    {headerName: 'رقم الارشيف', field: "ArchieveNumber"},
+                    {headerName: 'رقم المرجع', field: "RefrenceNumber"},
+                    {headerName: 'تحت المراجعة', field: "UnderRevision"},
+                    {headerName: 'الحالة', field: "Status"},
+                    {headerName: ' مباشر / اوتوماتيك', field: "DirectExchange",cellClass: "table-break"},
+                    {headerName: 'الإجراءات', field: "tools", cellRenderer: drawToolsColumn , width: 120 ,suppressSizeToFit: true,cellClass: 'tools'} 
+                ];
+                var data = [
+                    {
+
+                    }
+                ];
+                var gridOptions = {
+                    columnDefs: columns,                    //Define Columns
+                    rowData: data,                          //Define Rows
+                    enableSorting: true,                    //Enable Sorting
+                    enableFilter: true,                     //Enable Filter
+                    rowDragManaged: true,                   //Enable Drag
+                    suppressRowClickSelection: true,       
+                    rowSelection: 'multiple',               //Select Multible Rows
+                    animateRows: true,                      //Enable Animation
+                    localeText: setLocalization("ar"),      //Set Table Language 
+                    enableRangeSelection: false,            //Enable Range Select
+                    sideBar: false,                          //Show SideBar             
+                    pagination:true,
+                    suppressDragLeaveHidesColumns: true,
+                    paginationAutoPageSize :true,
+                    enableRtl: true,
+                    //sizeColumnsToFit: true,
+                    onGridReady(params){
+                        params.api.sizeColumnsToFit();
+                    },
+                    suppressMakeColumnVisibleAfterUnGroup: true,
+                    //rowGroupPanelShow: 'always',
+                    /* onFirstDataRendered(params) {       
+                               
+                    },  */
+                    /* onRowSelected(params){
+                        handleTableSelectionChanges(params);
+                    }, */
+                    onSelectionChanged(params){
+                        handleTableSelectionChanges(this);
+                    },
+                    onGridSizeChanged(params){
+                        params.api.sizeColumnsToFit();
+                    },
+                    onRowGroupOpened(params){
+                    }
+                }      
+                var Grid = new AgGrid({
+                    Selector: "#myGrid",
+                    GridOptions: gridOptions,
+                    GridData: data,
+                    hasTools: true,
+                    hasFooter: true,
+                    onReady: function(params){
+                        Grid.InitTableData(); 
+                    }, 
+                    /* onFirstDataRendered:function(params){
+                        BudgetGrid.UpdateDataGridInputs(); 
+                    }, */
+                    FooterStruct: [{ DelivererCode: 'الاجمالي',DebitorTotal: 0,CreditorTotal: 0}],
+                    TotalStruct : {DebitorTotal: 0,CreditorTotal: 0}
+                }); 
+                //-------- Render Tools Column ------------
+                function drawToolsColumn(params) {
+                    console.log(params.data);
+                    return '<div class="tools-div">'+
+                    '<a href="#"class="warning gicon gicon-eye" data-event="priview" onclick="dtEventHandler($(this))"></a>'+
+                    '<a href="#"class="danger fa fa-trash" data-event="delete" onclick="dtEventHandler($(this))"></a>'+
+                    '<a href="#"class="success fa fa-check-circle" data-event="check" onclick="dtEventHandler($(this)) "></a>'+
+                    '<a href="#"class="warning fa fa-ban" data-event="uncheck" onclick="dtEventHandler($(this))"></a>'+
+                    '<a href="#"class="success fa fa-trash" data-event="untrash" onclick="dtEventHandler($(this))"></a>'+
+                    '</div>';
+                }
+                //-------- Render HasClosingProp Column ------------
+                function renderResultClosingProp(params) {
+                    console.log("------------renderResultClosingProp----------------"); 
+                    console.log(params.data.HasClosingProp);
+                    if(params.data.HasClosingProp == "true"){
+                        return '<div class="icon-cell-div">'+
+                                '<a class="success fa fa-check"></a>'+
+                                '</div>'
+                    }else if(params.data.HasClosingProp == "false"){
+                        return '<div class="icon-cell-div">'+
+                                '<a class="danger fa fa-times"></a>'+
+                                '</div>'
+                    }             
+                }
+                //-------- Search on all Table Data ------------
+                function onQuickFilterChanged(input) {
+                    gridOptions.api.setQuickFilter(input.val());
+                } 
+                //-------- Edit Row By Clicking on Icon in Tools Column  ------------
+                function initPreviewModal(rowIndex){
+                    var rowData = gridOptions.api.getRowNode(rowIndex).data;
+                    console.log("----------initPriviewModal:Begin------------");
+                    console.log(rowIndex);
+                    console.log(rowData);
+                    console.log("----------initPriviewModal:End------------");
+                    /* 
+                        Import Edit Modal Initiation Here
+                        rowIndex : Variable Contains Row Index
+                        rowData : Variable Contains Row Data
+                    */
+                    viewStaticModal('edit-modal','lg','Edit-FinalAccounts-modal');
+                }
+    
+                //-------- Delete Selected Rows [Multiple/Single]  ------------
+                function deleteSelectedTableData(gridOptions){
+                    var selectedRows = gridOptions.api.getSelectedRows();
+                    console.log("----------deleteSelectedTableData:Begin------------");
+                    console.log(selectedRows);
+                    console.log("----------deleteSelectedTableData:End------------");
+                    /* 
+                        Import Delete Code Here
+                        selectedRows : Variable Contains All Selected Rows with Their Data
+                    */
+                    closeModal();
+                }       
+                
+
+                //-------- Delete Row By Clicking on Icon in Tools Column  ------------
+                function deleteRow(rowIndex){
+                    var rowData = gridOptions.api.getRowNode(rowIndex).data;
+                    console.log("----------deleteRow:Begin------------");
+                    console.log(rowIndex);
+                    console.log(rowData);
+                    console.log("----------deleteRow:End------------");
+                    /* 
+                        Import Delete Code Here
+                        rowIndex : Variable Contains Row Index
+                        rowData : Variable Contains Row Data
+                    */
+                    closeModal();
+                }
+                function undeleteRow(rowIndex){
+                    var rowData = gridOptions.api.getRowNode(rowIndex).data;
+                    console.log("----------deleteRow:Begin------------");
+                    console.log(rowIndex);
+                    console.log(rowData);
+                    console.log("----------deleteRow:End------------");
+                    /* 
+                        Import Delete Code Here
+                        rowIndex : Variable Contains Row Index
+                        rowData : Variable Contains Row Data
+                    */
+                    closeModal();
+                }
+                function checkRow(rowIndex){
+                    var rowData = gridOptions.api.getRowNode(rowIndex).data;
+                    console.log("----------CheckRow:Begin------------");
+                    console.log(rowIndex);
+                    console.log(rowData);
+                    console.log("----------CheckRow:End------------");
+                    /* 
+                        Import Delete Code Here
+                        rowIndex : Variable Contains Row Index
+                        rowData : Variable Contains Row Data
+                    */
+                    closeModal();
+                }
+                function uncheckRow(rowIndex){
+                    var rowData = gridOptions.api.getRowNode(rowIndex).data;
+                    console.log("----------CheckRow:Begin------------");
+                    console.log(rowIndex);
+                    console.log(rowData);
+                    console.log("----------CheckRow:End------------");
+                    closeModal();
+                }
+                //-------- Data Table Tools Event Handler ------------
+                // use options to send data with clicked control
+                function dtEventHandler(clickedIcon,options){
+                    var rowIndex = clickedIcon.closest(".ag-row").index();
+                    switch(clickedIcon.data("event")) {
+                        case "delete":{
+                            viewMsgModal('danger-modal','هل أنت متأكد من إزالة البيانات','true','true','deleteRow('+ rowIndex +')');
+                            break;
+                        }
+                        case "check":{
+                            viewMsgModal('success-modal','هل أنت متأكد من تاكيد البيانات','true','true','checkRow('+ rowIndex +')');
+                            break;
+                        }case "preview":{
+                            initPreviewModal(rowIndex);
+                            break;
+                        }
+                        case "uncheck":{
+                            viewMsgModal('success-modal','هل أنت متأكد من الغاء تاكيد البيانات','true','true','unCheckRow('+ rowIndex +')');
+                            break;
+                        }
+                        case "untrash":{
+                            viewMsgModal('success-modal','هل أنت متأكد من الغاء تاكيد البيانات','true','true','unDeleteRow('+ rowIndex +')');
+                            break;
+                        }
+
+
+                        default:
+                        {
+                            console.error("Handler Error : This Event Not Listed In Switch Cases");
+                            console.warn("Define Event in Switch Control located in 'dtEventHandler' function ");
+                        }
+                    }
+                }
+           </script>
+           <script>
+                //-------- Page Header Tools Event Handler ------------
+                // use options to send data with clicked control
+                function pageHeaderToolsHandler(actionBtn,options){
+                    debugger;
+                    switch(actionBtn.data("event")) {
+                        case "delete":{
+                            viewMsgModal('danger-modal','هل أنت متأكد من إزالة البيانات','true','true','deleteSelectedTableData(gridOptions)');
+                            break;
+                        
+                        }case "add":{
+                            //viewStaticModal('add-modal','lg','Add-FinalAccounts-modal');
+                            break;
+                        }case "print":{
+                            debugger;
+                            var eGridDiv2 = document.querySelector('#myGrid');
+                            //document.getElementById('myGrid').style.width='';
+                            //document.getElementById('myGrid').style.height='';
+                            gridOptions.api.setDomLayout('print');
+                            window.print();          
+                            break;
+                        }
+                        case "exportExcel": {
+                            var params = {
+                                allColumns: true,
+                                fileName: 'القيد الافتتاحي',
+                                sheetName: "Ag-grid",
+                                exportMode: 'xlsx'
+                            };
+                            gridOptions.api.exportDataAsExcel(params);
+                            break;
+                        } case "showFilter": {
+                            $(".ver-search-div").collapse("toggle");
+                            gridOptions.api.sizeColumnsToFit();
+                            break;
+                        }default:{
+                            console.error("Handler Error : This Event Not Listed In Switch Cases");
+                            console.warn("Define Event in Switch Control located in 'dtEventHandler' function ");
+                        }
+                    }
+                }         
+            </script>
+            
+            <!------------- Scripts : End -------------->
+    </body>
+</html>

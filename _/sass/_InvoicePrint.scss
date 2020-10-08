@@ -1,0 +1,122 @@
+.invoice-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.print-wrap{
+        .header{
+            background: none;
+            header{
+                background: none;
+                .Details{
+                    p{
+                        color: $black ;
+                        &.HeaderTitle{
+                            color: $black ;
+                        }
+                    }
+
+                }
+            }
+        }
+        header{
+            border-bottom: 1px solid;
+            flex: 0 0 98% !important;
+            .data{
+                .title {
+                    h3{
+                        color: $black;
+                        padding: 0px 15px 0px 0px;
+                    }
+                }
+            }
+            .logo{
+                img{
+                    margin-top: 5px;
+                }
+            }
+            
+            .header-block{
+                display: none;
+            }
+        }
+        .invoice-body{
+            margin-top: 0px;
+            h5{
+                color: $black !important;
+            }
+            .DetailsBody{
+                border: 3px $black solid;
+                .details{
+                    .Data{
+                        color: $black !important;
+                    }
+                }
+            }
+            .sub-header{
+                background: none;
+                padding-bottom:  30px;
+                p{
+                    color: $black;
+                }
+            }
+            table{
+                thead{
+                    tr{
+                        th{
+                            background: $ClearWhite !important;
+                            border:2px solid $black !important;
+                            font-weight: $FW-SBold;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            border:2px solid $black !important; 
+                        }
+                    }
+                }
+                
+            }
+        }
+        .sub-footer{
+            .totals{
+                .totals-container{
+                    p,span{
+                        color: $black !important;
+                    }
+                }
+            }
+        }
+        footer{
+            border-top: 1px solid $black;
+            flex: 0 0 98% !important;
+            .footer-block,.flat-block{
+                display: none;
+            }
+            .main-footer{
+                .footer-data{
+                    .footer-data-div{
+                        p{
+                            color: $black;
+                        }
+                    }
+                }
+                .thanks{
+                    padding: 0px;
+                    p{margin: 0px;}
+                }
+            }
+        }
+    }
+}
+
+@media print{
+    @page{
+        size: portrait;
+    -moz-transform: scale(70%, 70%);
+    }
+    .table{
+        margin-bottom: 0.25rem;
+    }
+}

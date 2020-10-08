@@ -1,0 +1,560 @@
+<!-- @using G7_HMIS.Helpers
+@using HMIS.BL.Enums
+@using Resources -->
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="Images/fav.png"/>
+
+        <!-- Styles -->
+        <link href="Content/css/styles.css" rel="stylesheet">
+        <link href="Content/css/datatables.min.css" rel="stylesheet">
+        <link href="Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link href="Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link href="Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="Content/css/animate.min.css" rel="stylesheet" />
+        <link href="Content/css/select2.min.css" rel="stylesheet" />
+        <link href="Content/css/flags.css" rel="stylesheet" />
+        <!-- /Styles -->
+
+        <!-- Scripts -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery.custom-file-input.js"></script>
+        <script src="js/datatables.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="js/jquery.validationEngine-ar.js"></script>
+        <script src="js/jquery.validationEngine.js"></script>
+        <script src="js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="js/bootstrap-datepicker.min.js"></script>
+
+        <script src="js/select2.min.js"></script>
+        <script src="js/jquery.flagstrap.min.js"></script>
+        <script src="js/downtime.js"></script>
+        <script src="js/loadingoverlay.min.js"></script>
+
+        <script src="js/ResizeSensor.js"></script>
+        <script src="js/ElementQueries.js"></script>
+
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="js/G7/functions.js"></script>
+        <script src="js/G7/scripts.js"></script>
+        <!-- /Scripts -->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+           <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                <div class="sidebar-bg"></div>
+                <div class="logo-div">
+                    <div class="logo">
+                        <img src="Images/prog-logo.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="list-div">
+                    <ul class="sidebar-list">
+                        <li class="list-item node-item" data-nodeid="1" data-parent="0">
+                            <div class="top-t"></div>
+                            <a>
+                                <span class="fa fa-gear"></span>
+                                <h4>Settings</h4>
+                            </a>
+                            <div class="bottom-t"></div>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="2" data-parent="1">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>System Settings</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">Main Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-globe leaf-node" onclick="getViewhtml('SystemSettings/MainSettings/Countries', 'Index', 'pageContainer', null);">Countries & Cities</a>
+                                        </li>
+                                        <li class="sub-list-item active" data-parent="1">
+                                            <a class="fa fa-building leaf-node" onclick="getViewhtml('SystemSettings/MainSettings/Company', 'Index', 'pageContainer', null);">Companies</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-sitemap leaf-node" onclick="getViewhtml('SystemSettings/MainSettings/Branches', 'Index', 'pageContainer', null);">Branches</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-cogs leaf-node" onclick="getViewhtml('SystemSettings//MainSettings//GeneralSettings', 'Index', 'pageContainer', null);">General Settings</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-tags leaf-node" onclick="getViewhtml('SystemSettings//MainSettings//GeneralFeatures', 'Index', 'pageContainer', null);">General Features</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-hashtag leaf-node" onclick="getViewhtml('SystemSettings//MainSettings//SystemCodes', 'Index', 'pageContainer', null);">System Codes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-user-secret node">User Settings</a>
+                                    <ul class="collapse even">
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-lock leaf-node" onclick="getViewhtml('SystemSettings/UsersSettings/Roles', 'AddEditRoles', 'pageContainer', null);">Roles</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-users leaf-node" onclick="getViewhtml('SystemSettings/UsersSettings/Users', 'Index', 'pageContainer', null);">Users</a>
+                                        </li>
+                                        <li class="sub-list-item" data-parent="1">
+                                            <a class="fa fa-unlock-alt leaf-node">Forget Password</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                            <div class="top-t"></div>
+                            <a><span class="fa fa-heartbeat"></span><h4>Medical</h4></a>
+                            <div class="bottom-t"></div>
+                        </li>
+                        <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                            <div class="sub-list-header">
+                                <h2>Medical Center</h2>
+                            </div>
+                            <ul class="sub-list-inner">
+                                <h3>Medical System</h3>
+                                <li data-parent="0">
+                                    <a class="fa fa-wrench node">General Settings</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" onclick="getViewhtml('Medical//GeneralSettings//PatientsSettings', 'Index', 'pageContainer', null);">Patient Settings</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square leaf-node" onclick="getViewhtml('Medical//GeneralSettings//Clinics', 'Index', 'pageContainer', null);">Clinics</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-stethoscope leaf-node" onclick="getViewhtml('Medical//GeneralSettings//Services', 'Index', 'pageContainer', null);">Services</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-bed leaf-node" onclick="getViewhtml('Medical//GeneralSettings//Rooms', 'Index', 'pageContainer', null);">Rooms</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-calendar-check-o leaf-node" onclick="getViewhtml('Medical//GeneralSettings//Vacations', 'Index', 'pageContainer', null);">Vacations</a>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-clock-o leaf-node" onclick="getViewhtml('Medical//GeneralSettings//Shifts', 'Index', 'pageContainer', null);">Shifts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-address-book-o node">Reception</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-users leaf-node" onclick="getViewhtml('Medical//Reception//MainSettings//Patients', 'Index', 'pageContainer', null);" >Patients</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-secret leaf-node">Cashiers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-ticket leaf-node" onclick="getViewhtml('Medical//Reception//MainSettings//ReservationNumbers', 'Index', 'pageContainer', null);">Reservations Codes</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li data-parent="1">
+                                            <a class="fa fa-users leaf-node" onclick="getViewhtml('Medical//Reception//Patients', 'Index', 'pageContainer', null);" >Patients</a>
+                                        </li> -->
+                                        <li data-parent="1">
+                                            <a class="fa fa-h-square node"> Clincs</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//Doctors','Index','pageContainer', null);">Doctors</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock-o leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//PenddingInvoices','Index','pageContainer', null);">Pendding Invoices</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//Prices','Index','pageContainer', null);">Services price</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-address-book-o leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//Reservations','Index','pageContainer', null);">Reservations</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-history leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//PeriodicCheckUps','Index','pageContainer', null);">Periodic CheckUps</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-calculator node">Accounting</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-cogs node">Main Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" onclick="getViewhtml('Medical//Accounting//MainSettings//InvoicesSettings','Index','pageContainer', null);">Invoices Settings</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money leaf-node" onclick="getViewhtml('Medical//Accounting//MainSettings//SubTreasuries','Index','pageContainer', null);">Sub Treasuries</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-hashtag leaf-node" onclick="getViewhtml('Medical//Accounting//MainSettings//SubTreasuriesSerials','Index','pageContainer', null);">Treasuries Serialization</a>
+                                                </li> 
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-money node">Pricing</a>
+                                                    <ul class="collapse even">
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-021-hospital leaf-node" onclick="getViewhtml('Medical//Accounting//Transactions//Pricing//ClinicPricing','Index','pageContainer', null);">Clincs</a>
+                                                        </li>
+                                                        <!-- <li data-parent="3">
+                                                            <a class="gicon gicon-015-microscope leaf-node">Test labs</a>
+                                                        </li>
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-hospital-x-ray leaf-node">Rays</a>
+                                                        </li> 
+                                                        <li data-parent="3">
+                                                            <a class="gicon gicon-ambulance-facing-right leaf-node">Emergency</a>
+                                                        </li>  -->
+                                                    </ul>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-tags leaf-node" onclick="getViewhtml('Medical//Accounting//Transactions//Offers','Index','pageContainer', null);">Offers</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-file-text-o leaf-node" onclick="getViewhtml('Medical//Accounting//Transactions//Invoices','Index','pageContainer', null);">Invoices</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li data-parent="0">
+                                    <a class="fa fa-h-square node">Clinics</a>
+                                    <ul class="collapse even">
+                                        <li data-parent="1">
+                                            <a class="fa fa-gear node">Clinic Settings</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-user-md leaf-node" onclick="getViewhtml('Medical//Clinics//Doctors','Index','pageContainer', null);">Doctors</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li data-parent="1">
+                                            <a class="fa fa-exchange node">Transactions</a>
+                                            <ul class="collapse odd">
+                                                <li data-parent="2">
+                                                    <a class="fa fa-clock leaf-node" onclick="getViewhtml('Medical//Doctor//DoctorDashboard','Index','pageContainer', null);">Doctors Shifts</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar leaf-node">Doctors Schedule</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-ticket leaf-node" onclick="getViewhtml('Medical//Reception//ClinicSection//Reservation','Index','pageContainer', null);">Exceptions</a>
+                                                </li>
+                                                <li data-parent="2">
+                                                    <a class="fa fa-calendar-check-o leaf-node" onclick="getViewhtml('Medical//Clinics//Vacations','Index','pageContainer', null);">Vacations</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item " data-nodeid="5" data-parent="0">
+                            <div class="top-t"></div>
+                            <a onclick="getViewhtml('StanderedPage', 'Index', 'pageContainer', null);">
+                                <span class="fa fa-home"></span>
+                                <h4>Home</h4>
+                            </a>
+                            <div class="bottom-t"></div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!------------------- Sidebar : End ------------------------>
+
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col">
+                            <!-- <img src="Images/logo1.jpg" /> -->
+                            <ul class="nav">
+                                <li class="dropdown d-flex" id="MCDP">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <h4>Medical Center 1</h4>
+                                        <span class="fa fa-caret-down"></span> 
+                                    </a>
+                                     <div class="dropdown-menu p-0 m-0 w-100 border-top-0">
+                                        <h6 class="dropdown-header">Medical Centers</h6>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 1</p>
+                                                <span class="justify-content-end badge badge-pill">255</span>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 2</p>
+                                                <span class="justify-content-end badge badge-pill">255</span>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 3</p>
+                                                <span class="justify-content-end badge badge-pill">400</span>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 4</p>
+                                                <span class="justify-content-end badge badge-pill">20</span>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 5</p>
+                                                <span class="justify-content-end badge badge-pill">360</span>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Medical Center 6</p>
+                                                <span class="justify-content-end badge badge-pill">99999</span>
+                                            </div>
+                                        </a>
+                                    </div> 
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Header Right [Big Scale] : Hidden Only in Extra Small Scale -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="dropdown mx-3 d-inline-block position-relative">
+                                    <a href="#" class="dropdown-toggle d-flex" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">Welcome</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p>Profile</p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="col">Settings</p>
+                                                <span class="badge badge-pill">New</span>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p>Help</p>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="Login.html" class="dropdown-item">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Right [Small Scale] : Visible Only in Extra Small Scale -->
+                        <div class="header-right header-right-collapse">
+                            <div class="nav">
+                                <div class="icon-link d-inline-block position-relative">
+                                    <a class="d-block">
+                                        <span class="fa fa-envelope"></span>
+                                        <span class="badge badge-pill position-absolute">42</span>
+                                    </a>
+                                </div>
+                                <div class="icon-link d-inline-block position-relative">
+                                    <a class="ntf-btn d-block">
+                                        <span class="fa fa-bell"></span>
+                                        <span class="badge badge-pill position-absolute">4</span>
+                                    </a>
+                                </div>
+                                <div class="icon-link d-inline-block position-relative">
+                                    <a class="md-icon d-block">
+                                        <span class="fa fa-question"></span>
+                                    </a>
+                                </div>
+                                <div class="dropdown d-inline-block position-relative m-0">
+                                    <a class="dropdown-toggle d-block" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="fa fa-bars"></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <div class="dropdown-item user-menuitem">
+                                            <div class="row no-gutters">
+                                                <div class="profile col">
+                                                    <div class="user-img d-inline-block align-middle">
+                                                        <img src="Images/img.jpg" alt="user">
+                                                    </div>
+                                                    <div class="user-data d-inline-block align-middle">
+                                                        <p class="m-0">Welcome</p>
+                                                        <h4 class="m-0">M.Khalifa</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item prog-notification">
+                                            <div class="row no-gutters">
+                                                <p class="col">
+                                                    <span class="fa fa-envelope"></span> Messages
+                                                </p>
+                                                <span class="badge badge-pill">42</span>
+                                            </div>
+                                        </a>
+                
+                                        <a class="dropdown-item prog-notification">
+                                            <div class="row no-gutters">
+                                                <p class="col">
+                                                    <span class="fa fa-bell"></span> Notifications
+                                                </p>
+                                                <span class="badge badge-pill">4</span>
+                                            </div>
+                                        </a>
+                                        <a data-lang="ar" class="dropdown-item prog-notification lang-btn" title="Arabic">
+                                        <div class="row no-gutters">
+                                            <p class="col">
+                                                <span class="fa fa-language"></span> Arabic
+                                            </p>
+                                        </div>
+                                    </a>
+                                    <a data-lang="en-us" class="dropdown-item prog-notification lang-btn" title="English">
+                                        <div class="row no-gutters">
+                                            <p class="col">
+                                                <span class="fa fa-language"></span> English
+                                            </p>
+                                        </div>
+                                    </a>
+
+                                        <a class="dropdown-item ">
+                                            <div class="row no-gutters">
+                                                <p class="col">Profile</p>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item ">
+                                            <div class="row no-gutters">
+                                                <p class="col">Settings</p>
+                                                <span class="badge badge-pill">New</span>
+                                            </div>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item ">
+                                            <div class="row no-gutters">
+                                                <p class="justify-content-start col">Log Out</p>
+                                                <span class="fa fa-sign-out m-0"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!-- Page Container -->
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+               
+            </div>
+            <!--------------- Page Container : End ------------------>
+        </div>
+
+        <!--------------- General Notification :Begin ---------------->
+        <div class="g7-notification ntf-default">
+            <div class="ntf-body row no-gutters justify-content-start align-items-stretch">
+                <div class="ntf-icon">
+                    <span class="fa fa-exclamation-triangle"></span>
+                </div>
+                <div class="ntf-text">
+                    <h4></h4>
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <a class="ntf-close fa fa-times"></a>
+            <div class="ntf-background"></div>
+        </div>
+        <!--------------- General Notification :End ---------------->
+
+        <!--------------- General Form Modal :Begin ---------------->
+        <div class="modal fade g7-modal-n form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormBody">
+
+            </div>
+        </div>
+        <!--------------- General Form Modal :End ---------------->
+
+        <!------------- General Advanced Modal :Begin -------------->
+        <div class="modal fade g7-modal-n g7-adv-modal form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="advanced-modal">
+            <div class="modal-dialog modal-dialog-centered" id="AdvFormBody">
+
+            </div>
+        </div>
+        <!------------- General Advanced Modal :End -------------->
+
+        <!------------- General Message Modal :Begin -------------->
+        <div class="modal fade g7-modal-n  msg-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+            <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+                <form class="modal-content" id="test">
+                    <div class="modal-indecator"></div>
+                    <div class="modal-body row no-gutters">
+                        <div class="modal-icon">
+                            <span></span>
+                        </div>
+                        <p class="msg-type">Confirmation Message</p>
+                        <div class="msg">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal" id="CancelBtn">Cancel</button>
+                        <button type="button" class="gbtn-o gbtn-success-o closeBtn" id="ConfirmationBtn">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!------------- General Message Modal :End -------------->
+    </body>
+</html>

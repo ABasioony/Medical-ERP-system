@@ -1,0 +1,136 @@
+/* .counter{
+    padding:10px 15px;
+    padding-top: 0px;
+    .counter-item{
+        .item-content{
+            display:flex;
+            align-items:center;
+            flex-direction:column;
+            align-items:center;
+            background:$ClearWhite;
+            padding:25px;    
+            border-top:1px solid $BorderColor;
+            border-bottom:1px solid $BorderColor;
+            .data{
+                width: 100%;
+                border-#{$Direction-Opposite}:1px solid $BorderColor;
+                h5{
+                margin:0px;
+                font-weight:$FW-Bold;
+                color:$SubColorLight;
+                text-align:center;
+                }
+                p{
+                    display:flex;
+                    justify-content:center;
+                    margin:0px;
+                    color:$SubColorLight;
+                    text-align:center;
+                    span{ margin-#{$Direction-Opposite}: 5px;}
+                }
+            }
+
+        }
+    }
+    .counter-item:first-child{
+        padding-#{$Direction-Opposite}:10px;
+        .item-content{
+            .data{border:none;}
+            border-bottom-#{$Direction}-radius : 5px;
+            border-top-#{$Direction}-radius : 5px; 
+            border:1px solid $BorderColor;
+        }
+    }
+    .counter-item:nth-child(2){
+        .item-content{
+            border-#{$Direction}:1px solid $BorderColor;
+        }
+    }
+    .counter-item:last-child{
+        .item-content{
+            .data{border:none;}
+            border-bottom-#{$Direction-Opposite}-radius : 5px;
+            border-top-#{$Direction-Opposite}-radius : 5px;
+            border:1px solid $BorderColor;
+            border-#{$Direction}:none;
+        }   
+    }
+    .counter-item.danger{
+        .data{
+            h5,p{color:$Danger;}
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .counter{
+        .counter-item{
+            .item-content{
+                border-top:none;
+            }
+        }
+        .counter-item:first-child{
+            padding-#{$Direction-Opposite}:0px !important;
+            .item-content{
+                border-top-#{$Direction-Opposite}-radius: 5px;
+                border-bottom-#{$Direction}-radius: 0px;
+                padding-bottom: 0px;
+                border-bottom:none;
+                .data{
+                    border-bottom:1px solid $BorderColor !important;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+        .counter-item:last-child{
+            .item-content{
+                border-top:none !important;
+            }
+        }
+        .counter-item:nth-child(2){
+            .item-content{
+                border-bottom-#{$Direction}-radius: 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .counter{
+        .counter-item:first-child{
+            padding-#{$Direction-Opposite}:0px !important;
+            .item-content{
+                border-top-#{$Direction-Opposite}-radius: 5px;
+                border-bottom-#{$Direction}-radius: 0px;
+                padding-bottom: 0px;
+                .data{
+                    border-bottom:1px solid $BorderColor !important;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+        .counter-item{
+            .item-content{
+                padding-bottom: 0px;
+                border-bottom:none !important;
+                border-#{$Direction-Opposite}: 1px solid $BorderColor;
+                border-#{$Direction}: 1px solid $BorderColor;
+                .data{
+                    border:none !important;
+                    border-bottom:1px solid $BorderColor !important;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+        .counter-item:last-child{
+            .item-content{
+                border-#{$Direction}: 1px solid $BorderColor;
+                border-bottom: 1px solid $BorderColor !important;
+                border-bottom-#{$Direction}-radius: 5px !important;
+                .data{
+                    border:none !important;
+                }
+            }
+        }
+    }
+} */

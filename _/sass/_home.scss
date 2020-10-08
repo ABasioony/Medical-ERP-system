@@ -1,0 +1,114 @@
+
+/* .home-content{
+
+    .home-main-div{
+        padding: 15px 25px !important;
+        background: $MainColorVLight;
+        h1{
+            font-weight: $FW-Light;
+            color: $SubColor;
+            text-align: $Direction ;
+            font-weight: $FW-Regular;
+        }
+        p{
+            font-weight: $FW-Light;
+            padding: 0px 15px;
+            color:$MainColorLight;
+            text-align: $Direction;
+        }
+        .links-container{
+        display: flex;
+        flex-direction: $FdirectionColumn;
+        align-items: flex-#{$Justification};
+        padding: 0px 15px;
+        .links-header{
+            padding: 15px 0px;
+            display: flex;
+            flex-direction: $FdirectionRow ;
+            align-items: center;
+            span{
+                font-size: 30px;
+                margin-#{$Direction-Opposite}: 10px;
+                color: $MainColorLight;
+                }
+            h4{
+                font-size: 28px;
+                margin:0px;
+                color: $SubColor;
+                font-weight: $FW-Light;
+            }
+        }
+        .links-body{
+            display: flex;
+            flex-direction: $FdirectionRow ;
+            align-items: flex-#{$Justification};
+            padding: 0px 25px;
+            padding-#{$Direction}: 0px;
+            flex-wrap:wrap;
+            a{
+                padding: 15px 50px;
+                border: 1px solid $MainColorLight;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                border-radius: 4px;
+                color: $MainColor;
+                font-family: $MainFont;
+                max-width:105px;
+                margin-bottom:10px;
+                margin-#{$Direction-Opposite}: 30px;
+                font-weight: $FW-Regular;
+                min-width: 105px;
+                min-height: 105px;
+                justify-content: center;
+            }
+            a:first-child{
+                margin-#{$Direction}: 0px;
+            }
+            a:before{
+                margin-bottom: 5px;
+                font: normal normal normal 35px/1 FontAwesome;
+            }
+            a.active{
+                color:$SubColorLight;
+                border-color: $SubColorLight;
+            }
+            a:hover{
+                cursor: pointer;
+                color:$Warning;
+                border-color: $Warning;
+            }
+        }
+        }
+    }
+}
+
+@media screen and (max-width:1200px){
+    .home-content{
+        .home-main-div{
+            .links-container{
+                .links-body{
+
+                    padding-#{$Direction-Opposite}:0px !important;
+                    a{
+                        margin-#{$Direction-Opposite}: 20px !important;
+                    }
+                }
+            }
+        }
+    }
+} */
+
+.float-button{
+    border: 0;
+    background-color: $TableHover;
+/*     margin: auto 10px 10px auto; */
+    margin-top: auto;
+    margin-#{$Direction}: 10px;
+    margin-#{$Direction-Opposite}: auto;
+    margin-bottom: 10px;
+    cursor: pointer !important;
+    outline: none;
+
+}

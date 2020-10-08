@@ -1,0 +1,94 @@
+.gauges-container{
+    padding:10px 0px;
+    .gauge-item-container{
+        padding:0px 15px;
+        .gauge-item{
+            border:1px solid $BorderColor;
+            background:$ClearWhite;
+            padding: 15px;
+            display:flex;
+            justify-content: flex-#{$Justification };
+            flex-direction: $FdirectionRow ;
+            margin-#{$Direction-Opposite}: auto;
+            align-items:center;
+            border-radius:5px;
+            span{
+                background: $SubColorLight;
+                color: $ClearWhite;
+                padding: 12px 14px;
+                font-size: 28px;
+                border-radius: 5px;
+                width: 50px;
+                height: 50px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+            }
+            .data{
+                margin-#{$Direction}: 10px;
+                h4{
+                    font-size: 22px;
+                    font-family: $MainFont;
+                    font-weight: $FW-Bold;
+                    text-align:center;
+                    color:$SubColorLight;
+                }
+                p{
+                    margin:0px;
+                    text-align:center;
+                    color:$MainColor;
+                }
+            }
+        }
+    }
+    .gauge-item-container.warnning{
+        span{background:$Warning;}
+        .data{ h4{color:$Warning;}}
+    }
+    .gauge-item-container.success{
+        span{background:$Success;}
+        .data{ h4{color:$Success;}}
+    }
+    .gauge-item-container.danger{
+        span{background:$Danger;}
+        .data{ h4{color:$Danger;}}
+    }
+    .gauge-item-container:first-child{
+        padding-#{$Direction}:0px;
+    }
+    .gauge-item-container:last-child{
+        padding-#{$Direction-Opposite}:0px;
+    }
+}
+ @media only screen and (max-width: 992px){
+    .gauges-container{
+        .gauge-item-container{
+            margin-bottom:10px;
+        }
+        .gauge-item-container:nth-child(2){
+            padding-#{$Direction-Opposite}:0px;
+        }
+        .gauge-item-container:nth-child(3){
+            padding-#{$Direction}:0px;
+        }
+    }
+} 
+/*  @media only screen and (max-width: 992px){
+    .gauges-container{
+        .gauge-item-container:nth-child(2),.gauge-item-container:nth-child(4){
+            padding-#{$Direction-Opposite}:0px;
+            padding-#{$Direction}:15px;
+        }
+        .gauge-item-container:nth-child(3),.gauge-item-container:nth-child(5),{
+            padding-#{$Direction}:0px;
+            padding-#{$Direction-Opposite}:15px;
+        }
+    }
+}  */
+@media only screen and (max-width: 576px){
+    .gauges-container{
+        .gauge-item-container{
+            padding:0px !important;
+        }
+    }
+}

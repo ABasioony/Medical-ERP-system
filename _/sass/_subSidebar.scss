@@ -1,0 +1,276 @@
+.sub-sidebar{
+    padding:65px 0px 0px 0px;
+    overflow: hidden;
+    background: $MainColorVLight;
+    display: inline-flex;
+    align-items:flex-start;
+    .sub-sidebar-container{
+        padding: 15px;
+        .sub-item{
+            margin-bottom: 15px;
+            display:block;
+            .item-header{
+                background: $SubColorLight;
+                border-radius: 5px;
+                padding: 5px 15px;
+                cursor: pointer;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: $FdirectionRow;
+                h4{
+                    color:$ClearWhite;
+                    font-family: $MainFont;
+                    font-size: 20px;
+                    font-weight: $FW-SBold;
+                    margin-top: 5px;
+                    align-self: center;
+                    text-align:$Direction;
+                    margin-#{$Direction}: 10px;
+                }
+                .right-span{
+                    color:$ClearWhite;
+                    font-size: 25px;
+                    margin-#{$Direction-Opposite}: 5px;
+                    align-self: center;
+                    display:block;
+                }
+                .left-span{     
+                    color:$ClearWhite;
+                    font-size: 20px;
+                    transition:all .1s linear;
+                    transform-origin: center;
+                    align-self: center;
+                    display:block;
+                }
+            }
+            .item-body{
+                background: $ClearWhite;
+                border-radius: 5px;
+                margin-top: 10px;
+                padding: 10px 0px;
+               /*  .filter-form{
+                    border-bottom: 1px solid $BorderColor;
+                } */
+                .body-div{
+                    padding: 0px 10px;
+                    .div-header{
+                        padding: 15px 5px 5px 5px;
+                        justify-content:flex-start;
+                        align-self:center;
+                        align-items:center;
+                        border-top:1px solid $BorderColor;
+                        margin-top: 15px;
+
+                        h4{
+                            color:$MainColorLight;
+                            font-family: $MainFont;
+                            font-size: 18px;
+                            font-weight: $FW-SBold;
+                            align-self:center;
+                            text-align:$Direction;
+                            margin-#{$Direction}: 10px;
+                        }
+                        span{
+                            color:$MainColorLight;
+                            font-size: 23px;
+                            margin-#{$Direction-Opposite}: 5px;
+                            align-self:center;
+                        }
+                        button{
+                            color: $MainColor;
+                            background: none;
+                            box-shadow: none;
+                            outline: none;
+                            font-size: 20px;
+                        }
+                        button:hover{
+                            color:$SubColorLight;
+                        }         
+                    }
+                    .div-body{
+                        padding-top: 15px;
+                        align-items:unset;
+                        .list{
+                            padding:0px 15px !important;
+                            max-height: 230px;
+                            margin-right: -5px;
+                            overflow-y: auto;
+                            .tooltip{
+                                display: none !important;
+                            }
+                            list-style: none;
+                            .green{
+                                background: $Success !important;  
+                            }
+                            .dark{
+                                background: $MainColor !important;  
+                            }
+                            .list-item{
+                                background: $Success;
+                                border-radius: 5px;
+                                margin-bottom: 5px;
+                                margin-top: 5px;
+                                padding: 5px 15px 5px 15px;
+                                a{
+                                    padding: 0px;
+                                    h4{
+                                        color:$ClearWhite;
+                                        font-family: $MainFont;
+                                        font-size: 20px;
+                                        font-weight: $FW-Light;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        width:95%;
+                                        vertical-align: sub;
+                                        text-align:$Direction;
+                                    }
+                                    span{
+                                        color:$ClearWhite;
+                                        font-size: 25px;
+                                        margin-#{$Direction-Opposite}: 10px;
+                                    }
+                                }
+                                .item-remove-icon{
+                                    display: none;
+                                } 
+                            }     
+                        }
+                    }        
+                    .div-footer{
+                        padding: 5px 0px;
+                        flex-direction:$FdirectionRow;
+                        justify-content: flex-start;
+                        align-items:center;
+                        button{
+                            background:none;
+                            border:2px solid $SubColorLight;
+                            color:$SubColorLight;
+                            padding-top: 5px;
+                            padding-bottom: 6px;
+                            border-radius: 35px;
+                            margin-#{$Direction}:5px;
+                        }
+                        button:hover,button:focus,button:active{
+                            background:$SubColorLight;
+                            color:$ClearWhite;
+                            cursor:pointer;
+                            outline:none;
+                            box-shadow:none;
+                        }
+                    }
+                }
+                .body-div:first-child{
+                    .div-header{
+                        border:none;
+                        padding: 0px 5px;
+                        margin-top:15px;
+                    }
+                }
+            }
+        }
+        .active{
+            .item-header{
+                background: $Warning;
+                .left-span{
+                    transform:rotate(-45deg);
+                }
+            }
+        }
+    }
+    .section-Sub-header-icon{
+        display: none;
+    }
+}
+
+
+@media only screen and(max-width: 992px) {
+    .sub-sidebar{
+        .mCustomScrollBox{
+            width:100%;
+        }
+        .sub-sidebar-container{
+            .sub-item{
+                .item-body{    
+                    .body-div{
+                        padding: 8px 10px 8px 15px !important;                    
+                        .div-header{
+                            border:none;
+                            margin:0px;
+                        }
+                        .div-body{
+                            .list{
+                                .list-item:first-child{
+                                    margin-top: 0px;
+                                }
+                            }
+                        }
+                    }
+                    form{
+                        border-right: 1px solid $BorderColor;
+                    }
+                }
+            }
+        }
+    }
+    /*.data-section{
+        padding-top:5px !important;
+    }*/
+}
+
+/*  @media only screen and(max-width: 1200px){
+    .sub-sidebar{
+        width: unset !important;
+    }
+ } */
+/*
+@media only screen and(max-width: 1540px) {
+    .sub-sidebar{
+        width: 25%;
+    }
+}
+@media only screen and(max-width: 1170px) {
+    .sub-sidebar{
+        width: 30%;
+    }
+}
+@media only screen and(max-width: 970px) {
+    .sub-sidebar{
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: none;
+    } */
+/*     .sub-sidebar{
+        width: 450px;
+        height: auto;
+        min-height: auto;
+        position: absolute;
+        z-index: 8;
+        height: 100%;    
+        transition: all 1.5s linear;
+        .sub-sidebar-container{
+            width: 400px;
+            background: $MainColorVLight;
+            overflow-y: auto;
+        }   
+        .section-Sub-header-icon{
+            display: block;
+            position: absolute;
+            right: 0px;
+            background: $MainColorVLight;
+            color: $SubColorLight;
+            padding: 14px 18px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 20px;
+            margin-top: 15px;
+        }   
+    }
+    .sub-open{
+        left:auto;
+    }
+    .sub-closed{
+        left:-400px;
+    } 
+}*/

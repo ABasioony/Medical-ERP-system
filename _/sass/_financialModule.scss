@@ -1,0 +1,1071 @@
+.financial-module{
+    background: $MainColorVLight;
+    .a{
+        &.black{
+            color: black;
+        }
+    }
+    
+    .data-container-header{
+        padding: 6px;
+        background: $MainColorVLight;
+        //border-bottom: 1px solid $BorderColor;
+        .section-header-main{
+            padding: 5px 2px;
+            /*span{
+                width: 40px;
+                height: 40px;
+                font-size: 24px;
+                &:before{
+                    width: 40px;
+                    height: 40px;
+                } 
+                padding: 0px;
+            }   */
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 42px;
+                height: 42px;
+                font-size: 20px;
+                &::before{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            .data{
+                margin-#{$Direction}:10px;
+                h4{
+                    font-size: 18px;
+                    line-height: 24px;
+                    color:$MainColor;
+                }
+                .breadcrumb{.breadcrumb-item{font-size: 14px; a{color:$MainColor; font-size: 14px;}}}
+            }
+        } 
+        .section-header-tools{
+            padding: 6px 1px;
+            margin-bottom: 0px;
+            z-index: 1;
+            .data-container-body-header-controls{
+                .controls-section{
+                    padding:0px 5px;
+                    &.br{
+                        border-#{$Direction-Opposite}:1px solid $BorderColor;
+                    }
+                    .header-input{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: 0px;
+                        label{
+                            border:none;
+                            color: $MainColor;
+                            font-weight: $FW-Regular;
+                            font-size: 15px;
+                            padding: 0px 5px;
+                            font-weight: $FW-Bold;
+                            &:after{
+                                content: ":";
+                                margin-#{$Direction}:10px;
+                                font-weight: $FW-Bold;
+                            } 
+                        }
+                        input{
+                            min-width: auto;
+                            width: 100px;
+                            text-align: center;
+                            background: none;
+                            box-shadow: none;
+                            border: none;
+                            font-weight: $FW-Regular;
+                            font-size: 16px;
+                            border:1px solid $BorderColor;
+                            margin:0px 5px;
+                        }
+                    }
+                    a{
+                        padding: 8px 11px;
+                        max-height: 35px;
+                        min-width: 35px;                        
+                        font-size: 15px;
+                        &::before{
+                            font-size: 15px;
+                        }
+                        &.tools-icons{
+                            padding: 0px;
+                            &::before{
+                                display: flex;
+                                font-size: 25px;
+                                align-items: center;
+                                justify-content: center;
+                                height: 19px;
+                            }
+                        }
+                    }
+                }          
+            }
+            /* background: none; */
+            /* padding-#{$Direction-Opposite}:0px; */
+             /* .data-container-body-header-controls{
+                a{
+                    padding: 6px 12px;
+                    span{
+                        font-weight: $FW-Regular;
+                    }
+                    &::before{
+                        font-size: 16px;
+                        margin-#{$Direction-Opposite}: 10px;
+                    }
+                    &.icon-gbtn{
+                        padding: 8px 10px;
+                        &:before{
+                            font-size: 16px;                            
+                            margin-#{$Direction-Opposite}: 0px;
+                        }
+                    }
+                }
+            }  */
+        }
+    }
+      
+    .data-container-body{
+        padding: 0px 6px;
+        .data-container-body-content{
+            //background: $ClearWhite;
+            //border: 1px solid $BorderColor;
+            .data-container-body-content-main{
+                padding-bottom: 6px;
+                .data-container-body-content-main-header{
+                    background:$ClearWhite;
+                    border-radius: 6px;
+                    border-top-#{$Direction}-radius: 6px;
+                    border:1px solid $BorderColor;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    padding: 15px 5px;
+                    flex-direction:$FdirectionRow;
+                    margin-bottom: 4px;
+                    position: relative;
+                    border-top-#{$Direction-Opposite}-radius:0px;
+                    overflow-y: hidden;
+                    overflow-x: hidden;
+                    justify-content: center;
+                    .header-tools{
+                        padding: 5px 15px;
+                        padding-top: 0px;
+                        border-bottom: 1px solid $BorderColor; 
+                        max-width: 99%;
+                        margin-bottom: 15px;
+                        padding-bottom: 10px;
+                        h6{
+                            font-weight:$FW-SBold;
+                        }
+                        .close-search{
+                            position: absolute;
+                            #{$Direction-Opposite}: 0px;
+                            margin-#{$Direction-Opposite}: 15px;
+                            color: $BorderColor;
+                            &:hover,&:active,&:focus{
+                                color: $Danger;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .search-container-div{
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                    }
+                }
+                .data-container-body-content-main-body{
+                    margin-bottom: 0px; 
+                    .grid{
+                        height: calc(100vh - 145px);
+                        width:calc(100vw - 100px);
+                        &.max100vh-565px{
+                            height: calc(100vh - 570px);
+                        }
+                        &.max100vh-75vh{
+                            height: calc(100vh - 75vh);
+                            //width: 100vh !important;
+                        }
+                        &.max100vh-60vh{
+                            height: calc(100vh - 60vh);
+                            //width: 100vh !important;
+                        }
+                        &.max100vh-65vh{
+                            height: calc(100vh - 65vh);
+                            //width: 100vh !important;
+                        }
+                        &.max100vh-57vh{
+                            height: calc(100vh - 57vh);
+                        }
+                        &.max100vh-510px{
+                            height: calc(100vh - 510px);
+                        }
+                        &.max100vh-300px{
+                            height: calc(100vh - 300px);
+                        }
+                    }
+                }
+                &.split-container{
+                    .data-container-body-content-main-body{
+                      /*   max-height: calc(100vh - 145px); */
+                          min-height: calc(100vh - 145px);
+                    }
+                    .main{
+                        padding-#{$Direction}: 3px;
+                        .data-container-body-content-main-body{
+                            border-top-#{$Direction}-radius: 0px;
+                            border-bottom-#{$Direction}-radius: 0px;
+                            &.search-hide{
+                                padding: 0px;
+                                border: none;
+                                max-height: 0px !important;
+                                visibility: hidden !important;
+                                margin-top: -5px;
+                            }
+                            &.search-show{
+                                margin-top: 0px;    
+                                max-height: 100px !important;
+                                visibility: visible; 
+                                margin-top: 0px;
+                            } 
+                            &.search-container{
+                                margin-bottom: 5px;
+                                border-bottom-#{$Direction-Opposite}-radius: 0px;                                        
+                                overflow: hidden;
+                                -webkit-transition: all 2s ease; /* Safari */
+                                transition: all 2s ease;
+                                height: auto;
+                                .search-container-div{
+                                    .data-desc-header{
+                                        margin-bottom: 0px;
+                                        .data-desc-header-content{
+                                            padding-bottom: 0px;
+                                            border: none;
+                                            .main-data{
+                                                .form-group {
+                                                    margin-top: 0.75em;
+                                                    margin-bottom: 0.75em;
+                                                }
+                                                button{
+                                                    margin-top: 0.8em;
+                                                    margin-bottom: 0.8em;
+                                                    margin-#{$Direction-Opposite}:15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.after-search{
+                                max-height: calc(100vh - 240px);
+                            }
+                            .data-desc-body{
+                                //min-height: calc(100vh - 315px);
+                                min-height: calc(100vh - 440px);
+                                &.min-300{
+                                    min-height: calc(100vh - 300px);
+                                }
+                                &.min-60vh{
+                                    min-height: calc(100vh - 60vh);
+                                }
+                                .data-desc-body-container{
+                                    margin: 0px;
+                                    padding: 0px ; 
+                                    .data-desc-body-container-body{
+                                        .data-desc-body-container-body-header{
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            h4,h5{
+                                                width: unset;
+                                            }
+                                            .data-desc-body-container-body-header-tools{
+                                                margin-#{$Direction}:auto;
+                                            }
+                                        }
+                                        .nav{
+                                            padding: 0px;
+                                            
+                                            .nav-item{
+                                                border-bottom: 1px solid $BorderColor;
+                                                a{
+                                                    position: relative;
+                                                    color: $MainColor;
+                                                    padding-bottom: 10px;
+                                                    font-size: 16px;
+                                                    font-weight: 600;
+                                                    .tab-indicator{
+                                                        height: 4px;
+                                                        width:100%;
+                                                        background: $LegendSuccess;
+                                                        position: absolute;
+                                                        left: 0;
+                                                        right: 0;
+                                                        bottom: -2px;
+                                                        display: none;
+                                                    }
+                                                    &.active{
+                                                        background: none;
+                                                        color: $Success;
+                                                        .tab-indicator{
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    &:hover,&:focus,&:active{
+                                                        color: $Success;
+                                                    }
+                                                }
+                                            }
+                                            &.br{
+                                                border-bottom: 1px solid $BorderColor;
+                                                .nav-item{ border: none;}
+                                            }
+                                        }
+                                        .tab-content{
+                                            padding-#{$Direction-Opposite}: 0px; 
+                                            .tab-pane{
+                                                padding-#{$Direction-Opposite}: 0px; 
+                                                &.scrollable{
+                                                    max-height: 460px;
+                                                    overflow-y: auto;
+                                                    overflow-x: hidden;
+                                                } 
+                                                .tab-pane-contatiner{
+                                                    padding: 0px;
+                                                    padding-bottom: 0px;
+                                                    align-items: flex-start;
+                                                    margin: 0px;
+                                                    padding-top: 10px;
+                                                    .tab-pane-contatiner-section{
+                                                        margin: 10px;
+                                                        padding-#{$Direction}:10px;
+                                                        &.br-side{
+                                                            border-#{$Direction-Opposite}: 1px solid $BorderColor; 
+                                                        }
+                                                    }
+                                                    .imageTag{
+                                                        max-height: 25%;
+                                                        max-width: 25%;
+                                                        min-width: 190px;
+                                                        object-fit: contain;
+                                                        min-height: 190px;
+                                                    }
+                                                    .upload-image-div{
+                                                        .imageTag{
+                                                            max-height: 25%;
+                                                            max-width: 25%;
+                                                        }
+                                                    }
+                                                    h6{
+                                                        font-weight: $FW-Bold;
+                                                        text-align: $Direction;
+                                                        border-bottom: 1px solid $BorderColor;
+                                                        padding-bottom: 15px;
+                                                        margin-bottom: 15px;
+                                                    }
+                                                    .grid{
+                                                        width: 100vw;
+                                                        padding: 0px !important;
+                                                        margin: 0px !important; 
+                                                        &.h-425{
+                                                            height: 398px !important;
+                                                        }
+                                                        &.h-174{
+                                                            height: 174px !important;
+                                                        }
+                                                        .ag-root{
+                                                            padding: 0px;
+                                                        }
+                                                        &.max100vh-565px{
+                                                            height: calc(100vh - 565px);
+                                                        }
+                                                        &.max100vh-75vh{
+                                                            height: calc(100vh - 75vh);
+                                                            //width: 100vh !important;
+                                                        }
+                                                        &.max100vh-70vh{
+                                                            height: calc(100vh - 70vh);
+                                                            //width: 100vh !important;
+                                                        }
+                                                        &.max100vh-60h{
+                                                            height: calc(100vh - 60vh);
+                                                            //width: 100vh !important;
+                                                        }
+                                                        &.max100vh-62h{
+                                                            height: calc(100vh - 62vh);
+                                                            //width: 100vh !important;
+                                                        }
+                                                    }
+                                                    .total-input{
+                                                        margin: 5px 0px;
+                                                        label{
+                                                            margin: 0px !important;
+                                                            margin-left: 10px !important;
+                                                        }
+                                                    }
+                                                    &.vertical-nav-contatiner{
+                                                        padding: 0px;
+                                                        .vertical-nav{
+                                                            padding-#{$Direction-Opposite}: 10px;
+                                                            max-height: 400px;
+                                                            overflow-y: auto;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            flex-wrap: wrap;
+                                                            li{
+                                                                a{
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: flex-start;
+                                                                    padding: 15px 0px;
+                                                                    flex-wrap:wrap;
+                                                                    p{
+                                                                        margin: 0px;
+                                                                        margin-#{$Direction-Opposite}: auto;
+                                                                        font-size: 14px;
+                                                                        white-space: nowrap;
+                                                                        overflow: hidden;
+                                                                        text-overflow: ellipsis;
+                                                                        //max-width: 130px;
+                                                                    }
+                                                                    .total{
+                                                                        color: $ClearWhite;
+                                                                        background: $MainColor;
+                                                                        font-size: 14px;
+                                                                        font-weight: 500;
+                                                                        padding: 0px 10px;
+                                                                        border-radius: 15px;
+                                                                    }
+                                                                    &.active{
+                                                                        .total{
+                                                                            background: $Success !important;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                &.total{
+                                                                    p{
+                                                                        font-weight: 600;
+                                                                        margin: 5px 0px;
+                                                                        font-size: 14px;
+                                                                    }
+                                                                    span{
+                                                                        color: $Success;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        .tab-content{
+                                                            min-height: 400px;
+                                                            border-#{$Direction}:1px solid $BorderColor;
+                                                            .tab-pane-contatiner{
+                                                                .grid{
+                                                                    height: calc(100vh - 510px);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .inline-form-group{
+                                                    label:first-child{
+                                                        width: auto;
+                                                        &:after{
+                                                            content: ":";
+                                                            margin-#{$Direction}:10px;
+                                                            font-weight: $FW-Bold;
+                                                        }
+                                                    }
+                                                    display: flex;
+                                                    justify-content: flex-start;
+                                                    align-items: center;
+                                                }
+                                            }
+                                        }  
+                                        .control-inline{
+                                            div:last-child{
+                                                input{
+                                                    border-#{$Direction}: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .data-desc-footer{
+                                padding: 10px 0px;
+                                border-top: 1px solid $BorderColor;
+                                margin: auto;
+                                .data-desc-footer-container{
+                                    .detail-data{
+                                        margin: 0px;
+                                    }
+                                    .data-desc-footer-container-item{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: flex-start;
+                                        padding: 0px 15px;
+                                        label:first-child{
+                                            &:after{
+                                                content: ":";
+                                                margin-#{$Direction}:10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.profile-main{
+                            .tab-content{
+                                .tab-pane{
+                                    &.scrollable{
+                                        max-height: 460px;
+                                        overflow-y: auto;
+                                        overflow-x: hidden;
+                                    } 
+                                    .data-container-body-content-main-body{
+                                        align-content: flex-start;
+                                        align-items: flex-start;
+                                        .data-desc-body{
+                                            padding:0px 15px;
+                                            padding-bottom: 15px;
+                                        }
+                                        &:first-child{
+                                            min-height: calc(100vh - 235px);
+                                        }
+                                        .data-desc-footer{
+                                            justify-content: flex-end;
+                                            align-items: center;
+                                            align-content: flex-end;
+                                            .form-group{
+                                                label{
+                                                    font-size: 17px;
+                                                    font-weight: 900;
+                                                }
+                                                input{
+                                                    font-size: 17px;
+                                                    font-weight: 900;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .main-footer{
+                            min-height: 85px;
+                            margin-top: 5px;
+                            align-content: flex-start;
+                            align-items: flex-start;
+                        }
+                    }
+                    .side{
+                        padding-#{$Direction-Opposite}: 3px;
+                        .data-container-body-content-main-body{
+                            min-height: calc(100vh - 145px);
+                            border-top-#{$Direction-Opposite}-radius: 0px;
+                            border-bottom-#{$Direction-Opposite}-radius: 0px;
+                            .data-desc-header{
+                                padding-bottom: 8px;
+                                margin-bottom: 0px;
+                                .data-desc-header-content{
+                                    .main-data{
+                                        align-content: center;
+                                        align-items: center;
+                                        h4{
+                                            width: auto;
+                                            margin-#{$Direction-Opposite}:10px;  
+                                            /* padding: 5px 10px;
+                                            border-#{$Direction-Opposite}:1px solid $BorderColor;
+                                            margin-bottom: 0px; */
+                                        }
+                                        
+                                        .controls-section{
+                                            margin-#{$Direction}:auto;
+                                            .icon-gbtn{
+                                                padding: 5px;
+                                                font-size: 25px;
+                                                &:hover,&:focus,&:active{
+                                                    cursor: pointer;
+                                                    color: $Warning
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .data-desc-body{
+                                .data-desc-body-container{
+                                    padding: 0px 10px; 
+                                    .data-desc-body-container-body{
+                                        .tree-tools{
+                                            margin-bottom: 10px;
+                                            padding: 0px;
+                                            border-bottom: 1px solid $BorderColor;
+                                            padding-bottom: 7px;
+                                            .r-link{
+                                                font-family: $MainFont;
+                                                color: $MainColor;
+                                                padding: 5px;
+                                                text-align: $Direction;
+                                                &::before{
+                                                    font-family: FontAwesome;
+                                                    margin-#{$Direction-Opposite}:10px;
+                                                }
+                                                &:first-child{
+                                                    border-#{$Direction-Opposite}:1px solid $BorderColor;
+                                                    padding: 5px;
+                                                    padding-#{$Direction-Opposite}: 10px;
+                                                    margin-#{$Direction-Opposite}:10px;
+                                                }
+                                                &:hover,&:focus,&:active{
+                                                    cursor: pointer;
+                                                    color: $Success;
+                                                }
+                                            }
+                                        }
+                                        .form-group{
+                                            margin-bottom: 0.7rem;
+                                            .search-icon{
+                                                position: absolute;
+                                                top: 0;
+                                                #{$Direction-Opposite}: 0;
+                                                margin: 10px 12px;
+                                                font-size: 16px;
+                                                color: $BorderColor;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.profile-side{
+                            .data-container-body-content-main-body{
+                                padding: 0px 15px;
+                                .data-desc-header{
+                                    padding: 0px;
+                                    .data-desc-header-content{
+                                        display: flex;
+                                        align-items: flex-start;
+                                        justify-content: flex-start;
+                                        padding: 15px 0px;
+                                        .profile-img{
+                                            background: $MainColorVLight;
+                                            border-radius: 6px;
+                                            width: 115px;
+                                            height:115px;
+                                            position: relative;
+                                            border: 10px solid $ClearWhite;
+                                            box-shadow: 0px 0px 9px $BorderColor;
+                                            .icon{
+                                                color:$MainColor-h;
+                                                font-size: 60px;
+                                                position:absolute;
+                                                top:0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom:0;
+                                                background:transparent;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 6px;
+                                                z-index: 5;
+                                                cursor: pointer;
+                                                box-shadow: 0px 0px 9px $BorderColor;
+                                            }
+                                            img{
+                                                border-radius: 6px;
+                                                width: 115px;
+                                                height:115px;
+                                                object-fit: cover;
+                                                z-index: 20;
+                                                box-shadow: 0px 0px 9px $BorderColor;
+                                            }
+                                            .overlay{
+                                                position:absolute;
+                                                top:0;
+                                                left: 0;
+                                                right: 0;
+                                                bottom:0;
+                                                background:$BlockColor;
+                                                align-items: center;
+                                                justify-content: center;
+                                                border-radius: 6px;
+                                                display: none;
+                                                z-index: 10;
+                                                &:before{
+                                                    color:$ClearWhite;
+                                                    font-size: 50px;
+                                                }
+                                            }
+                                            &:hover,&:focus,&:active{
+                                                .overlay{
+                                                    display: flex;
+                                                }
+                                                cursor: pointer;
+                                            }
+                                        }
+                                        .profile-data{
+                                            align-items: flex-start;
+                                            justify-content: flex-start;
+                                            padding: 0px 15px;
+                                            flex-direction: column;
+                                            p{
+                                                margin: 0px;
+                                                margin-bottom:5px;
+                                                font-size:14px;
+                                                display:flex;
+                                                align-items: center;
+                                                justify-content: flex-start;
+                                                font-family: $EnFont;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                &:before{
+                                                    color: $SubColorLight;
+                                                    margin-#{$Direction-Opposite}:10px;
+                                                    font-size: 16px;
+                                                }
+                                                &.fa{
+                                                    &:before{
+                                                        font-family: FontAwesome;
+                                                    }
+                                                }
+                                            }
+                                            h3{
+                                                margin:0px;
+                                                margin-bottom:8px;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            }
+                                        }
+                                    }
+                                }
+                                .data-desc-body{
+                                    .data-desc-body-container{
+                                        padding: 0px;
+                                        .data-desc-body-container-body{
+                                            .nav{
+                                                padding: 0px;
+                                                .nav-item{
+                                                    border-bottom: 1px solid $BorderColor;
+                                                    a{
+                                                        position: relative;
+                                                        color: $MainColor;
+                                                        padding-bottom: 10px;
+                                                        font-size: 16px;
+                                                        font-weight: 600;
+                                                        .tab-indicator{
+                                                            height: 4px;
+                                                            width:100%;
+                                                            background: $LegendSuccess;
+                                                            position: absolute;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: -2px;
+                                                            display: none;
+                                                        }
+                                                        &.active{
+                                                            background: none;
+                                                            color: $Success;
+                                                            .tab-indicator{
+                                                                display: block;
+                                                            }
+                                                        }
+                                                        &:hover,&:focus,&:active{
+                                                            color: $Success;
+                                                        }
+                                                    }
+                                                }
+                                                &.br{
+                                                    border-bottom: 1px solid $BorderColor;
+                                                    .nav-item{ border: none;}
+                                                }
+                                            }
+                                            .vertical-nav-contatiner{
+                                                padding: 0px;
+                                                .vertical-nav{
+                                                    padding-#{$Direction-Opposite}: 5px;
+                                                    max-height: calc(100vh - 315px);
+                                                    min-height: calc(100vh - 315px);
+                                                    overflow-y: auto;
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    flex-wrap: wrap;
+                                                    align-content: flex-start;
+                                                    li{
+                                                        width:100%;
+                                                        a{
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: flex-start;
+                                                            padding: 15px 0px;
+                                                            flex-wrap:wrap;
+                                                            p{
+                                                                margin: 0px;
+                                                                margin-#{$Direction-Opposite}: auto;
+                                                                font-size: 16px;
+                                                                white-space: nowrap;
+                                                                overflow: hidden;
+                                                                text-overflow: ellipsis;
+                                                                font-weight: 100;
+                                                                //max-width: 130px;
+                                                            }
+                                                            .total{
+                                                                color: $ClearWhite;
+                                                                background: $MainColor;
+                                                                font-size: 14px;
+                                                                font-weight: 500;
+                                                                padding: 0px 10px;
+                                                                border-radius: 15px;
+                                                            }
+                                                            &.active{
+                                                                .total{
+                                                                    background: $Success !important;
+                                                                }
+                                                            }
+                                                        }
+                                                        &.total{
+                                                            p{
+                                                                font-weight: 600;
+                                                                margin: 5px 0px;
+                                                                font-size: 14px;
+                                                            }
+                                                            span{
+                                                                color: $Success;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .tab-content{
+                                                    min-height: 400px;
+                                                    border-#{$Direction}:1px solid $BorderColor;
+                                                    .tab-pane-contatiner{
+                                                        .grid{
+                                                            height: calc(100vh - 510px);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.br-side{
+    border-#{$Direction-Opposite}: 1px solid $BorderColor;
+}
+.bl-side{
+    border-#{$Direction}: 1px solid $BorderColor;
+}
+.TimeSheet{
+    border: 1px solid $BorderColor;
+    color: $MainColorDark;
+    border-radius: 4px;
+    .td{
+        border: 1px solid $BorderColor;
+        text-align: center;
+    }
+    .TimeSheet-cell-selected{
+        background-color: $InvColor3 !important; 
+    }
+    .TimeSheet-cell-selecting{
+        background-color: $SubColorLight !important;
+    }
+}
+#wrap {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+#external-events {
+    float: $Direction;
+    width: 200px;
+    height: 600px;
+    overflow: auto;
+    padding: 0 15px 0 15px;
+    border: 1px solid #ccc;
+    background: #eee;
+    text-align: center;
+    h4{
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 5px;
+        text-align: center;
+    }
+    h5{
+        font-size: 14px;
+        margin-top: 0;
+        padding-top: 0.5em;
+        text-align: $Direction;
+    }
+    .fc-event{
+        margin: 10px 0;
+        cursor: pointer;
+    }
+    p{
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #666;
+        input{
+            margin: 0;
+            vertical-align: middle ;
+        }
+    }
+    .external-events-list{
+        max-height: 110px;
+        overflow: auto;
+        margin: 10px 0px;
+        margin-top: 0;
+        padding: 0px 5px;
+        border: 2px solid $BorderColor;
+    }
+    .custom-checkbox{
+        label{
+            color: $black !important;
+            &::before{
+                border: 2px solid $BorderColor !important;
+            }
+        }
+    }
+  }
+
+#calendar {
+float: #{$Direction-Opposite};
+width: 900px;
+max-height: 600px;
+height: 600px;
+padding: 15px;
+overflow: auto;
+overflow-x: auto;
+}
+
+.modal-xl{
+    max-width: 1200px;
+    
+    
+}
+@media only screen and(max-width: 1640px){
+    .profile-side{
+        .data-container-body-content-main-body{
+            .data-desc-header{
+                .data-desc-header-content{
+                    flex-direction: column;
+                    align-items: center !important;
+                    .profile-data{
+                        margin-top:10px;
+                        flex-basis: inherit !important;
+                        align-items: center !important;
+                    }
+                }
+            }
+            .data-desc-body{
+                .data-desc-body-container {
+                    .data-desc-body-container-body{
+                        .tab-pane-contatiner{
+                            .vertical-nav{
+                                max-height: calc(100vh - 430px) !important;
+                                min-height: calc(100vh - 430px) !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 992px) {
+    .financial-module{
+        padding-top: 0;
+        .data-container{
+            height: calc(100vh - 121px);
+            .gird{
+                height: 100vh !important;
+            }
+        }
+    }
+} 
+@media only screen and(max-width: 1199px) {
+
+    .financial-module{
+        .data-container-body{
+            .data-container-body-content{
+                .data-container-body-content-main.split-container{
+                    .data-container-body-content-main-body{
+                        height: auto !important;
+                    }
+                }
+            } 
+        } 
+    } 
+
+    .financial-module{
+        .gird{
+            height: calc(100vh - 201px);
+        }
+    }
+    .main {
+        padding-#{$Direction}: 0px !important;
+        .data-container-body-content-main-body{
+            max-height: unset;
+            height: auto !important;
+            border-bottom-left-radius: 6px !important;
+            border-bottom-right-radius: 6px !important;
+        }
+        
+    }
+    .side {
+        padding-#{$Direction-Opposite}: 0px !important;
+        padding-bottom: 5px;
+        .data-container-body-content-main-body{
+            height: auto !important;
+            border-bottom-left-radius: 0px !important;
+            border-bottom-right-radius: 0px !important;
+        }    
+    }
+
+
+
+    .profile-side{
+        .data-container-body-content-main-body{
+            .data-desc-header{
+                .data-desc-header-content{
+                    flex-direction: row;
+                    align-items: flex-start !important;
+                    .profile-data{
+                        margin-top:0px;
+                        flex-basis: 0 !important;
+                        align-items: flex-start !important;
+                    }
+                }
+            }
+            .data-desc-body{
+                .data-desc-body-container {
+                    .data-desc-body-container-body{
+                        .tab-pane-contatiner{
+                            .vertical-nav{
+                                max-height: unset !important;
+                                min-height: unset !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,268 @@
+
+.datepicker {
+    padding:0px !important;
+    //direction: $LTR-RTL;
+    .datepicker-days{
+        .table-condensed{
+            thead{
+                tr{
+                    background: $SubColorLight;
+                    th{
+                       color: $ClearWhite;
+                       border-radius: 0px !important; 
+                       width: 40px !important; 
+                       height: 40px !important; 
+                       &:hover{
+                           color: $MainColor;
+                           background: $SubColorLight !important; 
+                       }
+                       &.disabled{
+                            visibility: visible !important;
+                            background: $SubColor;
+                            color: $MainColor;
+                            pointer-events: none;
+                        }
+                    }
+                    &:nth-child(2){
+                        th{
+                            width: auto;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        width: 40px !important; 
+                        height: 40px !important; 
+                        border-radius: 0px !important; 
+                        &.active{
+                            background: $SubColorLight !important; 
+                            border-radius: 40px !important;
+                        }
+                    }
+                }
+                &:before {
+                    content: "_";
+                    display: block;
+                    line-height: 5px;
+                    color: transparent;
+                }
+            }
+        }
+    }
+    .datepicker-months{
+        .table-condensed{
+            thead{
+                tr{
+                    background: $SubColorLight;
+                    th{
+                       color: $ClearWhite;
+                       border-radius: 0px !important; 
+                       width: 40px !important; 
+                       height: 40px !important; 
+                       &:hover{
+                           color: $MainColor;
+                           background: $SubColorLight !important; 
+                       }
+                       &.disabled{
+                            visibility: visible !important;
+                            background: $SubColor;
+                            color: $MainColor;
+                            pointer-events: none;
+                        }
+                    }
+                    &:nth-child(2){
+                        th:nth-child(2){
+                            width: 200px !important;
+                        }
+                    }
+                    
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        span{
+                            border-radius: 0px !important; 
+                            &.active{
+                                background: $SubColorLight !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                            &.focused{
+                                background: $LegendDefault !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-years{
+        .table-condensed{
+            thead{
+                tr{
+                    background: $SubColorLight;
+                    th{
+                       color: $ClearWhite;
+                       border-radius: 0px !important; 
+                       width: 40px !important; 
+                       height: 40px !important; 
+                       &:hover{
+                           color: $MainColor;
+                           background: $SubColorLight !important; 
+                       }
+                       &.disabled{
+                            visibility: visible !important;
+                            background: $SubColor;
+                            color: $MainColor;
+                            pointer-events: none;
+                        }
+                    }
+                    &:nth-child(2){
+                        th:nth-child(2){
+                            width: 200px !important;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        span{
+                            border-radius: 0px !important; 
+                            &.active{
+                                background: $SubColorLight !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                            &.focused{
+                                background: $LegendDefault !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-decades{
+        .table-condensed{
+            thead{
+                tr{
+                    background: $SubColorLight;
+                    th{
+                       color: $ClearWhite;
+                       border-radius: 0px !important; 
+                       width: 40px !important; 
+                       height: 40px !important; 
+                       &:hover{
+                           color: $MainColor;
+                           background: $SubColorLight !important; 
+                       }
+                       &.disabled{
+                            visibility: visible !important;
+                            background: $SubColor;
+                            color: $MainColor;
+                            pointer-events: none;
+                        }
+                    }
+                    &:nth-child(2){
+                        th:nth-child(2){
+                            width: 200px !important;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        span{
+                            border-radius: 0px !important; 
+                            &.active{
+                                background: $SubColorLight !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                            &.focused{
+                                background: $LegendDefault !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .datepicker-centuries{
+        .table-condensed{
+            thead{
+                tr{
+                    background: $SubColorLight;
+                    th{
+                       color: $ClearWhite;
+                       border-radius: 0px !important; 
+                       width: 40px !important; 
+                       height: 40px !important; 
+                       &:hover{
+                           color: $MainColor;
+                           background: $SubColorLight !important; 
+                       }
+                       &.disabled{
+                            visibility: visible !important;
+                            background: $SubColor;
+                            color: $MainColor;
+                            pointer-events: none;
+                        }
+                    }
+                    &:nth-child(2){
+                        th:nth-child(2){
+                            width: 200px !important;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        span{
+                            border-radius: 0px !important; 
+                            &.active{
+                                background: $SubColorLight !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                            &.focused{
+                                background: $LegendDefault !important; 
+                                border-radius: 4px !important;
+                                color: $ClearWhite;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    &.dropdown-menu {
+        #{$Direction}: initial;
+    }
+    &:before{
+        border-bottom-color: $SubColorLight;
+        z-index: 10;
+    }
+}
+
+ .dir-15{
+    .datepicker{
+        #{$Direction}:15px !important;
+    }
+}

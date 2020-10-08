@@ -1,0 +1,794 @@
+.g-wizard{
+  display: flex;
+  flex-direction: $FdirectionRow;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  .g-wizard-header{   
+    display: flex;
+    flex-direction: $FdirectionColumn;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid $BorderColor;
+    .nav-pills{
+      justify-content: center;
+      .nav-item{
+        display: flex;
+        flex-direction: $FdirectionRow;
+        align-items: center;
+        padding: 0px;
+        flex-grow: unset;
+        .item-btn{
+          display: flex;
+          flex-direction: $FdirectionColumn;
+          align-items: center;
+          span{
+            background: $BorderColor;
+            color: $MainColorLight;
+            font-size: 35px;
+            padding: 25px 30px;
+            border-radius: 45px;
+            width: 85px;
+            height: 85px;
+          }
+          h6{
+            color: $MainColorLight;
+            font-weight: 600;
+            margin-bottom: 0px;
+            font-size: 15px;
+            margin-top: 8px;
+          }
+        }   
+        .v-border{
+          height: 5px;
+          width: 10vw;
+          margin-top: -25px;
+          background: $BorderColor;
+        }
+      }
+      .center-item{
+        max-width: 85px !important;
+      }
+      .nav-item.active{background: none; }
+      .nav-item:first-child{
+        .item-btn{
+          span{
+            background: $SubColorLight;
+            color: $ClearWhite;
+          }
+          h6{
+            color: $SubColorLight;
+          }
+        }
+        .v-border{
+          background: $SubColorLight;
+        }
+      }
+      .nav-item:last-child{
+        flex-direction: $FdirectionRow-Opposite;
+        .item-btn{
+          span{
+            background: $Success;
+            color: $ClearWhite;
+          }
+          h6{
+            color: $Success;
+          }
+        }
+        .v-border{
+          background: $Success;
+        }
+      }
+      .nav-item:nth-child(2){
+        .item-btn{
+          span{
+            background: $Warning;
+            color: $ClearWhite;
+          }
+          h6{
+            color: $Warning;
+          }
+        }
+      }
+      .nav-item.disabled{
+        pointer-events: none;
+        .item-btn{
+          span{
+            background: $BorderColor;
+            color: $MainColorLight;
+          }
+          h6{
+            color: $MainColorLight;
+          }
+        }
+        .v-border{
+          background: $BorderColor;
+        }
+      }
+    }
+  }
+  
+  .g-wizard-content{
+    .form-container{
+        flex-direction: $FdirectionColumn;
+        align-items: center;
+        padding: 15px;
+        .form-main-container{
+            display:flex;
+            flex-direction: $FdirectionColumn ;
+            justify-content: center;
+            align-items:center;
+        }
+        .form-controllers{
+            padding: 7px;
+            justify-content: center;
+            a{
+                margin-#{$Direction-Opposite}: 10px;
+            }
+            .gbtn-o,.gbtn{
+                justify-content: flex-start;
+                display: flex;
+                align-items: center;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                font-size: 20px;
+            }
+            .gbtn-o:before{
+                border-#{$Direction-Opposite}: 2px solid $SubColorLight;
+                padding: 4px 10px;
+                font-size: 36px;
+                margin-#{$Direction-Opposite}:15px; 
+                padding-#{$Direction}: 12px; 
+            }
+            .gbtn:before{
+                border-#{$Direction-Opposite}: 2px solid $ClearWhite;
+                padding: 4px 10px;
+                font-size: 36px;
+                margin-#{$Direction-Opposite}:15px; 
+                padding-#{$Direction}: 12px; 
+            }
+            .gbtn-o:before:hover{border-color: $SubColorLight}
+            .gbtn:before:hover{border-color: $Warning}
+        }
+        .main-conatiner{
+            .form-container{
+                display: flex;
+                flex-direction: $FdirectionColumn;
+                align-items: center;
+                .form-content{
+                    justify-content: center;
+                    align-items: center;
+                    align-content: flex-start;
+                    p{font-weight:$FW-Light !important;}
+                    .upload-control{
+                        input{
+                          border: 1px solid $BorderColor; 
+                        }
+                    }
+                    .form-group{
+                        padding: 0px 5px;
+                        label{
+                            font-weight: $FW-SBold;
+                            color: $SubColor;
+                            margin: 3px;
+                        }       
+                    }
+                    .gbtn{
+                        font-weight: $FW-Regular;
+                        font-size: 20px;
+                        padding: 4px 35px;
+                    }
+                    .date-input{
+                        position: relative;
+                        span{
+                            position: absolute;
+                            bottom: 12px;
+                            #{$Direction-Opposite}: 20px;
+                            color: $SubColorLight;
+                        }
+                    }
+                      
+                    .disabled{
+                        button{background-color: $BorderColor !important; pointer-events: none; } 
+                        select{background-color: $BorderColor !important; pointer-events: none; }
+                        input{background-color: $BorderColor !important; pointer-events: none; }      
+                    }
+                    .insurance-container{
+                        .insurance{
+                            padding: 0px;  
+                        }
+                    }
+                    .form-section{
+                        display: flex;
+                        flex-direction: $FdirectionRow;
+                        .discountContainer{
+                            .custom-control{
+                                padding-#{$Direction} : 1.5rem !important;
+                                padding-#{$Direction-Opposite} : 0 !important;
+                                margin-bottom:10px;
+                            }
+                        }
+                        p{
+                            font-weight: $FW-SBold !important;
+                            color: $SubColor;
+                            margin: 0px;
+                            margin-bottom: 5px;
+                        }  
+                        .radio-container{
+                            padding-top: 7px;
+                            padding-left: 10px;
+                        }
+                        .custom-radio .custom-control-input:checked ~ .custom-control-label::before{
+                            background: $SubColorLight;
+                        }         
+                        .flagstrap{
+                          button{
+                            display: flex;
+                            flex-direction: $FdirectionRow;
+                            align-items: center;
+                            width: 100%;
+                            font-size: 1rem;
+                            line-height: 1.5;
+                            color: $MainColor;
+                            background-color: $ClearWhite;
+                            background-clip: padding-box;
+                            border: 1px solid $BorderColor;
+                            border-radius: 0.25rem;
+                            text-align: $Direction;
+                            .caret{
+                                margin-#{$Direction}:auto !important;
+                            }
+                          }
+                        }
+                        .form-group.method-item{
+                            padding:0px 10px;
+                        }
+                        .method-item{
+                            .custom-control{
+                                position: absolute;
+                                #{$Direction}: 0px;
+                                top: 0px;
+                                margin-top: -15px;
+                                margin-#{$Direction-Opposite}: 5px;
+                                z-index: 9;
+                                padding-#{$Direction} : 1.5rem !important;
+                                padding-#{$Direction-Opposite} : 0 !important;
+                            }
+                            .custom-control-label:before{
+                                width:30px;
+                                height: 30px;
+                                border-radius: 15px !important;
+                                border: 2px solid $MainColorLight;
+                            }
+                            .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+                                background: $SubColorLight;
+                            }
+                            .custom-control-label::after{
+                                top: 10px;
+                                #{$Direction}: 5px;
+                                display: block;
+                                width: 20px;
+                                height: 20px;
+                                background-size: auto;
+                            }
+                            .method-item-data{
+                                display: flex;
+                                flex-direction: $FdirectionRow;
+                                align-items: center;
+                                justify-content: center;
+                                color:$MainColorLight;
+                                border: 2px solid $MainColorLight;
+                                padding: 5px 10px;
+                                border-radius: 4px;
+                                margin-bottom: 10px;
+                                h6{
+                                    margin: 0px;
+                                    font-size: 16px;
+                                    font-weight: $FW-SBold;
+                                }
+                                span{
+                                    margin-#{$Direction-Opposite}: 15px;
+                                    font-size: 35px;
+                                }
+                            }
+                        }
+                        .method-item.active{
+                            .method-item-data{border-color: $SubColorLight;}
+                            .custom-control-label:before{border-color: $SubColorLight !important;}
+                        }
+                    }
+                }
+                
+            }
+            .result-container{
+                flex-direction: $FdirectionColumn;
+                align-items: center;
+                padding: 15px;
+                .result-item{
+                    padding: 10px 20px;
+                    flex-direction:$FdirectionRow;
+                    background: $TableHover;
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    border-radius: 4px;
+                    border:1px solid $BorderColor;
+                    .data-item{
+                        h5{
+                            color: $MainColorLight;
+                            text-align:$Direction;
+                            padding: 0px 10px;
+                            font-weight: $FW-Regular;
+                            font-size: 15px;
+                        }
+                        h6{
+                            color:$SubColor;
+                            text-align:$Direction;
+                            padding: 0px 10px;
+                            font-size: 15px;
+                        }
+                    }
+                    .custom-checkbox{
+                        //margin-#{$Direction-Opposite}:15px;
+                        margin-top: -8px;
+                        label:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    .custom-control-label:before{
+                        width:25px;
+                        height: 25px;
+                    }
+                    .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+                        background: $SubColorLight;
+                    }
+                    .custom-control-label::after{
+                        top: 7px;
+                        left: 0px;
+                        display: block;
+                        width: 25px;
+                        height: 20px;
+                        background-size: auto;
+                    }
+                } 
+                .result-item.active{
+                    box-shadow: 0 0 5px 1px $SubColorLight;
+                }
+            }
+            .switch-container{
+                display:flex;
+                flex-direction: $FdirectionRow;
+                align-items:center;
+                justify-content:center;
+                padding-top:35px;
+                button{
+                    max-width:200px;
+                    padding: 15px;
+                }
+                .devider{
+                    display:flex;
+                    flex-direction: $FdirectionRow;
+                    align-items:center;
+                    justify-content:center;
+                    border-bottom:2px solid $BorderColor;
+                    margin:25px 0px 15px 0px;
+                    h4{
+                        color:$SubColorLight;
+                        margin-bottom: -15px;
+                        background: $ClearWhite;
+                        padding: 0px 15px;
+                        font-size: 30px;
+                        font-weight: $FW-Bold;
+                    }
+                }
+            }
+        }
+        .wizard-controllers{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            button,a{
+                padding: 5px 35px;
+            }
+            #patientSearch{order: $OrderFirst;}
+            #PatientSearchNext{order: $OrderLast;}
+        }
+        .items-list{
+            flex-direction: $FdirectionRow;
+            align-items: center;
+            padding: 15px;
+            justify-content:center;
+            a{
+                padding: 20px 32px;
+                border: 2px solid $MainColorLight;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 4px;
+                color: $MainColorLight;
+                font-family: $MainFont;
+                max-width:110.31px;
+                margin: 0px 20px;
+                font-size: 13px;
+                font-weight: $FW-SBold;
+                margin-bottom:5px;
+                width: 110px;
+                height: 105px;
+                justify-content: center;
+            }
+            a:before{
+                margin-bottom: 3px;
+                font: normal normal normal 35px/1 FontAwesome;
+            }
+            a.active{
+                color:$SubColorLight;
+                border-color: $SubColorLight;
+            }
+            a:hover{
+                cursor: pointer;
+                color:$Warning;
+                border-color: $Warning;
+            }
+        }
+        .services-div{
+            padding-top:15px;
+            h3{margin-bottom: 0px; display: flex; align-items: center;}
+            h3:before{margin-#{$Direction-Opposite}:10px; font-size: 35px;}
+            .form-container{padding: 10px;}
+        }
+        /* .inv{
+            font-family:"NeoSansArabic" !important;  
+            direction:rtl;
+            font-size:14px;
+            .inv-top-header{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+              // flex-direction:$PRow;
+                border:5px solid $InvColor1;
+                border-radius:10px;
+                padding:15px;
+                margin-bottom:10px;
+                .inv-logo{
+                  display:block  !important;
+                  width: 50%;
+                  margin-left: auto;
+                  margin-bottom:15px;
+                }
+                .contact{
+                    p{
+                        font-size:18px;
+                        color:$InvColor3;
+                        text-align: center;
+                        font-weight: 900;
+                    }
+                    p:last-child{
+                        margin:0px;
+                    }
+                }                   
+            }
+            .inv-body-container{
+                padding-left: 25px;
+                .inv-sub-header{
+                    margin-bottom:10px;
+                    .sub-header-col{
+                        display:flex;
+                        align-items:center;
+                        justify-content:flex-start;
+                        flex-direction:column;
+                        .data-item{
+                            display:flex;
+                            align-items:center;
+                            justify-content:flex-start;
+                          //  flex-direction:$PRow;
+                            flex-wrap:wrap;
+                            margin-bottom:5px;
+                            label{
+                                background:$InvColor1;
+                                margin:0px;
+                                margin-left:5px;
+                                color: $ClearWhite;
+                                padding: 5px 10px;
+                                border-radius: 4px;
+                                min-width: 115px;
+                                text-align: right;
+                            }
+                            input{
+                                background-color:$InvColor1L !important;
+                                padding: 4px 10px !important;
+                                color: $MainColor;
+                                height:auto !important;
+                                border:none;
+                                font-weight:900;
+                                text-align:right;
+                            }
+                            label:last-child{
+                                background:none;
+                                color: $InvColor1;
+                                margin-right:5px;
+                                font-weight:900;
+                                min-width: unset;
+                                text-align: left;
+                            }
+                        }
+                        .success{
+                            label{background:$InvColor2}
+                            input{background-color:$InvColor2L !important;}
+                            label:last-child{color:$InvColor2}
+                        }
+                    }   
+                    .sub-header-col:first-child{
+                        padding-right:0px;
+                        .data-item{padding:0px;}
+                    }
+                    .sub-header-col:last-child{
+                        padding-right:0px;
+                        .data-item{padding:0px;}
+                    }
+                }
+                .inv-body{
+                    table{
+                        border:none;
+                        thead{
+                            tr{
+                                th{
+                                    border:2px solid $InvColor3;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    padding:0px;
+                                    min-width: 100px;
+                                    span{
+                                        display:block;
+                                        width:100%;
+                                        color: $InvColor3;
+                                        font-weight:900;
+                                    }
+                                    span:last-child{
+                                        color: $InvColor2;
+                                    }
+                                }
+                                th[colspan="2"],th[colspan="3"]{
+                                    span{color: $InvColor3;}
+                                }
+                                th:first-child{min-width: 110px;}
+                                .desc{min-width: 500px;}
+                            }
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    border:2px solid $InvColor1;
+                                    border-bottom:none;
+                                    border-top:none;
+                                }
+                            }
+                            tr:last-child{
+                                td{
+                                    border-bottom:2px solid $InvColor1;
+                                    border-top:2px solid $InvColor1;
+                                    background:$InvColor1L;
+                                    .table-footer{
+                                        padding-top:5px;
+                                        .table-footer-item{
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            border:2px solid $InvColor1;
+                                            border-radius:10px;
+                                            padding:5px;
+                                            text-align: center;
+                                            vertical-align: middle;
+                                            min-height: 55px;
+                                            span{
+                                                display:block;
+                                                width:100%;
+                                                color: $InvColor3;
+                                                font-weight:900;
+                                                font-size:14px;
+                                            }
+                                            span:last-child{
+                                                color: $InvColor2;
+                                            }
+                                        }
+                                    }
+                                }
+                                td:first-child,td:nth-child(2){
+                                    border:none;
+                                    border-top:2px solid $InvColor1;
+                                    background:none;
+                                    padding:0px;
+                                }
+                                td:nth-child(2){
+                                    .table-footer{
+                                        padding-top:5px;
+                                        display:flex;
+                                        justify-content:center;
+                                        align-items:center;
+                                        .table-footer-item{
+                                            margin:0px 5px;
+                                            padding: 0px 10px;
+                                        }
+                                        .table-footer-item:last-child{
+                                            margin-right:0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .inv-footer{
+                    padding:0px 5px;
+                    .footer-item{
+                        display:flex;
+                        justify-content:flex-start;
+                        align-items:center;
+                        padding:5px 0px;
+                        border-bottom:2px solid $InvColor3;
+                        .item-title{
+                            display:flex;
+                            flex-direction:column;
+                            justify-content:flex-start;
+                            align-items:center;
+                            text-align:right;
+                            vertical-align:middle;
+                            span{
+                                display:block;
+                                width:100%;
+                                color: $InvColor3;
+                                font-weight:900;
+                            }
+                            span:last-child{
+                                color: $InvColor2;
+                            }
+                        }
+                        .item-result{
+                            margin:5px;
+                            border:2px solid $InvColor3;
+                            background:$InvColor1L;
+                            height: 55px;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                        }
+                    }
+                    .footer-item:last-child{
+                        border-bottom:none;
+                    }
+                }
+            }
+            .inv-note{
+                transform: rotate(-90deg);
+                position: absolute;
+                left: -130px;
+                top: 400px;
+                font-weight: 900;
+                font-size: 18px;
+                color: $InvColor3;
+            }                                      
+        }
+        .result-header{
+            display: flex;
+            flex-direction: $FdirectionRow ;
+            align-items: center;
+            border-bottom: 1px dashed $BorderColor;
+            padding: 15px;
+            padding-top: 0px;
+            .result-data{
+                h6{
+                    display: inline-block;
+                    margin: 0px;
+                    margin-#{$Direction-Opposite}:10px;
+                    color:$MainColor;
+                    font-weight: $FW-Bold;
+                }
+                p{
+                    display: inline-block;
+                    margin: 0px;
+                    color:$MainColor;
+                }
+            }
+            h3{
+                color:$Danger;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            
+        }
+        .result-body{
+            display: flex;
+            flex-direction: $FdirectionColumn ;
+            align-items: center;
+            .result-section{
+                display: flex;
+                flex-direction: $FdirectionRow ;
+                align-items: center;
+                padding: 30px 0px;
+                .result-section-header{
+                    position: relative;
+                    border: 1px dashed $BorderColor;
+                    margin-bottom: 25px;
+                    h6{
+                        position: absolute;
+                        background: $ClearWhite;
+                        font-size: 18px;
+                        font-weight: $FW-Bold;
+                        padding: 5px 7px;
+                        #{$Direction}: -3px;
+                        top: -20px;
+                    }
+                }
+                .disabled{
+                    input{background-color: $BorderColor !important; pointer-events: none; }      
+                }
+                .result-item{
+                    display: flex;
+                    flex-direction: $FdirectionRow;
+                    align-items: center;
+                    padding: 10px 35px;
+                    label{
+                        margin-#{$Direction-Opposite}: 15px;
+                        font-weight: $FW-Bold;
+                        color:$MainColor;
+                        margin-bottom: 0px;
+                        width: 110px;
+                    }
+                    input{
+                        padding: 10px 15px;
+                    }
+                    p{
+                        margin-bottom: 3px;
+                    }
+                }
+                .main-label{
+                    padding-right: 0px;
+                    width: 130px;
+                    label{
+                        margin-top: 25px;
+                        margin-right: 0px;    
+                    }
+                }
+            }
+        }
+        .result-footer{
+            display: flex;
+            flex-direction: $FdirectionRow;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            a{
+                padding: 5px 45px;
+                margin: 15px 20px;
+            }
+        } */
+    }
+
+
+
+    #Patient{
+      .back{background:$BorderColor !important; border-color:$BorderColor !important; color:$MainColorLight !important; pointer-events: none; }
+    }
+  }
+}
+
+@media screen and(max-width:767px){
+    .form-controllers{
+        a{margin-bottom: 10px;}
+    }
+}
+
+@media screen and (max-width:553px){
+    .g-wizard {
+        .g-wizard-header{ 
+            .nav-pills{
+                .nav-item {
+                    .v-border{ 
+                        width: 3vw;
+                    }
+                }
+            }
+        }
+    }
+}

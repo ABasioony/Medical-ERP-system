@@ -1,0 +1,989 @@
+﻿<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>G7 Medical Pro </title>
+        <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png"/>
+
+        <!------------------- Styles : Begin ---------------------->
+        <link href="../Content/css/ag-grid.css" rel="stylesheet">
+        <link href="../Content/css/ag-theme-balham.css" rel="stylesheet">
+        <link href="../Content/css/styles.css" rel="stylesheet">
+        <link href="../Content/css/datatables.min.css" rel="stylesheet">
+        <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+        <link href="../Content/css/jquery-ui.min.css" rel="stylesheet"/>
+        <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+        <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="../Content/css/Tree/style.min.css" />
+
+        <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+        <link href="../Content/css/animate.min.css" rel="stylesheet" />
+        <link href="../Content/css/select2.min.css" rel="stylesheet" />
+        <link href="../Content/css/flags.css" rel="stylesheet" />
+        <!------------------- Styles : End ---------------------->
+
+        <!------------------- Scripts : Begin ---------------------->
+        <script src="../Content/js/jquery-3.2.1.min.js"></script>
+        <script src="../Content/js/jquery.custom-file-input.js"></script>
+        <script src="../Content/js/datatables.min.js"></script>
+        <script src="../Content/js/popper.min.js"></script>
+        <script src="../Content/js/jquery-ui.min.js"></script>
+
+        <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+        <script src="../Content/js/bootstrap.min.js"></script>
+        <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+        <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+        <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+        <script src="../Content/js/jquery.validationEngine.js"></script>
+        <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+        <script src="../Content/js/select2.min.js"></script>
+        <script src="../Content/js/jquery.flagstrap.min.js"></script>
+        <script src="../Content/js/downtime.js"></script>
+        <script src="../Content/js/loadingoverlay.min.js"></script>
+
+        <script src="../Content/js/ResizeSensor.js"></script>
+        <script src="../Content/js/ElementQueries.js"></script>
+
+        <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+        <script src="../Content/js/jstree.min.js"></script>
+
+        <script src="../Content/js/G7/DataTableConfig.js"></script>
+        <script src="../Content/js/G7/functions.js"></script>
+        <script src="../Content/js/G7/scripts.js"></script> 
+        <script src="../Content/js/G7/Scripts_Html.js"></script>
+        <!------------------- Scripts : End ---------------------->
+    </head>
+    <body>
+        <div class="main-container container-fluid">
+            <!------------------- Sidebar : Begin ---------------------->
+            <aside class="sidebar">
+                    <div class="sidebar-bg"></div>
+                    <div class="logo-div">
+                        <div class="logo">
+                            <img src="../Content/Images/prog-logo.png" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="list-div">
+                        <ul class="sidebar-list">
+                            <!-- Index : Begin -->
+                            <li class="list-item " data-nodeid="5" data-parent="0">
+                                <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                            </li>
+                            <!-- Index : end -->
+                            <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                                <a class="fa fa-calculator">النظام المحاسبى</a>
+                            </li>
+                            <li class="list-item node-item" data-nodeid="2" data-parent="0">
+                                <a class="fi-cash flaticon-profit">ادارة النقدية</a>
+                            </li>
+                            <!-- Financial Module : Begin -->
+                            <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                                <div class="sub-list-header">
+                                    <h2>إسم المؤسسة</h2>
+                                </div>
+                                <ul class="sub-list-inner">
+                                    <h3>النظام المحاسبى</h3>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-bank-building leaf-node" href="./Definitions-CostCentersDimentions-index.html">
+                                                    أبعاد مراكز التكلفة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-contract-1 leaf-node" href="./Definitions-FinancialStatments-index.html">الحسابات
+                                                    الختامية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-payment-day leaf-node" href="./Definitions-AccountingPeriods-index.html">الفترات
+                                                    المحاسبية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-statistics leaf-node" href="./Definitions-AnalyticalJournalsTypes-index.html">أنواع
+                                                    اليوميات التحليلية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-mortgage-loan leaf-node" href="./Definitions_CostCentersTree.html">مراكز
+                                                    التكلفة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-analytics-1 leaf-node" href="./Definitions-AuditRatings.html">تصنيفات
+                                                    الحسابات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-business-affiliate-network leaf-node" href="./Definitions-ChartOfAccounts.html">شجرة
+                                                    الحسابات</a>
+                                            </li>
+        
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fa fa-exchange node">الحركات</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-notepad leaf-node" href="./Transaction-OpeningJornalEntry-index.html">القيد
+                                                    الافتتاحى</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-analytics leaf-node" href="./Transactions-DailyJournals_index.html">قيود
+                                                    اليوميه العامه</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-task-complete leaf-node" href="./Transactions-ClosingJornalEntry-index.html">قيود
+                                                    الاقفال</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-clipboard node">التقارير</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="./Reports-General ledger account-form.html">حساب
+                                                    الاستاذ العام</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-scale-1 leaf-node" href="./Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان
+                                                    مراجعة الاستاذ العام</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-shopping-list leaf-node" href="./Reports-FinancialMenus.html">القوائم
+                                                    الماليه للحسابات الختاميه</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                </ul>
+                            </li>
+                            <!-- Financial Module : End -->
+                            <!-- Financial Module - Cash Management : Begin -->
+                            <li class="sub-list-l" data-nodeid="6" data-parent="2">
+                                <div class="sub-list-header">
+                                    <h2>إسم المؤسسة</h2>
+                                </div>
+                                <ul class="sub-list-inner">
+                                    <h3>النظام المحاسبى</h3>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-safebox leaf-node" href="../FinancialModule_CashManagement/Definitions-ListOfSafesAndBanks.html">
+                                                    قائمة الخزائن و البنوك</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet leaf-node" href="../FinancialModule_CashManagement/Definitions-ListOfIncomesAndExpenses.html">الايرادات و المصروفات المتنوعة</a>
+                                            </li>
+                                               
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fa fa-exchange node">الحركات</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-money-bag leaf-node" href="../FinancialModule_CashManagement/Transactions-OpenningAccounts-Index.html">الارصدة الافتتاحية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-agreement leaf-node" href="../FinancialModule_CashManagement/Transactions-DailyExpenses-index.html">يومية المصروفات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-money leaf-node" href="../FinancialModule_CashManagement/Transactions-CashAndPaymentStatus-Index.html">حالة اوراق القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-pay leaf-node" href="../FinancialModule_CashManagement/Transactions-BillsOfExchange-index.html">سندات الصرف</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet-1 leaf-node" href="../FinancialModule_CashManagement/Transactions-Receipts-index.html">سندات القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-signing-the-contract  leaf-node" href="../FinancialModule_CashManagement/Transactions-CheckReview-index.html">متابعة الشيكات</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-parent="0">
+                                        <a class="fi flaticon-clipboard node">التقارير</a>
+                                        <ul class="collapse even">
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-money leaf-node" href="../FinancialModule_CashManagement/Reports-CashFlow.html">السيولة النقدية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-bitcoin leaf-node" href="../FinancialModule_CashManagement/Reports-CashStatus.html">حالة الاوراق المالية</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-send leaf-node" href="../FinancialModule_CashManagement/Reports-ChequeStatus.html">حالة الشيكات</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-pay leaf-node" href="../FinancialModule_CashManagement/Reports-BillsOfExchange.html">سندات الصرف</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-wallet-1 leaf-node" href="../FinancialModule_CashManagement/Reports-Receipts.html">سندات القبض</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-mortgage-loan leaf-node" href="../FinancialModule_CashManagement/Reports-BankStatement.html">كشف حساب البنك و الخزينة</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi flaticon-scale-1 leaf-node" href="../FinancialModule_CashManagement/Reports-CheckBalanceOfBanks.html">ميزان مراجعة الخزائن و البنوك</a>
+                                            </li>
+                                            <li data-parent="1">
+                                                <a class="fi-cash flaticon-bank leaf-node" href="../FinancialModule_CashManagement/Reports-MaxMinBankCredit.html">مقارنة ارصدة الخزائن و البنوك</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                </ul>
+                            </li>
+                            <!-- Financial Module - Cash Management : End -->
+                        </ul>
+                    </div>
+                </aside>
+            <!------------------- Sidebar : End ------------------------>     
+    
+            <!----------------- Main Header : Begin -------------------->
+            <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+                <div class="container-fluid">
+                    <div class="row no-gutters header-container">
+                        <!-- Header Left -->
+                        <div class="header-left col-xl col-12">
+                            <div class="company-logo row no-gutters">
+                                <!-- <img src="../Content/Images/fav.png" /> -->
+                                <h3>G7 Financial Pro</h3>
+                            </div>
+                            <ul class="nav">
+                                <li class="devider"></li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                    <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="الروابط المختصرة">
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">الروابط المختصرة</h6>
+                                        <div class="dropdown-body">
+                                            <div class="col-4 tool-link">
+                                                <a class="row success" title="شجرة الحسابات">
+                                                    <span class="fi flaticon-business-affiliate-network"></span>
+                                                    <p>شجرة الحسابات</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row warning" title="مراكز التكلفه">
+                                                    <span class="fi flaticon-mortgage-loan"></span>
+                                                    <p>مراكز التكلفه</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row danger" title="قيود الإقفال">
+                                                    <span class="fi flaticon-task-complete "></span>
+                                                    <p>قيود الإقفال</p>
+                                                </a>
+                                            </div>
+                                            <div class="col-4 tool-link">
+                                                <a class="row default" title="القيد الإفتتاحى">
+                                                    <span class="fi flaticon-notepad"></span>
+                                                    <p>القيد الإفتتاحى</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">إضافة المزيد</a>
+                                    </div>
+                                </li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-globe" title="تغيير اللغة"></a>
+                                </li>
+                                <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                    <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <span class="badge badge-pill">4</span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">التنبيهات</h6>
+                                        <div class="from-group col-12 search-input">
+                                            <input class="form-control" type="text" placeholder="تصفية الإشعارات" />
+                                            <span class="fa fa-search"></span>
+                                        </div>
+                                        <ul class="dropdown-body notifications" id="notifydata">
+                                            <li class="dropdown-item">
+                                                <a class="warning">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 1</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 6 دقائق</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="danger">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 2</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 30 دقيقة</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="success">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنيه 3</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 10 دقائق</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <a class="default">
+                                                    <div class="row no-gutters dropdown-item-container">
+                                                        <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                                        <div class="col row no-gutters dropdown-item-container-content">
+                                                            <h4 class="dropdown-item-container-header">تنبيه 4</h4>
+                                                            <p>تفاصيل التنبيه</p>
+                                                            <span>من 30 دقيقة</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-footer" href="../Notifications.html">عرض المزيد</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- <ul class="nav user-tools col">
+                        <li class="devider"></li>
+                        <li class="icon-link normal-link icon-sqr">
+                            <a class="fa fa-user-plus" title="Add New Patient"></a>
+                        </li>
+                        <li class="icon-link normal-link form-div icon-sqr row col">
+                            <span class="fa fa-search"></span>
+                            <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                        </li>
+                    </ul> -->
+                            <div class="row no-gutters header-data col">
+                                <div class="header-data-item col-12 row no-gutters">
+                                    <label class="label">اسم الشركة</label>
+                                    <label class="data">اسم المؤسسة</label>
+                                </div>
+                                <div class="header-data-item col-12 row no-gutters">
+                                    <label class="label">العام المالي</label>
+                                    <label class="data">2018/2019</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Header Right -->
+                        <div class="header-right">
+                            <ul class="nav">
+                                <li class="date-time">
+                                    <p>21 March 2018</p>
+                                    <p class="night fa fa-moon-o">11:57 PM</p>
+                                    <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                                </li>
+                                <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                    <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <div class="user-img d-inline-block align-middle">
+                                            <img src="../Content/Images/img.jpg" alt="user">
+                                        </div>
+                                        <div class="user-data d-inline-block align-middle">
+                                            <p class="m-0">مرحبا</p>
+                                            <h4 class="m-0">M.Khalifa</h4>
+                                        </div>
+                                        <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                    </a>
+                                    <div class="dropdown-menu p-0 m-0 border-top-0">
+                                        <span class="top-arrow fa fa-caret-up"></span>
+                                        <h6 class="dropdown-header">Hot Tools</h6>
+                                        <div class="dropdown-body">
+
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الملف الشخصى</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>الإعدادات</p>
+                                                        <span class="badge badge-pill">جديد</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>المساعدة</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="dropdown-item">
+                                                <div class="row no-gutters dropdown-item-container">
+                                                    <div class="col row no-gutters dropdown-item-container-content">
+                                                        <p>تسجيل خروج</p>
+                                                        <span class="fa fa-sign-out icon"></span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <!-- <a class="dropdown-footer" href="Login.html">
+                                    <div class="row no-gutters">
+                                        <p class="col">Log Out</p>
+                                        <span class="fa fa-sign-out"></span>
+                                    </div>
+                                </a> -->
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!----------------- Main Header : End -------------------->
+
+            <!--------------- Page Container : Begin ------------------>
+            <div class="page-container row no-gutters col position-relative" id="pageContainer">
+                <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                    <form class="row no-gutters data-container col-12 position-relative">
+                        <!-- Data Container Header -->
+                        <div class="data-container-header row no-gutters col-12 printed">
+                            <div class="section-header-main col-md col-12">
+                                <img src="../Content/Images/img.png">
+                                <div class="company-data">
+                                    <h3>G7 Software House</h3>
+                                    <p>23 Horia Street , Alexandria , Egypt</p>
+                                    <p>01100000000</p>
+                                </div>
+                            </div>
+                            <div class="section-header-sub">
+                                <h3>Clinics</h3>
+                                <p class="col-12">
+                                    <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="data-container-header row no-gutters col-12">
+                            <div class="section-header-main col-md col-12">
+                                <span class="fa fa-folder-open"></span>
+                                <div class="data d-inline-block align-middle">
+                                    <h4 class="m-0">تصنيفات الحسابات</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">الرئيسية</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">تصنيفات الحسابات</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="section-header-tools">
+                                <div class="data-container-body-header-controls row no-gutters">
+                                    <div class="row no-gutters controls-section br">
+                                        <a class="gbtn gbtn-success fa fa-check" title="حفظ"><span class="title">حفظ</span></a>
+                                        <a class="gbtn gbtn form-clear-btn fa fa-eraser" title="مسح"><span class="title">مسح</span></a>
+                                        <a class="gbtn gbtn-danger fa fa-times" title="إلغاء"><span class="title">إلغاء</span></a>
+                                        <a class="gbtn gbtn-danger fa fa-reply-all " title="خروج"><span class="title">خروج</span></a>
+                                    </div>
+                                    <div class="controls-section row no-gutters ">
+                                        <a class="gbtn gbtn-success fa fa-download icon-gbtn" title="إدراج ملف"><span class="title">إدراج ملف</span></a>
+                                        <a class="gbtn gbtn-default fa fa-upload icon-gbtn" title="إستخراج ملف"><span class="title">إستخراج ملف</span></a>
+                                        <a class="gbtn gbtn-dark-o fa fa-file-text icon-gbtn" onclick="handelLogHistoryBtn()" title="log"></a>
+                                        <a class="gbtn gbtn-dark fa fa-print icon-gbtn" title="طباعة"><span class="title">طباعة</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Data Container Body -->
+                        <div class="data-container-body row no-gutters col-12 ">
+                            <!-- Data Container Body Content-->
+                            <div class="col-12 row no-gutters data-container-body-content">
+                                <div class="col-12 row no-gutters data-container-body-content-main split-container">
+                                    <div class="col-xl-4 col-12 side">
+                                        <div class="data-container-body-content-main-body row no-gutters no-footer">
+                                            <div class="data-desc-header row no-gutters col-12">
+                                                <div class="data-desc-header-content row no-gutters col-12">
+                                                    <div class="main-data col row no-gutters">
+                                                        <h4>شجرة الحسابات</h4>
+                                                        
+                                                        <div class="controls-section row no-gutters ">
+                                                                <a class="fa fa-angle-double-right icon-gbtn" title="الأخير"></a>
+                                                                <a class="fa fa-angle-right  icon-gbtn" title="التالى"></a>
+                                                                <a class="fa fa-angle-left  icon-gbtn" title="السابق"></a>
+                                                                <a class="fa fa-angle-double-left  icon-gbtn" title="الاول"></a>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 data-desc-body">
+                                                <div class="data-desc-body-container row no-gutters col-12">
+                                                    <div class="data-desc-body-container-body col-12">
+                                                        <div class="form-group col-md col-12 pl-0 pr-0">
+                                                            <input type="text" class="form-control" name="BeginDate" id="BeginDate" placeholder="البحث بالكود و الأسم">
+                                                            <span class="fa fa-search search-icon"></span>
+                                                        </div>
+                                                        <div class="col-12 row no-gutters tree-tools">
+                                                            <a class="fa fa-plus r-link" title="إضافة جديد">إضافة جديد</a>
+                                                            <a class="fa fa-sitemap r-link" title="إضافة جذر">إضافة جذر</a>
+                                                        </div>
+                                                        <div id="jstree_demo_div" class="tree-container">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-8 col-12 main">
+                                        <div class="data-container-body-content-main-body search-container row no-gutters no-footer auto-h search-hide">
+                                            <div class="search-container-div col-12">
+                                                <div class="data-desc-header row no-gutters col-12">
+                                                    <div class="data-desc-header-content row no-gutters col-12 ">
+                                                        <div class="main-data col">
+                                                            
+                                                            <div class="form-group col-md col-12 ">
+                                                                <input type="text" class="form-control" name="BeginDate" id="BeginDate" placeholder="البحث بكود التصنيف">
+                                                            </div>
+                                                            <div class="form-group col-md col-12 ">
+                                                                <input type="text" class="form-control" name="EndDate" id="EndDate" placeholder=" البحث بإسم التصنيف">
+                                                            </div>
+                                                            <button type="button" class="gbtn gbtn-default">بحث</button>
+                                                        </div>
+                                                    </div>                                            
+                                                </div>   
+                                            </div>
+                                        </div>
+                                        <div class="data-container-body-content-main-body row no-gutters no-footer tree-form">
+                                            <div class="data-desc-header row no-gutters col-12">
+                                                <div class="data-desc-header-content row no-gutters col-12 ">
+                                                    <div class="main-data col">
+                                                        <h4>بيانات التصنيف</h4>  
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                            <div class="col-12 data-desc-body ">
+                                                <div class="data-desc-body-container row no-gutters col-12">
+                                                    <div class="data-desc-body-container-body col-12 pt-0">
+                                                        <div class="form-group radio-group col-3">
+                                                                <label>نوع التصنيف</label>
+                                                                <div class="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" id="customRadioInline1" name="CategoryType" class="custom-control-input" checked>
+                                                                    <label class="custom-control-label" for="customRadioInline1">عام</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" id="customRadioInline2" name="CategoryType" class="custom-control-input">
+                                                                    <label class="custom-control-label" for="customRadioInline2">إدخال</label>
+                                                                    </div>
+                                                        </div>
+                                                        <div class="form-group radio-group col-3">
+                                                            <label> طبيعة التصنيف</label>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline3" name="CategoryField" class="custom-control-input" checked>
+                                                                <label class="custom-control-label" for="customRadioInline3">مدين</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline4" name="CategoryField" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline4">دائن</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group radio-group col-6">
+                                                            <label>التوجيه المحاسبى</label>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline5" name="radio3" class="custom-control-input" checked>
+                                                                <label class="custom-control-label" for="customRadioInline5">أصول</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline6" name="radio3" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline6">خصوم</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline7" name="radio3" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline7">مصروفات</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline8" name="radio3" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline8">ايرادات</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row no-gutters col-md-6 col-12 control-inline required">
+                                                            <label>كود التصنيف</label>
+                                                            <div class="row no-gutters col-md-6 col-12 ">
+                                                                <input type="text" class="form-control" name="CategoryCode" id="CategoryCode" placeholder="كود التصنيف">
+                                                            </div>
+                                                            <div class=" row no-gutters col-md-6 col-12">
+                                                                <input type="text" class="form-control" name="CategoryCode" id="CategoryCode" placeholder="كود الأب" disabled>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox col-4">
+                                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                            <label class="custom-control-label" for="customCheck1">تعيين التصنيف كجذر</label>
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-12 required">
+                                                            <label>إسم التصنيف باللغة العربية</label>
+                                                            <input type="text" class="form-control fdatepickere" name="BeginDate" id="BeginDate" placeholder="الإسم باللغة العربية">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-12 required">
+                                                                <label>إسم التصنيف باللغة الإنجليزية</label>
+                                                            <input type="text" class="form-control fdatepickere" name="EndDate" id="EndDate" placeholder="الإسم باللغة الإنجليزية">
+                                                        </div>
+                                                        <div class="form-group row no-gutters col-md-6 col-12 control-inline">
+                                                            <label>الكود الرئيسى</label> 
+                                                            <div class=" row no-gutters col-md-4 col-12">
+                                                                <input type="text" class="form-control" name="CategoryCode" id="CategoryCode" placeholder="الكود الرئيسى" disabled>
+                                                            </div>                                       
+                                                            <div class="row no-gutters col-md-8 col-12 ">
+                                                                <input type="text" class="form-control" name="CategoryName" id="CategoryName" placeholder="إسم التصنيف الرئيسى" disabled>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="form-group col-md-4 col-12 ">
+                                                            <label>مستوى التصنيف</label>
+                                                            <input type="text" class="form-control fdatepickere" name="EndDate" id="EndDate" placeholder="مستوى التصنيف" disabled>
+                                                        </div>
+                                                        <div class="form-group radio-group col-md-8 col-12 mb-4">
+                                                            <label>عدد التصنيفات التى تندرج أسفله</label>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline9" name="NoChildren" class="custom-control-input" checked>
+                                                                <label class="custom-control-label" for="customRadioInline9">أقل من 10</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline10" name="NoChildren" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline10">أقل من 100</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline11" name="NoChildren" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline11">أقل من 1000</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline12" name="NoChildren" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline12">أقل من 10000</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+             <!-----------|Log Modal : Begin -->
+    <div class="modal fade g7-modal-n form-modal g7-account-modal" tabindex="-1" role="dialog" data-source="Log-modal"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="form-modal">
+    <div class="modal-dialog modal-dialog-centered" id="FormBody">
+        <form class="modal-content">
+            <div class="modal-indecator"></div>
+            <div class="modal-header main-data">
+                <h5 class="modal-title" id="myModalLabel"><span class="fi flaticon-parchment"></span>قائمة الاجراءات</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body row no-gutters data-container-body-content-main-body body-table">
+                <div class="col-12 data-desc-body">
+                    <div class="col-12 data-desc-body-container">
+                        <div class="data-desc-body-container-body">
+                                <div id="myGridLog" class="ag-theme-balham grid no-side col-12"></div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="gbtn-o gbtn-danger-o " data-dismiss="modal">إلغاء</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!--------------- Log Modal :End ---------------->
+            <!--------------- Page Container : End ------------------>
+        </div>
+    </body>
+    <script>
+        function toogleSearch(e){
+            console.log(e.target);
+            if ($('.search-container').hasClass('search-hide')){
+                $('.search-container').addClass('search-show');$('.search-container').removeClass('search-hide');
+                $(".tree-form").addClass("after-search");
+            }else{
+                $('.search-container').addClass('search-hide');$('.search-container').removeClass('search-show');
+                setTimeout(function(){ $(".tree-form").removeClass("after-search"); }, 1500);
+                
+            }
+
+        }
+    /* var list=[
+            {Text:"General Settings", Icon : 'fa-wrench', Link:'#', hasNodes: true, Parent: '0', NodeId: '01'},
+            {Text:"Reception", Icon : 'fa-address-book-o', Link:'#', hasNodes: true, Parent: '01', NodeId: '02'},
+            {Text:"Accounting", Icon : 'fa-calculator', Link:'#', hasNodes: true, Parent: '0', NodeId: '03'},
+            {Text:"Clinics", Icon : 'fa-h-square', Link:'#', hasNodes: false, Parent: '0', NodeId: '04'},
+            ]; */
+
+    /* var list=[
+        {Text:"Assets", Icon:"fa-folder", hasChildren: true , parentId: 0 , NodeId: 01},
+            {Text:"Fixed Assets *", Icon:"fa-folder", hasChildren: true , parentId: 01 , NodeId: 0101},
+                {Text:"Fixed Assets", Icon:"fa-folder", hasChildren: true , parentId: 0101 , NodeId: 010101},
+                    {Text:"Lands", Icon:"fa-file", hasChildren: false , parentId: 010101 , NodeId: 01010101},
+                    {Text:"Property", Icon:"fa-file", hasChildren: false , parentId: 010101 , NodeId: 01010102},
+                    {Text:"Machines", Icon:"fa-file", hasChildren: false , parentId: 010101 , NodeId: 010101013},
+                    {Text:"Equipment", Icon:"fa-file", hasChildren: false , parentId: 010101 , NodeId: 01010104},
+                {Text:"Accumulated depreciation", Icon:"fa-folder", hasChildren: true , parentId: 0101 , NodeId: 010102},
+                    {Text:"Property Accumulated depreciation", Icon:"fa-file", hasChildren: false , parentId: 010102 , NodeId: 01010201},
+            {Text:"Current assets", Icon:"fa-folder", hasChildren: true , parentId: 01 , NodeId: 0102},
+                {Text:"Cash and cash equivalents", Icon:"fa-folder", hasChildren: true , parentId: 0102 , NodeId: 010201},
+                    {Text:"Cash On Hand", Icon:"fa-file", hasChildren: false , parentId: 010201, NodeId: 01020101},
+        {Text:"Equity And liabilities *", Icon:"fa-folder", hasChildren: true , parentId: 0 , NodeId: 02},
+            {Text:"Equity And liabilities", Icon:"fa-file", hasChildren: false , parentId: 02 , NodeId: 0201},
+        {Text:"Leaf Node", Icon:"fa-file", hasChildren: false , parentId: 0 , NodeId: 03},
+    ]; */
+    var list=[
+        {"text":"Assets",'icon':"fa-folder", hasChildren: true , 'parent': '#' , 'id': 01},
+            {"text":"Fixed Assets *", 'icon':"fa-folder", hasChildren: true , 'parent': 01 , 'id': 0101},
+                {"text":"Fixed Assets", 'icon':"fa-folder", hasChildren: true , 'parent': 0101 , 'id': 010101},
+                    {"text":"Lands", 'icon':"fa-file", hasChildren: false , 'parent': 010101 , 'id': 01010101},
+                    {"text":"Property", 'icon':"fa-file", hasChildren: false , 'parent': 010101 , 'id': 01010102},
+                    {"text":"Machines", 'icon':"fa-file", hasChildren: false , 'parent': 010101 , 'id': 010101013},
+                    {"text":"Equipment", 'icon':"fa-file", hasChildren: false , 'parent': 010101 , 'id': 01010104},
+                {"text":"Accumulated depreciation", 'icon':"fa-folder", hasChildren: true , 'parent': 0101 , 'id': 010102},
+                    {"text":"Property Accumulated depreciation", 'icon':"fa-file", hasChildren: false , 'parent': 010102 , 'id': 01010201},
+            {"text":"Current assets", 'icon':"fa-folder", hasChildren: true , 'parent': 01 , 'id': 0102},
+                {"text":"Cash and cash equivalents", 'icon':"fa-folder", hasChildren: true , 'parent': 0102 , 'id': 010201},
+                    {"text":"Cash On Hand", 'icon':"fa-file", hasChildren: false , 'parent': 010201, 'id': 01020101},
+        {"text":"Equity And liabilities *", 'icon':"fa-folder", hasChildren: true , 'parent': '#' , 'id': 02},
+            {"text":"Equity And liabilities", 'icon':"fa-file", hasChildren: false , 'parent': 02 , 'id': 0201},
+        {"text":"Leaf Node", 'icon':"fa-file", hasChildren: false , 'parent': '#' , id: 03, },
+
+    ];
+    $(document).ready(function(){
+        //renderIcons(list,"#tree",0);
+        $(function () { $('#jstree_demo_div').jstree(
+            {
+                "core" : {
+                    'data' : list,
+                    "check_callback" : true,
+                    animation : true,
+                    themes: {
+                        name: 'default',
+                        icons: true,
+                        responsive: true,
+                        dots: true,
+                        ellipsis:true,
+                    },  
+                },
+                plugins: 
+                    ["contextmenu" , "dnd", "search","state", "types", "wholerow"] , contextmenu:{
+                        items:{
+                            addItem: {
+                                label: "أضف جديد",
+                                action: function () {}
+                            },
+                            editItem: { 
+                                label: "تعديل ",
+                                action: function () {}
+                            },
+                            deleteItem: { 
+                                label: "حذف",
+                                action: function () {}
+                            }
+                        }
+                    },"search": {
+                        "case_insensitive": true,
+                        "show_only_matches" : true
+                    },
+
+            }); 
+        });
+    });
+    function renderIcons(list,selector,parentId){
+        
+        $(selector).empty();
+
+        $.each(list, function (index, value) {
+            if(value.parentId == 0 && value.hasChildren == true) {
+                    $(selector).append(
+                        /* "<li class='list-item' data-hasChildren='"+value.hasChildren+"' data-parent='"+value.parentId+"' data-nodeid='"+value.NodeId+"' >"+
+                            "<a href='#' class='explorer-icon fa "+value.Icon+"'  data-text='"+value.Text+"' title='"+value.Text+"'><p>"+value.Text+"</p></a>"+
+                            "<ul class='Sublist_"+value.NodeId+"' data-source='"+value.NodeId+"'"+                                
+                            "</ul>"+
+                        "</li>" */
+                        renderNode(value)
+                    ); 
+            }else if(value.parentId == 0 && value.hasChildren == false){
+                $(selector).append(
+                /*  "<li class='list-item' data-hasChildren='"+value.hasChildren+"' data-parent='"+value.parentId+"' data-nodeid='"+value.NodeId+"' >"+
+                    "<a href='#' class='explorer-icon fa "+value.Icon+"'  data-text='"+value.Text+"' title='"+value.Text+"'><p>"+value.Text+"</p></a>"+
+                "</li>" */
+                renderLeaf(value)
+                ); 
+            }else if(value.parentId != 0 && value.hasChildren == true){
+                $(selector).find("ul[data-source ='"+value.parentId+"']").append(
+                    renderNode(value)
+                )
+            }else if(value.parentId != 0 && value.hasChildren == false){
+                $(selector).find("ul[data-source ='"+value.parentId+"']").append(
+                    renderLeaf(value)
+                )
+            }
+            /* if(value)
+            $(selector).append(
+                "<li class='list-item' data-hasChildren='"+value.hasChildren+"' data-parent='"+value.parentId+"' data-nodeid='"+value.NodeId+"' >"+
+                    "<a href='#' class='explorer-icon fa "+value.Icon+"'  data-text='"+value.Text+"' title='"+value.Text+"'><p>"+value.Text+"</p></a>"+
+                "</li>"
+            ); */
+        });
+
+    }
+    function renderNode(obj){
+        return" <li class='list-tree-item' data-hasChildren='"+obj.hasChildren+"' data-parent='"+obj.parentId+"' data-nodeid='"+obj.NodeId+"' >"+
+                    "<a href='#' class='list-tree-item-a  fa "+obj.Icon+"'  data-text='"+obj.Text+"' title='"+obj.Text+"' onclick='handleChildrenStatus(this)'>"+obj.Text+"</a>"+
+                    "<ul class='collapse  list-tree-item-sub-list-"+obj.NodeId+"' data- data-source='"+obj.NodeId+"'"+                              
+                    "</ul>"+
+                "</li>";
+    }
+    function renderLeaf(obj){
+        return "<li class='list-tree-item' data-hasChildren='"+obj.hasChildren+"' data-parent='"+obj.parentId+"' data-nodeid='"+obj.NodeId+"' >"+
+                    "<a href='#' class='list-tree-item-a fa "+obj.Icon+"'  data-text='"+obj.Text+"' title='"+obj.Text+"' onclick='handleLeafNode(this)'>"+obj.Text+"</a>"+
+                "</li>"
+    }
+
+    function handleChildrenStatus(obj){
+        //debugger;
+        console.log(obj);
+        let parent = $(obj.closest(".list-tree-item")).attr("data-nodeid");
+        let parentlistItem = $(obj.closest(".list-tree-item")).find(".list-tree-item-sub-list-"+ parent);
+
+        if(parentlistItem.hasClass("show")){
+            $(obj).addClass("fa-folder");
+            $(obj).removeClass("fa-folder-open")
+        }else{
+            $(obj).addClass("fa-folder-open");
+            $(obj).removeClass("fa-folder");   
+        }
+        parentlistItem.collapse("toggle");
+        
+    } 
+    function handleLeafNode(obj){
+        var  leafNodes = $('.list-tree li[data-hasChildren="false"] a');
+        console.log(leafNodes);
+        $('.list-tree li[data-hasChildren="false"]').removeClass("selected");
+        $('.list-tree li[data-hasChildren="false"] a').removeClass("fa-file-o");
+        $('.list-tree li[data-hasChildren="false"] a').addClass("fa-file");
+
+        $(obj.closest('li[data-hasChildren="false"]')).addClass("selected");
+        $(obj.closest('li[data-hasChildren="false"] a')).removeClass("fa-file");
+        $(obj.closest('li[data-hasChildren="false"] a')).addClass("fa-file-o");
+    }
+    
+    </script>
+    <script>
+        var columnsLog = [
+            {
+                headerName: 'م',
+                field: "Number",
+                enableRowGroup: true,
+                width:100
+            },
+            {
+                headerName: 'تاريخ',
+                field: "date",
+                enableRowGroup: true,
+                width:150
+            },
+            {
+                headerName: 'الوقت',
+                field: "Time",
+                enableRowGroup: true,
+                width:130
+            },
+            {
+                headerName: 'المستخدم',
+                field: "Name",
+                enableRowGroup: true,
+                width:195
+            },
+            {
+                headerName: 'الاجراءات',
+                field: "Action",
+                enableRowGroup: true,
+                width:120
+            },
+            
+        ];
+        var dataLog = [
+            {
+                Number: "1",
+                Date: '12/12/1212',
+                Time: '12:12',
+                Name: 'Ahmed',
+                Action: "معتمد"
+            }
+        ];
+        var gridOptionsLog = {
+            columnDefs: columnsLog, //Define Columns
+            rowData: dataLog, //Define Rows
+            rowDragManaged: true, //Enable Drag
+            animateRows: true, //Enable Animation
+            localeText: setLocalization("ar"), //Set Table Language 
+            sideBar: false, //Show SideBar             
+            pagination: false,
+            enableRtl: true,
+            defaultColDef: {
+                editable: false
+            },
+            suppressDragLeaveHidesColumns: true,
+            suppressMakeColumnVisibleAfterUnGroup: true,
+            rowGroupPanelShow: 'always',
+            onGridReady: function (params) {
+                params.api.sizeColumnsToFit();
+            },
+            onRowEditingStarted: function (event) {
+                console.log('never called - not doing row editing');
+            },
+            onRowEditingStopped: function (event) {
+                console.log('never called - not doing row editing');
+            },
+            onCellEditingStarted: function (event) {
+                console.log('cellEditingStarted');
+                /* EditableCol.push(event);
+                console.log(EditableCol); */
+                EditableCol = event;
+            },
+            onCellEditingStopped: function (event) {
+                console.log('cellEditingStarted');
+            },
+            onCellFocused: function (event) {
+                //debugger;
+                FocustableCol = event;
+            }
+        }
+        var eGridDivLog = document.querySelector('#myGridLog');
+        var tableLog = new agGrid.Grid(eGridDivLog, gridOptionsLog);
+    </script>
+
+    <script>
+        function handelLogHistoryBtn(){
+            viewStaticModal('details-modal', 'lg', 'Log-modal');
+        }
+    
+    </script>
+</html>
+
+
+
+

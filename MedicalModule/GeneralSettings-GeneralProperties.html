@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>G7 Medical Pro </title>
+    <link rel="shortcut icon" type="image/ico" href="../Content/Images/fav.png" />
+
+    <!------------------- Styles : Begin ---------------------->
+    <link href="../Content/css/ag-grid.css" rel="stylesheet">
+    <link href="../Content/css/ag-theme-balham.css" rel="stylesheet">
+    <link href="../Content/css/styles.css" rel="stylesheet">
+    <link href="../Content/css/datatables.min.css" rel="stylesheet">
+    <link href="../Content/css/validationEngine.jquery.css" rel="stylesheet" />
+    <link href="../Content/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="../Content/css/bootstrap-clockpicker.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../Content/css/Tree/style.min.css" />
+
+    <link href="../Content/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+
+    <link href="../Content/css/animate.min.css" rel="stylesheet" />
+    <link href="../Content/css/select2.min.css" rel="stylesheet" />
+    <link href="../Content/css/flags.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
+    <!------------------- Styles : End ---------------------->
+
+    <!------------------- Scripts : Begin ---------------------->
+    <script src="../Content/js/jquery-3.2.1.min.js"></script>
+    <script src="../Content/js/jquery.custom-file-input.js"></script>
+    <script src="../Content/js/datatables.min.js"></script>
+    <script src="../Content/js/popper.min.js"></script>
+    <script src="../Content/js/jquery-ui.min.js"></script>
+
+    <script src="../Content/js/jquery.autocomplete.min.js"></script>
+
+    <script src="../Content/js/bootstrap.min.js"></script>
+    <script src="../Content/js/bootstrap-clockpicker.min.js"></script>
+    <!-- <script src="js/jquery.validationEngine-en.js"></script> -->
+    <script src="../Content/js/jquery.validationEngine-ar.js"></script>
+    <script src="../Content/js/jquery.validationEngine.js"></script>
+    <script src="../Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="../Content/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="../Content/js/select2.min.js"></script>
+    <script src="../Content/js/jquery.flagstrap.min.js"></script>
+    <script src="../Content/js/downtime.js"></script>
+    <script src="../Content/js/loadingoverlay.min.js"></script>
+
+    <script src="../Content/js/ResizeSensor.js"></script>
+    <script src="../Content/js/ElementQueries.js"></script>
+
+    <script src="../Content/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="../Content/js/ag-grid-enterprise.min.noStyle.js"></script>
+
+    <script src="../Content/js/jstree.min.js"></script>
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
+    <script src="../Content/js/G7/DataTableConfig.js"></script>
+    <script src="../Content/js/G7/functions.js"></script>
+    <script src="../Content/js/G7/scripts.js"></script>
+    <script src="../Content/js/G7/Scripts_Html.js"></script>
+    <script src="../Content/js/G7/ag-grid-config.js"></script>
+    <!------------------- Scripts : End ---------------------->
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <!------------------- Sidebar : Begin ---------------------->
+        <!-- <img src="../Content/Images/fav.png" /> -->
+
+        <aside class="sidebar">
+            <div class="sidebar-bg"></div>
+            <div class="logo-div">
+                <div class="logo">
+                    <img src="../Content/Images/prog-logo.png" alt="Logo">
+                </div>
+            </div>
+            <div class="list-div">
+                <ul class="sidebar-list">
+                    <!-- Index : Begin -->
+                    <li class="list-item " data-nodeid="5" data-parent="0">
+                        <a href="../Index.html" class="fa fa-home">الرئيسية</a>
+                    </li>
+                    <!-- Index : end -->
+                    <li class="list-item node-item" data-nodeid="3" data-parent="0">
+                        <a class="fa fa-calculator">النظام المحاسبى</a>
+                    </li>
+                    <li class="list-item node-item" data-nodeid="2" data-parent="0">
+                        <a class="fi-cash flaticon-profit">ادارة النقدية</a>
+                    </li>
+                    <!-- Financial Module : Begin -->
+                    <li class="sub-list-l" data-nodeid="4" data-parent="3">
+                        <div class="sub-list-header">
+                            <h2>إسم المؤسسة</h2>
+                        </div>
+                        <ul class="sub-list-inner">
+                            <h3>النظام المحاسبى</h3>
+                            <li data-parent="0">
+                                <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-bank-building leaf-node" href="../FinancialModule/Definitions-CostCentersDimentions-index.html">
+                                            أبعاد مراكز التكلفة</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-contract-1 leaf-node" href="../FinancialModule/Definitions-FinancialStatments-index.html">الحسابات
+                                            الختامية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-payment-day leaf-node" href="../FinancialModule/Definitions-AccountingPeriods-index.html">الفترات
+                                            المحاسبية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-statistics leaf-node" href="../FinancialModule/Definitions-AnalyticalJournalsTypes-index.html">أنواع
+                                            اليوميات التحليلية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-mortgage-loan leaf-node" href="../FinancialModule/Definitions_CostCentersTree.html">مراكز
+                                            التكلفة</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-analytics-1 leaf-node" href="../FinancialModule/Definitions-AuditRatings.html">تصنيفات
+                                            الحسابات</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-business-affiliate-network leaf-node" href="../FinancialModule/Definitions-ChartOfAccounts.html">شجرة
+                                            الحسابات</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li data-parent="0">
+                                <a class="fa fa-exchange node">الحركات</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-notepad leaf-node" href="../FinancialModule/Transaction-OpeningJornalEntry-index.html">القيد
+                                            الافتتاحى</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-analytics leaf-node" href="../FinancialModule/Transactions-DailyJournals_index.html">قيود
+                                            اليوميه العامه</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-task-complete leaf-node" href="../FinancialModule/Transactions-ClosingJornalEntry-index.html">قيود
+                                            الاقفال</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-parent="0">
+                                <a class="fi flaticon-clipboard node">التقارير</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-businessman-with-dollar-money-sign leaf-node" href="../FinancialModule/Reports-General ledger account-form.html">حساب
+                                            الاستاذ العام</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-scale-1 leaf-node" href="../FinancialModule/Reports-BalanceReviewOfTheGeneralLedger-Form.html">ميزان
+                                            مراجعة الاستاذ العام</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-shopping-list leaf-node" href="../FinancialModule/Reports-FinancialMenus.html">القوائم
+                                            الماليه للحسابات الختاميه</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- Financial Module : End -->
+                    <!-- Financial Module - Cash Management : Begin -->
+                    <li class="sub-list-l" data-nodeid="6" data-parent="2">
+                        <div class="sub-list-header">
+                            <h2>إسم المؤسسة</h2>
+                        </div>
+                        <ul class="sub-list-inner">
+                            <h3>النظام المحاسبى</h3>
+                            <li data-parent="0">
+                                <a class="fi flaticon-dollar-symbol node">التعريفات الأساسية</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-safebox leaf-node" href="./Definitions-ListOfSafesAndBanks.html">
+                                            قائمة الخزائن و البنوك</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-wallet leaf-node" href="./Definitions-ListOfIncomesAndExpenses.html">الايرادات
+                                            و المصروفات المتنوعة</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li data-parent="0">
+                                <a class="fa fa-exchange node">الحركات</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-money-bag leaf-node" href="./Transactions-OpenningAccounts-Index.html">الارصدة
+                                            الافتتاحية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-agreement leaf-node" href="./Transactions-SettlementOfCustody-index.html">تسوية
+                                            العهدة</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-money leaf-node" href="./Transactions-CashAndPaymentStatus-Index.html">حالة
+                                            اوراق القبض</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-pay leaf-node" href="./Transactions-BillsOfExchange-index.html">سندات
+                                            الصرف</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Transactions-Receipts-index.html">سندات
+                                            القبض</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-signing-the-contract  leaf-node" href="./Transactions-CheckReview-index.html">متابعة
+                                            الشيكات</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-parent="0">
+                                <a class="fi flaticon-clipboard node">التقارير</a>
+                                <ul class="collapse even">
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-money leaf-node" href="./Reports-CashFlow.html">السيولة
+                                            النقدية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-bitcoin leaf-node" href="./Reports-CashStatus.html">حالة
+                                            الاوراق المالية</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-send leaf-node" href="./Reports-ChequeStatus.html">حالة
+                                            الشيكات</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-pay leaf-node" href="./Reports-BillsOfExchange.html">سندات
+                                            الصرف</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-wallet-1 leaf-node" href="./Reports-Receipts.html">سندات
+                                            القبض</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-mortgage-loan leaf-node" href="./Reports-BankStatement.html">كشف
+                                            حساب البنك و الخزينة</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi flaticon-scale-1 leaf-node" href="./Reports-CheckBalanceOfBanks.html">ميزان
+                                            مراجعة الخزائن و البنوك</a>
+                                    </li>
+                                    <li data-parent="1">
+                                        <a class="fi-cash flaticon-bank leaf-node" href="./Reports-MaxMinBankCredit.html">مقارنة
+                                            ارصدة الخزائن و البنوك</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <!-- Financial Module - Cash Management : End -->
+                </ul>
+            </div>
+        </aside>
+        <!------------------- Sidebar : End ------------------------>
+        <!----------------- Main Header : Begin -------------------->
+        <nav class="page-header m-0 w-100 position-absolute rounded-0 border-0">
+            <div class="container-fluid">
+                <div class="row no-gutters header-container">
+                    <!-- Header Left -->
+                    <div class="header-left col-xl col-12">
+                        <div class="company-logo row no-gutters">
+
+
+                            <h3>G7 Medical Pro</h3>
+                        </div>
+                        <ul class="nav">
+                            <li class="devider"></li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-md icon-sqr">
+                                <a class="dropdown-toggle fa fa-th" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false" title="Hot Tools">
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Hot Tools</h6>
+                                    <div class="dropdown-body">
+                                        <div class="col-4 tool-link">
+                                            <a class="row success" title="Add Patient">
+                                                <span class="fa fa-user-plus"></span>
+                                                <p>Add Patient</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row warning" title="Search Patients">
+                                                <span class="fa fa-search"></span>
+                                                <p>Search Patients</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row danger" title="End Shift">
+                                                <span class="fa fa-stop"></span>
+                                                <p>End Shift</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 tool-link">
+                                            <a class="row default" title="Reservations">
+                                                <span class="fa fa-calendar"></span>
+                                                <p>Reservations</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">Add More Tools</a>
+                                </div>
+                            </li>
+                            <li class="icon-link normal-link icon-sqr">
+                                <a class="fa fa-globe" title="Change Language"></a>
+                            </li>
+                            <li class="icon-link dropdown g7-dropdown g7-dropdown-lg">
+                                <a class="dropdown-toggle fa fa-bell" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="badge badge-pill">4</span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Notifications</h6>
+                                    <a class="dropdown-item warning">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-clock-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Pending Invoice</h4>
+                                                <p>Mr/ Mohamed Khalifa has Pending Invoice</p>
+                                                <span>6 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item danger">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-user-times dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Incomplete Data</h4>
+                                                <p>Mr/ Mohamed Khalifa's Data Incomplete</p>
+                                                <span>30 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item success">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-calendar-check-o dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Reservation Request</h4>
+                                                <p>Dr\ Mohamed Khalifa Reserve Teeth Eamination To Ali Soliman</p>
+                                                <span>10 minutes ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item default">
+                                        <div class="row no-gutters dropdown-item-container">
+                                            <span class="fa fa-retweet dropdown-item-container-icon"></span>
+                                            <div class="col row no-gutters dropdown-item-container-content">
+                                                <h4 class="dropdown-item-container-header">Reservation Forward</h4>
+                                                <p>Dr\ Mohamed Khalifa Forward Ali Khalifa To Dr\ Hassan Mahfouz</p>
+                                                <span>30 seconds ago</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-footer" href="../Notifications.html">View More</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <ul class="nav user-tools col">
+                                <li class="devider"></li>
+                                <li class="icon-link normal-link icon-sqr">
+                                    <a class="fa fa-user-plus" title="Add New Patient"></a>
+                                </li>
+                                <li class="icon-link normal-link form-div icon-sqr row col">
+                                    <span class="fa fa-search"></span>
+                                    <input type="text" class="form-control col" placeholder="Search For Patients" id="patientSearch">
+                                </li>
+                            </ul> -->
+                    </div>
+                    <!-- Header Right -->
+                    <div class="header-right">
+                        <ul class="nav">
+                            <li class="date-time">
+                                <p>21 March 2018</p>
+                                <p class="night fa fa-moon-o">11:57 PM</p>
+                                <!-- <p class="day fa fa-sun-o">11:57 AM</p> -->
+                            </li>
+                            <li class="dropdown mx-3 d-inline-block position-relative profile-menu g7-dropdown g7-dropdown-sm ">
+                                <a href="#" class="dropdown-toggle d-flex profile-link" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="user-img d-inline-block align-middle">
+                                        <img src="../Content/Images/img.jpg" alt="user">
+                                    </div>
+                                    <div class="user-data d-inline-block align-middle">
+                                        <p class="m-0">Welcome</p>
+                                        <h4 class="m-0">M.Khalifa</h4>
+                                    </div>
+                                    <span class="fa fa-caret-down d-inline-block align-bottom "></span>
+                                </a>
+                                <div class="dropdown-menu p-0 m-0 border-top-0">
+                                    <span class="top-arrow fa fa-caret-up"></span>
+                                    <h6 class="dropdown-header">Hot Tools</h6>
+                                    <div class="dropdown-body">
+
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>Profile</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>Settings</p>
+                                                    <span class="badge badge-pill">New</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>Help</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="dropdown-item">
+                                            <div class="row no-gutters dropdown-item-container">
+                                                <div class="col row no-gutters dropdown-item-container-content">
+                                                    <p>Log Out</p>
+                                                    <span class="fa fa-sign-out icon"></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <a class="dropdown-footer" href="Login.html">
+                                            <div class="row no-gutters">
+                                                <p class="col">Log Out</p>
+                                                <span class="fa fa-sign-out"></span>
+                                            </div>
+                                        </a> -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!----------------- Main Header : End -------------------->
+
+
+        <!--------------- Page Container : Begin ------------------>
+        <div class="page-container row no-gutters col position-relative" id="pageContainer">
+
+
+            <div class="data-section d-inline-flex col position-retaive col-12 single-tab-page printable financial-module">
+                <form class="row no-gutters data-container col-12 position-relative">
+                    <!-- Data Container Header -->
+                    <div class="data-container-header row no-gutters col-12 printed">
+                        <div class="section-header-main col-md col-12">
+                            <img src="../Content/Images/img.png">
+                            <div class="company-data">
+                                <h3>G7 Software House</h3>
+                                <p>23 Horia Street , Alexandria , Egypt</p>
+                                <p>01100000000</p>
+                            </div>
+                        </div>
+                        <div class="section-header-sub">
+                            <h3>Clinics</h3>
+                            <p class="col-12">
+                                <span> 21 March 2018</span> - <span id="digitalClock"> 11:57 AM</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="data-container-header row no-gutters col-12">
+                        <div class="section-header-main col-md col-12">
+                            <span class="fa fa-tags"></span>
+                            <div class="data d-inline-block align-middle">
+                                <h4 class="m-0">الخصائص العامة</h4>
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="../SystemSettings/Admin-Index.html">الرئيسية</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">الخصائص العامة
+                                        المتنوعة</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="section-header-tools">
+                            <div class="data-container-body-header-controls row no-gutters">
+                                <div class="row no-gutters controls-section">
+                                    <a class="gbtn gbtn-success fa fa-plus" title="اضافة" data-event="add" onclick="pageHeaderToolsHandler($(this));"><span
+                                            class="title">اضافة</span></a>
+                                    <a class="gbtn gbtn form-clear-btn fa fa-eraser" title="مسح" data-event="clear"
+                                        onclick="pageHeaderToolsHandler($(this));"><span class="title">مسح</span></a>
+                                    <a class="gbtn gbtn-danger fa fa-times" title="إلغاء" data-event="exit" onclick="pageHeaderToolsHandler($(this));"><span
+                                            class="title">إلغاء</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Data Container Body -->
+                    <div class="data-container-body row no-gutters col-12 ">
+                        <!-- Data Container Body Content-->
+                        <div class="col-12 row no-gutters data-container-body-content">
+                            <div class="col-12 row no-gutters data-container-body-content-main split-container">
+                                <div class="col-xl-4 col-12 side">
+                                    <div class="data-container-body-content-main-body row no-gutters no-footer">
+                                        <div class="data-desc-header row no-gutters col-12">
+                                            <div class="data-desc-header-content row no-gutters col-12">
+                                                <div class="main-data col row no-gutters">
+                                                    <h4>الخصائص العامة</h4>
+
+                                                    <div class="controls-section row no-gutters ">
+                                                        <a class="fa fa-angle-double-right icon-gbtn" title="الأخير"></a>
+                                                        <a class="fa fa-angle-right  icon-gbtn" title="التالى"></a>
+                                                        <a class="fa fa-angle-left  icon-gbtn" title="السابق"></a>
+                                                        <a class="fa fa-angle-double-left  icon-gbtn" title="الاول"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 data-desc-body">
+                                            <div class="data-desc-body-container row no-gutters col-12">
+                                                <div class="data-desc-body-container-body col-12">
+                                                    <div class="form-group col-md col-12 pl-0 pr-0">
+                                                        <input type="text" class="form-control" name="txtTreeSearchInput"
+                                                            id="txtTreeSearchInput" placeholder="البحث بالأسم">
+                                                        <span class="fa fa-search search-icon"></span>
+                                                    </div>
+                                                    <div class="col-12 row no-gutters tree-tools">
+                                                        <a class="fa fa-plus r-link" title="إضافة خصائص عامة">إضافة
+                                                            خصائص عامة</a>
+                                                        <a class="fa fa-sitemap r-link" title="اضافة جذر"
+                                                            data-event="import" onclick="pageHeaderToolsHandler($(this));">اضافة
+                                                            جذر</a>
+                                                    </div>
+                                                    <div id="jstree_demo_div" class="tree-container">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-12 main">
+                                    <div class="data-container-body-content-main-body row no-gutters no-footer tree-form">
+                                        <div class="data-desc-header row no-gutters col-12">
+                                            <div class="data-desc-header-content row no-gutters col-12 ">
+                                                <div class="main-data col">
+                                                    <h4 class="col-7">بيانات الأساسية</h4>
+                                                    <div class="form-group row no-gutters col-md-10 col-12 control-inline">
+                                                        <label>نوع الخاصية</label>
+                                                        <div class="row no-gutters col-md-12 col-12 ">
+                                                            <input type="text" class="form-control" name="PropertyType"
+                                                                id="PropertyType" placeholder="نوع الخاصية" disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                        <label class="custom-control-label" for="customCheck1">افتراضي</label>
+                                                    </div>
+                                                    <div class="form-group row no-gutters col-md-12 col-12 control-inline">
+                                                        <label>الخاصية الرئيسية</label>
+                                                        <div class="row no-gutters col-md-12 col-12 ">
+                                                            <input type="text" class="form-control" name="MainProperty"
+                                                                id="MainProperty" placeholder="الخاصية الرئيسية" disabled>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-12 required">
+                                                        <label>الإسم باللغة العربية</label>
+                                                        <input type="text" class="form-control" name="Name" id="Name"
+                                                            placeholder="الإسم باللغة العربية">
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-12 required">
+                                                        <label>الإسم باللغة الإنجليزية</label>
+                                                        <input type="text" class="form-control" name="EnglishName" id="EnglishName"
+                                                            placeholder="الإسم باللغة الإنجليزية">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--------------- Page Container : End ------------------>
+    </div>
+</body>
+
+
+<script>
+    //-------- Page Header Tools Event Handler ------------
+    // use options to send data with clicked control
+    function pageHeaderToolsHandler(actionBtn, options) {
+        switch (actionBtn.data("event")) {
+            case "add":
+                {
+                    alert("Enter add Case");
+                    break;
+                }
+            case "exit":
+                {
+                    alert("Enter Exit Case")
+                    break;
+                }
+            case "clear":
+                {
+                    alert("Enter clear Case")
+                    break;
+                }
+            default:
+                {
+                    console.error("Handler Error : This Event Not Listed In Switch Cases");
+                    console.warn("Define Event in Switch Control located in 'dtEventHandler' function ");
+                }
+        }
+    }
+</script>
+<script>
+    var list2 = [
+        {"text": "المرضى",'icon': "fa-users root",hasChildren: true,'parent': '#','id': 1,'type': 'root'},
+        {"text": "الاطباء",'icon': "fa-user-md root",hasChildren: true,'parent': '#','id': 2},
+        {"text": "العملاء",'icon': "fa-user root",hasChildren: true,'parent': '#','id': 3},
+        {"text": "الموردين",'icon': "fa-truck root",hasChildren: true,'parent': '#','id': 4},
+        {"text": "الموظفين",'icon': "fa-user-secret root",hasChildren: true,'parent': '#','id': 5},
+        {"text": "اخرى",'icon': "fa-cubes root",hasChildren: true,'parent': '#','id': 6},
+        {"text": "مواطن",'icon': "fa-folder",hasChildren: true,'parent': 1,'id': 11},
+        {"text": "مقيم",'icon': "fa-file",hasChildren: false,'parent': 1,'id': 12},
+        {"text": "موظف حكومي",'icon': "fa-file",hasChildren: false,'parent': 11,'id': 111},
+        {"text": "معلم",'icon': "fa-file",hasChildren: false,'parent': 11,'id': 112},
+        {"text": "شرطة",'icon': "fa-file",hasChildren: false,'parent': 11,'id': 113},
+        {"text": "جيش",'icon': "fa-file",hasChildren: false,'parent': 11,'id': 114},
+        {"text": "رجال اعمال",'icon': "fa-file",hasChildren: false,'parent': 11,'id': 115},
+        {"text": "زائر",'icon': "fa-file",hasChildren: false,'parent': 2,'id': 21},
+        {"text": "عام",'icon': "fa-file",hasChildren: false,'parent': 2,'id': 22},
+        {"text": "استشاري",'icon': "fa-file",hasChildren: false,'parent': 2,'id': 23},
+        {"text": "اخصائي",'icon': "fa-file",hasChildren: false,'parent': 2,'id': 24},
+        {"text": "مقيم",'icon': "fa-file",hasChildren: false,'parent': 2,'id': 25},
+        {"text": "اطفال",'icon': "fa-file",hasChildren: false,'parent': 3,'id': 31},
+        {"text": "نساء",'icon': "fa-file",hasChildren: false,'parent': 3,'id': 32},
+        {"text": "رجال",'icon': "fa-file",hasChildren: false,'parent': 3,'id': 33},
+        {"text": "غير دائم للاسنان",'icon': "fa-file",hasChildren: false,'parent': 4,'id': 41},
+        {"text": "دائم للاسنان",'icon': "fa-file",hasChildren: false,'parent': 4,'id': 42},
+        {"text": "غير دائم جلدية و تجميل",'icon': "fa-file",hasChildren: false,'parent': 4,'id': 43},
+        {"text": "دائم جلدية و تجميل",'icon': "fa-file",hasChildren: false,'parent': 4,'id': 44},
+        {"text": "مواطن",'icon': "fa-file",hasChildren: false,'parent': 5,'id': 51},
+        {"text": "مقيم",'icon': "fa-file",hasChildren: false,'parent': 5,'id': 52},
+
+    ];
+    $(document).ready(function () {
+        //renderIcons(list,"#tree",0);
+        $(function () {
+            $('#jstree_demo_div').jstree({
+                "core": {
+                    'data': list2,
+                    "check_callback": true,
+                    animation: true,
+                    themes: {
+                        name: 'default',
+                        icons: true,
+                        responsive: true,
+                        dots: true,
+                        ellipsis: true,
+                    },
+
+                },
+                "type":{
+                    "root":{
+                        "a_attr" : { "style" : "color:red" }
+                    }
+                },
+                plugins: ["dnd", "search", "state", "types", "wholerow"],
+                "search": {
+                    "case_insensitive": true,
+                    "show_only_matches": true
+                }
+            });
+        });
+    });
+    $(document).on("keyup", "#txtTreeSearchInput", function () {
+        $("#jstree_demo_div").jstree("search", $(this).val());
+    });
+</script>
+
+</html>
